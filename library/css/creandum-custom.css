@@ -553,6 +553,29 @@ p.large_invest_white{
 }
 
 
+/* NETWORK */
+.network-post .tcontent{
+  background-color: #fff;
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+  padding:10px;
+  max-height:150px;
+  overflow-y:hidden;
+}
+.network-post img{
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+}
+.network-post h3{
+  font-size:18px;
+  padding-top:0px;
+  margin-top:0;
+}
+.network-post p{
+  font-size:12px;
+  line-height: 1.6em;
+}
+
 /* BLOG POST SINGLE */
 .post_content img{
   width: 100%;
