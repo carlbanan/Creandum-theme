@@ -12,7 +12,7 @@ $news = $n->give_newsfeed(10);
 
 <div class='page-wrapper newspage'>
     <div class="big-image-container">
-   		<h1>Newsdeck</h1>
+   		<h1><span>Newsdeck</span></h1>
     </div>
 
 	<div class="lightgreen_bg">

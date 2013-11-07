@@ -1,12 +1,12 @@
 <?php
    class newsfeed {
          
-      private $ant = 10;
+      private $ant;
 
       function __construct() {
 
       }
-      function give_newsfeed($ant, $ptype = '') {
+      function give_newsfeed($ant = 10, $ptype = '') {
 
          $this->ant = $ant;
          $nfeed = array();
