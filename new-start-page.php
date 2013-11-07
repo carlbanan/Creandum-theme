@@ -21,42 +21,47 @@ body{
           
           <?php 
           $c = 0;
-          if ($slider = page_has_slider(get_the_ID())) { 
-            ?>
-            <div id='slider-bigimage'>
-            <?php
-              $slides = get_slider_images($slider);
-              foreach ($slides as $slide) {
-                $c++;
-                $active = "";
-                if($c == 1){
-                  $active = " active";
-                }
-            ?>
-             <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
-               <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['src'];?>");'>
-               </div>
-               <div class='content-header-text wrapper container'>
-                 <div class='shadowop'>
-                  <h1 class="shadow"><?php echo $slide['caption'];?></h1><br>
-                  <h1 class="shadow"><?php echo $slide['alt'];?></h1>
-                </div>
-                <div>
-                  <h1 class="strip"><?php echo $slide['caption'];?></h1><br>
-                  <h1 class="strip"><?php echo $slide['alt'];?></h1>
+
+           // IS SLIDER PLUGIN ACTIVEED ? 
+          include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+          $plugin = "simple-fields/simple_fields.php";
+          if(is_plugin_active($plugin)){
+            if ($slider = page_has_slider(get_the_ID())) { 
+              ?>
+              <div id='slider-bigimage'>
+              <?php
+                $slides = get_slider_images($slider);
+                foreach ($slides as $slide) {
+                  $c++;
+                  $active = "";
+                  if($c == 1){
+                    $active = " active";
+                  }
+                  $textline = explode("\n", $slide['Slide text line 1']);
+              ?>
+               <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
+                 <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
+                 </div>
+                 <div class='content-header-text wrapper container'>
+                   <div class='shadowop'>
+                    <?php foreach($textline as $txt){ ?>
+                    <h1 class="shadow"><?php echo $txt;?></h1><br>
+                    <?php } ?>
+                  </div>
+                  <div>
+                    <?php foreach($textline as $txt){ ?>
+                    <h1 class="strip"><?php echo $txt;?></h1><br>
+                    <?php } ?>
+                  </div>
                 </div>
               </div>
-            </div>
-            <?php if(!$active){ ?>
-            <img src="<?php echo $slide['src'];?>" class="preload"/>
-            <?php  } ?>
-            <?php 
-
+              <?php if(!$active){ ?>
+              <img src="<?php echo $slide['src'];?>" class="preload"/>
+              <?php  
+                  } 
+                }
+              }
             }
-            ?>
-
-            <?php
-          }
           ?>
           </div>
           <a class="right carousel-control" href="javascript:;" id='nextbig'><div class="righticon"></div></a>
@@ -133,45 +138,69 @@ body{
 
                 <?php
 
-                $c = 0;
-                $page_id = 236;     // woms.se
-            //  $page_id = 257;  // localhost
+              // IS SLIDER PLUGIN ACTIVEED ? 
+              if(is_plugin_active($plugin)){
 
-                if ($slider2 = page_has_slider($page_id)) { 
-                  $slides2 = get_slider_images($slider2);
-                  foreach ($slides2 as $slide2) {
-                    $c++;
-                    if($c != 5){
+                  $c = 0;
+                
+                  // Find connected pages
+                  $connected = new WP_Query( array(
+                    'connected_type' => 'page_to_page',
+                    'connected_items' => get_queried_object(),
+                    'nopaging' => true,
+                    )
+                  );
+                  // GET ID FROM  connected page
+                  $i = 0;
 
-                      $active = "";
+                  if ( $connected->have_posts() ) :
+                    while ( $connected->have_posts() ) : $connected->the_post();                           
+                              $page_id = get_the_ID();
+                    endwhile; 
+                  // Prevent weirdness
+                  wp_reset_postdata();
 
-                      if($c == 1){
-                        $active = " active";
-                      }
-                      ?>
-                      <div class="item <?php echo $active;?>">
-                        <img src="<?php echo $slide2['src'];?>" alt="First slide">
+                  endif;
+                  // GET SLIDER FOR PAGE
+                  if ($slider2 = page_has_slider($page_id)) { 
+                    $slides2 = get_slider_images($slider2);
+                    foreach ($slides2 as $slide2) {
+                      $c++;
+                      if($c != 5){
 
-                          <div class="carousel-caption">
-                            <h2 class="strip2">“Creandum really helped us throught</h2><br>
-                            <h2 class="strip2">our entire start-up process, from”</h2><br>
-                            <h2 class="strip2">backing to recritment”</h2><br>
-                            <div class"title" style="margin-top:10px;">
-                              <p class="strip3">Hampus Jacobsson</p><br>
-                              <p class="strip3">Ceo and Co-founder at Dexplora</p>
-                            </div>
+                        $active = "";
 
+                        if($c == 1){
+                          $active = " active";
+                        }
+                        $textline = explode("\n", $slide2['Slide text line 1']);
+                        ?>
+                        <div class="item <?php echo $active;?>">
+                          <img src="<?php echo $slide2['img']['src'];?>" alt="First slide">
+
+                            <div class="carousel-caption">
+                              <?php foreach($textline as $txt){ ?>
+                              <h2 class="strip2"><?php echo $txt;?></h2><br>
+                              <?php } ?>
+                              <div class"title" style="margin-top:10px;">
+                                <p class="strip3"><?php echo $slide2['Slide text line 2'];?></p><br>
+                                <p class="strip3"><?php echo $slide2['Slide text line 3'];?></p>
+                              </div>
+
+                          </div>
                         </div>
-                      </div>
-                      <?php
+                        <?php
+                      }
                     }
                   }
                 }
               ?>
             </div>
             <!--pay attention-->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><div class="lefticon"></div></a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next"><div class="righticon"></div></a>
+            <?php if($c != 0){ ?>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><div class="lefticon"></div></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><div class="righticon"></div></a>
+            <?php } ?>
         </div><!-- /.carousel -->
 
         <div class='lightgreen_bg'>

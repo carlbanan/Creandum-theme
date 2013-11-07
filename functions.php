@@ -72,11 +72,20 @@ add_filter( 'wp_title', 'bones_filter_title', 10, 2 );
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/
-
+add_theme_support( 'post-thumbnails' );
 // Thumbnail sizes
-add_image_size( 'wpbs-featured', 638, 300, true );
+add_image_size( 'wpbs-featured', 300, 300, true );
 add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
+add_image_size( 'wpbs-featured-network', 303, 227, true);
+
+
+
+add_action( 'after_setup_theme', 'theme_setup' );
+function theme_setup() {
+  add_image_size( 'thumbnal-size', 303, 227, true);
+}
+
 
 /* 
 to add more sizes, simply copy a line from above 
@@ -638,6 +647,34 @@ function get_wpbs_theme_options(){
 add_filter('show_admin_bar', '__return_false');
 
 // Create TEAM POST
+function create_network_post() {
+    $labels = array(
+        'name'               => _x( 'network', 'post type general name' ),
+        'singular_name'      => _x( 'Network', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'network' ),
+        'add_new_item'       => __( 'Add New Network post' ),
+        'edit_item'          => __( 'Edit Network post' ),
+        'new_item'           => __( 'New Network post' ),
+        'all_items'          => __( 'All Network posts' ),
+        'view_item'          => __( 'View Network post' ),
+        'search_items'       => __( 'Search Network post' ),
+        'not_found'          => __( 'No Network posts found' ),
+        'not_found_in_trash' => __( 'No Network posts found in the Trash' ), 
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Network'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our Network posts and Network posts specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'post-formats' ),
+        'has_archive'   => 'network'
+    );
+    register_post_type( 'network', $args ); 
+
+}
+add_action( 'init', 'create_network_post' );
 
 function create_team_post() {
     $labels = array(
@@ -785,6 +822,8 @@ function my_taxonomies_investment() {
 
 }
 add_action( 'init', 'my_taxonomies_investment', 0 );
+
+
 
 
 
@@ -1026,6 +1065,12 @@ function my_connection_types() {
         'to' => 'team',
         'cardinality' => 'many-to-one'
     ) );
+    p2p_register_connection_type( array(
+        'name' => 'page_to_page',
+        'from' => 'page',
+        'to' => 'page',
+        'cardinality' => 'one-to-one'
+    ) );
 }
 add_action( 'p2p_init', 'my_connection_types' );
 
@@ -1140,128 +1185,158 @@ register_post_type('slideshows', array(
         'menu_name' => 'Slideshows'
     ),
 ) );
-simple_fields_register_field_group('slideshow_images',
-    array (
-        'name' => 'Slideshow images',
-        'description' => 'Add images to your slideshow here',
-        'repeatable' => 1,
-        'fields' => array(
-            array('name' => 'Slideshow image',
-                'slug' => 'slideshow_image',
-                'description' => 'Select image',
-                'type' => 'file'
-            )
-        )
-    )
-);
-simple_fields_register_post_connector('slideshow_images_connector',
-    array (
-        'name' => "Slideshow images connector",
-        'field_groups' => array(
-            array('name' => 'Slideshow images',
-                'key' => 'slideshow_images',
-                'context' => 'normal',
-                'priority' => 'high')
-        ),
-        'post_types' => array('slideshows'),
-        'hide_editor' => 1
-    )
-);
-simple_fields_register_post_type_default('slideshow_images_connector', 'slideshows');
 
-simple_fields_register_field_group('slideshow_page_options',
-    array (
-        'name' => 'Slideshow options',
-        'fields' => array(
-            array('name' => 'Slideshow display',
-                'slug' => 'slideshow_page_display',
-                'description' => 'Choose a slideshow to display on this page',
-                'type' => 'post',
-                'type_post_options' => array("enabled_post_types" => array("slideshows"))
-            )
-        )
-    )
-);
- 
-simple_fields_register_post_connector('slideshow_page_connector',
-    array (
-        'name' => "Slideshow page connector",
-        'field_groups' => array(
-            array('name' => 'Slideshow options',
-                'key' => 'slideshow_page_options',
-                'context' => 'normal',
-                'priority' => 'high')
-        ),
-        'post_types' => array('page')
-    )
-);
- 
-simple_fields_register_post_type_default('slideshow_page_connector', 'page');
-simple_fields_register_field_group('slideshow_page_options',
-    array (
-        'name' => 'Slideshow options',
-        'fields' => array(
-            array('name' => 'Slideshow display',
-                'slug' => 'slideshow_page_display',
-                'description' => 'Choose a slideshow to display on this page',
-                'type' => 'post',
-                'type_post_options' => array("enabled_post_types" => array("slideshows"))
-            )
-        )
-    )
-);
- 
-simple_fields_register_post_connector('slideshow_page_connector',
-    array (
-        'name' => "Slideshow page connector",
-        'field_groups' => array(
-            array('name' => 'Slideshow options',
-                'key' => 'slideshow_page_options',
-                'context' => 'normal',
-                'priority' => 'high')
-        ),
-        'post_types' => array('page')
-    )
-);
- 
-simple_fields_register_post_type_default('slideshow_page_connector', 'page');
-function page_has_slider($theID) {
-    $slider_id = simple_fields_get_post_value($theID, "Slideshow display", true);
-    return ($slider_id) ? $slider_id : false;
-}
- 
-function get_slider_images($slider) {
-    if (empty($slider)) {
-        return false;
-    } else {
-        if (is_numeric($slider)) {
-            $post_key = "p";
-        } else {
-            $post_key = "post_name";
-        }
-        $slides = array();
-        $slide_query = new WP_Query(array( "post_type" => "slideshows", $post_key => $slider));
-        if ($slide_query->have_posts()) : while ( $slide_query->have_posts() ) : $slide_query->the_post();
-            $img_attachments = simple_fields_get_post_group_values(get_the_ID(), "Slideshow images", true, 2);
-            foreach($img_attachments as $image) {
-                $slides[] = wp_get_attachment($image["Slideshow image"]);
-            }
-        endwhile; endif; wp_reset_query();
-        return (!empty($slides)) ? $slides : false;
-    }
-}
-function wp_get_attachment( $attachment_id ) {
 
-  $attachment = get_post( $attachment_id );
-  return array(
-    'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
-    'caption' => $attachment->post_excerpt,
-    'description' => $attachment->post_content,
-    'href' => get_permalink( $attachment->ID ),
-    'src' => $attachment->guid,
-    'title' => $attachment->post_title
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+$plugin = "simple-fields/simple_fields.php";
+if(is_plugin_active($plugin)){
+  simple_fields_register_field_group('slideshow_images',
+      array (
+          'name' => 'Slideshow images',
+          'description' => 'Add images to your slideshow here',
+          'repeatable' => 1,
+          'fields' => array(
+              array('name' => 'Slideshow image',
+                  'slug' => 'slideshow_image',
+                  'description' => 'Select image',
+                  'type' => 'file'
+              ),
+              array('name' => 'Slide text line 1',
+                  'slug' => 'slideshow_text',
+                  'description' => 'Max 250 chars',
+                  'type' => 'textarea'
+              ),
+              array('name' => 'Slide text line 2',
+                  'slug' => 'slideshow_text2',
+                  'description' => 'Max 100 chars',
+                  'type' => 'text'
+              ),
+              array('name' => 'Slide text line 3',
+                  'slug' => 'slideshow_text3',
+                  'description' => 'Max 100 chars',
+                  'type' => 'text'
+              )
+          )
+      )
   );
-}
+  simple_fields_register_post_connector('slideshow_images_connector',
+      array (
+          'name' => "Slideshow images connector",
+          'field_groups' => array(
+              array('name' => 'Slideshow images',
+                  'key' => 'slideshow_images',
+                  'context' => 'normal',
+                  'priority' => 'high')
+          ),
+          'post_types' => array('slideshows'),
+          'hide_editor' => 1
+      )
+  );
+  simple_fields_register_post_type_default('slideshow_images_connector', 'slideshows');
+
+  simple_fields_register_field_group('slideshow_page_options',
+      array (
+          'name' => 'Slideshow options',
+          'fields' => array(
+              array('name' => 'Slideshow display',
+                  'slug' => 'slideshow_page_display',
+                  'description' => 'Choose a slideshow to display on this page',
+                  'type' => 'post',
+                  'type_post_options' => array("enabled_post_types" => array("slideshows"))
+              )
+          )
+      )
+  );
+   
+  simple_fields_register_post_connector('slideshow_page_connector',
+      array (
+          'name' => "Slideshow page connector",
+          'field_groups' => array(
+              array('name' => 'Slideshow options',
+                  'key' => 'slideshow_page_options',
+                  'context' => 'normal',
+                  'priority' => 'high')
+          ),
+          'post_types' => array('page')
+      )
+  );
+   
+  simple_fields_register_post_type_default('slideshow_page_connector', 'page');
+  simple_fields_register_field_group('slideshow_page_options',
+      array (
+          'name' => 'Slideshow options',
+          'fields' => array(
+              array('name' => 'Slideshow display',
+                  'slug' => 'slideshow_page_display',
+                  'description' => 'Choose a slideshow to display on this page',
+                  'type' => 'post',
+                  'type_post_options' => array("enabled_post_types" => array("slideshows"))
+              )
+          )
+      )
+  );
+   
+  simple_fields_register_post_connector('slideshow_page_connector',
+      array (
+          'name' => "Slideshow page connector",
+          'field_groups' => array(
+              array('name' => 'Slideshow options',
+                  'key' => 'slideshow_page_options',
+                  'context' => 'normal',
+                  'priority' => 'high')
+          ),
+          'post_types' => array('page')
+      )
+  );
+   
+  simple_fields_register_post_type_default('slideshow_page_connector', 'page');
+  function page_has_slider($theID) {
+      $slider_id = simple_fields_get_post_value($theID, "Slideshow display", true);
+      return ($slider_id) ? $slider_id : false;
+  }
+   
+
+  function wp_get_attachment( $attachment_id ) {
+
+    $attachment = get_post( $attachment_id );
+    return array(
+      'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+      'caption' => $attachment->post_excerpt,
+      'description' => $attachment->post_content,
+      'href' => get_permalink( $attachment->ID ),
+      'src' => $attachment->guid,
+      'title' => $attachment->post_title
+    );
+  }
+
+  function get_slider_images($slider) {
+      if (empty($slider)) {
+          return false;
+      } else {
+          if (is_numeric($slider)) {
+              $post_key = "p";
+          } else {
+              $post_key = "post_name";
+          }
+          $slides = array();
+          $slide_query = new WP_Query(array( "post_type" => "slideshows", $post_key => $slider));
+          if ($slide_query->have_posts()) : while ( $slide_query->have_posts() ) : $slide_query->the_post();
+
+              $img_attachments = simple_fields_get_post_group_values(get_the_ID(), "Slideshow images", true, 2);
+              
+              foreach($img_attachments as $image) {
+                  $slidedata = $image;
+                  $slidedata['img'] = wp_get_attachment($image["Slideshow image"]);
+                  array_push($slides,$slidedata);
+
+              }
+          endwhile; endif; wp_reset_query();
+          return (!empty($slides)) ? $slides : false;
+      }
+  }
+} 
+
+// END IS SIMPLE FIELDS ACTIVE
 /*
  * ========================================================================
  *  Shortcodes
