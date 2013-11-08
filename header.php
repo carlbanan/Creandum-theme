@@ -66,8 +66,9 @@
               foreach($items as $item){
                 ?>
                
-                  <li class="<?php echo $item->classes[0];?>  head">
+                  <li class="head">
                     <a href="<?php echo $item->url;?>">
+                      <span class='<?php echo $item->classes[0];?>'></span>
                       <?php echo $item->title;?>
                     </a>
                   </li>

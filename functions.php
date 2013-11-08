@@ -988,7 +988,7 @@ function my_admin_enqueue_scripts( ) {
     wp_register_script(  'admin', 
       get_template_directory_uri() . '/library/js/admin.js', 
       array('jquery'), 
-      '1.2' );
+      '1.3' );
     wp_enqueue_script('admin');
 }
 // ADMIN CSS
