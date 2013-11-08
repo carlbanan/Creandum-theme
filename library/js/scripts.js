@@ -101,7 +101,7 @@ jQuery(document).ready(function($) {
 	function router(){
 		var r = $("#content").attr("page");
 		if(r){
-			if(r == 'investment' || r == 'team'){
+			if(r == 'investment' || r == 'team'  || r == 'network'){
 				ajax_nav();
 			}
 		}

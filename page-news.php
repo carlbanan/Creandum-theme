@@ -69,7 +69,11 @@ $news = $n->give_newsfeed(10);
 
 	
 		    </div><!-- END FEED --> 
-     
+            <p class='center padblock'>
+              <a href="<?php echo bloginfo("url");?>/blog/">
+              <button class='btn btn-default btn-green'>More news</button>
+              </a>
+            </p>
 		</div> <!-- END CONTAINER NEWS -->
 	</div><!-- END GREEN-->
 

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row">
+			<div id="content" class="clearfix row container">
 			
 				<div id="main" class="col-md-8 col-sm-8 col-lg-8 clearfix" role="main">
 
@@ -21,13 +21,13 @@
 						
 						<footer>
 			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ', ', '</p>'); ?>
+							<?php //the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ', ', '</p>'); ?>
 							
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template('',true); ?>
+					<?php //comments_template('',true); ?>
 					
 					<?php endwhile; ?>		
 					
@@ -48,7 +48,7 @@
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
+				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 
