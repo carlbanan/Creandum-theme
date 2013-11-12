@@ -66,10 +66,18 @@
               foreach($items as $item){
                 ?>
                
+<<<<<<< HEAD
                   <li>
                       <a href="<?php echo $item->url;?>">
                         <span class="<?php echo $item->classes[0];?>  head"></span><?php echo $item->title;?>
                       </a>
+=======
+                  <li class="head">
+                    <a href="<?php echo $item->url;?>">
+                      <span class='<?php echo $item->classes[0];?>'></span>
+                      <?php echo $item->title;?>
+                    </a>
+>>>>>>> 3ffa626a6b396ff29875f82661936f63e329ffdc
                   </li>
                
                 <?php

@@ -1,29 +1,19 @@
-error_reporting(E_ALL);
 <?php get_header(); ?>
-			
-			<?php
-				$blog_hero = of_get_option('blog_hero');
-				if ($blog_hero){
-			?>
-			<div class="clearfix row">
-				<div class="jumbotron">
-				
-					<h1><?php bloginfo('title'); ?></h1>
-					
-					<p><?php bloginfo('description'); ?></p>
-				
-				</div>
-			</div>
-			<?php
-				}
-			?>
-			
+
+
+	<div class='lightgreen_bg'>
+
+		<div class='container padblock'>
+			<h2 class='center'>Creandum news archive</h2>
 			<div id="content" class="clearfix row">
 			
-				<div id="main" class="col-sm-8 col-md-8 clearfix" role="main">
+				<div id="main" class="col-sm-12 col-md-12 clearfix feed" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<?php get_template_part( 'content', get_post_format() ); ?>					
+
+
+
+						<?php get_template_part( 'list-content', get_post_format() ); ?>					
 					<?php endwhile; ?>	
 					
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
@@ -56,8 +46,10 @@ error_reporting(E_ALL);
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
-    
 			</div> <!-- end #content -->
+
+		</div> <!-- CONTAINER -->	
+
+	</div> <!-- BACKGROUND LIGHTGREEB -->	
 
 <?php get_footer(); ?>

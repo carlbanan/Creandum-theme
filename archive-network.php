@@ -1,20 +1,50 @@
+
 <?php get_header(); ?>
 			
-	<div id="content" class="clearfix row">
-		<div class="big-image-container">
-			<h1><span>Network</span></h1>
-		</div>	
+			
+	<div id="async_content">
+	
+	<!-- AJAX CONTENT GOES HERE -->
+	<?php
+		if(SINGLEPOST == 1){
+			$_template_file = get_template_directory()."/single-network-content.php";
+			load_template( $_template_file);
+		}
+		else{
+	?>
+		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
+
+			<div class="page-content intro">	
+					<p class="large_invest_white"></p>
+					<section class="post_content center clearfix" itemprop="articleBody">
+					<h2>
+					 Stories from our Network.
+					</h2>
+					</section>
+			</div>
+		<div class="big-image-container" style="background:#ccc;"></div>
+		<div class="green_background"></div>
+	<?php } ?>
+	</div>
+
+	<div id="hidden_content">
+		<!-- HIDDEN CONTENTN IS STORED HERE -->
+	</div>
+			
+	<div id="content" class="clearfix row" page="network">
+
 		<div class='lightgreen_bg'>		
 			<div class='container padblock'  id="main" >
 		
-				
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+				<?php
+					  query_posts( array( 'post_type' => 'network') );
+					  if ( have_posts() ) : while ( have_posts() ) : the_post();
+				?>
 				<div class="col-lg-3 col-md-4 clearfix network-post" role="main">	
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
-					<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+					<a href="<?php the_permalink() ?>" class="async" rel="bookmark" title="<?php the_title_attribute(); ?>">
 								
 						<section class="post_content">
 						
