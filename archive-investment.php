@@ -12,7 +12,7 @@
 		else{
 	?>
 		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
-
+	<div class"top-post">
 			<div class="page-content intro">	
 					<p class="large_invest_white"></p>
 					<section class="post_content center clearfix" itemprop="articleBody">
@@ -23,6 +23,7 @@
 			</div>
 		<div class="big-image-container"></div>
 		<div class="green_background"></div>
+	</div>	
 	<?php } ?>
 	</div>
 
@@ -37,16 +38,12 @@
 				<div id="main" class="row clearfix" role="main">
 
 					<div class='filter-menu'>
-						View investments by:  
-						<span class='filter active' id=''>
-							All
-						</span>
-						<span class='filter' id='hardware'>
-							Hardware companies
-						</span>
-						<span class='filter' id='software'>
-							Software companies
-						</span>
+
+						<span class='filter active' id=''>All</span>
+						<span class='dash'>/</span>
+						<span class='filter' id='hardware'>Hardware companies</span>
+						<span class='dash'>/</span>
+						<span class='filter' id='software'>Software companies</span>
 					</div>
 					<?php
 					  query_posts( array( 'post_type' => 'investment') );

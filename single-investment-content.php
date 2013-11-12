@@ -9,6 +9,9 @@
       <div  id="post_<?php the_ID();?>">
         <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>">
         
+        </div>  <!-- end big-image --> 
+        <div class="green_background"></div>
+        
           <div class="container padblock page-content">
             <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 
@@ -59,7 +62,7 @@
               </article> <!-- end article -->
               
             </div> <!-- end #main AND COL-8 -->
-          </div>  <!-- end big-image --> 
+
           <div class="col-lg-4 col-md-4 col-sm-4 clearfix">
 
             <!-- SIDEBAR -->

@@ -6,11 +6,7 @@ Template Name: New startpage
 
 <?php get_header(); ?>
       
-<style>
-body{
-  padding-top: 60px;
-}
-</style>
+
       <div class='startpage'>
 
 

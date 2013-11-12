@@ -66,10 +66,10 @@
               foreach($items as $item){
                 ?>
                
-                  <li class="<?php echo $item->classes[0];?>  head">
-                    <a href="<?php echo $item->url;?>">
-                      <?php echo $item->title;?>
-                    </a>
+                  <li>
+                      <a href="<?php echo $item->url;?>">
+                        <span class="<?php echo $item->classes[0];?>  head"></span><?php echo $item->title;?>
+                      </a>
                   </li>
                
                 <?php
