@@ -86,7 +86,14 @@ h2 {
 .green_bg{
   background-color: #3da955;
 }
-
+.green_background_main{
+	background: #3da955;
+	opacity: 0.5;
+	position:absolute;
+	width:inherit;
+	height:inherit;
+	z-index:5;
+}
 .green{
 	color: #3da955;
 }
@@ -1861,7 +1868,7 @@ button:hover .twitter-icon{
 
 .content-header-text{
 	position: relative;
-	z-index: 5;
+	z-index: 6;
 	text-align: left;
 	color:#fff;
 	height:inherit;
@@ -2024,6 +2031,7 @@ button:hover .twitter-icon{
 .carousel-control.right {
 background-image: none;
 right: 20px;
+z-index: 6;
 }
 
 .carousel-control.left {

@@ -36,6 +36,7 @@ Template Name: New startpage
                   $textline = explode("\n", $slide['Slide text line 1']);
               ?>
                <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
+                 <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
                  </div>
                  <div class='content-header-text wrapper container'>
