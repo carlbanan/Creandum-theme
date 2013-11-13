@@ -88,7 +88,7 @@ h2 {
 }
 .green_background_main{
 	background: #3da955;
-	opacity: 0.5;
+	opacity: 0.8;
 	position:absolute;
 	width:inherit;
 	height:inherit;
@@ -261,7 +261,7 @@ h2 {
 	clear:both;
 }
 .padblock{
-	padding: 110px 0 110px 0;
+	padding: 40px 0 110px 0;
 }
 .page-wrapper{
 	margin-top:40px;
@@ -610,7 +610,52 @@ span.dash{
 
 /* STARTPAGE */
 .slideshow_container .slideshow_view .slideshow_slide.slideshow_slide_image .slideshow_description h2{
+}
 
+.ticker{
+overflow: hidden;
+height: 90px;
+vertical-align: baseline;
+}
+
+span.one{
+	background:green;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	float: center;
+	margin: 20px 10px;
+}
+
+span.two{
+	background:green;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	float: center;
+	margin: 20px 10px;
+}
+
+span.three{
+	background:green;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	float: center;
+	margin: 20px 10px;
+}
+
+.ticker h2 {
+margin-bottom: 0px;
+height: 90px;
+-webkit-transition: margin-top 0.5s ease-in-out;
+-moz-transition: margin-top 0.5s ease-in-out;
+-o-transition: margin-top 0.5s ease-in-out;
+transition: margin-top 0.5s ease-in-out;
+}
+
+span.one:hover span.small_invest_white{
+		color: green; 
 }
 
 

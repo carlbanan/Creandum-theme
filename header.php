@@ -35,6 +35,8 @@
 
     <!-- typeahead plugin - if top nav search bar enabled -->
     <?php require_once('library/typeahead.php'); ?>
+
+
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">  
 
   </head>

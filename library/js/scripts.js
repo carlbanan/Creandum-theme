@@ -273,9 +273,11 @@ jQuery(document).ready(function($) {
 		
 		// SET HEIGHT
 		windowHeight = windowHeight;
+		
 		if(windowHeight > 1000){
 			windowHeight = 1000;
 		}
+		
 		$(".content-header-wrap,.item").css("height",windowHeight);
 
 		// SET TEXT MARGIN

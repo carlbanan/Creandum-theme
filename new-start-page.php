@@ -63,14 +63,19 @@ Template Name: New startpage
           </div>
           <a class="right carousel-control" href="javascript:;" id='nextbig'><div class="righticon"></div></a>
       </div>
-      <div class="container goscroll"></div>
+      <!-- <div class="container goscroll"></div> -->
       <div class="start-content">
         <div class="container">
           <div class="row padblock">
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 center padblock">
-                  <h2>We are a leading venture capital firm, based in the Nordics.</h2>
+                  <div class="ticker">
+                  <h2 style='background:orange'>We are a leading venture capital firm, based in the Nordics.</h2>
+                  <h2 style='background:yellow'>We are a leading venture capital firm, based in the Nordics.</h2>
+                  <h2 style='background:blue'>We are a leading venture capital firm, based in the Nordics.</h2>
+                  </div>
+                  <div class="ticker_icons"><span class="one"></span><span class="two"></span><span class="three"></span></div>
                 </div>
                 <!--pay attention-->
               </div>
