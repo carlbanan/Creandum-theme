@@ -381,7 +381,7 @@ $('span.one').hover(function () {
 		
 		if(windowHeight > 800){
 			windowHeight = 800;
-			$(".content-header-text").addCladd("bigheight");
+			$(".content-header-text").addClass("bigheight");
 		}
 		
 		$(".content-header-wrap,.slider-bigimage .item").css("height",windowHeight);
