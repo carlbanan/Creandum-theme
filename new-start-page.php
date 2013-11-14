@@ -38,6 +38,7 @@ Template Name: New startpage
                   $textline = explode("\n", $slide['Slide text line 1']);
                   $textline2 = $slide['Slide text line 2'];
                   $textline3 = $slide['Slide text line 3'];
+
               ?>
                <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
                  <div class='green_background_main'></div>
@@ -55,8 +56,8 @@ Template Name: New startpage
                     <?php } ?>
                   </div>
                   <div>
-                    <?php if($textline2){ echo "<h4>".$textline2."<h4>"; }?>
-                    <?php if($textline3){ echo "<h4 class='nom'>".$textline3."</h4>"; }?>
+                    <?php if($textline2!=""){ echo "<h4>".$textline2."</h4>"; }?>
+                    <?php if($textline3!=""){ echo "<h4>".$textline3."</h4>"; }?>
                   </div>
                 </div>
               </div>
@@ -257,7 +258,7 @@ Template Name: New startpage
                         
                           <!-- BLOG POST -->
                             <h2 class="bold"><?php echo $n['title'];?></h2>
-                            <h3 class="green"><?php echo $n['author'];?> published <?php echo $n['date(format)'];?></h3>
+                            <h3 class="green"><?php echo date("M j, Y",strtotime($n['date']));?> <?php if($n['author']){ echo " by ".$n['author']; } ?></h3>
                         <? }else{ ?>
 
                           <!-- OTHERS -->

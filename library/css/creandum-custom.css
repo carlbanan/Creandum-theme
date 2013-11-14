@@ -2086,11 +2086,16 @@ button:hover .twitter-icon{
 	 margin-top: 300px;
 }
 .content-header-text div h4{
-	margin-top:200px;
+	margin-top:20px;
+	font-weight: 200;
+	font-size:15px;
+	max-width: 60%;
+	line-height: 1.6em;
 }
-.content-header-text div h4.nom{
-	margin-top:10px;
+.content-header-text div h4:first-child{
+	margin-top:180px;
 }
+
 .content-header-text.fixedheight div{
 	 position: fixed;
 	 display: table-cell;
