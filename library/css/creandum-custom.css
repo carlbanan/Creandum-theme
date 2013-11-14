@@ -97,7 +97,9 @@ h2 {
 .green{
 	color: #3da955;
 }
-
+.white{
+	color:#FFFFFF;
+}
 .lightgreen{
 	color: #ecf3ef;
 }
@@ -182,6 +184,7 @@ h2 {
 }
 
 
+
 /* MENU */
 .navbar{
 	min-height: 60px;
@@ -264,7 +267,12 @@ h2 {
 	padding: 40px 0 110px 0;
 }
 .page-wrapper{
-	margin-top:40px;
+		margin-top:40px;
+}
+.page-wrapper.contact{
+	margin:0;
+	position: relative;
+	z-index: 10;
 }
 /* DISPLAY CONTENT TEAM INVESTMENT */
 .big-image-container{
@@ -607,7 +615,98 @@ span.dash{
 	font-size: 12px;
 	color: #39423f;
 }
+/* CONTACT PAGE */
+.forms{
+	width:600px;
+	margin:30px auto;
+}
+.pitchform{
+	margin-top:30px;
+}
+.sendform{
+	width: 100px;
+	display: block;
+	margin:30px auto;
+	background:#3da955;
+	border-color:#3da955;
+}
+.sendform:hover,.sendform:focus{
+	background-color: #1f592c;
+	border-color:#1f592c;
+	color:#fff;
+}
+label{
+	border-bottom:1px solid #fff;
+	width: 100%;
+	margin:15px 0;
+}
+textarea,input{
+	width:100%;
+	padding:15px;
+	background-color: #fff;
+	border:0;
+	box-shadow:0 0 2px rgba(0,0,0,0.05);
+	border-radius:2px;
+	font-size:12px;
+	color:#111;
+	margin:8px 0;	
+}
+textarea{
+	height:70px;
+	padding-right:55px;
+}
+input{
+	width:100%;
+}
 
+textarea:focus,input:focus{
+   color: #3da955;
+}
+*::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+*:-moz-placeholder {
+    color: #ccc;
+}
+
+*:-ms-input-placeholder {
+    /* IE10+ */
+    color: #ccc;
+}
+.counter{
+	position: absolute;
+	margin:21px 0 0 -52px;
+	font-size:10px;
+	color:#111;
+}
+.counter.active{
+
+}
+.checkbox{
+	display: table;
+	float:left;
+	height: 30px;
+	font-size:10px;
+	padding-left:34px;
+	padding-right:16px;
+	padding-bottom:0;
+	margin-top:0px;
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-image: url("../../images/unchecked.png");
+}
+.checkbox + .checkbox{
+	margin-top:0;
+	margin-bottom:0;
+}
+.checkbox.active{
+	background-image: url("../../images/checked.png");
+}
+.checkbox span{
+	display: table-cell;
+	vertical-align: middle;
+}
 /* STARTPAGE */
 .slideshow_container .slideshow_view .slideshow_slide.slideshow_slide_image .slideshow_description h2{
 }
@@ -1924,7 +2023,17 @@ button:hover .twitter-icon{
 	 height:inherit;
 	 top:50%;
 	 bottom:50%;
-	 margin-top: -110px;
+	 margin-top: -90px;
+	 max-width:960px;
+
+}
+.content-header-text.fixedheight div{
+	 position: fixed;
+	 display: table-cell;
+	 height:inherit;
+	 top:auto;
+	 bottom:auto;
+	 margin-top: 110px;
 	 max-width:960px;
 
 }
@@ -1939,6 +2048,15 @@ button:hover .twitter-icon{
 
 	line-height: 1.6em;
 	font-size: 48px;
+}
+.content-header-text div.subtext{
+	margin-top:275px;
+	width: 50%;
+}
+.content-header-text div.subtext h3{
+	font-weight: 200;
+	font-size:15px;
+	line-height: 1.6em;
 }
 
 .strip{

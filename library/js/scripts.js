@@ -317,15 +317,61 @@ jQuery(document).ready(function($) {
 		var yp = $(window).scrollTop();
 		var gobig = $(".content-header").hasClass("bigimage"); 
 		if(gobig){
-
 			$('.bigimage').css('top',(0-(yp*.2))+'px');	
 			
 			if(yp >= 40){
 				$(".goscroll").fadeOut();	
 			}		
 		}
+	}
+	if($(".forms").length >= 1){
+		form_init();
+	}
+	function form_init(){
+
+		// TEXAREA COUNTER
+		$("textarea, input").on("focus",function(){
+			var counter;
+			inputid = $(this).attr("id");
+			pcounter = $(".counter[for='"+inputid+"']");
+			if(pcounter.length >= 1){
+				pcounter.addClass("active");
+				max = $(this).attr("maxlength");
+				$(this).on("keyup",function(){
+					var count = $(this).val().length;
+					pcounter.html(count+" / "+max);
+				});
+			}
+		});
+
+		// CHECKBOX VALUE
+		$(".checkbox").on("click",function(){
+			$(this).parent("div.checkform").children(".active").removeClass("active");
+			$(this).addClass("active");
+			var cval = $(this).attr("value");
+			$(this).parent("div.checkform").children("input").attr("value",cval);
+		});
+
+		// SEND FORM
+		$("#pitch").submit(function( event ) {
+			event.preventDefault();
+			$("#dialog").hide().removeClass("success").html("");
+			var data = $(this).serializeArray();
+			url = $(this).attr("url");
+			 $.post(url,data).done(function(d){
+			 	dd = JSON.parse(d);
+			 	if(dd.response == 1){
+			 		$("#dialog").fadeIn().addClass("success").html(dd.message);		 		
+			 	} 
+			 	else{
+			 		$("#dialog").fadeIn().html(dd.message);
+			 	}
+	 	
+
+			 },'json');
+		  	 
+		});
 
 	}
-
 }); /* end of as page load scripts */
 

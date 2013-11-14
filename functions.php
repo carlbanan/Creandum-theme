@@ -615,7 +615,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
       array('jquery'), 
-      '1.2' );
+      '1.3' );
   
     wp_register_script(  'modernizr', 
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 
