@@ -31,10 +31,9 @@
 		<!-- HIDDEN CONTENTN IS STORED HERE -->
 	</div>
 			
-	<div id="content" class="clearfix row" page="network">
-
-		<div class='lightgreen_bg'>		
-			<div class='container padblock'  id="main" >
+	<div class=' lightgreen_bg padblock'>
+		<div class="container">
+			<div id="content" page='network' class="clearfix clear">
 		
 				<?php
 					  query_posts( array( 'post_type' => 'network') );
