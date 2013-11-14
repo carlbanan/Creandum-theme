@@ -2063,6 +2063,7 @@ button:hover .twitter-icon{
 	color:#fff;
 	height:inherit;
 }
+
 .content-header-text div{
 	 position: fixed;
 	 display: table-cell;
@@ -2072,6 +2073,13 @@ button:hover .twitter-icon{
 	 margin-top: -90px;
 	 max-width:960px;
 
+}
+.content-header-text.bigheight div{
+	 display: table-cell;
+	 height:inherit;
+	 top:auto;
+	 bottom:auto;
+	 margin-top: 300px;
 }
 .content-header-text.fixedheight div{
 	 position: fixed;

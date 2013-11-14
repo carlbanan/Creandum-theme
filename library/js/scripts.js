@@ -381,10 +381,12 @@ $('span.one').hover(function () {
 		
 		if(windowHeight > 800){
 			windowHeight = 800;
+			$(".content-header-text").addCladd("bigheight");
 		}
 		
 		$(".content-header-wrap,.slider-bigimage .item").css("height",windowHeight);
 
+		/*
 		// SET TEXT MARGIN
 		theight = $(".content-header-text div").height();
 		theight = theight / 1.8;
@@ -393,6 +395,7 @@ $('span.one').hover(function () {
 		if(t == 1){
 			//$(".content-header-text div").css("margin-top",-theight);
 		}
+		*/
 	}
 
 

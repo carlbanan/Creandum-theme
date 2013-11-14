@@ -36,8 +36,8 @@ Template Name: New startpage
                     $active = " active";
                   }
                   $textline = explode("\n", $slide['Slide text line 1']);
-                  $textline2 = explode("\n", $slide['Slide text line 2']);
-                  $textline3 = explode("\n", $slide['Slide text line 3']);
+                  $textline2 = $slide['Slide text line 2'];
+                  $textline3 = $slide['Slide text line 3'];
               ?>
                <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
                  <div class='green_background_main'></div>
@@ -255,7 +255,7 @@ Template Name: New startpage
                         
                           <!-- BLOG POST -->
                             <h2 class="bold"><?php echo $n['title'];?></h2>
-                            <h3 class="green"><?php echo $n['author'];?></h3>
+                            <h3 class="green"><?php echo $n['author'];?> published <?php echo $n['date(format)'];?></h3>
                         <? }else{ ?>
 
                           <!-- OTHERS -->

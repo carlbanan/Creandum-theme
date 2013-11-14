@@ -71,11 +71,11 @@
                 $portrait = get_post_meta($postid,"custom_portrait_image",true);  
           ?>
             <p class="meta">
-
+                <?php if($auth_title){ ?>
                 <img src='<?php echo $portrait;?>'/>
                 <span>Written by</span>
                 <a href='<?php echo $auth_url;?>' class='metanfo green'><?php echo $auth_title;?></a>
-
+                <?php } ?>
                 <span>Published</span>
                 <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate  class='metanfo green'><?php the_date(); ?></time>
 
