@@ -55,6 +55,9 @@ $news = $n->give_newsfeed(10);
 
 									  <!-- OTHERS -->
 									 	<h2><?php echo $n['title'];?></h2>
+											<?php if($n['type'] == 'external'){ ?>
+												<h3 class="green"><?php echo date("M j, Y",strtotime($n['date']));?></h3>
+											<?php } ?>
 									<?php } ?>
 
 								</div> <!-- END ncard-content -->
