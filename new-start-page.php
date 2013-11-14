@@ -30,10 +30,14 @@ Template Name: New startpage
                 foreach ($slides as $slide) {
                   $c++;
                   $active = "";
+                  $textline2 = "";
+                  $textline3 = ""; 
                   if($c == 1){
                     $active = " active";
                   }
                   $textline = explode("\n", $slide['Slide text line 1']);
+                  $textline2 = explode("\n", $slide['Slide text line 2']);
+                  $textline3 = explode("\n", $slide['Slide text line 3']);
               ?>
                <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
                  <div class='green_background_main'></div>
@@ -50,6 +54,8 @@ Template Name: New startpage
                     <h1 class="strip"><?php echo $txt;?></h1><br>
                     <?php } ?>
                   </div>
+                    <?php if($textline2){ echo "<h3>".$textline2."</h3>"; }?>
+                    <?php if($textline3){ echo "<h3>".$textline3."</h3>"; }?>
                 </div>
               </div>
               <?php if(!$active){ ?>
@@ -102,7 +108,7 @@ Template Name: New startpage
         <?php
         /* POSTS */
         $args = array(
-          'posts_per_page'   => 9,
+          'posts_per_page'   => 8,
           'offset'           => 0,
           'orderby'          => 'post_date',
           'order'            => 'DESC',
@@ -131,7 +137,7 @@ Template Name: New startpage
                         <a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" class='async' rel="bookmark" title="<?php the_title_attribute(); ?>">   
                             <div class="portrait_list">
                               <div class='over'>
-                                <button type="button" class="btn btn-default btn-white">Learn more</button>
+                                <button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
                               </div>
                               <img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
                             </div>

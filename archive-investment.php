@@ -70,7 +70,7 @@
 								?>
 								<div class="portrait_list">
 									<div class='over'>
-										<button type="button" class="btn btn-default btn-white">Learn more</button>
+										<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
 									</div>
 									<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
 
