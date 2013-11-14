@@ -64,25 +64,40 @@ Template Name: New startpage
           <a class="right carousel-control" href="javascript:;" id='nextbig'><div class="righticon"></div></a>
       </div>
       <!-- <div class="container goscroll"></div> -->
-      <div class="start-content">
+       <div class="start-content">
         <div class="container">
-          <div class="row padblock">
+          <div class="row padblock_one">
             <div class="col-lg-12">
               <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 center padblock">
-                  <div class="ticker">
-                  <h2 style='background:orange'>We are a leading venture capital firm, based in the Nordics.</h2>
-                  <h2 style='background:yellow'>We are a leading venture capital firm, based in the Nordics.</h2>
-                  <h2 style='background:blue'>We are a leading venture capital firm, based in the Nordics.</h2>
+                <div class="col-sm-12 col-md-12 col-lg-12 center">
+                   <div class="ticker">
+                      <h2 class='tick'>We are an independent and partner owned venture capital firm.</h2>
+                      <h2>Our job is to help great entrepreneurs building great companies.</h2>
+                      <h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2>
+                      <h2>Due to our experience we are offering services beyond expected.</h2>
                   </div>
-                  <div class="ticker_icons"><span class="one"></span><span class="two"></span><span class="three"></span></div>
+                  <div class="ticker_icons">
+                    <ul>
+                      <li class="one">
+                      <span class="sprite-small_about_green icon"></span>
+                        <span class="text">We do</span>
+                      </li>
+                      <li class="two">
+                        <span class="sprite-small_invest_green icon"></span>
+                        <span class="text">Focus</span>
+                      </li>
+                      <li class="three">
+                        <span class="sprite-small_network_green icon"></span>
+                        <span class="text">Service</span>
+                      </li>
+                    </ul>
+                  </div>  
                 </div>
                 <!--pay attention-->
               </div>
             </div>
           </div>
         </div>
-
 
         <?php
         /* POSTS */

@@ -75,8 +75,7 @@
 									<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
 
 								</div>
-								<ul>
-								</ul>
+								
 
 		
 						</a>
