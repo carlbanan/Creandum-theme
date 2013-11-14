@@ -359,13 +359,14 @@ $('span.one').hover(function () {
     function(){    
         $('.tick').removeClass('ticker_margin_three');     
     });
-
+/*
     console.log('fdsf')
 	var hello = setInterval(function() {
 		console.log('hello world')
 	}, 5000) 
 
 	hello();
+	*/
 
 
 
@@ -388,7 +389,7 @@ $('span.one').hover(function () {
 			windowHeight = 800;
 		}
 		
-		$(".content-header-wrap,.item").css("height",windowHeight);
+		$(".content-header-wrap,.slider-bigimage .item").css("height",windowHeight);
 
 		// SET TEXT MARGIN
 		theight = $(".content-header-text div").height();
