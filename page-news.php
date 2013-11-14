@@ -27,23 +27,11 @@ $news = $n->give_newsfeed(10);
 <div class='newspage'>
 	<div class="lightgreen_bg">
 		<div class="container newsdeck">
-
-		      <div class="newsicon"></div>
-		      <h2>Read the latest from Creandum Team and our great network.</h2>
 			<div class='filter-menu'>
-				View news by:  
-				<span class='filter active' id=''>
-					All
-				</span>
-				<span class='filter' id='blog'>
-					Our blog
-				</span>
-				<span class='filter' id='twitter'>
-					Twitter
-				</span>
-				<span class='filter' id='external'>
-					News
-				</span>
+				<span class='filter active' id=''>All</span>
+				<span class='filter' id='blog'>Our blog</span>
+				<span class='filter' id='twitter'>Twitter</span>
+				<span class='filter' id='external'>News</span>
 			</div>
 		       <div class="feed">  
 

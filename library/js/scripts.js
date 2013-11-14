@@ -221,25 +221,25 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	/*
+	
 	var cbpAnimatedHeader = (function() {
 	 
 	    var docElem = document.documentElement,
 	        didScroll = false,
-	        changeHeaderOn = 400;
+	        changeHeaderOn = 3;
 	 	var header = $(".cbp-af-header");
 
 	    function init() {
 	        window.addEventListener( 'scroll', function( event ) {
 	            if( !didScroll ) {
 	                didScroll = true;
-	                setTimeout( scrollPage, 400 );
+	                setTimeout( scrollPage, 3 );
 	            }
 	        }, false );
 	    }
 	 
 	    function scrollPage() {
-	        var sy = scrollY(400);
+	        var sy = scrollY(3);
 	        if ( sy >= changeHeaderOn ) {
 	            if(!header.hasClass("cbp-af-header-shrink")){
 	            	header.addClass("cbp-af-header-shrink");
@@ -259,8 +259,9 @@ jQuery(document).ready(function($) {
 	 
 	})();
 
-	*/
+	
 
+/*
 	$(window).scroll(function() {    
    		var scroll = $(window).scrollTop();
 
@@ -284,8 +285,7 @@ jQuery(document).ready(function($) {
 	        $(".cbp-af-header").removeClass("topanimations");
 	    }
 	});
-
-
+*/
 
 /*
 
