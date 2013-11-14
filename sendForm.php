@@ -97,7 +97,7 @@ $from_name 	= "Creandum pitch";
 	
 	$address = $to_email;
 	$mail->AddAddress($address, $address);
-	$mail->AddBCC($bccer);
+	$mail->AddBCC($bcc_email);
 	
 	//$mail->AddAttachment("images/phpmailer.gif");      // attachment
 	//$mail->AddAttachment("images/phpmailer_mini.gif"); // attachment
