@@ -339,7 +339,8 @@ $('span.one').hover(function () {
 */
 
 
-    $('.one').hover(function(){     
+    $('.one').hover(function(){
+    	console.log('sdf')
         $('.tick').addClass('ticker_margin_one');    
     },     
     function(){    
@@ -359,14 +360,7 @@ $('span.one').hover(function () {
     function(){    
         $('.tick').removeClass('ticker_margin_three');     
     });
-/*
-    console.log('fdsf')
-	var hello = setInterval(function() {
-		console.log('hello world')
-	}, 5000) 
 
-	hello();
-	*/
 
 
 
