@@ -54,8 +54,8 @@ Template Name: New startpage
                     <h1 class="strip"><?php echo $txt;?></h1><br>
                     <?php } ?>
                   </div>
-                    <?php if($textline2){ echo "<h3>".$textline2."</h3>"; }?>
-                    <?php if($textline3){ echo "<h3>".$textline3."</h3>"; }?>
+                    <?php if($textline2){ echo "<span>".$textline2."<span>"; }?>
+                    <?php if($textline3){ echo "<span>".$textline3."</span>"; }?>
                 </div>
               </div>
               <?php if(!$active){ ?>
