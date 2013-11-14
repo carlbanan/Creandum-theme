@@ -441,6 +441,7 @@ line-height: 1.8em;
 .sideblock div.fill{
 	 background-color:#edf3ef;
 }
+
 .sideicon{
 	 padding:10px;
 	float:left;
@@ -464,8 +465,13 @@ line-height: 1.8em;
 
 
 
-
 /* NEWS */
+.sideblock.news div.fill{
+	 background-color:#FFF;
+}
+.sideblock.news{
+	margin:	6px 0px 10px 6px;
+}
 .newsicon{
 	width:57px;
 	position: relative;
@@ -506,7 +512,7 @@ line-height: 1.8em;
 	max-height: 75px;
 	text-overflow:hidden;
 	overflow:hidden;
-	max-width: 70%;
+	max-width: 62%;
 }
 .ncard-content h2{
 	text-align: left;
@@ -2074,6 +2080,7 @@ button:hover .twitter-icon{
 .content-header.bigimage{
 	background-size:cover;
 	background-repeat: no-repeat;
+	background-position: center center;
 	width:100%;
 	height:inherit;
 	position: fixed;  

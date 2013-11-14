@@ -890,8 +890,8 @@ $prefix = 'custom_';
 global $investment_custom_meta_fields;
 $investment_custom_meta_fields = array(  
     array(  
-        'label'=> 'Twitter URL',  
-        'desc'  => 'https://twitter.com/creandum',  
+        'label'=> 'Twitter username',  
+        'desc'  => 'creandum',  
         'id'    => $prefix.'twitter',  
         'type'  => 'text'  
     ),

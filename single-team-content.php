@@ -103,7 +103,7 @@
                 wp_reset_postdata();
                 endif;    
             ?>
-            <!-- GET TWEET -->
+
             <!-- GET TWEET -->
             <?php
             if($twitter_src){ 
@@ -119,7 +119,7 @@
 
                     foreach($Twitter->tweet as $twt){
                        $tweet = $twt->text;
-                       $tweet_user_url = "https://www.twitter.com".$twt->user->{"screen_name"};
+                       $tweet_user_url = "https://www.twitter.com/".$twt->user->{"screen_name"};
                        $tweet_user = $twt->user->{"screen_name"};
                        $tweet_url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
                        $tweet_date = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));
