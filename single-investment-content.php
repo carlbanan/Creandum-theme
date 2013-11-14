@@ -99,16 +99,21 @@
             if($twitter_src){ 
 
                  include('library/Twitter.php');
-                 $twitterUsername = "creandum";
-                 $twitterCacheFile = "../.cacheFile";
-                 $Twitter = new Twitter($twitterUsername,$twitterCacheFile);
+                 $twitterUsername = $twitter_src;
+                 $twitterCacheFile  = "cache/twitter_invest_".$twitter_src.".cacheFile";
+                 $twitterCount = 1;
+
+                 $Twitter = new Twitter($twitterUsername,$twitterCacheFile,$twitterCount);
+
                  if($Twitter->tweet != false) {
 
-                     $tweet = $Twitter->tweet->text;
-                     $tweet_user_url = "https://www.twitter.com".$Twitter->tweet->user->{"screen_name"};
-                     $tweet_user = $Twitter->tweet->user->{"screen_name"};
-                     $tweet_url = "https://www.twitter.com/".$Twitter->tweet->user->{"screen_name"}."/status/".$Twitter->tweet->{"id_str"};
-                     $tweet_date = date('F j, Y \a\t g:i a',strtotime($Twitter->tweet->{"created_at"}));
+                    foreach($Twitter->tweet as $twt){
+                       $tweet = $twt->text;
+                       $tweet_user_url = "https://www.twitter.com".$twt->user->{"screen_name"};
+                       $tweet_user = $twt->user->{"screen_name"};
+                       $tweet_url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
+                       $tweet_date = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));
+                    }
                 }
              }
              ?>

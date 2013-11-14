@@ -76,7 +76,7 @@
         if($ptype == '' || $ptype == 'twitter' ){
           include('Twitter.php');
           
-          $twitterCount      = 1; 
+          $twitterCount      = $ant; 
           $twitterUsername   = "creandum";
           $twitterCacheFile  = "cache/twettir.cacheFile";
 
