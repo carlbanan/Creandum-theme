@@ -11,16 +11,17 @@
 		}
 		else{
 	?>
-		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
+	
+	<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 	<div class"top-post">
-			<div class="page-content intro">	
-					<p class="large_invest_white"></p>
-					<section class="post_content center clearfix" itemprop="articleBody">
-					<h2>
-					 We invest in fast growing companies in early and later stages.
-					</h2>
-					</section>
-			</div>
+		<div class="page-content intro">	
+				<p class="large_invest_white"></p>
+				<section class="post_content center clearfix" itemprop="articleBody">
+				<h2>
+				 We invest in fast growing companies in early and later stages.
+				</h2>
+				</section>
+		</div>
 		<div class="big-image-container"></div>
 		<div class="green_background"></div>
 	</div>	

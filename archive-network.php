@@ -22,7 +22,7 @@
 					</h2>
 					</section>
 			</div>
-		<div class="big-image-container" style="background:#ccc;"></div>
+		<div class="big-image-container"></div>
 		<div class="green_background"></div>
 	<?php } ?>
 	</div>

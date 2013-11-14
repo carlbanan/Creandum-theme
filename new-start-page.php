@@ -54,8 +54,10 @@ Template Name: New startpage
                     <h1 class="strip"><?php echo $txt;?></h1><br>
                     <?php } ?>
                   </div>
-                    <?php if($textline2){ echo "<span>".$textline2."<span>"; }?>
-                    <?php if($textline3){ echo "<span>".$textline3."</span>"; }?>
+                  <div>
+                    <?php if($textline2){ echo "<h4>".$textline2."<h4>"; }?>
+                    <?php if($textline3){ echo "<h4 class='nom'>".$textline3."</h4>"; }?>
+                  </div>
                 </div>
               </div>
               <?php if(!$active){ ?>
@@ -67,7 +69,7 @@ Template Name: New startpage
             }
           ?>
           </div>
-          <a class="right carousel-control" href="javascript:;" id='nextbig'><div class="righticon"></div></a>
+
       </div>
       <!-- <div class="container goscroll"></div> -->
        <div class="start-content">

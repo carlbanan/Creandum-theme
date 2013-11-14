@@ -11,25 +11,18 @@
 			else{
 				?>
 		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
-		<div class="big-image-container">
-
-		</div>
-		<div class="container padblock page-content">	
-            <header>
-              
-              <div class="page-header">
-              	<h1 class="single-title center" itemprop="headline">Team</h1>
-              </div>
-                   
-            </header> <!-- end article header -->
-          
-            <section class="post_content center clearfix" itemprop="articleBody">
-            <p>
-           	The people behind creandum and our investments.
-            </p>
-			</section>
-
-		</div>
+		<div class"top-post">
+			<div class="page-content intro">	
+					<p class="large_invest_white"></p>
+					<section class="post_content center clearfix" itemprop="articleBody">
+					<h2>
+					 Our team members.
+					</h2>
+					</section>
+			</div>
+			<div class="big-image-container"></div>
+			<div class="green_background"></div>
+	</div>	
 	<?php } ?>
 
 	</div>

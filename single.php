@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-      
+      <div class="small-header"></div>
       <div id="content" class="clearfix row">
       
         <div class="container padblock page-content">

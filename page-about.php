@@ -6,19 +6,9 @@
 
 
 <!-- Big picture -->
-<div class='content-header-wrap padblock'>
-	<div class='content-header bigimage' style='background-image:url(<?php echo get_template_directory_uri(); ?>/img/bigimage/About_image.png);'>
-	</div>
-	<div class='content-header-text container'>
-		<div>
-			<h1> - Building a great company is not an easy task.</h1>
-			<h2>We know this because  we have done it ourselves as entrepreneurs, managers and investors. </h2>
-		</div>
-	</div>
-</div>
+<div class="small-header"></div>
 
-
-<div class='page-wrapper about'>
+<div class='about'>
 
 	
 

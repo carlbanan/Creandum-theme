@@ -10,11 +10,21 @@ $n = new newsfeed();
 $news = $n->give_newsfeed(10);
 ?>
 
-<div class='page-wrapper newspage'>
-    <div class="big-image-container">
-   		<h1><span>Newsdeck</span></h1>
-    </div>
 
+<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
+<div class"top-post">
+	<div class="page-content intro">	
+			<p class="large_invest_white"></p>
+			<section class="post_content center clearfix" itemprop="articleBody">
+			<h2>
+				News from our network.
+			</h2>
+			</section>
+	</div>
+	<div class="big-image-container"></div>
+	<div class="green_background"></div>
+</div>	
+<div class='newspage'>
 	<div class="lightgreen_bg">
 		<div class="container newsdeck">
 

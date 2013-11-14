@@ -262,28 +262,28 @@ jQuery(document).ready(function($) {
 	*/
 
 	$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
+   		var scroll = $(window).scrollTop();
 
-    if (scroll >= 100) {
-        $(".cbp-af-header").addClass("topanimation");
-    } else {
-        $(".cbp-af-header").removeClass("topanimation");
-    }
+	    if (scroll >= 100) {
+	        $(".cbp-af-header").addClass("topanimation");
+	    } else {
+	        $(".cbp-af-header").removeClass("topanimation");
+	    }
 
 
-    if (scroll >= 100) {
-        $(".cbp-af-header").addClass("cbp-af-header-shrink");
-    } else {
-        $(".cbp-af-header").removeClass("cbp-af-header-shrink");
-    }
-  
+	    if (scroll >= 100) {
+	        $(".cbp-af-header").addClass("cbp-af-header-shrink");
+	    } else {
+	        $(".cbp-af-header").removeClass("cbp-af-header-shrink");
+	    }
+	  
 
-    if (scroll >= 400) {
-        $(".cbp-af-header").addClass("topanimations");
-    } else {
-        $(".cbp-af-header").removeClass("topanimations");
-    }
-});
+	    if (scroll >= 400) {
+	        $(".cbp-af-header").addClass("topanimations");
+	    } else {
+	        $(".cbp-af-header").removeClass("topanimations");
+	    }
+	});
 
 
 
@@ -381,6 +381,7 @@ $('span.one').hover(function () {
 		
 		if(windowHeight > 800){
 			windowHeight = 800;
+			$(".content-header-text").addClass("bigheight");
 			$(".content-header-text").addClass("bigheight");
 		}
 		
