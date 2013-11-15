@@ -123,8 +123,30 @@ h3 {
 	color:#39423f;
 
 }
-
-
+.loader{
+	position: fixed;
+	top:50%;
+	bottom:50%;
+	left:50%;
+	right:50%;
+	width:300px;
+	padding:150px 0;
+	border-radius: 300px;
+	margin:-100px 0 0 -100px;
+	background-color:rgba(0,0,0,0.5);
+	text-align: center;
+	font-size:22px;
+	font-weight: 600;
+	color:#fff;
+	display: none;
+}
+.loader.show{
+	display: block;
+	 -webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease; 
+	transition-delay: 0.2s;
+	-webkit-transition-delay: 0.2s; 
+}
 .bold{
 	font-weight: 600;
 }
@@ -241,6 +263,8 @@ h3 {
 	 color:#fff;
 	box-shadow: none;
 }
+
+
 
 
 
@@ -446,6 +470,7 @@ line-height: 1.8em;
 .sideblock div.fill{
 	 background-color:#edf3ef;
 }
+
 .sideicon{
 	 padding:10px;
 	float:left;
@@ -469,8 +494,13 @@ line-height: 1.8em;
 
 
 
-
 /* NEWS */
+.sideblock.news div.fill{
+	 background-color:#FFF;
+}
+.sideblock.news{
+	margin:	6px 0px 10px 6px;
+}
 .newsicon{
 	width:57px;
 	position: relative;
@@ -511,7 +541,7 @@ line-height: 1.8em;
 	max-height: 75px;
 	text-overflow:hidden;
 	overflow:hidden;
-	max-width: 70%;
+	max-width: 62%;
 }
 .ncard-content h2{
 	text-align: left;
@@ -1351,7 +1381,14 @@ button:hover .twitter-icon{
 	cursor: pointer;
 	color:#3da955;
 }
-
+.btn2.btn-white-bg{
+	background-color: #fff;
+	color:#3da955;
+	border:0;
+}
+.btn-white-bg .btntext{
+	border-color:#edf3ef;
+}
 
 .info{
 	margin-top: 130px;

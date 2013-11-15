@@ -40,7 +40,7 @@ Template Name: New startpage
                   $textline3 = $slide['Slide text line 3'];
 
               ?>
-               <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>'>
+               <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>' bigid='<?php echo $c;?>'>
                  <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
                  </div>
@@ -61,9 +61,9 @@ Template Name: New startpage
                   </div>
                 </div>
               </div>
-              <?php if(!$active){ ?>
-              <img src="<?php echo $slide['src'];?>" class="preload"/>
-              <?php  
+              <?php 
+                  if(!$active){ 
+                     $pr .= "<img src='".$slide['src']."' class='preload'/>"; 
                   } 
                 }
               }
@@ -72,6 +72,7 @@ Template Name: New startpage
           </div>
 
       </div>
+      <?php echo $pr; ?>
       <!-- <div class="container goscroll"></div> -->
        <div class="start-content">
         <div class="container">

@@ -74,7 +74,7 @@
          // TWITTER
 
         if($ptype == '' || $ptype == 'twitter' ){
-          include('Twitter.php');
+          require_once('Twitter.php');
           
           $twitterCount      = $ant; 
           $twitterUsername   = "creandum";
@@ -92,7 +92,7 @@
                  $title = $twt->text;
                  $url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
                  $date = date('Y-m-d H:i:s',strtotime($twt->{"created_at"}));
-                 $tweet_user_url = "https://www.twitter.com".$twt->user->{"screen_name"};
+                 $tweet_user_url = "https://www.twitter.com/".$twt->user->{"screen_name"};
                  $authour = $twt->user->{"screen_name"};    
 
                  $t_item = array(
@@ -156,6 +156,44 @@
           return $nfeed;
 
 
+      }
+      function give_tweets($ant){
+
+            $ret = array();
+
+            query_posts( array( 'post_type' => 'investment', 'posts_per_page' => 10) );
+            if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+              $postid = get_the_ID();
+              $twitter_src = "";
+              $twitter_src = get_post_meta($postid,"custom_twitter",true);
+              $t = 0;
+              if($twitter_src && $t <= 4){ 
+                   $t++;
+                   require_once('Twitter.php');
+                   $twitterUsername = $twitter_src;
+                   $twitterCacheFile  = "cache/twitter_invest_".$twitter_src.".cacheFile";
+                   $twitterCount = 1;
+
+                   $Twitter = new Twitter($twitterUsername,$twitterCacheFile,$twitterCount);
+
+                   if($Twitter->tweet != false) {
+
+                      foreach($Twitter->tweet as $twt){
+                         $d['tweet'] = $twt->text;
+                         $d['tweet_user_url'] = "https://www.twitter.com/".$twt->user->{"screen_name"};
+                         $d['tweet_user'] = $twt->user->{"screen_name"};
+                         $d['tweet_url'] = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
+                         $d['tweet_date'] = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));
+                        
+                         array_push($ret,$d);
+                      }
+
+                  }
+              }
+            endwhile;  
+            endif;
+            return $ret;
       }
 
       function get_xml($url, $max_age){

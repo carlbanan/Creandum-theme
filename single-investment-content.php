@@ -7,12 +7,13 @@
 
         <!-- SINGLE TEAM CONTENT  -->
       <div  id="post_<?php the_ID();?>">
-        <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>">
-        
-        </div>  <!-- end big-image --> 
+      <?php if( $bigimg  != ''){ ?>
+        <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div>  <!-- end big-image --> 
         <div class="green_background"></div>
-        
-          <div class="container padblock page-content">
+      <?php }else{ ?>
+      <div class="small-header"></div>
+      <?php } ?>  
+        <div class="container padblock page-content">
             <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 
               
@@ -109,7 +110,7 @@
 
                     foreach($Twitter->tweet as $twt){
                        $tweet = $twt->text;
-                       $tweet_user_url = "https://www.twitter.com".$twt->user->{"screen_name"};
+                       $tweet_user_url = "https://www.twitter.com/".$twt->user->{"screen_name"};
                        $tweet_user = $twt->user->{"screen_name"};
                        $tweet_url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
                        $tweet_date = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));

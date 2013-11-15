@@ -1,12 +1,17 @@
 
 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post();
+
+      $img = get_post_meta(get_the_ID(),"custom_bigprofile_image",true);
+      ?>
 
         <!-- SINGLE TEAM CONTENT  -->
       <div  id="post_<?php the_ID();?>">
-        <div class="big-image-container" bigimage="<?php echo get_post_meta($postid,"custom_bigprofile_image",true);?>">
-
-        </div>
+      <?php if($img != ''){ ?>
+       <div class="big-image-container" style="<?php if($img){ echo "background-image:url('".$img."');"; } ?>"></div>  <!-- end big-image --> 
+      <?php }else{ ?>
+        <div class="small-header"></div>
+      <?php } ?>
         <div class="container padblock page-content">
           <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 
@@ -103,7 +108,7 @@
                 wp_reset_postdata();
                 endif;    
             ?>
-            <!-- GET TWEET -->
+
             <!-- GET TWEET -->
             <?php
             if($twitter_src){ 
@@ -119,7 +124,7 @@
 
                     foreach($Twitter->tweet as $twt){
                        $tweet = $twt->text;
-                       $tweet_user_url = "https://www.twitter.com".$twt->user->{"screen_name"};
+                       $tweet_user_url = "https://www.twitter.com/".$twt->user->{"screen_name"};
                        $tweet_user = $twt->user->{"screen_name"};
                        $tweet_url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
                        $tweet_date = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));

@@ -126,6 +126,10 @@ jQuery(document).ready(function($) {
 				$.get(urlBase, reqData, function(d) {
 					$("#async_content").html(d);
 					image_update();
+					$(".loader").removeClass("show");
+					$('html, body').animate({
+				         scrollTop: 0
+					 },250);
 				});	
 
 						
@@ -142,6 +146,10 @@ jQuery(document).ready(function($) {
 			        $('#async_content').html("");
 			        $(selector).appendTo('#async_content');
 			        image_update();
+			        $(".loader").removeClass("show");
+					$('html, body').animate({
+				         scrollTop: 0
+					 },0);
 
 			    }
 			    else { 
@@ -151,7 +159,7 @@ jQuery(document).ready(function($) {
 			        loadAjaxContent('#async_content', State.url);
 
 			    }
-			
+
 				// GO TOPSIDE
 				 /*
 
@@ -165,6 +173,9 @@ jQuery(document).ready(function($) {
 		 	 	$("a.async").unbind("click");
 				$("a.async").click(function(e){
 					e.preventDefault();
+
+					// SHOW LOADER
+					$(".loader").addClass("show");
 					$(".async.active").removeClass("active")
 					$(this).addClass("active");
 
@@ -173,12 +184,6 @@ jQuery(document).ready(function($) {
 
 					var title = $(this).text();
 					History.pushState({urlPath: urlPath, select : select}, title, urlPath);
-
-					hig = $("#async_content .page-content").offset();
-					console.log(hig.top);
-					 $('html, body').delay(100).animate({
-				         scrollTop: hig.top - 50
-					 }, 250);
 
 
 					return false; // prevents default click action of <a ...>
@@ -417,16 +422,17 @@ $('span.one').hover(function () {
 		
 		$(".content-header-wrap,.slider-bigimage .item").css("height",windowHeight);
 
-		/*
-		// SET TEXT MARGIN
-		theight = $(".content-header-text div").height();
-		theight = theight / 1.8;
-
-		// SET MARGIN TOP CONTENT
-		if(t == 1){
-			//$(".content-header-text div").css("margin-top",-theight);
-		}
-		*/
+		// CHANGE IMG
+		$('#slider-bigimage').each(function(){
+		    (function(obj){
+		        setInterval(function(){
+		            var $cur = obj.find('.active').removeClass('active');
+		            var $next = $cur.next().length?$cur.next():obj.children().eq(0);
+		            $next.addClass('active');
+		        },4500);
+		    })($(this));
+		        
+		});
 	}
 
 
@@ -442,7 +448,7 @@ $('span.one').hover(function () {
 			next.addClass("active");
 
 			act.removeClass("active");
-			console.log(act.attr("id"));
+			
 		});
 	}	
 	if($("#slider-bigimage").length >= 1){

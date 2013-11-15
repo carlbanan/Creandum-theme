@@ -19,7 +19,7 @@
             $this->tweet = $tweet;
          }else{
             $data = json_decode($data);
-            if($data->{"last_update"}+1 < time()) {
+            if($data->{"last_update"}+3600 < time()) {
 
                $tweet = $this->fetchNewTweet($username);
 
