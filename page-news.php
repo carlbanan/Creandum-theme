@@ -25,7 +25,7 @@ $tweets = $n->give_tweets(3);
 	<div class="big-image-container"></div>
 	<div class="green_background"></div>
 </div>	
-<div class='newspage'>
+<div class='newspage infront'>
 	<div class="lightgreen_bg">
 		<div class='filter-menu'>
 					<span class='filter active' id=''>All</span>

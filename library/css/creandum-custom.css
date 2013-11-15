@@ -2141,6 +2141,7 @@ button:hover .twitter-icon{
 	width:50%;
 	 -webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease; 
+	z-index: 11;
 }
 
 .content-header-wrap{
