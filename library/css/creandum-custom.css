@@ -359,16 +359,23 @@ h3 {
 	z-index: 10;
 }
 /* DISPLAY CONTENT TEAM INVESTMENT */
+.big-image-stat{
+	max-height: 450px;
+	width: 100%;
+	overflow:hidden;
+}
+.big-image-stat img{
+	width: 100%;
+}
 .big-image-container{
-	background-position: top center;
+	background-position: center center;
 	background-color: #f1f1f1;
 	background-image: url("../../images/creandum-big-backup.jpg");
 	background-attachment: fixed;
 	background-repeat:no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	display: table;
 	width: 100%;
-	min-height: 480px;
 	-webkit-transition: all 0.15s ease;
 	-moz-transition: all  0.15s ease;
 	-o-transition:  all 0.15s ease; 
@@ -380,7 +387,6 @@ h3 {
 .green_background{
 	background: #3da955;
 	width: 100%;
-	height: 480px;
 	position: absolute;
 	top: 0;
 	opacity: 0.70;
@@ -388,14 +394,17 @@ h3 {
 }
 
 .intro{
-		height: 450px;
 		padding-top: 40px;
 		position: absolute;
 		z-index: 9999;
 		width: 100%;
 		color: white;
 }
-
+.intro,.big-image-container,.green_background{
+	height:450px;
+	 -webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease; 
+}
 .middle{
 		top: 50%;
 }
@@ -408,15 +417,6 @@ p.large_invest_white{
 }
 
 
-/* Tog bort pga inte skriva över Investments h1
-.big-image-container h1{
-		vertical-align: middle;
-		text-align: center;
-		display: table-cell;
-		color:#fff;
-		font-size:50px;
-}
-*/
 
 .page-header{
 	border:0;
@@ -1133,22 +1133,6 @@ line-height: 1.8em;
 }
 
 
-@media (max-width: 767px) {
-	.ncard .icon{
-		width:50px;
-		height:50px;
-		background-size:50px auto;
-		background-position: center center;
-		border-width: 0;
-		margin-top:25px;
-	}
-	.ncard .ncard-content{
-		max-width: 80%;
-	}
-	.feedright,.ncard .blogicon{
-		display: none;
-	}
-}
 
 
 /* MENU */
@@ -1365,49 +1349,7 @@ line-height: 1.8em;
  	height: 105px;
  	background-color: #3da955;
  }
-/* Example Media Queries */
-@media screen and (max-width: 55em) {
-		 
-		.cbp-af-header .cbp-af-inner {
-				width: 100%;
-		}
- 
-		.cbp-af-header h1,
-		.cbp-af-header nav {
-				display: block;
-				margin: 0 auto;
-				text-align: center;
-				float: none;
-		}
- 
-		.cbp-af-header h1,
-		.cbp-af-header nav a {
-				line-height: 115px;
-		}
- 
-		.cbp-af-header nav a {
-				margin: 0 10px;
-		}
- 
-		.cbp-af-header.cbp-af-header-shrink h1,
-		.cbp-af-header.cbp-af-header-shrink nav a {
-				line-height: 36px;
-		}
- 
-		.cbp-af-header.cbp-af-header-shrink h1 {
-				font-size: 2em;
-		}
- 
-		.cbp-af-header.cbp-af-header-shrink nav a {
-				font-size: 1em;
-		}
 
-		.cbp-af-header.cbp-af-header-shrink nav ul li {
-				display: none;
-		}
-
- 
-}
 
 
 /* FOOTER */
@@ -2289,12 +2231,16 @@ button:hover .twitter-icon{
 	color: white;
 	font-family: 'gothambold',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 38px;
-	text-align: center
+	text-align: center;
 	position: fixed;
-	-webkit-margin-before: 4.9em;
-	-webkit-margin-after: 0em;
-	-webkit-margin-start: 8em;
-	-webkit-margin-end: 8em;
+	left:50%;
+	right:50%;
+	margin-left:-25%;
+	margin-top:150px;
+	width:50%;
+	 -webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease; 
+	z-index: 11;
 }
 
 .content-header-wrap{
@@ -2593,23 +2539,86 @@ background-image: none;
 .righticon:hover{
 	background-image: url("../../images/icons/right_green.png");
 }
+/* SCREENS LESS THAN 767px */
+@media (max-width: 767px) {
+	.ncard .icon{
+		width:50px;
+		height:50px;
+		background-size:50px auto;
+		background-position: center center;
+		border-width: 0;
+		margin-top:25px;
+	}
+	.ncard .ncard-content{
+		max-width: 80%;
+	}
+	.feedright,.ncard .blogicon{
+		display: none;
+	}
+	.intro,.big-image-container,.green_background{
+		height:250px;
+	}	
+	.post_content h2{
+		margin-top:80px;
+		width:80%;
+		margin-left:-40%;
+		font-size:32px;
+	}
+}
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+		 
+		.cbp-af-header .cbp-af-inner {
+				width: 100%;
+		}
+ 
+		.cbp-af-header h1,
+		.cbp-af-header nav {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				float: none;
+		}
+ 
+		.cbp-af-header h1,
+		.cbp-af-header nav a {
+				line-height: 115px;
+		}
+ 
+		.cbp-af-header nav a {
+				margin: 0 10px;
+		}
+ 
+		.cbp-af-header.cbp-af-header-shrink h1,
+		.cbp-af-header.cbp-af-header-shrink nav a {
+				line-height: 36px;
+		}
+ 
+		.cbp-af-header.cbp-af-header-shrink h1 {
+				font-size: 2em;
+		}
+ 
+		.cbp-af-header.cbp-af-header-shrink nav a {
+				font-size: 1em;
+		}
 
+		.cbp-af-header.cbp-af-header-shrink nav ul li {
+				display: none;
+		}
+
+ 
+}	
 /* SCREENS LESS THAN 480px */
 @media only screen and (max-width : 484px) {
 	.investments, .team{
-	background: url(/creandum/wp-content/themes/Creandum-theme/images/spritesx2.png) no-repeat;
-	background-size: 500px 500px
+		background: url(/creandum/wp-content/themes/Creandum-theme/images/spritesx2.png) no-repeat;
+		background-size: 500px 500px
 	}
 
 	.large_invest_green, .large_invest_white, .small_invest_white, .small_invest_fillw{
-	background: url(sprites.png) no-repeat;
-}
-
-	/* DISPLAY CONTENT TEAM INVESTMENT 
-	.big-image-container{
-		background-size: cover;
+		background: url(sprites.png) no-repeat;
 	}
-*/
+
 }
 
 /* SCREENS LESS THAN 1300px */
@@ -2629,21 +2638,13 @@ background-image: none;
 		padding-right: 20px;
 	}
 
-/* DISPLAY CONTENT TEAM INVESTMENT 
-.big-image-container{
-	background-size: contain;
-}
-*/
+
 }
 
 /* SCREENS MORE THAN 1300px */
 @media all and (min-width : 1750px) {
 
-/* DISPLAY CONTENT TEAM INVESTMENT 
-.big-image-container{
-	background-size: cover;
-}
-*/
+
 }
 
 

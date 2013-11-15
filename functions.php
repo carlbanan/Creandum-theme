@@ -627,12 +627,9 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'), 
       '1.2' );
 
-    wp_register_script(  'picker', 
-      get_template_directory_uri() . '/library/js/picker.js', 
-      array('jquery'), 
-      '1.2' );
 
-    wp_enqueue_script('picker');
+
+
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('history');
     wp_enqueue_script('wpbs-scripts');
@@ -1090,93 +1087,7 @@ add_action( 'admin_menu', 'edit_admin_menus' );
 
 
 
-add_action('admin_menu', 'add_settings_menu');
-function add_settings_menu(){
-     add_menu_page('My Plugin Options', 'Newsfeed', 'manage_options', 'my-unique-identifier', 'newsfeed_settings','',30);
 
-}
-
-
-/* FOOTER FUNCTIONS */
-function newsfeed_settings(){
-   if (!current_user_can('manage_options')) {  
-      wp_die('You do not have sufficient permissions to access this page.');  
-   }
-   else{ 
-    if (isset($_POST["update_settings"])) {   /******** UPDATE VALUES  *********/ 
-
-      $color = esc_attr($_POST["color"]);     
-      update_option("content_color", $color); 
-
-      $bgcol = esc_attr($_POST["bgcol"]);     
-      update_option("content_bgcolor", $bgcol);       
-
-    }
-    else{                   
-
-      /* GET CURRENT SETTINGS */
-      $color  = get_option("content_color");
-
-      /* GET CURRENT SETTINGS */
-      $bgcol  = get_option("content_bgcolor");      
-
-    }
-    if(!$color){
-      $color = "#FFFFFF";
-    }
-    if(!$bgcol){
-      $bgcol = "#F1F1F1";
-    }   
-    ?>
- 
-      <div class="wrap">  
-          <?php screen_icon('themes'); ?> <h2> Newsfeed</h2>  
-        <div style='padding:20px 10px;'>
-      <form method="POST" action=""> 
-
-        <h3>Content colors</h3>
-        <table class="form-table">  
-                <tr valign="top">  
-                    <th scope="row">  
-                        <label for="num_elements">  
-                           Produkt-bilds-bakgrundsfärg:<br/><span class='description'>Synligt på transparenta bilder</span>
-                        </label>   
-                    </th>  
-                    <td>  
-                        <input type="text" name="color" id='color' size="25" value='<?php echo $color; ?>'/> 
-                         <div id="ilctabscolorpicker" class='colorpicker'></div> 
-                    </td>  
-                </tr>
-                <tr valign="top">  
-                    <th scope="row">  
-                        <label for="num_elements">  
-                           Bakgrundsfärg :
-                        </label>   
-                    </th>  
-                    <td>  
-                        <input type="text" name="bgcol" id='bg_color' size="25" value='<?php echo $bgcol; ?>'/> 
-                         <div id="bg_ilctabscolorpicker" class='colorpicker'></div> 
-                    </td>   
-                </tr>                 
-        </table>   
-
-    <table class="form-table">  
-        <tr>
-          <td>  
-          <p> 
-            <input type="hidden" name="update_settings" value="Y" />  
-              <input type="submit" value="Save settings" class="button-primary"/>  
-          </p>
-          </td>
-        </tr>
-    </table>
-      </form>           
-     </div>
-     </div>
-  <?php
-    }   
-
-}
 
 /* CREANDUM CUSTOM SLIDESHOW */
 

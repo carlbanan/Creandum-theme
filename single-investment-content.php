@@ -8,8 +8,10 @@
         <!-- SINGLE TEAM CONTENT  -->
       <div  id="post_<?php the_ID();?>">
       <?php if( $bigimg  != ''){ ?>
-        <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div>  <!-- end big-image --> 
+
+        <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div> 
         <div class="green_background"></div>
+
       <?php }else{ ?>
       <div class="small-header"></div>
       <?php } ?>  
@@ -138,6 +140,7 @@
                     <?php echo $tweet_user; ?>
                   </a> 
                   <span><?php echo $tweet_date;?></span>
+
 
               </div>
             </div>

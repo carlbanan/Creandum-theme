@@ -30,76 +30,81 @@
 		<!-- HIDDEN CONTENTN IS STORED HERE -->
 	</div>
 
-	<div class='lightgreen_bg padblock'>
+	<div class='lightgreen_bg padblock infront'>
 
 		<div class="container">
 
 			<div id="content" page='team' class="clearfix clear">
 			
-				<div id="main" class="row clearfix" role="main">
+				<div id="main" class="clearfix" role="main">
 
-					<?php
-					  query_posts( array( 'post_type' => 'team') );
-					  if ( have_posts() ) : while ( have_posts() ) : the_post();
-					?>
-											
-					<div id="post-<?php the_ID(); ?>" <?php post_class('col-md-3  col-lg-3  col-sm-6'); ?> role="article">
-							
-						<a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" class='async' rel="bookmark" title="<?php the_title_attribute(); ?>">		
+					<div class="row">
+
+						<?php
+						  query_posts( array( 'post_type' => 'team') );
+						  if ( have_posts() ) : while ( have_posts() ) : the_post();
+						?>
+												
+						<div id="post-<?php the_ID(); ?>" <?php post_class('col-md-3  col-lg-3  col-sm-6'); ?> role="article">
 								
-							<?php 
-								$postid = $post->ID;
-								$portrait = "";
-								$portrait = get_post_meta($postid,"custom_portrait_image",true);	
-								?>
-								<div class="portrait_list">
-									<div class='over'>
-										<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
+							<a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" class='async' rel="bookmark" title="<?php the_title_attribute(); ?>">		
+									
+								<?php 
+									$postid = $post->ID;
+									$portrait = "";
+									$portrait = get_post_meta($postid,"custom_portrait_image",true);	
+									?>
+									<div class="portrait_list">
+										<div class='over'>
+											<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
+										</div>
+										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
 									</div>
-									<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
-								</div>
-								<?php
+									<?php
 
-							?>
-						</a>
-					</div> <!-- end article -->
-					
-					<?php endwhile; ?>	
-					
-					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
+								?>
+							</a>
+						</div> <!-- end article -->
 						
-						<?php page_navi(); // use the page navi function ?>
+						<?php endwhile; ?>	
+						
+						<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
+							
+							<?php page_navi(); // use the page navi function ?>
 
-					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix list-unstyled">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-							</ul>
-						</nav>
-					<?php } ?>
-								
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, What you were looking for is not here.", "bonestheme"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
+						<?php } else { // if it is disabled, display regular wp prev & next links ?>
+							<nav class="wp-prev-next">
+								<ul class="clearfix list-unstyled">
+									<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
+									<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
+								</ul>
+							</nav>
+						<?php } ?>
+									
+						
+						<?php else : ?>
+						
+						<article id="post-not-found">
+						    <header>
+						    	<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
+						    </header>
+						    <section class="post_content">
+						    	<p><?php _e("Sorry, What you were looking for is not here.", "bonestheme"); ?></p>
+						    </section>
+						    <footer>
+						    </footer>
+						</article>
+						
+						<?php endif; ?>
 				
-			</div> <!-- end #content -->
-		</div>
-	</div>
+					</div> <!-- end row -->
+					
+				</div> <!-- end main -->
+
+			</div> <!-- end content -->
+		
+		</div> <!-- end container -->
+	
+	</div> <!--end lightgreen_bg-->
 
 <?php get_footer(); ?>

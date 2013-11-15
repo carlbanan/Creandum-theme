@@ -84,6 +84,6 @@
       </nav>
   </div>
 </div>
-
+<div class="loader"> ... </div>
     
 
