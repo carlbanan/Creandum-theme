@@ -4,7 +4,6 @@ if(imgCache.length){c.resize(function(){for(var i=0;i<imgCache.length;i++){var r
 var src=img.src;img.style.width=img.offsetWidth+"px";img.style.height=img.offsetHeight+"px";img.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='scale')"
 img.oldSrc=src;img.src=c.Config.spacer;},resize:function(func){var oldonresize=window.onresize;if(typeof window.onresize!='function'){window.onresize=func;}else{window.onresize=function(){if(oldonresize){oldonresize();}
 func();}}}}
-
 // add twitter bootstrap classes and color based on how many times tag is used
 function addTwitterBSClass(thisObj) {
   var title = $(thisObj).attr('title');
@@ -361,7 +360,38 @@ $('span.one').hover(function () {
         $('.tick').removeClass('ticker_margin_three');     
     });
 
+    var $window = $(window);
+    var $box = $('.sunrise');
+    var $sun = $('.sun');
+    var $eye = $('.eye')
+    var height = $box.css('height'); // get the height value from the css
+    var parseHeight = parseInt(height); // parse the height value from 300px to 300
 
+    $window.on('scroll', function(e) {
+    	var position = $(this).scrollTop(); // on scroll update the position value
+    	if (position <= parseHeight ) { // start value is 0, stop when the value reach 300
+
+    		$sun.css({
+    			'top': position / 1.7, // 300 - whatever scroll says
+    			'-webkit-transform': 'rotate(' + position + 'deg)'
+    		})
+
+    		$box.css({
+    			'height': parseHeight - position * 1.3, // 300 - whatever scroll says
+    		})
+    	} 
+    	if (position >= parseHeight && position <= parseHeight * 2 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+    		console.log('bajs')
+    	console.log(parseHeight)
+    	console.log(100 - parseHeight + (position / 5))
+    		$eye.css({
+    			'width':  (100 - parseHeight + position) / 5,
+    			'height':  (100 - parseHeight + position) / 5,
+    			'top': (100 - parseHeight + position * 5)
+    		})
+
+    	} 
+    })
 
 
 	var gobig = $(".content-header").hasClass("bigimage"); 

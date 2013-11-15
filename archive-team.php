@@ -13,7 +13,7 @@
 		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 		<div class"top-post">
 			<div class="page-content intro">	
-					<p class="large_invest_white"></p>
+					<!--<p class="large_invest_white"></p> -->
 					<section class="post_content center clearfix" itemprop="articleBody">
 					<h2>
 					 Our team members.

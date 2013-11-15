@@ -14,7 +14,7 @@ $news = $n->give_newsfeed(10);
 <!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 <div class"top-post">
 	<div class="page-content intro">	
-			<p class="large_invest_white"></p>
+			<!--<p class="large_invest_white"></p> -->
 			<section class="post_content center clearfix" itemprop="articleBody">
 			<h2>
 				News from our network.
@@ -26,13 +26,13 @@ $news = $n->give_newsfeed(10);
 </div>	
 <div class='newspage'>
 	<div class="lightgreen_bg">
-		<div class="container newsdeck">
 			<div class='filter-menu'>
 				<span class='filter active' id=''>All</span>
 				<span class='filter' id='blog'>Our blog</span>
 				<span class='filter' id='twitter'>Twitter</span>
 				<span class='filter' id='external'>News</span>
 			</div>
+		<div class="container newsdeck">
 		       <div class="feed">  
 
 		       		<?php

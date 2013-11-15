@@ -15,12 +15,12 @@
 	<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 	<div class"top-post">
 		<div class="page-content intro">	
-				<p class="large_invest_white"></p>
+				<!--<p class="large_invest_white"></p> -->
 				<section class="post_content center clearfix" itemprop="articleBody">
+
 				<h2>
 				 We invest in fast growing companies in early and later stages.
 				</h2>
-				</section>
 		</div>
 		<div class="big-image-container"></div>
 		<div class="green_background"></div>
@@ -32,20 +32,17 @@
 		<!-- HIDDEN CONTENTN IS STORED HERE -->
 	</div>
 
-	<div class=' lightgreen_bg padblock'>
-		<div class="container">
+	<div class='lightgreen_bg investpadblock infront'>
 			<div id="content" page='investment' class="clearfix clear">
 			
 				<div id="main" class="row clearfix" role="main">
 
 					<div class='filter-menu'>
-
 						<span class='filter active' id=''>All</span>
-						<span class='dash'>/</span>
 						<span class='filter' id='hardware'>Hardware companies</span>
-						<span class='dash'>/</span>
 						<span class='filter' id='software'>Software companies</span>
 					</div>
+		<div class="container">			
 					<?php
 					  query_posts( array( 'post_type' => 'investment') );
 					  if ( have_posts() ) : while ( have_posts() ) : the_post();

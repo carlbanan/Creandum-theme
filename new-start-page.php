@@ -57,7 +57,7 @@ Template Name: New startpage
                   </div>
                   <div>
                     <?php if($textline2!=""){ echo "<h4>".$textline2."</h4>"; }?>
-                    <?php if($textline3!=""){ echo "<h4>".$textline3."</h4>"; }?>
+                    <?php if($textline3!=""){ echo "<h5>".$textline3."</h5>"; }?>
                   </div>
                 </div>
               </div>

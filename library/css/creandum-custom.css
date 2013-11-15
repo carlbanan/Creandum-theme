@@ -171,6 +171,11 @@ h3 {
 	font-family: 'gothambold',"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.infront{
+	position: relative;
+	z-index:9999;
+}
+
 /* GRID BOOTSTRAP FIX */
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
 	padding-right:7.5px;
@@ -338,7 +343,7 @@ h3 {
 	background-size: 100%;
 	display: table;
 	width: 100%;
-	min-height: 450px;
+	min-height: 480px;
 	-webkit-transition: all 0.15s ease;
 	-moz-transition: all  0.15s ease;
 	-o-transition:  all 0.15s ease; 
@@ -350,7 +355,7 @@ h3 {
 .green_background{
 	background: #3da955;
 	width: 100%;
-	height: 450px;
+	height: 480px;
 	position: absolute;
 	top: 0;
 	opacity: 0.70;
@@ -359,7 +364,7 @@ h3 {
 
 .intro{
 		height: 450px;
-		padding-top: 190px;
+		padding-top: 40px;
 		position: absolute;
 		z-index: 9999;
 		width: 100%;
@@ -638,15 +643,13 @@ line-height: 1.8em;
 }
 
 /* FILTER */
-.filter-menu{
-	margin-bottom:40px;
-	text-align: center;
-	margin-top:0px;
-}
 
-.newsdeck .filter-menu{
-	padding:40px 0 30px 0;
-	margin:0;
+.filter-menu{
+	padding:30px 0 30px 0;
+	margin-bottom:40px;
+	background: #fff;
+	text-align: center;
+	margin-top: 0;
 }
 
 .filter{
@@ -661,6 +664,10 @@ line-height: 1.8em;
  border-bottom: 1px solid #3da955;
 }
 
+.filter.active{
+ font-weight: bold;
+}
+
 .filter:hover{
  padding-bottom: 5px;
  -webkit-transition: all 0.15s ease-in-out;
@@ -672,7 +679,7 @@ span.dash{
 }
 /* CONTACT PAGE */
 .forms{
-	width:600px;
+	width:100%;
 	margin:30px auto;
 }
 .pitchform{
@@ -867,31 +874,91 @@ line-height: 90px;
 	line-height: 1.6em;
 }
 
+.padblock .green_bg{
+
+}
+
 /* ABOUT */
 
+/* INVESTMENTS */
+.investpadblock{
+	padding: 0px 0 100px 0!important;
+}
 
+
+.invest{
+	text-align: center!important;
+}
 
 .icon_right{
 	float:right;
+	position: relative;
+	height: inherit;
 }
 
 .icon_left{
 	float:left;
 }
 
-.sunrise{
-	width: 100%;
-	height: 500px;
-	background: yellow;
-	display: block;
+.who{
+	height:800px;
 }
 
-.who{
-	height:1000px;
+.about .post_content p{
+	-webkit-margin-before: 2em;
+-webkit-margin-after: 2em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0em;
+line-height: 1.8em;
+}
+
+.blockright{
+	width: 60%;
+}
+
+.blockleft{
+	width: 40%;
+}
+
+.sun{
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 295px;
+	position: absolute;
+	left: 50%;
+	margin-left: -147px;
+	top: 0;
+	height: 295px;
+	background-image: url("../../images/wheel.png");
+}
+
+.sunrise{
+	width: 350px;
+	height: 700px;
+	left: 50%;
+	margin-left: -175px;
+	bottom:0;
+	background: #edf3ef;
+	display: block;
+	position: absolute;
+	border-top: 3px solid #3da954;
+	z-index: 
+}
+
+.eye {
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	background-color: black;
 }
 
 
 /* BLOG POST SINGLE */
+
+.blog h1{
+
+}
+
 .post_content img{
 	width: 100%;
 }
@@ -2062,6 +2129,18 @@ button:hover .twitter-icon{
 	width: ;
 }
 
+.post_content h2{
+	color: white;
+	font-family: 'gothambold',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 38px;
+	text-align: center
+	position: fixed;
+	-webkit-margin-before: 4.9em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 8em;
+	-webkit-margin-end: 8em;
+}
+
 .content-header-wrap{
 	width:100%;
 	vertical-align: middle;
@@ -2074,6 +2153,7 @@ button:hover .twitter-icon{
 .content-header.bigimage{
 	background-size:cover;
 	background-repeat: no-repeat;
+	background-position: center center;
 	width:100%;
 	height:inherit;
 	position: fixed;  
@@ -2103,15 +2183,29 @@ button:hover .twitter-icon{
 	 height:inherit;
 	 top:auto;
 	 bottom:auto;
-	 margin-top: 300px;
+	 margin-top: 280px;
 }
 .content-header-text div h4{
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin-top:20px;
-	font-weight: 200;
-	font-size:15px;
+	font-size:18px;
+	line-height: 1.6em;
+	padding-top: 20px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 30em;
+}
+
+.content-header-text div h5{
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top:20px;
+	font-size:14px;
+	letter-spacing: 0.04em;
 	max-width: 60%;
 	line-height: 1.6em;
 }
+
 .content-header-text div h4:first-child{
 	margin-top:180px;
 }
@@ -2143,9 +2237,10 @@ button:hover .twitter-icon{
 	width: 50%;
 }
 .content-header-text div.subtext h3{
-	font-weight: 200;
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:15px;
 	line-height: 1.6em;
+	color: #fff;
 }
 
 .strip{
