@@ -1,12 +1,17 @@
 
 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post();
+
+      $img = get_post_meta(get_the_ID(),"custom_bigprofile_image",true);
+      ?>
 
         <!-- SINGLE TEAM CONTENT  -->
       <div  id="post_<?php the_ID();?>">
-        <div class="big-image-container" bigimage="<?php echo get_post_meta($postid,"custom_bigprofile_image",true);?>">
-
-        </div>
+      <?php if($img != ''){ ?>
+       <div class="big-image-container" style="<?php if($img){ echo "background-image:url('".$img."');"; } ?>"></div>  <!-- end big-image --> 
+      <?php }else{ ?>
+        <div class="small-header"></div>
+      <?php } ?>
         <div class="container padblock page-content">
           <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 

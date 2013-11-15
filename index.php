@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+	<div class="small-header"></div>
 	<div class='lightgreen_bg'>
 
 		<div class='container padblock'>
