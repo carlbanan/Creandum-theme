@@ -136,7 +136,8 @@
                   <br/>
                   <a href='<?php echo $tweet_user_url;?>'>
                     <?php echo $tweet_user; ?>
-                  </a> - <?php echo $tweet_date;?>
+                  </a> 
+                  <span><?php echo $tweet_date;?></span>
 
               </div>
             </div>

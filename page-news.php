@@ -27,15 +27,15 @@ $tweets = $n->give_tweets(3);
 </div>	
 <div class='newspage'>
 	<div class="lightgreen_bg">
-
-		<div class="container newsdeck">
-			<div class="row">
-				<div class='filter-menu'>
+		<div class='filter-menu'>
 					<span class='filter active' id=''>All</span>
 					<span class='filter' id='blog'>Our blog</span>
 					<span class='filter' id='twitter'>Twitter</span>
 					<span class='filter' id='external'>News</span>
 				</div>
+		<div class="container newsdeck">
+			<div class="row">
+				
 			    <div class="feed col-md-9 col-lg-9">  
 
 			       		<?php

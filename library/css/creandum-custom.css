@@ -79,6 +79,7 @@
 body{
 	-webkit-font-smoothing:antialiased;
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #39423f;
 }
 a {
 	font-family: 'gothambook', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -463,12 +464,15 @@ line-height: 1.8em;
 }
 
 .sidehead{
-	margin-bottom:2px;
+	margin-bottom:1px;
 	height:40px;
 	text-align: center;
 }
 .sideblock div.fill{
 	 background-color:#edf3ef;
+	 -webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
 }
 
 .sideicon{
@@ -477,19 +481,35 @@ line-height: 1.8em;
 	margin-right:2px;
 	width:40px;
 	height: inherit;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
 }
 .sidetopic{
 	padding:10px; 
-	margin-left:42px;
+	margin-left:41px;
 	height: inherit;
 	color:#3da954;
 }
 .sidecontent{
-	padding:15px;
-	font-weight: bold;
+	padding:20px 20px 30px 20px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	
+
 }
 .sidecontent a{
-	color:#111;
+	color:#39423f;
+	font-size: 15px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0em;
+	-webkit-margin-end: 15em;
+
 }
 
 
@@ -2183,9 +2203,12 @@ button:hover .twitter-icon{
 	vertical-align: middle;
 	text-align: center;
 	display: none;  
+	opacity:0;
+	transition: all 0.1s ease-in-out;
 }
 .content-header-wrap.active{
 		display: table;
+		opacity: 1;
 }
 .content-header.bigimage{
 	background-size:cover;
