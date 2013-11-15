@@ -31,8 +31,11 @@
 
 			<div class="who">
 				<div class="col-md-7 icon_left">
-					<div class="pupil"></div>
-					<div class="eye icon_right"></div>
+					<div class="globe">
+						<div class="cloud-1"></div>
+						<div class="cloud-2"></div>
+						<div class="cloud-3"></div>
+					</div>
 				</div>
 				<div class="col-md-5">
 					<h1>What we do</h1>
@@ -50,14 +53,14 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 	Building companies is our favorite occupation.</p>	
 				</div>
 				<div class="col-md-7 icon_right">
-					<div class="something"></div>
-					<div class="something icon_right"></div>
+					<div class="eye_outer">
+					<div class="eye icon_right"></div></div>
 				</div>
 			</div>
 
 			<div class="who">
 				<div class="col-md-7 icon_left">
-					<div class="Something"></div>
+					<div class="wheel"></div>
 				</div>
 				<div class="col-md-5">
 					<h1>Our approach</h1>
@@ -73,8 +76,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 					<p>We help our investments with recruitments, advisory boards, office spaces and all sorts of great leads to help them build strong networks and grow their businesses. Our network spreads all over the globe in all kinds of operating categories which leaves us with the possibility of helping our investments with pretty much everything.</p>	
 				</div>
 				<div class="col-md-7 icon_right">
-					<div class="Something"></div>
-					<div class="eye icon_right"></div>
+					<div class="box"></div>
 				</div>
 			</div>
 

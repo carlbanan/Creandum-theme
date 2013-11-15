@@ -369,11 +369,17 @@ $('span.one').hover(function () {
     var $box = $('.sunrise');
     var $sun = $('.sun');
     var $eye = $('.eye')
+    var $globe = $('.globe')
+    var $circle = $('.circle')
+    var $wheel = $('.wheel')
+    var $outerEye = $('.eye_outer')
     var height = $box.css('height'); // get the height value from the css
     var parseHeight = parseInt(height); // parse the height value from 300px to 300
 
     $window.on('scroll', function(e) {
     	var position = $(this).scrollTop(); // on scroll update the position value
+    	var changeValue = 100 + ((parseHeight * 2 - position) / 10)
+
     	if (position <= parseHeight ) { // start value is 0, stop when the value reach 300
 
     		$sun.css({
@@ -384,18 +390,42 @@ $('span.one').hover(function () {
     		$box.css({
     			'height': parseHeight - position * 1.3, // 300 - whatever scroll says
     		})
-    	} 
-    	if (position >= parseHeight && position <= parseHeight * 2 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
-    		console.log('bajs')
-    	console.log(parseHeight)
-    	console.log(100 - parseHeight + (position / 5))
-    		$eye.css({
-    			'width':  (100 - parseHeight + position) / 5,
-    			'height':  (100 - parseHeight + position) / 5,
-    			'top': (100 - parseHeight + position * 5)
+    	}
+
+    	if (position >= parseHeight && position <= parseHeight * 2 ) {
+    		
+    		$globe.css({
+    			'marginTop': ((position - parseHeight) / 4)
+    		})
+    	}
+
+    	if (position >= parseHeight * 2 && position <= parseHeight * 3 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+
+    		$outerEye.css({
+    			'marginTop' : ((position - parseHeight * 2) / 3)
     		})
 
+    		if(changeValue > 10) {
+
+	    		$eye.css({
+	    			'width':  changeValue,
+	    			'height':  changeValue,
+	    			'marginLeft':  -(changeValue) / 2,
+	    			'marginTop':  -(changeValue) / 2,
+	    		})
+
+	    	}
+
     	} 
+
+    	if (position >= parseHeight * 3 && position <= parseHeight * 4 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+    			$wheel.css({
+    			'top': parseInt((position - parseHeight * 3) / 1.2), // 300 - whatever scroll says
+    			'-webkit-transform': 'rotate(' + parseInt((position - parseHeight * 3) / 1) + 'deg)'
+    		})
+
+    	}
+
     })
 
 
