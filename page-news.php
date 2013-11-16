@@ -79,7 +79,7 @@ $tweets = $n->give_tweets(3);
 				<?php foreach($tweets as $twt){ ?>
 	            <div class='sideblock news'>
 	              <div class='sidehead'>
-	                <div class='sideicon twitter_icon fill'></div>
+	                <div class='sideicon fill'><div class="sprite-twitter"></div></div>
 	                <div class='sidetopic fill'>
 	                  <a href='<?php echo $twt['tweet_user_url'] ?>'>
 	                    @<?php echo  $twt['tweet_user'];?>
@@ -102,18 +102,16 @@ $tweets = $n->give_tweets(3);
 			    </div>
 
 		        <div class="clearfix"></div>
-		        <div class="col-lg-8 col-md-8 clearfix"> 
- 
-
-		            <p class='center padblock'>
-		              <a href="<?php echo bloginfo("url");?>/blog/">
-		              <button class='btn btn-default btn-green'>More news</button>
-		              </a>
-		            </p>
-		        </div>
+		 
 	        </div> <!-- ROW -->
 
 		</div> <!-- END CONTAINER NEWS -->
+
+		 <p class='center'>
+              <a href="<?php echo bloginfo("url");?>/blog/">
+              <button class='btn btn-default btn-green more'>More news</button>
+              </a>
+            </p>
 	</div><!-- END GREEN-->
 
 		

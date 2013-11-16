@@ -123,7 +123,7 @@
             <?php if($tweet){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon twitter_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-twitter"></div></div>
                 <div class='sidetopic fill'>
                   <a href='<?php echo $tweet_url ?>'>
                     Latest tweet
@@ -139,7 +139,7 @@
                   <a href='<?php echo $tweet_user_url;?>'>
                     <?php echo $tweet_user; ?>
                   </a> 
-                  <span><?php echo $tweet_date;?></span>
+                  <span class="date"><?php echo $tweet_date;?></span>
 
 
               </div>
@@ -148,7 +148,7 @@
             <?php if($bloggpost){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon blog_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-blog"></div></div>
                 <div class='sidetopic fill'>
                   <a href='<?php echo $bloggpost ?>'>
                     Latest blog post

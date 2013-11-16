@@ -372,8 +372,9 @@ $('span.one').hover(function () {
     var $globe = $('.globe')
     var $circle = $('.circle')
     var $wheel = $('.wheel')
+    var $tools = $('.box')
     var $outerEye = $('.eye_outer')
-    var height = $box.css('height'); // get the height value from the css
+    var height = $('.who').css('height'); // get the height value from the css
     var parseHeight = parseInt(height); // parse the height value from 300px to 300
 
     $window.on('scroll', function(e) {
@@ -419,11 +420,18 @@ $('span.one').hover(function () {
     	} 
 
     	if (position >= parseHeight * 3 && position <= parseHeight * 4 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
-    			$wheel.css({
-    			'top': parseInt((position - parseHeight * 3) / 1.2), // 300 - whatever scroll says
+    		$wheel.css({
+    			'top': parseInt((position - parseHeight * 3) / 3), // 300 - whatever scroll says
     			'-webkit-transform': 'rotate(' + parseInt((position - parseHeight * 3) / 1) + 'deg)'
     		})
 
+    	}
+
+    	if ((position >= (parseHeight * 4) - (parseHeight / 2))  && position <= parseHeight * 5 ) {
+
+    		$tools.css({
+    			'marginTop': ((position - parseHeight  * 4) + (parseHeight / 2)) / 1.4
+    		})
     	}
 
     })
@@ -452,6 +460,8 @@ $('span.one').hover(function () {
 		
 		$(".content-header-wrap,.slider-bigimage .item").css("height",windowHeight);
 
+		//var slider = new Swiper('.startpage')
+
 		// CHANGE IMG
 		$('#slider-bigimage').each(function(){
 		    (function(obj){
@@ -459,7 +469,7 @@ $('span.one').hover(function () {
 		            var $cur = obj.find('.active').removeClass('active');
 		            var $next = $cur.next().length?$cur.next():obj.children().eq(0);
 		            $next.addClass('active');
-		        },4500);
+		        },8000);
 		    })($(this));
 		        
 		});
@@ -549,5 +559,50 @@ $('span.one').hover(function () {
 		});
 
 	}
+
+
+    function Swiper(element) {
+        var $element = $(element);
+
+        var current = 0;
+        var $window = $(window);
+        
+        var length = $element.find('li').length;
+
+        function setDimensions () {
+            var width = $window.width();
+            $element.find('ul').width(width * length);
+            $element.find('li').width(width);
+        }
+        
+        setDimensions();
+
+        function slideImage () {
+            var width = $window.width();
+            $element.find('ul').animate({
+                'marginLeft': -( current * width)
+            }, 'slow');
+        }
+
+        function setCurrent (dir) {
+            var pos = current;
+            pos += ( ~~( dir === 'next' ) || -1 );
+
+            current = ( pos < 0 ) ? length - 1 : pos % length;
+            return pos;
+        }
+
+        return {
+            slide: function(dir) {
+                setCurrent(dir);
+                slideImage();
+            },
+            setDimensions: function() {
+                setDimensions();
+            }
+        };
+
+    }
 }); /* end of as page load scripts */
+
 

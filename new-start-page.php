@@ -44,7 +44,7 @@ Template Name: New startpage
                  <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
                  </div>
-                 <div class='content-header-text wrapper container'>
+                 <div class='content-header-text wrapper big container'>
                    <div class='shadowop'>
                     <?php foreach($textline as $txt){ ?>
                     <h1 class="shadow"><?php echo $txt;?></h1><br>
@@ -129,6 +129,7 @@ Template Name: New startpage
               <div class="col-lg-12">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class"center sprite-large_invest_green"></div> 
                     <h2 class='center'>Our investments.</h2>
                     <br/>
                     <?php
@@ -276,14 +277,14 @@ Template Name: New startpage
 
         
               </div><!-- END FEED --> 
-            <p class='center padblock'>
-              <a href="<?php echo bloginfo("url");?>/news/">
-              <button class='btn btn-default btn-green'>More news</button>
-              </a>
-            </p>
 
             </div>
           </div>
+            <p class='center'>
+              <a href="<?php echo bloginfo("url");?>/news/">
+              <button class='btn btn-default btn-green more'>More news</button>
+              </a>
+            </p>
         </div>
 
 

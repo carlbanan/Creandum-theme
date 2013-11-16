@@ -33,8 +33,6 @@
 	</div>
 
 	<div class='lightgreen_bg investpadblock infront'>
-		
-		<div class="container">
 
 			<div id="content" page='investment' class="clearfix clear">
 			
@@ -45,7 +43,8 @@
 						<span class='filter' id='hardware'>Hardware companies</span>
 						<span class='filter' id='software'>Software companies</span>
 					</div>
-
+		
+		<div class="container">
 
 					<div class="row">	
 						<?php
