@@ -513,6 +513,10 @@ h3 {
 		width: 100%;
 		color: white;
 }
+
+.intro-about{
+	position: fixed;
+}
 .intro,.big-image-container,.green_background{
 	height:450px;
 	 -webkit-transition: all 0.3s ease;
@@ -541,7 +545,7 @@ p.large_invest_white{
 	-webkit-margin-before: 1em;
 -webkit-margin-after: 1em;
 -webkit-margin-start: 0px;
--webkit-margin-end: 7em;
+-webkit-margin-end: 2em;
 line-height: 1.8em;
 }
 
@@ -2482,7 +2486,7 @@ button:hover .twitter-icon{
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 	-webkit-margin-start: 0px;
-	-webkit-margin-end: 30em;
+	-webkit-margin-end: 34em;
 }
 
 .content-header-text div h5{
@@ -2794,7 +2798,7 @@ p.center{
  
 		.cbp-af-header h1,
 		.cbp-af-header nav a {
-				line-height: 115px;
+				line-height: 100px;
 		}
  
 		.cbp-af-header nav a {
@@ -2818,12 +2822,23 @@ p.center{
 				display: none;
 		}
 
+		.cbp-af-header .cbp-af-inner {
+			padding:0;
+		}
+
 		/* SHOW MENU ICON TOGGLE */
 		.menu-icon{
 			display: block;
 			z-index: 999;
 			margin-top: 25px;
 			cursor: pointer;
+			 -webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease; 
+		}
+
+
+		.cbp-af-header.cbp-af-header-shrink .menu-icon {
+				margin-top: 0px;
 		}
 
 		.cbp-af-header nav ul li{

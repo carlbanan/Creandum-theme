@@ -6,7 +6,7 @@
 
 
 <!-- Big picture -->
-<div class="page-content intro">	
+<div class="page-content intro-about">	
 				<!--<p class="large_invest_white"></p> -->
 				<section class="post_content center clearfix" itemprop="articleBody">
 				<h2>
