@@ -23,7 +23,7 @@
 
 	<!-- Wrapper -->
 
-	<div class="lightgreen_bg">
+	<div class="lightgreen_bg infront">
 		<div class="container about post_content padblock">
 			<div class="who">
 				<div class="col-md-5">
