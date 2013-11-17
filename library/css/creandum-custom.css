@@ -1004,7 +1004,16 @@ transition: margin-top 0.5s ease-in-out;
 line-height: 90px;
 }
 
-
+/* ABOUT */
+.press-area{
+	padding:60px 0;
+}
+.press-area h1{
+	padding:0 0 60px 0;
+}
+.press-area ul.thumbnails li{
+	display: inline-block;
+}
 
 /* NETWORK */
 .network-post .tcontent{

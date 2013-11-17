@@ -69,7 +69,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 				</div>
 			</div>
 
-				<div class="who">
+			<div class="who">
 				<div class="col-md-5">
 					<h1>Our services</h1>
 					<p class="lead">We do not only invest in great companies, we help make them stronger and better aswell.</h3>
@@ -80,12 +80,23 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 				</div>
 			</div>
 
+		</div>
+
 	</div>
 	
 </div>
 			
+<!-- PRESS AREA -->
 
-		
+<div class='press-area container	'>
+	<h1>Press resources</h1>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		content
+		<?php the_content(); ?>
+
+	<?php endwhile;  endif; ?>
+
+</div>
 
 	<!-- /Wrapper -->
 

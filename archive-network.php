@@ -54,7 +54,7 @@
 										
 								<section class="post_content">
 								
-									<?php the_post_thumbnail("thumbnal-size"); ?>
+									<?php the_post_thumbnail("wpbs-featured-network"); ?>
 									<div class="tcontent">
 										<h3><?php the_title(); ?></h3>
 									
