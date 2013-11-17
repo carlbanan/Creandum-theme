@@ -2,11 +2,10 @@
      <div id="footer">
        <div class="container">
          <ul class="links">
-          <li><p>Team</p></li>
-          <li><p>Investments</p></li>
-          <li><p>newsdeck</p></li>
-          <li><p>About</p></li>
-          <li><p>Contact</p></li>
+          <li><p>Blog</p></li>
+          <li><p>Press</p></li>
+          <li><p>Google maps</p></li>
+          <li><p>E-mail</p></li>
           <button type="button" class="btn2 btn-default btn-lg right">
           	<span class="fb btntext hidden-xs"></span>
           	Like us on facebook

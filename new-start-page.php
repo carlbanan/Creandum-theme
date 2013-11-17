@@ -89,17 +89,17 @@ Template Name: New startpage
                   <div class="ticker_icons">
                     <ul>
                       <li class="one">
-                      <span class="sprite-small_about_green icon"></span>
+                      <span class="sprite-spinn_sun icon"></span>
                         <span class="text">We do</span>
                       </li>
 
                       <li class="two">
-                        <span class="sprite-small_invest_green icon"></span>
+                        <span class="sprite-spinneye icon focus"></span>
                         <span class="text">Focus</span>
                       </li>
 
                       <li class="three">
-                        <span class="sprite-small_network_green icon"></span>
+                        <span class="sprite-spin_service icon"></span>
                         <span class="text">Service</span>
                       </li>
 
@@ -133,7 +133,7 @@ Template Name: New startpage
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="center homeblock">
-                      <div class="icon_center sprite-large_invest_green"></div> 
+                      <div class="icon_center sprite-large_invest"></div> 
                       <h2>We invest in fast-growing companies in early- and later stages.</h2>
                     </div>
                     <?php

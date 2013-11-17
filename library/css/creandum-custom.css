@@ -49,7 +49,8 @@
 	background: url('../../images/sprite_small_green.png') no-repeat;
 }
 
-.sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest_green, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel, .sprite-large_news, .sprite-in{
+.sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel, .sprite-large_news, .sprite-in, .sprite-spin_service, .sprite-spinneye, .sprite-spinn_sun, .sprite-contact_email, .sprite-contact_phone, .sprite-contact_pin, .sprite-large_contact
+{
 	background: url('../../images/sprite-all.png') no-repeat;
 }
 
@@ -73,32 +74,39 @@
 .sprite-cloud-1{ background-position: 0 -306px; width: 160px; height: 70px; } 
 .sprite-cloud-2{ background-position: 0 -426px; width: 148px; height: 70px; } 
 .sprite-cloud-3{ background-position: 0 -546px; width: 140px; height: 70px; } 
-.sprite-eye{ background-position: 0 -666px; width: 140px; height: 146px; } 
-.sprite-eye_outer{ background-position: 0 -862px; width: 300px; height: 200px; } 
-.sprite-fb-white{ background-position: 0 -1112px; width: 10px; height: 19px; } 
-.sprite-fb{ background-position: 0 -1181px; width: 10px; height: 19px; } 
-.sprite-globe{ background-position: 0 -1250px; width: 290px; height: 288px; } 
-.sprite-in{ background-position: 0 -1588px; width: 18px; height: 17px; } 
-.sprite-large_invest_green{ background-position: 0 -1655px; width: 57px; height: 52px; } 
-.sprite-large_news{ background-position: 0 -1757px; width: 57px; height: 57px; } 
-.sprite-mail{ background-position: 0 -1867px; width: 18px; height: 14px; } 
-.sprite-phone{ background-position: 0 -1931px; width: 15px; height: 19px; } 
-.sprite-small_about_filled{ background-position: -354px 0; width: 20px; height: 23px; } 
-.sprite-small_about_white{ background-position: -354px -73px; width: 20px; height: 23px; } 
-.sprite-small_contact_filled{ background-position: -354px -146px; width: 22px; height: 23px; } 
-.sprite-small_contact_white{ background-position: -354px -219px; width: 22px; height: 23px; } 
-.sprite-small_invest_filled{ background-position: -354px -292px; width: 24px; height: 22px; } 
-.sprite-small_invest_white{ background-position: -354px -364px; width: 24px; height: 22px; } 
-.sprite-small_network_filled{ background-position: -354px -436px; width: 22px; height: 22px; } 
-.sprite-small_network_white{ background-position: -354px -508px; width: 22px; height: 22px; } 
-.sprite-small_news_filled{ background-position: -354px -580px; width: 22px; height: 23px; } 
-.sprite-small_news_white{ background-position: -354px -653px; width: 22px; height: 23px; } 
-.sprite-small_team_filled{ background-position: -354px -726px; width: 24px; height: 22px; } 
-.sprite-small_team_white{ background-position: -354px -798px; width: 24px; height: 22px; } 
-.sprite-sun{ background-position: -354px -870px; width: 296px; height: 294px; } 
-.sprite-twitter-white{ background-position: -354px -1214px; width: 19px; height: 15px; } 
-.sprite-twitter{ background-position: -354px -1279px; width: 19px; height: 15px; } 
-.sprite-wheel{ background-position: -354px -1344px; width: 295px; height: 295px; } 
+.sprite-contact_email{ background-position: 0 -666px; width: 24px; height: 19px; } 
+.sprite-contact_phone{ background-position: 0 -735px; width: 21px; height: 27px; } 
+.sprite-contact_pin{ background-position: 0 -812px; width: 16px; height: 26px; } 
+.sprite-eye{ background-position: 0 -888px; width: 140px; height: 146px; } 
+.sprite-eye_outer{ background-position: 0 -1084px; width: 300px; height: 200px; } 
+.sprite-fb-white{ background-position: 0 -1334px; width: 10px; height: 19px; } 
+.sprite-fb{ background-position: 0 -1403px; width: 10px; height: 19px; } 
+.sprite-globe{ background-position: 0 -1472px; width: 290px; height: 288px; } 
+.sprite-in{ background-position: 0 -1810px; width: 18px; height: 17px; } 
+.sprite-large_contact{ background-position: 0 -1877px; width: 57px; height: 60px; } 
+.sprite-large_invest{ background-position: -354px 0; width: 57px; height: 52px; } 
+.sprite-large_news{ background-position: -354px -102px; width: 57px; height: 57px; } 
+.sprite-mail{ background-position: -354px -209px; width: 18px; height: 14px; } 
+.sprite-phone{ background-position: -354px -273px; width: 15px; height: 19px; } 
+.sprite-small_about_filled{ background-position: -354px -342px; width: 20px; height: 23px; } 
+.sprite-small_about_white{ background-position: -354px -415px; width: 20px; height: 23px; } 
+.sprite-small_contact_filled{ background-position: -354px -488px; width: 22px; height: 23px; } 
+.sprite-small_contact_white{ background-position: -354px -561px; width: 22px; height: 23px; } 
+.sprite-small_invest_filled{ background-position: -354px -634px; width: 24px; height: 22px; } 
+.sprite-small_invest_white{ background-position: -354px -706px; width: 24px; height: 22px; } 
+.sprite-small_network_filled{ background-position: -354px -778px; width: 22px; height: 22px; } 
+.sprite-small_network_white{ background-position: -354px -850px; width: 22px; height: 22px; } 
+.sprite-small_news_filled{ background-position: -354px -922px; width: 22px; height: 23px; } 
+.sprite-small_news_white{ background-position: -354px -995px; width: 22px; height: 23px; } 
+.sprite-small_team_filled{ background-position: -354px -1068px; width: 24px; height: 22px; } 
+.sprite-small_team_white{ background-position: -354px -1140px; width: 24px; height: 22px; } 
+.sprite-spin_service{ background-position: -354px -1212px; width: 32px; height: 21px; } 
+.sprite-spinneye{ background-position: -354px -1283px; width: 35px; height: 22px; } 
+.sprite-spinn_sun{ background-position: -354px -1355px; width: 30px; height: 30px; } 
+.sprite-sun{ background-position: -354px -1435px; width: 296px; height: 294px; } 
+.sprite-twitter-white{ background-position: -354px -1779px; width: 19px; height: 15px; } 
+.sprite-twitter{ background-position: -354px -1844px; width: 19px; height: 15px; } 
+.sprite-wheel{ background-position: -354px -1909px; width: 295px; height: 295px; } 
 
 
 
@@ -550,7 +558,7 @@ line-height: 1.8em;
 	font-size: 15px;
 }
 .sideblock a:hover{
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .sidehead{
@@ -853,6 +861,8 @@ label{
 	border-bottom:1px solid #fff;
 	width: 100%;
 	margin:15px 0;
+	font-weight: normal!important;
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 textarea,input{
 	width:100%;
@@ -861,8 +871,8 @@ textarea,input{
 	border:0;
 	box-shadow:0 0 2px rgba(0,0,0,0.05);
 	border-radius:2px;
-	font-size:12px;
-	color:#111;
+	font-size:14px;
+	color:#39423f;
 	margin:8px 0;	
 }
 textarea{
@@ -920,13 +930,14 @@ textarea:focus,input:focus{
 .checkbox span{
 	display: table-cell;
 	vertical-align: middle;
+	font-size: 12px;
 }
 /* STARTPAGE */
 .slideshow_container .slideshow_view .slideshow_slide.slideshow_slide_image .slideshow_description h2{
 }
 
 .padblock_one{
-	padding: 70px 0 70px 0;
+	padding: 65px 0 60px 0;
 }
 
 .padblock_two{
@@ -943,6 +954,19 @@ vertical-align: baseline;
 	color: #3da955;
 	padding-top: 10px;
 }
+
+.one .text{
+	line-height: 25px;
+}
+
+.two .text{
+	line-height: 32px;
+}
+
+.three .text{
+	line-height: 33px;
+}
+
 
 .ticker_icons li{
 	display: inline-block;
@@ -1465,6 +1489,7 @@ line-height: 1.8em;
 	color:white;
 	margin:10px 0 0 0;
 	vertical-align: middle;
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .links li{
@@ -1479,18 +1504,39 @@ line-height: 1.8em;
 	float:right;
 }
 .btntext{
-	height:39px;
-	width:39px;
-	left:0;
+	height:40px;
+	width:40px;
 	margin-top: -4px;
 	margin-right: 20px;
 	position: relative;
 	background-repeat: no-repeat;
-	background-position: left center;
 	display: inline-block;
 	vertical-align: middle;
 	border-right: 1px solid white;
 }
+
+.btntextcontact{
+	height:60px;
+	width:60px;
+	margin-top: -4px;
+	margin-right: 20px;
+	position: relative;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: 1px solid #ecf3ef;;
+}	
+
+.contact-con{
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+.contact-con-email{
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
 .fb{
 	background-image: url("../../images/icons/social/fb_white.png");
 }
@@ -1536,6 +1582,12 @@ button:hover .twitter-icon{
 	cursor: pointer;
 	color:#3da955;
 }
+
+.btn2 .contact{
+	background: white;
+	padding: 4px 25px 0 0;
+} 
+
 .btn2.btn-white-bg{
 	background-color: #fff;
 	color:#3da955;
@@ -2431,7 +2483,7 @@ button:hover .twitter-icon{
 }
 .content-header-text div.subtext{
 	margin-top:275px;
-	width: 50%;
+	width: 40%;
 }
 .content-header-text div.subtext h3{
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2491,6 +2543,19 @@ button:hover .twitter-icon{
 .homeblock{
 	margin: 0px 0 40px 0;
 }
+
+.contactblock{
+	margin: -30px 0 45px 0;
+}
+
+.contactblock h2{
+	line-height: 1.5em;
+	max-width: 68%;
+	margin: 0 auto;
+	font-size: 18px;
+	padding-top: 25px;
+}
+
 
 
 /* CAROUSEL */

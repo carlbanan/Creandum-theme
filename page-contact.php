@@ -13,12 +13,12 @@
    <div class='shadowop'>
     
     <h1 class="shadow">Are you building</h1><br>
-    <h1 class="shadow">the next big company?</h1><br>
+    <h1 class="shadow">the company of tomorrow?</h1><br>
 
   </div>
   <div>
    	 <h1 class="strip">Are you building</h1><br>
-    <h1 class="strip">the next 	big company?</h1><br>
+    <h1 class="strip">the company of tomorrow?</h1><br>
    
   </div>
   <div class='subtext'>	
@@ -39,11 +39,11 @@
 	<div class="lightgreen_bg">
 		<div class="container padblock">
 			<div class='forms'>
-				<span class='icon icon-contact'></span>
-				<p class="center">
-					We read all pitches, but make sure you take the time to formulate your elevator pitch. 
-					We get contacted by 800+ companies a year and are use to high standards.
-				</p>
+				<div class="center contactblock">
+                      <div class="icon_center sprite-large_contact"></div> 
+                      <h2>We read all pitches, but make sure you take the time to formulate your elevator pitch. 
+					We get contacted by 800+ companies a year and are use to high standards.</h2>
+                    </div>
 
 				<form id="pitch" class="pitchform" url="<?php bloginfo('template_url'); ?>/sendForm.php">
 					<div class="row">
@@ -154,16 +154,19 @@
 	<div class="lightgreen_bg">
 		<iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.se/maps?t=m&amp;q=Jacobsbergsgatan+18,+Stockholm,+103+86&amp;ie=UTF8&amp;hq=&amp;hnear=Jakobsbergsgatan+18,+111+44+Stockholm,+Stockholms+l%C3%A4n&amp;z=14&amp;ll=59.33553,18.069616&amp;output=embed"></iframe>
 		<div class="container padblock center maps-footer">
-          <button type="button" class="btn2 btn-default btn-lg btn-white-bg">
-          	<span class="email-icon btntext hidden-xs"></span>
+          <!--<button type="button" class="btn2 btn-default btn-lg btn-white-bg">
+          	<span class=" btntext hidden-xs"></span>
           		E-mail for other inquries
+          </button> -->
+          <button type="button" class="btn2 btn-default btn-lg btn2 btn-default btn-lg btn-white-bg">
+          	<div class="btntextcontact hidden-xs"><div class="sprite-contact_email contact-con-email"></div></div>E-mail for other inquries
           </button>
           <button type="button" class="btn2 btn-default btn-lg btn-white-bg">
-          	<span class="tel-icon btntext hidden-xs"></span>+46 (0)8 524 636 30
+          	<div class="btntextcontact hidden-xs"><div class="sprite-contact_phone contact-con"></div></div>+46 (0)8 524 636 30
           </button>
           <a href="https://www.google.se/maps?t=m&amp;q=Jacobsbergsgatan+18,+Stockholm,+103+86&amp;ie=UTF8&amp;hq=&amp;hnear=Jakobsbergsgatan+18,+111+44+Stockholm,+Stockholms+l%C3%A4n&amp;z=14&amp;ll=59.33553,18.069616&amp;source=embed" style="color:#0000FF;text-align:left">	
 	          <button type="button" class="btn2 btn-default btn-lg btn-white-bg">
-	          	<span class="maps-icon btntext hidden-xs"></span>
+	          	<div class="btntextcontact hidden-xs"><div class="sprite-contact_pin contact-con"></div></div>
 	          		Go to Google maps
 	          </button>
 		   </a>
