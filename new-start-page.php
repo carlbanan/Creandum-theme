@@ -44,7 +44,7 @@ Template Name: New startpage
                  <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
                  </div>
-                 <div class='content-header-text wrapper big container'>
+                 <div class='content-header-text wrapper container'>
                    <div class='shadowop'>
                     <?php foreach($textline as $txt){ ?>
                     <h1 class="shadow"><?php echo $txt;?></h1><br>
@@ -92,14 +92,17 @@ Template Name: New startpage
                       <span class="sprite-small_about_green icon"></span>
                         <span class="text">We do</span>
                       </li>
+
                       <li class="two">
                         <span class="sprite-small_invest_green icon"></span>
                         <span class="text">Focus</span>
                       </li>
+
                       <li class="three">
                         <span class="sprite-small_network_green icon"></span>
                         <span class="text">Service</span>
                       </li>
+
                     </ul>
                   </div>  
                 </div>
@@ -125,13 +128,14 @@ Template Name: New startpage
         ?>
         <div class='lightgreen_bg'>
           <div class='container'>
-            <div class="row padblock">
+            <div class="row padblock_two">
               <div class="col-lg-12">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class"center sprite-large_invest_green"></div> 
-                    <h2 class='center'>Our investments.</h2>
-                    <br/>
+                    <div class="center homeblock">
+                      <div class="icon_center sprite-large_invest_green"></div> 
+                      <h2>Our investments.</h2>
+                    </div>
                     <?php
                     foreach ( $myposts as $post ) : setup_postdata( $post );
                       $postid = $post->ID;
@@ -276,7 +280,7 @@ Template Name: New startpage
                     ?>
 
         
-              </div><!-- END FEED --> 
+                </div><!-- END FEED --> 
 
             </div>
           </div>

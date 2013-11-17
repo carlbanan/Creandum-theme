@@ -248,6 +248,12 @@ h3 {
 .center{
 	text-align: center;
 }
+
+
+.icon_center{
+	margin:0 auto;
+	display: block;
+}
 .start-content{
 	z-index: 10;
 	background-color: #fff;
@@ -498,7 +504,7 @@ line-height: 1.8em;
 }
 .sideblock{
 	margin-bottom:15px;
-	max-width: 250px; 
+	width: 250px; 
 	float:right;
 }
 .sideblock a{
@@ -882,7 +888,11 @@ textarea:focus,input:focus{
 }
 
 .padblock_one{
-	padding: 50px 0 50px 0;
+	padding: 70px 0 70px 0;
+}
+
+.padblock_two{
+	padding: 120px 0 160px 0;
 }
 
 .ticker{
@@ -2362,7 +2372,6 @@ button:hover .twitter-icon{
 
 .content-header-text.fixedheight div{
 	 position: fixed;
-	 display: table-cell;
 	 height:inherit;
 	 top:auto;
 	 bottom:auto;
@@ -2439,6 +2448,12 @@ button:hover .twitter-icon{
 	z-index: 0;
 	height:1px;
 }
+
+
+.homeblock{
+	margin: 0px 0 40px 0;
+}
+
 
 /* CAROUSEL */
 
@@ -2675,9 +2690,7 @@ p.center{
 /* SCREENS LESS THAN 1300px */
 @media all and (max-width : 1300px) {
 
-	.content-header-text div{
-		margin-top: 260px;
-	}
+
 		
 
 	.container{

@@ -19,7 +19,7 @@
 				<section class="post_content center clearfix" itemprop="articleBody">
 
 				<h2>
-				 We invest in fast growing companies in early and later stages.
+				 Our ambition is to help build market leaders.
 				</h2>
 		</div>
 		<div class="big-image-container"></div>

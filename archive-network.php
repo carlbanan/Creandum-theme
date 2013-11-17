@@ -18,7 +18,7 @@
 				<!--<p class="large_invest_white"></p> -->
 				<section class="post_content center clearfix" itemprop="articleBody">
 				<h2>
-				 Stories from our Network.
+				 Meet some of the people<br>we meet.
 				</h2>
 				</section>
 		</div>

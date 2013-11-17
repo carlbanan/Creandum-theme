@@ -138,7 +138,7 @@
             <?php if($tweet){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon twitter_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-twitter"></div></div>
                 <div class='sidetopic fill'>
                   <a href='<?php echo $tweet_url ?>'>
                     Latest tweet
@@ -164,7 +164,7 @@
             <?php if($bloggpost){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon blog_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-blog"></div></div>
                 <div class='sidetopic fill'>
                   <a href='<?php echo $bloggpost ?>'>
                     Latest blog post
@@ -184,7 +184,7 @@
             <?php if($fb_page){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon fb_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-fb"></div></div>
                 <div class='sidetopic fill'>
                   <a href='<?php echo $fb_page ?>'>
                     Facebook-page
@@ -199,7 +199,7 @@
             <?php if($email){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon email_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-mail"></div></div>
                 <div class='sidetopic fill'>
                   <a href='mailto:<?php echo $email ?>'>
                     E-mail me

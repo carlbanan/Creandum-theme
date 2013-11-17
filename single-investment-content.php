@@ -10,7 +10,6 @@
       <?php if( $bigimg  != ''){ ?>
 
         <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div> 
-        <div class="green_background"></div>
 
       <?php }else{ ?>
       <div class="small-header"></div>

@@ -18,7 +18,7 @@ $tweets = $n->give_tweets(3);
 			<!--<p class="large_invest_white"></p> -->
 			<section class="post_content center clearfix" itemprop="articleBody">
 			<h2>
-				News from our network.
+			Here's what we're up to and whats going on in our network.
 			</h2>
 			</section>
 	</div>

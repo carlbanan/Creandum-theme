@@ -16,7 +16,7 @@
 					<!--<p class="large_invest_white"></p> -->
 					<section class="post_content center clearfix" itemprop="articleBody">
 					<h2>
-					 Our team members.
+					 This is team Creandum and also a great part of somewhat 60 companies. 
 					</h2>
 					</section>
 			</div>
