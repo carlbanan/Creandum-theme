@@ -166,6 +166,7 @@ body{
 a {
 	font-family: 'gothambook', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #39423f;
+	cursor: pointer;
 }
 a,a:hover{
 	text-decoration: none;
@@ -175,6 +176,11 @@ a,a:hover{
 ul {
 	list-style-type: disc;
 -webkit-padding-start: 0px;
+}
+
+.row{
+	margin-left:0;
+	margin-right:0;
 }
 
 .active{
@@ -480,7 +486,7 @@ h3 {
 	background-image: url("../../images/creandum-big-backup.jpg");
 	background-attachment: fixed;
 	background-repeat:no-repeat;
-	background-size: contain;
+	background-size: 100%;
 	display: table;
 	width: 100%;
 	-webkit-transition: all 0.15s ease;
@@ -2767,18 +2773,23 @@ p.center{
 	}
 }
 /* Example Media Queries */
-@media screen and (max-width: 55em) {
+@media screen and (max-width: 1060px) {
 		 
 		.cbp-af-header .cbp-af-inner {
 				width: 100%;
 		}
+		
+		.content-header-wrap .container {
+		max-width: 100%!important;
+			}
+
  
 		.cbp-af-header h1,
 		.cbp-af-header nav {
 				display: block;
 				margin: 0 auto;
-				text-align: center;
-				float: none;
+				text-align: left;
+				float: left;
 		}
  
 		.cbp-af-header h1,
@@ -2792,7 +2803,7 @@ p.center{
  
 		.cbp-af-header.cbp-af-header-shrink h1,
 		.cbp-af-header.cbp-af-header-shrink nav a {
-				line-height: 36px;
+				line-height: 58px;
 		}
  
 		.cbp-af-header.cbp-af-header-shrink h1 {
@@ -2811,7 +2822,14 @@ p.center{
 		.menu-icon{
 			display: block;
 			z-index: 999;
+			margin-top: 25px;
+			cursor: pointer;
 		}
+
+		.cbp-af-header nav ul li{
+			display: none;
+		}
+
 		.cbp-af-header.cbp-af-header-shrink.mobile nav,.cbp-af-header.mobile nav  {	
 			margin-top:-26px;
 		}
@@ -2845,26 +2863,6 @@ p.center{
 
 }
 
-/* SCREENS LESS THAN 1300px */
-@media all and (max-width : 1000px) {
-	.big-image-container{
-	background-position: center center;
-	background-color: #f1f1f1;
-	background-image: url("../../images/creandum-big-backup.jpg");
-	background-attachment: fixed;
-	background-repeat:no-repeat;
-	background-size: cover;
-	display: table;
-	width: 100%;
-	-webkit-transition: all 0.15s ease;
-	-moz-transition: all  0.15s ease;
-	-o-transition:  all 0.15s ease; 
-	-webkit-transition-delay: 0.35s; /* Safari */
-	-moz-transition-delay: 0.35s; /* Safari */
-	transition-delay: 0.35s; /* Safari */
-}
-	
-	}
 
 /* SCREENS LESS THAN 1300px */
 @media all and (max-width : 1300px) {
@@ -2873,9 +2871,7 @@ p.center{
 		max-width: 1140px!important;
 	}
 
-	.content-header-wrap .container{
-		max-width: 1140px!important;
-	}
+	
 
 
 	.cbp-af-header .container, .about .container{
