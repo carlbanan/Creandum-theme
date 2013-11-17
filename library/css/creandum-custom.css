@@ -49,7 +49,7 @@
 	background: url('../../images/sprite_small_green.png') no-repeat;
 }
 
-.sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest_green, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel{
+.sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest_green, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel, .sprite-large_news, .sprite-in{
 	background: url('../../images/sprite-all.png') no-repeat;
 }
 
@@ -66,6 +66,43 @@
 .sprite-small_team_green{ background-position: 0 -726px; width: 24px; height: 22px; } 
 .sprite-small_team_green_filled{ background-position: 0 -798px; width: 24px; height: 22px; } 
 
+
+
+.sprite-blog{ background-position: 0 0; width: 18px; height: 18px; } 
+.sprite-box{ background-position: 0 -68px; width: 304px; height: 188px; } 
+.sprite-cloud-1{ background-position: 0 -306px; width: 160px; height: 70px; } 
+.sprite-cloud-2{ background-position: 0 -426px; width: 148px; height: 70px; } 
+.sprite-cloud-3{ background-position: 0 -546px; width: 140px; height: 70px; } 
+.sprite-eye{ background-position: 0 -666px; width: 140px; height: 146px; } 
+.sprite-eye_outer{ background-position: 0 -862px; width: 300px; height: 200px; } 
+.sprite-fb-white{ background-position: 0 -1112px; width: 10px; height: 19px; } 
+.sprite-fb{ background-position: 0 -1181px; width: 10px; height: 19px; } 
+.sprite-globe{ background-position: 0 -1250px; width: 290px; height: 288px; } 
+.sprite-in{ background-position: 0 -1588px; width: 18px; height: 17px; } 
+.sprite-large_invest_green{ background-position: 0 -1655px; width: 57px; height: 52px; } 
+.sprite-large_news{ background-position: 0 -1757px; width: 57px; height: 57px; } 
+.sprite-mail{ background-position: 0 -1867px; width: 18px; height: 14px; } 
+.sprite-phone{ background-position: 0 -1931px; width: 15px; height: 19px; } 
+.sprite-small_about_filled{ background-position: -354px 0; width: 20px; height: 23px; } 
+.sprite-small_about_white{ background-position: -354px -73px; width: 20px; height: 23px; } 
+.sprite-small_contact_filled{ background-position: -354px -146px; width: 22px; height: 23px; } 
+.sprite-small_contact_white{ background-position: -354px -219px; width: 22px; height: 23px; } 
+.sprite-small_invest_filled{ background-position: -354px -292px; width: 24px; height: 22px; } 
+.sprite-small_invest_white{ background-position: -354px -364px; width: 24px; height: 22px; } 
+.sprite-small_network_filled{ background-position: -354px -436px; width: 22px; height: 22px; } 
+.sprite-small_network_white{ background-position: -354px -508px; width: 22px; height: 22px; } 
+.sprite-small_news_filled{ background-position: -354px -580px; width: 22px; height: 23px; } 
+.sprite-small_news_white{ background-position: -354px -653px; width: 22px; height: 23px; } 
+.sprite-small_team_filled{ background-position: -354px -726px; width: 24px; height: 22px; } 
+.sprite-small_team_white{ background-position: -354px -798px; width: 24px; height: 22px; } 
+.sprite-sun{ background-position: -354px -870px; width: 296px; height: 294px; } 
+.sprite-twitter-white{ background-position: -354px -1214px; width: 19px; height: 15px; } 
+.sprite-twitter{ background-position: -354px -1279px; width: 19px; height: 15px; } 
+.sprite-wheel{ background-position: -354px -1344px; width: 295px; height: 295px; } 
+
+
+
+/*
 .sprite-blog{ background-position: 0 0; width: 18px; height: 18px; } 
 .sprite-box{ background-position: 0 -68px; width: 304px; height: 188px; } 
 .sprite-cloud-1{ background-position: 0 -306px; width: 160px; height: 70px; } 
@@ -543,6 +580,7 @@ line-height: 1.8em;
 	border-top-right-radius: 0px!important;
 }
 .sidetopic{
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding-top:14px;
 	padding-bottom: 13px;
 	padding-left: 16px;
@@ -779,7 +817,7 @@ span.date{
 }
 
 .filter.active{
- font-weight: bold;
+
 }
 
 .filter:hover{

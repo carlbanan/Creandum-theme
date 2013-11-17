@@ -214,7 +214,7 @@
             <?php if($linkedin){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon linkedin_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-in"></div></div>
                 <div class='sidetopic fill'>
                   <a href='<?php echo $linkedin ?>'>
                    Find med on LinkedIn
@@ -229,7 +229,7 @@
             <?php if($tel){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
-                <div class='sideicon linkedin_icon fill'></div>
+                <div class='sideicon fill'><div class="sprite-phone"></div></div>
                 <div class='sidetopic fill'>
 
                    <?php echo $tel ?>

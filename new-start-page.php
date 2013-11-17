@@ -134,7 +134,7 @@ Template Name: New startpage
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="center homeblock">
                       <div class="icon_center sprite-large_invest_green"></div> 
-                      <h2>Our investments.</h2>
+                      <h2>We invest in fast-growing companies in early- and later stages.</h2>
                     </div>
                     <?php
                     foreach ( $myposts as $post ) : setup_postdata( $post );
@@ -237,9 +237,12 @@ Template Name: New startpage
 
         <div class='lightgreen_bg'>
           <div class='container'>
-            <div class="row padblock">
+            <div class="row padblock_two">
 
-              <h2 class="center">Newsdeck</h2>
+              <div class="center homeblock">
+                      <div class="icon_center sprite-large_news"></div> 
+                      <h2>Find out what we are up to and what's happening in our network.</h2>
+              </div>
 
             <?php 
             require_once("library/newsfeed.php");
@@ -292,7 +295,7 @@ Template Name: New startpage
         </div>
 
 
-      </div>
+   
       <?php endwhile; ?>
       
       <?php endif; ?>
