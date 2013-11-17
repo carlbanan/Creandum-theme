@@ -160,6 +160,7 @@
       function give_tweets($ant){
 
             $ret = array();
+            $max = 8;
 
             query_posts( array( 'post_type' => 'investment', 'posts_per_page' => 10) );
             if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -167,12 +168,13 @@
               $postid = get_the_ID();
               $twitter_src = "";
               $twitter_src = get_post_meta($postid,"custom_twitter",true);
-              $t = 0;
-              if($twitter_src && $t <= 4){ 
+             
+
+              if($twitter_src && $t <= $max){ 
                    $t++;
                    require_once('Twitter.php');
                    $twitterUsername = $twitter_src;
-                   $twitterCacheFile  = "cache/twitter_invest_".$twitter_src.".cacheFile";
+                   $twitterCacheFile  = "cache/twitter_invests_".$twitter_src.".cacheFile";
                    $twitterCount = 1;
 
                    $Twitter = new Twitter($twitterUsername,$twitterCacheFile,$twitterCount);
@@ -185,6 +187,7 @@
                          $d['tweet_user'] = $twt->user->{"screen_name"};
                          $d['tweet_url'] = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
                          $d['tweet_date'] = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));
+                         $d['tweet_date_time'] = $twt->{"created_at"};
                         
                          array_push($ret,$d);
                       }
@@ -193,7 +196,13 @@
               }
             endwhile;  
             endif;
-            return $ret;
+         // SORT ARRAY ON DATE
+         foreach ($ret as $key => $row) {
+              $ddate[$key]  = $row['tweet_date_time'];
+              $ttype[$key]  = $row['tweet_user'];
+          }
+          array_multisort($ddate, SORT_DESC, $ttype, SORT_ASC, $ret);
+          return $ret;
       }
 
       function get_xml($url, $max_age){

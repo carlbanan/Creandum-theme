@@ -66,13 +66,17 @@
           <ul>
 
            <?php
+
            $menu = "Menu";
            $items = wp_get_nav_menu_items( $menu ); 
+           $surl =  "http://".$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+           
            if($items){
               foreach($items as $item){
+              
                 ?>
 
-                  <li>
+                  <li <?php if($surl == $item->url) { echo "class='active'"; } ?>>
                       <a href="<?php echo $item->url;?>">
                         <span class="<?php echo $item->classes[0];?>  head"></span><?php echo $item->title;?>
                       </a>

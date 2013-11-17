@@ -126,8 +126,7 @@
 							<span for="other" class="counter"></span>
 							<textarea id="other" placeholder="Other ( optional )" name="other"></textarea>
 
-							<input type="text" id="reference" name="reference" placeholder="Reference person (optional)" />
-
+						
 						</div><!-- END 12 COL -->
 						<div class="col-md-6 col-lg-6">
 							<input type="text" id="name" name="name" placeholder="Your name" class="col-6"/>

@@ -67,10 +67,11 @@
 
           <div class="col-lg-4 col-md-4 col-sm-4 clearfix">
 
-            <!-- SIDEBAR -->
+            <!-- SIDEBAR DATA -->
              <?php
                $twitter_src = get_post_meta($post->ID,"custom_twitter",true);
                $fb_page = get_post_meta($post->ID,"custom_fb",true);
+               $angel = get_post_meta($post->ID,"custom_angel",true);
               ?>
             
             <!-- GET LATSET BLOG POST -->
@@ -161,6 +162,18 @@
               </div>
             </div>
             <?php } ?>
+            <?php if($angel){ ?>
+            <div class='sideblock'>
+              <div class='sidehead'>
+                <div class='sideicon angel_icon fill'></div>
+                <div class='sidetopic fill'>
+                  <a href='<?php echo $angel ?>'>
+                    Find us on AngelList
+                  </a>
+                </div>
+              </div>
+            </div>
+            <?php } ?>
             <?php if($fb_page){ ?>
             <div class='sideblock'>
               <div class='sidehead'>
@@ -173,6 +186,7 @@
               </div>
             </div>
             <?php } ?>
+
           </div>
       </div> <!-- end container -->
     </div>      

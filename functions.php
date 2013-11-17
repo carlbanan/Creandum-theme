@@ -619,7 +619,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
       array('jquery'), 
-      '1.4' );
+      '1.7' );
   
     wp_register_script(  'modernizr', 
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 
@@ -742,9 +742,15 @@ $team_custom_meta_fields = array(
         'type'  => 'text'  
     ),
     array(  
-        'label'=> 'LinkedIn ur',  
+        'label'=> 'LinkedIn url',  
         'desc'  => 'http://se.linkedin.com/pub/pontus-wiehager/22/124/861',  
         'id'    => $prefix.'linkedin',  
+        'type'  => 'text'  
+    ),
+    array(  
+        'label'=> 'AngelList url',  
+        'desc'  => 'https://angel.co/spotify',  
+        'id'    => $prefix.'angel',  
         'type'  => 'text'  
     ),
     array(  
@@ -900,6 +906,12 @@ $investment_custom_meta_fields = array(
         'label'=> 'Facebook-page URL',  
         'desc'  => 'http://www.facebook.com/creandum',  
         'id'    => $prefix.'fb',  
+        'type'  => 'text'  
+    ),
+    array(  
+        'label'=> 'AngelList url',  
+        'desc'  => 'https://angel.co/spotify',  
+        'id'    => $prefix.'angel',  
         'type'  => 'text'  
     ),
     array(  

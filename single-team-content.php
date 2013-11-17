@@ -83,6 +83,7 @@
                $email = get_post_meta($post->ID,"custom_email",true);
                $tel = get_post_meta($post->ID,"custom_tel",true);
                $linkedin = get_post_meta($post->ID,"custom_linkedin",true);
+               $angel = get_post_meta($post->ID,"custom_angel",true);
               ?>
             
             <!-- GET LATSET BLOG POST -->
@@ -175,6 +176,21 @@
                   <a href='<?php echo $bloggpost ?>'>
                   <?php echo $excerpt;?>
                   </a>
+              </div>
+            </div>
+            <?php } ?>
+
+            <!-- ANGELLIST -->
+
+            <?php if($angel){ ?>
+            <div class='sideblock'>
+              <div class='sidehead'>
+                <div class='sideicon angel_icon fill'></div>
+                <div class='sidetopic fill'>
+                  <a href='<?php echo $angel ?>'>
+                    Find me on AngelList
+                  </a>
+                </div>
               </div>
             </div>
             <?php } ?>

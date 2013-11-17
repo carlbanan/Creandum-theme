@@ -32,13 +32,20 @@
 	</div>
 			
 
-	<div class='lightgreen_bg padblock infront'>
+	<div class='lightgreen_bg infront'>
 
-		<div class="container">
+		<div id="content" page='network' class="clearfix clear">
+		
+			<div id="main" class="clearfix" role="main">
+				
+				<div class='filter-menu'>
+					<span class='filter active' id=''>All</span>
+					<span class='filter' id='stories'>Stories</span>
+					<span class='filter' id='videos'>Videos</span>
+					<span class='filter' id='inspiration'>Inspiration</span>
+				</div>
 
-			<div id="content" page='network' class="clearfix clear">
-			
-				<div id="main" class="clearfix" role="main">
+				<div class="container">
 
 					<div class="row">
 		
@@ -50,8 +57,9 @@
 							
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 								
+							<!--
 							<a href="<?php the_permalink() ?>" class="async" rel="bookmark" title="<?php the_title_attribute(); ?>">
-										
+							-->			
 								<section class="post_content">
 								
 									<?php the_post_thumbnail("wpbs-featured-network"); ?>
@@ -59,11 +67,14 @@
 										<h3><?php the_title(); ?></h3>
 									
 										<?php the_excerpt(); ?>
+										<br/>
+										<a href="/" target="_blank" class="green">Read more</a>
 									</div>
 
 								</section> <!-- end article section -->
-								
+							<!--
 							</a>	
+							-->
 
 
 							</article> <!-- end article -->

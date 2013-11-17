@@ -254,10 +254,10 @@ jQuery(document).ready(function($) {
 	        }
 	        didScroll = false;
 	    }
-	 
 	    function scrollY() {
 	        return window.pageYOffset || docElem.scrollTop;
 	    }
+
 	 
 	    init();
 	 
@@ -607,6 +607,28 @@ $('span.one').hover(function () {
     	$(".cbp-af-header").toggleClass("mobile");
 
     });
+
+
+	    function scrollY() {
+	        return window.pageYOffset || docElem.scrollTop;
+	    }
+	    // STICKY FILTER
+	    if($(".filter-menu").length >= 1){
+	    	 fixh = $(".filter-menu").offset().top ;
+	    	$(window).scroll(function(){
+		        var sy = scrollY();
+		       
+
+		  	    if ( sy >= fixh  ) {	
+
+		        	$(".filter-menu").addClass("fix");
+		       	}
+		       	else{
+		       		$(".filter-menu").removeClass("fix");
+		       	}
+	    	});
+	    }
+
 }); /* end of as page load scripts */
 
 

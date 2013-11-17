@@ -37,7 +37,7 @@
 			<div id="content" page='investment' class="clearfix clear">
 			
 				<div id="main" class="clearfix" role="main">
-
+				
 					<div class='filter-menu'>
 						<span class='filter active' id=''>All</span>
 						<span class='filter' id='hardware'>Hardware companies</span>

@@ -12,7 +12,7 @@ $email = mysql_real_escape_string($_POST['email']);
 $website = mysql_real_escape_string($_POST['website']);
 $name = mysql_real_escape_string($_POST['name']);
 $other = mysql_real_escape_string($_POST['other']);
-$reference = mysql_real_escape_string($_POST['reference']);
+
 
 
 

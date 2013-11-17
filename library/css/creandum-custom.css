@@ -817,11 +817,21 @@ span.date{
 /* FILTER */
 
 .filter-menu{
-	padding:30px 0 30px 0;
+	padding:30px 0;
 	margin-bottom:40px;
 	background: #fff;
 	text-align: center;
 	margin-top: 0;
+	transition: padding 0.45s ease;
+	-moz-transition: padding 0.45s ease;
+ 	-webkit-transition: padding 0.45s ease;
+}
+.filter-menu.fix{
+	position: fixed;
+	top:60px;
+	z-index: 9999;
+	width: 100%;
+	padding:10px 0;
 }
 
 .filter{
@@ -1378,7 +1388,7 @@ line-height: 1.8em;
 		background-position: -67px 0px; 
 }
 
-.cbp-af-header nav a:hover{
+.cbp-af-header nav a:hover,.cbp-af-header nav ul li.active a{
 		border-bottom: 1px solid white;
 		padding-bottom: 5px;
 }

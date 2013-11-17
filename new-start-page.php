@@ -120,7 +120,8 @@ Template Name: New startpage
           'orderby'          => 'post_date',
           'order'            => 'DESC',
           'post_type'        => 'investment',
-          'post_status'      => 'publish'
+          'post_status'      => 'publish',
+          'investment_category' => 'Bump firstpage'
           );
         $posts_array = get_posts( $args );
 
