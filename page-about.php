@@ -69,7 +69,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 				</div>
 			</div>
 
-				<div class="who">
+			<div class="who">
 				<div class="col-md-5">
 					<h1>Our services</h1>
 					<p class="lead">We do not only invest in great companies, we help make them stronger and better aswell.</h3>
@@ -80,12 +80,73 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 				</div>
 			</div>
 
+		</div>
+
 	</div>
 	
 </div>
 			
 
+
+<div class='press-area container' style='background:#fff;z-index:9999;position:relative;padding:60px 0;'>
+	<h1>Press resources</h1>
+
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p1.png'/>
+		<h4>Team picture</h4>
+		<span class='green'>Download</span>
+	</div>
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p2.png'/>
+		<h4>Network picture</h4>
+		<span class='green'>Download</span>
+	</div>
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p3.png'/>
+		<h4>Logo picture</h4>
+		<span class='green'>Download</span>
+	</div>		
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p4.png'/>
+		<h4>Team picture</h4>
+		<span class='green'>Download</span>
+	</div>	
 		
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p5.png'/>
+		<h4>Team picture</h4>
+		<span class='green'>Download</span>
+	</div>
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p6.png'/>
+		<h4>Network picture</h4>
+		<span class='green'>Download</span>
+	</div>
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p7.png'/>
+		<h4>Logo picture</h4>
+		<span>Download</span>
+	</div>		
+	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
+		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p4.png'/>
+		<h4>Team picture</h4>
+		<span class='green'>Download</span>
+	</div>		
+
+
+
+<!--
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		content
+		<?php the_content(); ?>
+
+	<?php endwhile;  endif; ?>
+
+-->
+
+</div>		
+
+	<!-- /Wrapper -->
 
 	<!-- /Wrapper -->
 

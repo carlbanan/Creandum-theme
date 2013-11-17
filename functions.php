@@ -77,13 +77,12 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'wpbs-featured', 300, 300, true );
 add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
-add_image_size( 'wpbs-featured-network', 303, 227, true);
-
 
 
 add_action( 'after_setup_theme', 'theme_setup' );
 function theme_setup() {
-  add_image_size( 'thumbnal-size', 303, 227, true);
+  add_image_size( 'thumbnail-size', 280, 280, true);
+  add_image_size( 'wpbs-featured-network', 303, 227, true);
 }
 
 
@@ -587,12 +586,17 @@ function add_active_class($classes, $item) {
 if( !function_exists("theme_styles") ) {  
     function theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
+        
+
+
         wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/css/bootstrap.css', array(), '1.0', 'all' );
         
         wp_register_style( 'bootstrap-theme', get_template_directory_uri() . '/library/css/bootstrap-theme.css', array(), '1.0', 'all' );
         wp_register_style( 'wp-bootstrap', get_stylesheet_uri(), array(), '1.0', 'all' );
     
         wp_register_style( 'creandum-theme', get_template_directory_uri() . '/library/css/creandum-custom.css', array(), '1.0', 'all' );       
+
+
 
         wp_enqueue_style( 'bootstrap' );
         wp_enqueue_style( 'bootstrap-theme' );
@@ -615,7 +619,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
       array('jquery'), 
-      '1.3' );
+      '1.4' );
   
     wp_register_script(  'modernizr', 
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 

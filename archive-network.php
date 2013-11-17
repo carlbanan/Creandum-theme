@@ -22,7 +22,7 @@
 				</h2>
 				</section>
 		</div>
-		<div class="big-image-container style='background-image:url(<?php echo get_template_directory_uri(); ?>../../images/header-network.jpg);' "></div>
+		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/overhead-hi-res.jpg);'></div>
 		<div class="green_background"></div>
 	<?php } ?>
 	</div>
@@ -54,7 +54,7 @@
 										
 								<section class="post_content">
 								
-									<?php the_post_thumbnail("thumbnal-size"); ?>
+									<?php the_post_thumbnail("wpbs-featured-network"); ?>
 									<div class="tcontent">
 										<h3><?php the_title(); ?></h3>
 									

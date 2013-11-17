@@ -22,6 +22,8 @@ jQuery(document).ready(function($) {
 				 imgurl = htmlob[0]['src'];
 				 $('#'+imageid).val(imgurl);
 
+				 console.log(htmlob);
+
 				 $('#preview_'+imageid).css("background-image","url('"+imgurl+"')");
 			     tb_remove();
 			     window.send_to_editor = original_send_to_editor;

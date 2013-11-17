@@ -55,9 +55,13 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <!--end facebook-->  
+
 <div class="cbp-af-header">
+
   <div class="cbp-af-inner container">
+
      <a href="<?php echo home_url(); ?>"><h1>Creandum</h1></a>
+    <div id='menutoggle' class='menu-icon'></div>
       <nav>
           <ul>
 
@@ -84,6 +88,7 @@
       </nav>
   </div>
 </div>
+
 <div class="loader"> ... </div>
     
 
