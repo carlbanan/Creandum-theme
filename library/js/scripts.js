@@ -603,6 +603,10 @@ $('span.one').hover(function () {
         };
 
     }
+    $("#menutoggle").click(function(){
+    	$(".cbp-af-header").toggleClass("mobile");
+
+    });
 }); /* end of as page load scripts */
 
 

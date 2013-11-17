@@ -373,7 +373,19 @@ h3 {
 	font-weight: bold;
 	text-transform: uppercase;
 }
+.menu-icon{
+	width:40px;
+	height:40px;
 
+	display: none;
+	background-image: url("../../images/icons/menu-white.png");
+	background-size: 30px 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: fixed;
+	right:10px;
+	top:10px;
+}
 /* AJAX NAV */
 #hidden_content{
 	display: none;
@@ -1269,6 +1281,7 @@ line-height: 1.8em;
 		-webkit-transition: 0.2s ease-in-out;
 		-moz-transition: 0.2s ease-in-out;
 		-o-transition: 0.2s ease-in-out;
+
 }
 
 
@@ -2719,7 +2732,30 @@ p.center{
 				display: none;
 		}
 
- 
+		/* SHOW MENU ICON TOGGLE */
+		.menu-icon{
+			display: block;
+			z-index: 999;
+		}
+		.cbp-af-header.cbp-af-header-shrink.mobile nav,.cbp-af-header.mobile nav  {	
+			margin-top:-26px;
+		}
+		.cbp-af-header.cbp-af-header-shrink.mobile nav ul li ,.cbp-af-header.mobile nav ul li {		
+			display: block;
+			width: 100%;
+			height: 50px;
+			background-color: #edf3ef;
+		}
+		.cbp-af-header.mobile{
+			overflow:visible;
+		}
+		.cbp-af-header.mobile nav a ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a {
+ 			line-height: 3em;
+ 			color:#3da955;
+ 		}
+		.cbp-af-header.mobile nav a span ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a span{
+			display: none;
+		} 		
 }	
 /* SCREENS LESS THAN 480px */
 @media only screen and (max-width : 484px) {

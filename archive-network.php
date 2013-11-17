@@ -22,7 +22,7 @@
 				</h2>
 				</section>
 		</div>
-		<div class="big-image-container"></div>
+		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/overhead-hi-res.jpg);'></div>
 		<div class="green_background"></div>
 	<?php } ?>
 	</div>
