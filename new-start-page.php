@@ -90,17 +90,17 @@ Template Name: New startpage
                     <ul>
                       <li class="one">
                       <span class="sprite-spinn_sun icon"></span>
-                        <span class="text">We do</span>
+                        <span class="text">We are</span>
                       </li>
 
                       <li class="two">
                         <span class="sprite-spinneye icon focus"></span>
-                        <span class="text">Focus</span>
+                        <span class="text">Our focus</span>
                       </li>
 
                       <li class="three">
                         <span class="sprite-spin_service icon"></span>
-                        <span class="text">Service</span>
+                        <span class="text">Our service</span>
                       </li>
 
                     </ul>

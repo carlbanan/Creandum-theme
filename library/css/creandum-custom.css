@@ -475,12 +475,12 @@ h3 {
 	width: 100%;
 }
 .big-image-container{
-	background-position: center center;
+	background-position: top;
 	background-color: #f1f1f1;
 	background-image: url("../../images/creandum-big-backup.jpg");
 	background-attachment: fixed;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: contain;
 	display: table;
 	width: 100%;
 	-webkit-transition: all 0.15s ease;
@@ -2836,10 +2836,28 @@ p.center{
 }
 
 /* SCREENS LESS THAN 1300px */
+@media all and (max-width : 1000px) {
+	.big-image-container{
+	background-position: center center;
+	background-color: #f1f1f1;
+	background-image: url("../../images/creandum-big-backup.jpg");
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+	background-size: cover;
+	display: table;
+	width: 100%;
+	-webkit-transition: all 0.15s ease;
+	-moz-transition: all  0.15s ease;
+	-o-transition:  all 0.15s ease; 
+	-webkit-transition-delay: 0.35s; /* Safari */
+	-moz-transition-delay: 0.35s; /* Safari */
+	transition-delay: 0.35s; /* Safari */
+}
+	
+	}
+
+/* SCREENS LESS THAN 1300px */
 @media all and (max-width : 1300px) {
-
-
-		
 
 	.container{
 		max-width: 1140px!important;
