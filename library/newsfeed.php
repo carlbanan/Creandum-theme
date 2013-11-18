@@ -41,7 +41,8 @@
                   'nopaging' => true,
                   )
                 );
-
+                $imgid = "";
+                $author = "";
                 // Display connected pages
                 $i = 0;
                 if ( $connected->have_posts() ) :
@@ -54,7 +55,7 @@
                 // Prevent weirdness
                 wp_reset_postdata();
                 endif;
-
+              $imgurl = "";
               $imgurl = get_post_meta($imgid,"custom_portrait_image",true);
 
               $b_item = array(

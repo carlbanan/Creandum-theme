@@ -20,7 +20,10 @@ jQuery(document).ready(function($) {
 			window.send_to_editor = function(html) {
 					 
 				imgurl = $("<div>" + html + "</div>").find('img').attr('src');
+				if(imgurl == "undefined" || !imgurl || imgurl == ""){
 
+					imgurl = $("<div>" + html[0]['innerHTML'] + "</div>").find('img').attr('src');
+				}
 				$('#'+imageid).val(imgurl);	 
 
 				 $('#preview_'+imageid).css("background-image","url('"+imgurl+"')");

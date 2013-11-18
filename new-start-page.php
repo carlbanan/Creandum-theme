@@ -44,6 +44,8 @@ Template Name: New startpage
                  <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
                  </div>
+
+
                  <div class='content-header-text wrapper container'>
                    <div class='shadowop'>
                     <?php foreach($textline as $txt){ ?>
@@ -60,7 +62,12 @@ Template Name: New startpage
                     <?php if($textline3!=""){ echo "<h5>".$textline3."</h5>"; }?>
                   </div>
                 </div>
+
+
               </div>
+
+
+
               <?php 
                   if(!$active){ 
                      $pr .= "<img src='".$slide['src']."' class='preload'/>"; 
@@ -72,6 +79,7 @@ Template Name: New startpage
           </div>
 
       </div>
+
       <?php echo $pr; ?>
       <!-- <div class="container goscroll"></div> -->
        <div class="start-content">
@@ -80,7 +88,7 @@ Template Name: New startpage
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
-                   <div class="ticker2"> 
+                   <div class="ticker2 init"> 
                     <div class="tick2 tick"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
                   <div class="tick2"><h2>We are backing entrepreneurs that are obsessed by creating extraordinary things within software and hardware.</h2></div>
                   <div class="tick2"><h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2></div>

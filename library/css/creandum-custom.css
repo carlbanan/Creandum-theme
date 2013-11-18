@@ -1077,11 +1077,13 @@ line-height: 1.4em;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;
+
+}
+.ticker2.init h2 {
  -webkit-animation: move 25s;
  -webkit-animation-iteration-count: 1;
 -webkit-animation-delay: 5s;
 }
-
 
 @-webkit-keyframes move{
 0%{ top: 0px; }
@@ -1122,15 +1124,19 @@ transition: all 0.5s ease-in-out;
 
 
 .ticker_margin_one{
-	opacity: o;
+	opacity: 1;
+	top:0;
+	margin-top:0;
 }
 
 .ticker_margin_two{
-	top: -222px;
+	top:0
+	margin-top: -222px;
 }
 
 .ticker_margin_three{
-	top: -339px;
+	top:0;
+	margin-top: -339px;
 }
 
 
@@ -2511,8 +2517,12 @@ button:hover .twitter-icon{
 	width:100%;
 	vertical-align: middle;
 	text-align: center;
-	display: none;  
+	display: table;
 	opacity:0;
+	position: absolute;
+	 -webkit-transition: opacity 0.73s linear;
+	transition: opacity 0.73s linear; 	
+	
 }
 .content-header-wrap.active{
 		display: table;
