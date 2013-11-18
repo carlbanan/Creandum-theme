@@ -214,6 +214,12 @@ h3 {
 	color:#39423f;
 
 }
+
+.contactz{
+	z-index:9999!important;
+}
+
+
 .loader{
 	position: fixed;
 	top:50%;
@@ -471,7 +477,7 @@ h3 {
 .page-wrapper.contact{
 	margin:0;
 	position: relative;
-	z-index: 10;
+	z-index: 40;
 }
 /* DISPLAY CONTENT TEAM INVESTMENT */
 .big-image-stat{
@@ -528,6 +534,12 @@ h3 {
 	 -webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease; 
 }
+
+.contact .big-image-container, .green_background{
+	height: 600px;
+}
+
+
 .middle{
 		top: 50%;
 }
@@ -2518,12 +2530,13 @@ button:hover .twitter-icon{
 
 .content-header-text{
 	position: relative;
-	z-index: 6!important;
+	z-index: 30!important;
 	text-align: left;
 	color:#fff;
 	height:inherit;
 	z-index:99;
 }
+
 
 .content-header-text div{
 	 position: fixed;
@@ -2572,7 +2585,7 @@ button:hover .twitter-icon{
 	 height:inherit;
 	 top:auto;
 	 bottom:auto;
-	 margin-top: 110px;
+	 margin-top: 90px;
 	 max-width:960px;
 
 }
