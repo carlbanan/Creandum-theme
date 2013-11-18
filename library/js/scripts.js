@@ -599,7 +599,7 @@ $('span.one').hover(function () {
 
 
 	    function scrollY() {
-	        return window.pageYOffset || docElem.scrollTop;
+	        return window.pageYOffset || document.documentElement.scrollTop;
 	    }
 	    
 	    // STICKY FILTER
