@@ -36,6 +36,8 @@
 
 	<!-- Wrapper -->
 
+	
+
 	<div class="lightgreen_bg">
 		<div class="container padblock">
 			<div class='forms'>
@@ -95,7 +97,7 @@
 										Other
 									</span>
 								</div>
-							</div> <!-- CLOSE STAGE GROUP -->
+							</div> 
 
 							<label>What sector are you in?</label>
 							<div class="checkform">
@@ -121,13 +123,13 @@
 									</span>
 								</div>
 
-							</div> <!-- CLOSE SECTOR GROUP -->
+							</div> 
 
 							<span for="other" class="counter"></span>
 							<textarea id="other" placeholder="Other ( optional )" name="other"></textarea>
 
 						
-						</div><!-- END 12 COL -->
+						</div>
 						<div class="col-md-6 col-lg-6">
 							<input type="text" id="name" name="name" placeholder="Your name" class="col-6"/>
 						</div>
@@ -141,11 +143,12 @@
 						<div class="col-md-6 col-lg-6">
 							<input type="text" id="email" name="email" placeholder="Your e-mail"  class="col-6"/>	
 						</div>
-					</div><!-- END ROW -->
+					</div>
 
 					<input type="submit" id="sendform" class="sendform btn btn-default green_bg white" value="Send"/>
 					<div id="dialog" class="dialog"></div>
 				</form>									
+
 
 			</div>				
 		</div>

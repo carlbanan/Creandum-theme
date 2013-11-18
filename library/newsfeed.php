@@ -78,7 +78,7 @@
           
           $twitterCount      = $ant; 
           $twitterUsername   = "creandum";
-          $twitterCacheFile  = "cache/twettir.cacheFile";
+          $twitterCacheFile  = "cache/twitter_".$twitterCount.".cacheFile";
 
           $Twitter = new Twitter($twitterUsername,$twitterCacheFile,$twitterCount);
 
@@ -117,7 +117,7 @@
            $xmlsource = "http://swedishstartupspace.com/feed/";
            //$rawFeed = file_get_contents($xmlsource);
 
-           $max_age = 2*60*60;     // 1 HOURE
+           $max_age = 2*60*60;     // 2 HOURE
            $feed = $this->get_xml($xmlsource,$max_age);
 
            $doc = new DOMDocument();
@@ -139,7 +139,7 @@
                             'url'    => $url,
                             'author'=> $authour
                           );
-                if($ant_xml < $ant){
+                if($ant_xml < ($ant*3)){
                     $ant_xml++;
                     array_push($nfeed,$x_item);
                 }
@@ -187,7 +187,7 @@
                          $d['tweet_user'] = $twt->user->{"screen_name"};
                          $d['tweet_url'] = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
                          $d['tweet_date'] = date('F j, Y \a\t g:i a',strtotime($twt->{"created_at"}));
-                         $d['tweet_date_time'] = $twt->{"created_at"};
+                         $d['tweet_date_time'] = date('Y-m-d H:i:s',strtotime($twt->{"created_at"}));
                         
                          array_push($ret,$d);
                       }

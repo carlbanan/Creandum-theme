@@ -213,17 +213,6 @@ jQuery(document).ready(function($) {
 	}  /* END AJAX NAV */
 
 	
-	if($(".filter-menu").length >= 1){
-		$(".filter").bind("click",function(){
-			var show = $(this).attr("id");
-			$(".filterable").css( "display", "block" );
-			if(show != ""){
-				$(".filterable").not("."+show).css( "display", "none" );
-			}
-			$(this).parent(".filter-menu").children(".active").removeClass("active");
-			$(this).addClass("active");			
-		});
-	}
 
 	
 	var cbpAnimatedHeader = (function() {
@@ -612,6 +601,7 @@ $('span.one').hover(function () {
 	    function scrollY() {
 	        return window.pageYOffset || docElem.scrollTop;
 	    }
+	    
 	    // STICKY FILTER
 	    if($(".filter-menu").length >= 1){
 	    	 fixh = $(".filter-menu").offset().top ;
@@ -626,7 +616,20 @@ $('span.one').hover(function () {
 		       	else{
 		       		$(".filter-menu").removeClass("fix");
 		       	}
+		       	
 	    	});
+			$(".filter").bind("click",function(){
+				var show = $(this).attr("id");
+				$(".filterable").css( "display", "block" );
+				if(show != ""){
+					$(".filterable").not("."+show).css( "display", "none" );
+				}
+				$(this).parent(".filter-menu").children(".active").removeClass("active");
+				$(this).addClass("active");		
+				$('html, body').animate({
+			         scrollTop: ( fixh - 50 )
+				 },250);
+			});
 	    }
 
 }); /* end of as page load scripts */
