@@ -197,12 +197,14 @@
             endwhile;  
             endif;
          // SORT ARRAY ON DATE
-         foreach ($ret as $key => $row) {
-              $ddate[$key]  = $row['tweet_date_time'];
-              $ttype[$key]  = $row['tweet_user'];
-          }
-          array_multisort($ddate, SORT_DESC, $ttype, SORT_ASC, $ret);
-          return $ret;
+        if($ret){
+             foreach ($ret as $key => $row) {
+                $ddate[$key]  = $row['tweet_date_time'];
+                $ttype[$key]  = $row['tweet_user'];
+            }
+            array_multisort($ddate, SORT_DESC, $ttype, SORT_ASC, $ret);
+        }
+        return $ret;
       }
 
       function get_xml($url, $max_age){

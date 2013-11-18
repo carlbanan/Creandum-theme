@@ -97,10 +97,9 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 </div>
 			
 
-
 <div class='press-area container' style='background:#fff;z-index:9999;position:relative;padding:60px 0;'>
 	<h1>Press resources</h1>
-
+<!--
 	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
 		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p1.png'/>
 		<h4>Team picture</h4>
@@ -143,16 +142,16 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 		<span class='green'>Download</span>
 	</div>		
 
+-->
 
 
-<!--
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		content
+		
 		<?php the_content(); ?>
 
 	<?php endwhile;  endif; ?>
 
--->
+
 
 </div>		
 

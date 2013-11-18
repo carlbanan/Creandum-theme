@@ -892,6 +892,8 @@ array(
     )  
 )  */
 
+wp_enqueue_script( 'media-upload' );
+
 
 $prefix = 'custom_';  
 global $investment_custom_meta_fields;
@@ -1007,7 +1009,7 @@ function my_admin_enqueue_scripts( ) {
     wp_register_script(  'admin', 
       get_template_directory_uri() . '/library/js/admin.js', 
       array('jquery'), 
-      '1.3' );
+      '1.4' );
     wp_enqueue_script('admin');
 }
 // ADMIN CSS
@@ -1268,6 +1270,8 @@ if(is_plugin_active($plugin)){
       }
   }
 } 
+
+
 
 // END IS SIMPLE FIELDS ACTIVE
 /*

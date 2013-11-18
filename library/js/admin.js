@@ -18,11 +18,10 @@ jQuery(document).ready(function($) {
 			var original_send_to_editor = window.send_to_editor;
 
 			window.send_to_editor = function(html) {
-				 htmlob = $(html);
-				 imgurl = htmlob[0]['src'];
-				 $('#'+imageid).val(imgurl);
+					 
+				imgurl = $("<div>" + html + "</div>").find('img').attr('src');
 
-				 console.log(htmlob);
+				$('#'+imageid).val(imgurl);	 
 
 				 $('#preview_'+imageid).css("background-image","url('"+imgurl+"')");
 			     tb_remove();
