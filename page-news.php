@@ -14,17 +14,19 @@ $tweets = $n->give_tweets(3);
 
 <!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 <div class"top-post">
-	<div class="page-content intro">	
-			<!--<p class="large_invest_white"></p> -->
-			<section class="post_content center clearfix" itemprop="articleBody">
-			<h2>
-			Here's what we're up to and whats going on in our network.
-			</h2>
-			</section>
-	</div>
-	<div class="big-image-container"></div>
-	<div class="green_background"></div>
+	<!-- Big picture -->
+<div class="page-content intro-about">	
+				<!--<p class="large_invest_white"></p> -->
+				<section class="post_content center clearfix" itemprop="articleBody">
+				<h2>
+				 Backing the companies of tomorrow.
+				</h2>
+				</section>
+		</div>
+		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
+		<div class="green_background"></div>
 </div>	
+
 <div class='newspage infront'>
 	<div class="lightgreen_bg">
 		<div class='filter-menu'>

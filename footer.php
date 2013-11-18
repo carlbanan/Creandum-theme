@@ -5,13 +5,13 @@
           <li><p>Blog</p></li>
           <li><p>Press</p></li>
           <li><p>Google maps</p></li>
-          <li><p>E-mail</p></li>
+          <li><p>AngelList</p></li>
           <button type="button" class="btn2 btn-default btn-lg right">
-          	<span class="fb btntext hidden-xs"></span>
-          	Like us on facebook
+          	<span class="in btntext hidden-xs"></span>
+          	Follow us on Linkedin
           </button>
           <button type="button" class="btn2 btn-default btn-lg right">
-          	<span class="twitter-icon btntext hidden-xs"></span>Follow on twitter
+          	<span class="twitter-icon btntext hidden-xs"></span>Follow us on twitter
           </button>
         </ul>
 

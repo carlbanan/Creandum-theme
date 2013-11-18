@@ -61,7 +61,7 @@
   <div class="cbp-af-inner container">
 
      <a href="<?php echo home_url(); ?>"><h1>Creandum</h1></a>
-    <div id='menutoggle' class='menu-icon'></div>
+    <div id='menutoggle' class='menu-icon cbp-af-header-shrink'></div>
       <nav>
           <ul>
 

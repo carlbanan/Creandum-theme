@@ -12,16 +12,18 @@
 				?>
 		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 		<div class"top-post">
-			<div class="page-content intro">	
-					<!--<p class="large_invest_white"></p> -->
-					<section class="post_content center clearfix" itemprop="articleBody">
-					<h2>
-					 This is team Creandum and also a great part of somewhat 60 companies. 
-					</h2>
-					</section>
-			</div>
-			<div class="big-image-container"></div>
-			<div class="green_background"></div>
+				<!-- Big picture -->
+				<div class="page-content intro-about">	
+								<!--<p class="large_invest_white"></p> -->
+								<section class="post_content center clearfix" itemprop="articleBody">
+								<h2>
+								 This is team Creandum and also a great part of somewhat 60 companies. 
+								</h2>
+								</section>
+						</div>
+						<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
+						<div class="green_background"></div>
+				</div>	
 	</div>	
 	<?php } ?>
 
