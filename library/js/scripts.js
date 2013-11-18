@@ -370,15 +370,15 @@ $('span.one').hover(function () {
     	var position = $(this).scrollTop(); // on scroll update the position value
     	var changeValue = 100 + ((parseHeight * 2 - position) / 10)
 
-    	if (position <= parseHeight ) { // start value is 0, stop when the value reach 300
+    	if (position + 300 <= parseHeight ) { // start value is 0, stop when the value reach 300
 
     		$sun.css({
     			'top': position / 1.7, // 300 - whatever scroll says
-    			'-webkit-transform': 'rotate(' + position + 'deg)'
+    			/*'-webkit-transform': 'rotate(' + position + 'deg)'*/
     		})
 
     		$box.css({
-    			'height': parseHeight - position * 1.3, // 300 - whatever scroll says
+    			'height': parseHeight - position - 100 * 1.3, // 300 - whatever scroll says
     		})
     	}
 
@@ -408,7 +408,8 @@ $('span.one').hover(function () {
 
     	} 
 
-    	if (position >= parseHeight * 3 && position <= parseHeight * 4 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+    	if (position >= parseHeight * 3 && position <= parseHeight * 4 - 200 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+
     		$wheel.css({
     			'top': parseInt((position - parseHeight * 3) / 3), // 300 - whatever scroll says
     			'-webkit-transform': 'rotate(' + parseInt((position - parseHeight * 3) / 1) + 'deg)'
@@ -416,7 +417,9 @@ $('span.one').hover(function () {
 
     	}
 
-    	if ((position >= (parseHeight * 4) - (parseHeight / 2))  && position <= parseHeight * 5 ) {
+    	if ((position >= (parseHeight * 4) - (parseHeight / 2))  && position <= parseHeight * 5 - 500 ) {
+    		console.log(position)
+    		console.log(parseHeight * 5 - 200)
 
     		$tools.css({
     			'marginTop': ((position - parseHeight  * 4) + (parseHeight / 2)) / 1.4
