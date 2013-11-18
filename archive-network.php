@@ -31,7 +31,7 @@
 		<!-- HIDDEN CONTENTN IS STORED HERE -->
 	</div>
 			
-
+<div class="network">
 	<div class='lightgreen_bg infront'>
 
 		<div id="content" page='network' class="clearfix clear">
@@ -121,5 +121,6 @@
 		</div> <!-- end container -->
 	
 	</div> <!--end lightgreen_bg-->
+</div>	
 
 <?php get_footer(); ?>

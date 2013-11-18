@@ -32,6 +32,7 @@
 		<!-- HIDDEN CONTENTN IS STORED HERE -->
 	</div>
 
+<div class="investments">
 	<div class='lightgreen_bg investpadblock infront'>
 
 			<div id="content" page='investment' class="clearfix clear">
@@ -123,5 +124,6 @@
 		</div> <!-- end container -->
 	
 	</div> <!--end lightgreen_bg-->
+</div>
 
 <?php get_footer(); ?>

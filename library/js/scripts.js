@@ -343,7 +343,7 @@ $('span.one').hover(function () {
 */
 
 
-    $('.one').hover(function(){
+    $('li.one').hover(function(){
     	console.log('sdf')
         $('.tick').addClass('ticker_margin_one');    
     },     
@@ -352,17 +352,17 @@ $('span.one').hover(function () {
     });
  
     $('.two').hover(function(){     
-        $('.tick').addClass('ticker_margin_two');    
+        $('.ticker2').addClass('ticker_margin_two');    
     },     
     function(){    
-        $('.tick').removeClass('ticker_margin_two');     
+        $('.ticker2').removeClass('ticker_margin_two');     
     });
  
     $('.three').hover(function(){     
-        $('.tick').addClass('ticker_margin_three');    
+        $('.ticker2').addClass('ticker_margin_three');    
     },     
     function(){    
-        $('.tick').removeClass('ticker_margin_three');     
+        $('.ticker2').removeClass('ticker_margin_three');     
     });
 
     var $window = $(window);
@@ -614,12 +614,12 @@ $('span.one').hover(function () {
 	    }
 	    // STICKY FILTER
 	    if($(".filter-menu").length >= 1){
-	    	 fixh = $(".filter-menu").offset().top ;
+	    	 fixh = $(".filter-menu").offset().top;
 	    	$(window).scroll(function(){
 		        var sy = scrollY();
 		       
 
-		  	    if ( sy >= fixh  ) {	
+		  	    if (60 + sy >= fixh ) {	
 
 		        	$(".filter-menu").addClass("fix");
 		       	}

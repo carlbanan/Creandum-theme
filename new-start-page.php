@@ -80,12 +80,13 @@ Template Name: New startpage
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
-                   <div class="ticker">
-                      <h2 class='tick'>We are an independent and partner owned venture capital firm.</h2>
-                      <h2>Our job is to help great entrepreneurs building great companies.</h2>
-                      <h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2>
-                      <h2>Due to our experience we are offering services beyond expected.</h2>
-                  </div>
+                   <div class="ticker2"> 
+                    <div class="tick2 tick"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
+                  <div class="tick2"><h2>We are backing entrepreneurs that are obsessed by creating extraordinary things within software and hardware.</h2></div>
+                  <div class="tick2"><h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2></div>
+                   <div class="tick2"><h2> We use our extensive background in building companies to serve top entrepreneurs.</h2></div>
+                  </h2>
+                   </div> 
                   <div class="ticker_icons">
                     <ul>
                       <li class="one">

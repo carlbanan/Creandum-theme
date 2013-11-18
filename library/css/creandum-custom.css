@@ -49,7 +49,7 @@
 	background: url('../../images/sprite_small_green.png') no-repeat;
 }
 
-.sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel, .sprite-large_news, .sprite-in, .sprite-spin_service, .sprite-spinneye, .sprite-spinn_sun, .sprite-contact_email, .sprite-contact_phone, .sprite-contact_pin, .sprite-large_contact
+.sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel, .sprite-large_news, .sprite-in, .sprite-in_white, .sprite-spin_service, .sprite-spinneye, .sprite-spinn_sun, .sprite-contact_email, .sprite-contact_phone, .sprite-contact_pin, .sprite-large_contact
 {
 	background: url('../../images/sprite-all.png') no-repeat;
 }
@@ -83,7 +83,8 @@
 .sprite-fb{ background-position: 0 -1403px; width: 10px; height: 19px; } 
 .sprite-globe{ background-position: 0 -1472px; width: 290px; height: 288px; } 
 .sprite-in{ background-position: 0 -1810px; width: 18px; height: 17px; } 
-.sprite-large_contact{ background-position: 0 -1877px; width: 57px; height: 60px; } 
+.sprite-in_white{ background-position: 0 -1877px; width: 18px; height: 17px; } 
+.sprite-large_contact{ background-position: 0 -1944px; width: 57px; height: 60px; } 
 .sprite-large_invest{ background-position: -354px 0; width: 57px; height: 52px; } 
 .sprite-large_news{ background-position: -354px -102px; width: 57px; height: 57px; } 
 .sprite-mail{ background-position: -354px -209px; width: 18px; height: 14px; } 
@@ -107,6 +108,7 @@
 .sprite-twitter-white{ background-position: -354px -1779px; width: 19px; height: 15px; } 
 .sprite-twitter{ background-position: -354px -1844px; width: 19px; height: 15px; } 
 .sprite-wheel{ background-position: -354px -1909px; width: 295px; height: 295px; } 
+
 
 
 
@@ -306,7 +308,7 @@ h3 {
 	display: block;
 }
 .start-content{
-	z-index: 99999999;
+	z-index: 99;
 	background-color: #fff;
 	position: relative;
 }
@@ -363,8 +365,8 @@ h3 {
 	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	width: 100%;
 	border-radius: 0px;
-	background: #fff;
-	border:none;
+	background: none;
+	border-top: 1px solid #3da955;
 	padding:25px 0;
 }
 
@@ -673,6 +675,21 @@ span.date{
 	padding-bottom: 100px;
 }
 
+.newsdeck .row{
+	margin-top: 120px;
+}
+
+.network .row{
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+.investments .row{
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+
 
 .newsdeck h2{
 	text-align: center;
@@ -831,21 +848,20 @@ span.date{
 /* FILTER */
 
 .filter-menu{
-	padding:30px 0;
-	margin-bottom:40px;
-	background: #fff;
+	padding:15px 0;
+	background: #edf3ef;
 	text-align: center;
 	margin-top: 0;
-	transition: padding 0.45s ease;
-	-moz-transition: padding 0.45s ease;
- 	-webkit-transition: padding 0.45s ease;
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px solid white;
 }
 .filter-menu.fix{
 	position: fixed;
 	top:60px;
-	z-index: 9999;
+	z-index: 999999;
 	width: 100%;
-	padding:10px 0;
+	padding:15px 0;
 }
 
 .filter{
@@ -980,12 +996,6 @@ textarea:focus,input:focus{
 	padding: 120px 0 160px 0;
 }
 
-.ticker{
-overflow: hidden;
-height: 80px;
-vertical-align: baseline;
-}
-
 .text{
 	color: #3da955;
 	padding-top: 10px;
@@ -1040,29 +1050,79 @@ span.one:hover, span.two:hover, span.three:hover, span.four:hover{
 	cursor: pointer;
 }
 
+.ticker2{
+	height: 90px;
+	overflow: hidden;
+
+}
+
+.ticker2 h2 {
+margin:30px 20%;	
+display: inline-block;
+position: relative;
+line-height: 1.4em;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+ -webkit-animation: move 25s;
+ -webkit-animation-iteration-count: 1;
+-webkit-animation-delay: 5s;
+}
+
+
+@-webkit-keyframes move{
+0%{ top: 0px; }
+5% { top: -103px;}
+20% { top: -103px;}
+25% { top: -222px; }
+40% { top: -222px; }
+45% { top: -339px; }
+60% { top: -339px; }
+65% { top: 0px; }
+80% { top: 0px; }
+}
+
+.ticker_icons .one{
+ -webkit-animation: opacity 5s;
+ -webkit-animation-iteration-count: 1;
+-webkit-animation-delay: 5s;
+}
+
+.ticker_icons .two{
+ -webkit-animation: opacity 5s;
+ -webkit-animation-iteration-count: 1;
+-webkit-animation-delay: 10s;
+}
+
+.ticker_icons .three{
+ -webkit-animation: opacity 5s;
+ -webkit-animation-iteration-count: 1;
+-webkit-animation-delay: 15s;
+}
+
+@-webkit-keyframes opacity{
+0%{ opacity: 0.5; }
+5% { opacity: 1;}
+95% { opacity: 1;}
+100% { opacity: 0.5;}
+}
+
 
 .ticker_margin_one{
-	margin-top: -90px!important;
+	opacity: o;
 }
 
 .ticker_margin_two{
-	margin-top: -180px!important;
+	top: -222px;
 }
 
 .ticker_margin_three{
-	margin-top: -270px!important;
+	top: -339px;
 }
 
 
-.ticker h2 {
-margin: 0px;
-height: 90px;
--webkit-transition: margin-top 0.5s ease-in-out;
--moz-transition: margin-top 0.5s ease-in-out;
--o-transition: margin-top 0.5s ease-in-out;
-transition: margin-top 0.5s ease-in-out;
-line-height: 90px;
-}
+
 
 /* ABOUT */
 .press-area{
@@ -1583,12 +1643,12 @@ line-height: 1.8em;
 	margin-top: 20px;
 }
 
-.fb{
-	background-image: url("../../images/icons/social/fb_white.png");
+.in{
+	background-image: url("../../images/icons/social/in_white.png");
 }
-button:hover .fb{
+button:hover .in{
 	border-right: 1px solid #3da955;
-	background-image: url("../../images/icons/social/fb.png");
+	background-image: url("../../images/icons/social/in.png");
 }
 .twitter-icon{
 	background-image: url("../../images/icons/social/twitter_full_white.png");
