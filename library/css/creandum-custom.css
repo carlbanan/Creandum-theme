@@ -2512,7 +2512,9 @@ button:hover .twitter-icon{
 	transition: all 0.3s ease; 
 	z-index: 11;
 }
-
+#slider-bigimage{
+	background-color: #3da955;
+}
 .content-header-wrap{
 	width:100%;
 	vertical-align: middle;
@@ -2520,13 +2522,15 @@ button:hover .twitter-icon{
 	display: table;
 	opacity:0;
 	position: absolute;
-	 -webkit-transition: opacity 0.73s linear;
-	transition: opacity 0.73s linear; 	
+	 -webkit-transition: opacity 0.43s linear;
+	transition: opacity 0.43s linear; 	
 	
 }
 .content-header-wrap.active{
 		display: table;
 		opacity: 1;
+	 -webkit-transition: opacity 0.73s linear;
+	transition: opacity 0.73s linear; 		
 }
 .content-header.bigimage{
 	background-size:cover;
