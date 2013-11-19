@@ -78,6 +78,8 @@ Template Name: New startpage
           ?>
           </div>
 
+         
+
       </div>
 
       <?php echo $pr; ?>

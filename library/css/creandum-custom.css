@@ -638,7 +638,7 @@ line-height: 1.8em;
 }
 .sidecontent{
 	text-align: left;
-	padding:20px 40px 20px 20px;
+	padding:20px 40px 30px 20px;
 	-webkit-border-bottom-right-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	-moz-border-radius-bottomright: 3px;
@@ -726,12 +726,12 @@ span.date{
 	max-height: 75px;
 	text-overflow:hidden;
 	overflow:hidden;
-	max-width: 62%;
+	max-width: 75%;
 }
 .ncard-content h2{
 	text-align: left;
-	font-size: 16px;
-	line-height: 1.6em;
+	font-size: 15px;
+	line-height: 1.5em;
 	padding:4px 0;
 	margin:auto; 
 	vertical-align: middle;
@@ -1158,7 +1158,7 @@ transition: all 0.5s ease-in-out;
 	background-color: #fff;
 	border-bottom-left-radius:3px;
 	border-bottom-right-radius:3px;
-	padding:10px;
+	padding:15px 20px 0px 20px;
 	max-height:150px;
 	overflow-y:hidden;
 
@@ -1464,8 +1464,8 @@ line-height: 1.8em;
 .cbp-af-header nav a {
 		color: white;
 		font-size: 1em;
-		margin-left: 20px;
 		margin-right: 20px;
+		
 }
 
 .cbp-af-header nav ul {
@@ -1528,7 +1528,7 @@ line-height: 1.8em;
 }
 
 .cbp-af-header.cbp-af-header-shrink a {
-		margin-left: 10px;
+		
 }
 
 .cbp-af-header.cbp-af-header-shrink .head{
@@ -1541,8 +1541,7 @@ line-height: 1.8em;
 .cbp-af-header.cbp-af-header-shrink  .network,
 .cbp-af-header.cbp-af-header-shrink  .aboutnav,
 .cbp-af-header.cbp-af-header-shrink  .contactnav{
-		background-image: none;
-		position: none;
+		display: none;
 }
 
  .cbp-af-header.cbp-af-header-shrink nav ul{
@@ -1679,7 +1678,7 @@ button:hover .twitter-icon{
 .btn2 {
 	display: inline-block;
 	-webkit-font-smoothing:antialiased;
-	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding: 4px 20px 0 0;
 	margin-bottom: 0;
 	margin-left: 20px;
@@ -2526,6 +2525,8 @@ button:hover .twitter-icon{
 	transition: opacity 0.43s linear; 	
 	
 }
+
+
 .content-header-wrap.active{
 		display: table;
 		opacity: 1;
@@ -2869,7 +2870,125 @@ p.center{
 }
 /* Example Media Queries */
 @media screen and (max-width: 1060px) {
-		 
+
+
+
+.cbp-af-header {
+		position: fixed;
+		left: 0;
+		top:0;
+		width: 100%;
+		background: none;
+		z-index: 10000;
+		height: 60px;
+		overflow: hidden;
+		transition: 0.2s ease-in-out;
+		-webkit-transition: 0.2s ease-in-out;
+		-moz-transition: 0.2s ease-in-out;
+		-o-transition: 0.2s ease-in-out;
+
+}
+
+
+.cbp-af-header nav ul li{
+		display: block;
+		float:left;
+		top: 0px;   
+}
+
+.cbp-af-header nav ul{
+		margin-right: ; 
+}
+
+.head{
+	margin-top:40px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+
+.cbp-af-header .cbp-af-inner {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 15px;
+}
+ 
+.cbp-af-header h1,
+.cbp-af-header nav {
+		display: inline-block;
+		position: absolute;
+		line-height: 60px;
+		font-size: 1.5em;
+}
+
+.cbp-af-header h1{
+		z-index:50;
+		padding-left: 15px;
+}
+ 
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+
+ 
+.cbp-af-header h1 {
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: 3.2px;
+		font-size: 2.3em;
+		margin: 0;
+		float: left;
+}
+ 
+.cbp-af-header nav {
+		float: right;
+}
+ 
+.cbp-af-header nav a {
+		color: white;
+		font-size: 1em;
+
+		
+}
+
+
+.cbp-af-header.cbp-af-header-shrink {
+		background: #3da955;
+
+}
+ 
+.cbp-af-header.cbp-af-header-shrink h1 {
+		font-size: 2.3em;
+}
+
+.cbp-af-header.cbp-af-header-shrink a {
+		margin-left: 0px;
+
+}
+
+.cbp-af-header.cbp-af-header-shrink .head{
+	display: none;
+}
+
+.cbp-af-header.cbp-af-header-shrink  .invest,
+.cbp-af-header.cbp-af-header-shrink  .team,
+.cbp-af-header.cbp-af-header-shrink  .newsnav,
+.cbp-af-header.cbp-af-header-shrink  .network,
+.cbp-af-header.cbp-af-header-shrink  .aboutnav,
+.cbp-af-header.cbp-af-header-shrink  .contactnav{
+		display: none;
+}
+
+ .cbp-af-header.cbp-af-header-shrink nav ul{
+				margin-top:0;
+}
+
+		/*
+		
+		.cbp-af-header h1,
+		.cbp-af-header nav a {
+				line-height: 58px;
+		}
+		
 		.cbp-af-header .cbp-af-inner {
 				width: 100%;
 		}
@@ -2885,17 +3004,26 @@ p.center{
 				margin: 0 auto;
 				text-align: left;
 				float: left;
+				font-size: 2em;
+		}
+
+		.cbp-af-header h1{
+				margin-left:20px;
+				position: absolute;
+				z-index:99999;
 		}
  
 		.cbp-af-header h1,
 		.cbp-af-header nav a {
-				line-height: 100px;
+				line-height: none;
 		}
  
 		.cbp-af-header nav a {
 				margin: 0 10px;
 		}
  
+		
+
 		.cbp-af-header.cbp-af-header-shrink h1,
 		.cbp-af-header.cbp-af-header-shrink nav a {
 				line-height: 58px;
@@ -2917,44 +3045,98 @@ p.center{
 			padding:0;
 		}
 
+	
+
 		/* SHOW MENU ICON TOGGLE */
 		.menu-icon{
 			display: block;
 			z-index: 999;
-			margin-top: 25px;
 			cursor: pointer;
 			 -webkit-transition: all 0.3s ease;
 			transition: all 0.3s ease; 
 		}
 
-
+		/*
 		.cbp-af-header.cbp-af-header-shrink .menu-icon {
 				margin-top: 0px;
+		}
+		*/
+
+		
+
+		.cbp-af-header .cbp-af-inner {
+		padding: 0;
 		}
 
 		.cbp-af-header nav ul li{
 			display: none;
 		}
 
-		.cbp-af-header.cbp-af-header-shrink.mobile nav,.cbp-af-header.mobile nav  {	
-			margin-top:-26px;
+		.cbp-af-header.mobile nav  {	
+			position: absolute;
+			width:100%;
+			height: 824px;
+			background: #3da955;
+			-webkit-transition: height 0.3s, background 0.3s ease-in-out;
+			transition: height 0.3s, background 0.3s ease-in-out; 
 		}
-		.cbp-af-header.cbp-af-header-shrink.mobile nav ul li ,.cbp-af-header.mobile nav ul li {		
+
+		.cbp-af-header.mobile nav ul{	
+			margin-top: 60px;
+		}
+
+		.cbp-af-header.mobile nav ul li {		
 			display: block;
-			width: 100%;
-			height: 50px;
-			background-color: #edf3ef;
+			height: 100%;	
+			float:center;
+			-webkit-transition: all 0.3 ease-in-out;
+			transition: all 0.3 ease-in-out; 
+			-webkit-animation: fadeIn 1s;
+		    animation: fadeIn 1s;
+		    border-top: 1px solid rgba(255, 255, 255, 0.2);
 		}
+
+		@-webkit-keyframes fadeIn {
+	    from { opacity: 0; }
+	      to { opacity: 1; }
+		}
+
+		@keyframes fadeIn {
+		    from { opacity: 0; }
+		      to { opacity: 1; }
+		}
+
+		.cbp-af-header.mobile nav ul li a{		
+			line-height: 6em;
+			margin-left: 50px;
+			text-align: left;
+			
+		}
+
 		.cbp-af-header.mobile{
 			overflow:visible;
 		}
-		.cbp-af-header.mobile nav a ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a {
- 			line-height: 3em;
- 			color:#3da955;
- 		}
+
+		
 		.cbp-af-header.mobile nav a span ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a span{
 			display: none;
-		} 		
+			-webkit-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out; 
+		} 
+
+
+		.content-header-text div h4 {
+		font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 1.6em;
+		padding-top: 20px;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 25em;
+		}
+
 }	
 /* SCREENS LESS THAN 480px */
 @media only screen and (max-width : 484px) {
@@ -2967,6 +3149,34 @@ p.center{
 		background: url(sprites.png) no-repeat;
 	}
 
+	.content-header-text div h4 {
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 1.6em;
+	padding-top: 20px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 3em;
+	}
+
+	.shadow{
+		box-shadow: none;
+	}
+	.shadowop{
+		opacity: 1;
+		color: white;
+	}
+	.strip{
+		display: none;
+	}
+
+	.cbp-af-header .container, .about .container{
+		max-width: 1140px!important;
+	}
+
+
 }
 
 
@@ -2977,17 +3187,7 @@ p.center{
 		max-width: 1140px!important;
 	}
 
-	
 
-
-	.cbp-af-header .container, .about .container{
-		max-width: 1140px!important;
-	}
-
-	.cbp-af-header, .about .post_content{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
 
 
 }
