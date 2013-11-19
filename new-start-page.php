@@ -239,19 +239,19 @@ Template Name: New startpage
                   }
                 }
               ?>
-            </div>
             <!--pay attention-->
             <?php if($c != 0){ ?>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><div class="lefticon"></div></a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next"><div class="righticon"></div></a>
             <?php } ?>
         </div><!-- /.carousel -->
+      </div>
 
         <div class='lightgreen_bg'>
           <div class='container'>
             <div class="row padblock_two">
 
-              <div class="center homeblock">
+              <div class="center homeblock mobile">
                       <div class="icon_center sprite-large_news"></div> 
                       <h2>Find out what we are up to and what's happening in our network.</h2>
               </div>

@@ -271,6 +271,7 @@ jQuery(document).ready(function($) {
           	$(".ticker2 h2").css("top","-222px" );   	
  	});
 
+
     var $window = $(window);
     var $box = $('.sunrise');
     var $sun = $('.sun');

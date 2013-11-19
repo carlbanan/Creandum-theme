@@ -4,17 +4,29 @@
          <ul class="links">
           <li><p>Blog</p></li>
           <li><p>Press</p></li>
-          <li><p>Google maps</p></li>
+          <li><p>Contact</p></li>
           <li><p>AngelList</p></li>
-          <button type="button" class="btn2 btn-default btn-lg right">
-          	<span class="in btntext hidden-xs"></span>
-          	Follow us on Linkedin
-          </button>
-          <button type="button" class="btn2 btn-default btn-lg right">
-          	<span class="twitter-icon btntext hidden-xs"></span>Follow us on twitter
-          </button>
+          <div class="hidemobile">
+              <button type="button" class="btn2 btn-default btn-lg right">
+              	<span class="in btntext hidden-xs"></span>
+              	Follow us on Linkedin
+              </button>
+              <button type="button" class="btn2 btn-default btn-lg right">
+              	<span class="twitter-icon btntext hidden-xs "></span>Follow us on twitter
+              </button>
+          </div>
+            
+           <div class="showmobile mobilesocial">
+             <div class="btnmobile">
+              <span class="twitter-icon"></span>
+            </div>
+             <div class="btnmobile">
+              <span class="in"></span>
+            </div>
+        </div>
         </ul>
-
+        
+        <div class="hidemobile">
         <div class="info">
         <ul class="details">
           <li><p>Jacobsbergsgatan 18, Stockholm, 103 86</p></li>
@@ -22,6 +34,7 @@
           <li><p>+46 (0)8 524 636 30</p></li>
         </ul>
       </div>
+    </div>
 
        </div>   
       </div>	

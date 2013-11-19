@@ -215,6 +215,8 @@ h3 {
 
 }
 
+
+
 .contactz{
 	z-index:9999!important;
 }
@@ -2779,11 +2781,12 @@ button:hover .twitter-icon{
 .carousel-control.right {
 background-image: none;
 right: 20px;
-z-index: 6;
+z-index: 66;
 }
 
 .carousel-control.left {
 background-image: none;
+z-index: 66;
 }
 
 .carousel-control{
@@ -3107,8 +3110,8 @@ p.center{
 		}
 
 		.cbp-af-header.mobile nav ul li a{		
-			line-height: 6em;
-			margin-left: 50px;
+			line-height: 3em;
+			margin-left: 20px;
 			text-align: left;
 			
 		}
@@ -3140,6 +3143,24 @@ p.center{
 }	
 /* SCREENS LESS THAN 480px */
 @media only screen and (max-width : 484px) {
+
+	.mobile{
+		display: block;
+	}
+
+	.hidemobile{
+		display: none!important;
+	}
+	
+	.padblock_two, .padblock_one {
+		padding: 50px 0 50px 0;
+	}
+
+	.col-lg-12{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.investments, .team{
 		background: url(/creandum/wp-content/themes/Creandum-theme/images/spritesx2.png) no-repeat;
 		background-size: 500px 500px
@@ -3148,6 +3169,7 @@ p.center{
 	.large_invest_green, .large_invest_white, .small_invest_white, .small_invest_fillw{
 		background: url(sprites.png) no-repeat;
 	}
+
 
 	.content-header-text div h4 {
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3161,21 +3183,177 @@ p.center{
 	-webkit-margin-end: 3em;
 	}
 
-	.shadow{
-		box-shadow: none;
-	}
-	.shadowop{
-		opacity: 1;
-		color: white;
-	}
-	.strip{
-		display: none;
-	}
-
+	
 	.cbp-af-header .container, .about .container{
 		max-width: 1140px!important;
 	}
 
+	.content-header-text h1 {
+	line-height: 1.6em;
+	font-size: 21px;
+	-webkit-margin-before: 0.2em;
+	-webkit-margin-after: 0.2em;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	padding:0px 5 0 5px;
+	}
+
+	.ticker2 h2 {
+		margin: 30px 0;
+		font-size: 14px;
+	}
+
+	.text {
+		font-size: 11px;
+	}
+
+	.content-header-text div h4:first-child{
+	margin-top:90px;
+	}
+
+	h2{ 
+		line-height: 1.4;
+		font-size: 19px;
+	}
+
+	.carousel-inner {
+	overflow: hidden;
+
+}
+	.carousel-caption {
+		position: absolute;
+		top: 100px;
+		right:0px;
+		left:0px;
+		width: 100%;
+	}
+
+	.carousel-inner > .item > img {
+	display: block;
+	height: auto;
+	line-height: 1;
+	min-width: none;
+	max-width: none;
+	min-height: none;
+	min-width: none;
+	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	display: block;
+	height: auto;
+	max-width: none;
+	line-height: 1;
+		}
+
+	.strip2{
+		font-size: 13px;
+		padding: 10px 10px 10px 10px;
+	}
+
+	.carousel-control.right {
+	background-image: none;
+	z-index: 66;
+	right: 0;
+	}
+
+	.carousel-control.left {
+	background-image: none;
+	z-index: 66;
+	left: 0;
+
+	}
+
+	.ncard .icon {
+	width: 50px;
+	height: 50px;
+	background-size: 50px auto;
+	background-position: center center;
+	border-width: 0;
+	margin-top: -60px!important;
+	position: absolute;
+	background-color: white;
+	border-radius: 50px;
+	text-align: center;
+	margin: 0 auto;
+	left: 42%;
+	}	
+	
+	.ncard{
+		margin-top: 110px;
+		height: 100%;
+		background-color: rgba(255,255,255,0);
+		text-align: center;
+	}
+
+	.ncard .ncard-content{
+		overflow: visible;
+		max-width: 100%;
+		max-height: 100%;
+		padding-left: 0;
+	}
+	.ncard-content h2{
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.mobile h2{
+		color: #3da955;
+	}
+
+
+	.details{
+		margin-left:0;
+	}
+
+	.links li{
+		float: center;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 20px;
+	}
+
+	.links {
+		text-align: center;
+	}	
+
+	.btn2, .mobile{
+		padding: 0 0 0 0;
+	}
+	
+	.btntext, .mobile{
+	border-right:none;
+	margin-right:0;
+}
+	.btnmobile{
+		width: 40px;
+		height: 40px;
+		border-radius: 4px;
+		border:1px solid white;
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	.twitter-icon{
+		width: 40px;
+		height: 40px;
+		display: block;
+	}
+
+	.mobilesocial{
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.in{
+		width: 40px;
+		height: 40px;
+		display: block;
+	}
+
+	.info{
+		margin-top: 50px;
+	}
 
 }
 
@@ -3197,6 +3375,8 @@ p.center{
 
 
 }
+
+
 
 
 
