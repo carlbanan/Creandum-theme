@@ -27,14 +27,14 @@
         </ul>
         
         <div class="hidemobile">
-        <div class="info">
-        <ul class="details">
-          <li><p>Jacobsbergsgatan 18, Stockholm, 103 86</p></li>
-          <li><p>Box 7068, SE-103 86 Stockholm</p></li>
-          <li><p>+46 (0)8 524 636 30</p></li>
-        </ul>
-      </div>
-    </div>
+          <div class="info">
+            <ul class="details">
+              <li><p>Jacobsbergsgatan 18, Stockholm, 103 86</p></li>
+              <li><p>Box 7068, SE-103 86 Stockholm</p></li>
+              <li><p>+46 (0)8 524 636 30</p></li>
+            </ul>
+          </div>
+         </div>
 
        </div>   
       </div>	
