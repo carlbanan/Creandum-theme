@@ -22,8 +22,10 @@
 				 Our ambition is to help build market leaders.
 				</h2>
 		</div>
-		<div class="big-image-container"></div>
-		<div class="green_background"></div>
+		<div class="responsive-wrapper">
+			<div class="big-image-container"></div>
+			<div class="green_background"></div>
+		</div>
 	</div>	
 	<?php } ?>
 	</div>
