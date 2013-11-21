@@ -6,10 +6,7 @@ Template Name: New startpage
 
 <?php get_header(); ?>
       
-
       <div class='startpage'>
-
-
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -44,6 +41,8 @@ Template Name: New startpage
                  <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>
                  </div>
+
+
                  <div class='content-header-text wrapper container'>
                    <div class='shadowop'>
                     <?php foreach($textline as $txt){ ?>
@@ -60,7 +59,12 @@ Template Name: New startpage
                     <?php if($textline3!=""){ echo "<h5>".$textline3."</h5>"; }?>
                   </div>
                 </div>
+
+
               </div>
+
+
+
               <?php 
                   if(!$active){ 
                      $pr .= "<img src='".$slide['src']."' class='preload'/>"; 
@@ -71,7 +75,10 @@ Template Name: New startpage
           ?>
           </div>
 
+         
+
       </div>
+
       <?php echo $pr; ?>
       <!-- <div class="container goscroll"></div> -->
        <div class="start-content">
@@ -80,7 +87,7 @@ Template Name: New startpage
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
-                   <div class="ticker2"> 
+                   <div class="ticker2 init"> 
                     <div class="tick2 tick"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
                   <div class="tick2"><h2>We are backing entrepreneurs that are obsessed by creating extraordinary things within software and hardware.</h2></div>
                   <div class="tick2"><h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2></div>
@@ -105,9 +112,11 @@ Template Name: New startpage
                       </li>
 
                     </ul>
+
                   </div>  
                 </div>
                 <!--pay attention-->
+
               </div>
             </div>
           </div>
@@ -122,7 +131,7 @@ Template Name: New startpage
           'order'            => 'DESC',
           'post_type'        => 'investment',
           'post_status'      => 'publish',
-          'investment_category' => 'Bump firstpage'
+          'investment_category' => 'Bump startpage'
           );
         $posts_array = get_posts( $args );
 
@@ -229,63 +238,35 @@ Template Name: New startpage
                   }
                 }
               ?>
-            </div>
             <!--pay attention-->
             <?php if($c != 0){ ?>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><div class="lefticon"></div></a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next"><div class="righticon"></div></a>
             <?php } ?>
         </div><!-- /.carousel -->
+      </div>
 
         <div class='lightgreen_bg'>
           <div class='container'>
             <div class="row padblock_two">
 
-              <div class="center homeblock">
+              <div class="center homeblock mobile">
                       <div class="icon_center sprite-large_news"></div> 
                       <h2>Find out what we are up to and what's happening in our network.</h2>
               </div>
 
-            <?php 
-            require_once("library/newsfeed.php");
-            $n = new newsfeed();
-            $news = $n->give_newsfeed(1);
-            ?>
+
 
                <div class="feed">  
 
-                    <?php
-
-                    foreach($news as $n){
-                    ?>
-                      <a href='<?php echo $n['url'];?>' class='<?php echo $n['type'];?> filterable' <?php if($n['type'] != 'blog'){ echo "target='_blank'";} ?>>
-                    <div class="ncard <?php echo $n['type'];?>">
-                      <div class="<?php echo $n['type'];?>icon icon"></div>
-                      <?php if($n['type']=='blog' && $n['author_img'] != ''){ ?>
-                        <div class="profile hidden-xs" style="background-image:url('<?php echo $n['author_img'];?>');"></div>
-                      <?php } ?>
-                      <div class='ncard-content'>
-                      <?php  if($n['type']=='blog'){ ?>
-                        
-                          <!-- BLOG POST -->
-                            <h2 class="bold"><?php echo $n['title'];?></h2>
-                            <h3 class="green"><?php echo date("M j, Y",strtotime($n['date']));?> <?php if($n['author']){ echo " by ".$n['author']; } ?></h3>
-                        <? }else{ ?>
-
-                          <!-- OTHERS -->
-                          <h2><?php echo $n['title'];?></h2>
-                        <?php } ?>
-
-                      </div> <!-- END ncard-content -->
-                      <div class="feedright"></div>
-                    </div>
-                  </a>
-                <?php
-                    }
-                    ?>
+              <?php 
+                  require_once("feed.php");
+                  feed(1);
+              ?>
 
         
                 </div><!-- END FEED --> 
+              
 
             </div>
           </div>

@@ -22,8 +22,10 @@
 				 Our ambition is to help build market leaders.
 				</h2>
 		</div>
-		<div class="big-image-container"></div>
-		<div class="green_background"></div>
+		<div class="responsive-wrapper">
+			<div class="big-image-container"></div>
+			<div class="green_background"></div>
+		</div>
 	</div>	
 	<?php } ?>
 	</div>
@@ -39,13 +41,13 @@
 			
 				<div id="main" class="clearfix" role="main">
 				
-					<div class='filter-menu'>
-						<span class='filter active' id=''>All</span>
-						<span class='filter' id='hardware'>Hardware companies</span>
-						<span class='filter' id='software'>Software companies</span>
-					</div>
+				<div class='filter-menu'>
+					<span class='filter active' id=''>All</span>
+					<span class='filter' id='hardware'>Hardware companies</span>
+					<span class='filter' id='software'>Software companies</span>
+				</div>
 		
-		<div class="container">
+				<div class="container">
 
 					<div class="row">	
 						<?php
@@ -72,10 +74,11 @@
 									$portrait = get_post_meta($postid,"custom_logo_image",true);	
 									?>
 									<div class="portrait_list">
-										<div class='over'>
+										<div class='over hidemobile'>
 											<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
 										</div>
 										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
+										<h4 class="showmobile"><?php the_title();?></h4>
 
 									</div>
 									

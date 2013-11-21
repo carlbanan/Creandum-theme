@@ -40,9 +40,15 @@
 				
 				<div class='filter-menu'>
 					<span class='filter active' id=''>All</span>
-					<span class='filter' id='stories'>Stories</span>
-					<span class='filter' id='videos'>Videos</span>
-					<span class='filter' id='inspiration'>Inspiration</span>
+					<?php
+						$taxonomy = 'network_category';
+						$tax_terms = get_terms($taxonomy);
+
+						foreach ($tax_terms as $tax_term) {
+							echo '<span class="filter" id="'.$tax_term->slug.'">' .$tax_term->name. '</span>';
+
+						}
+					?>
 				</div>
 
 				<div class="container">
@@ -52,32 +58,49 @@
 						<?php
 						  query_posts( array( 'post_type' => 'network') );
 						  if ( have_posts() ) : while ( have_posts() ) : the_post();
+							  // TAXONOMIES
+							  $ts = get_the_terms( $post->ID, 'network_category');
+							  $tax = "";
+							  if($ts){
+								  foreach($ts as $ax){
+									$tax .= $ax->slug." ";
+								  }
+							  }
+							  // CUSTOM META
+							$postid = $post->ID;
+							$linkurl = "";
+							$linkurl = get_post_meta($postid,"custom_url",true);
 						?>
-						<div class="col-lg-3 col-md-4 clearfix network-post" role="main">	
+						<div class="col-lg-3 col-md-4 clearfix network-post  filterable <?php echo $tax;?>" role="main">	
 							
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-								
-							<!--
-							<a href="<?php the_permalink() ?>" class="async" rel="bookmark" title="<?php the_title_attribute(); ?>">
-							-->			
-								<section class="post_content">
-								
-									<?php the_post_thumbnail("wpbs-featured-network"); ?>
-									<div class="tcontent">
-										<h3><?php the_title(); ?></h3>
+								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 									
-										<?php the_excerpt(); ?>
-										<br/>
-										<a href="/" target="_blank" class="green">Read more</a>
-									</div>
+								<!--
+								<a href="<?php the_permalink() ?>" class="async" rel="bookmark" title="<?php the_title_attribute(); ?>">
+								-->			
+									<section class="post_content">
+										<a href="<?php echo $linkurl;?>" target="_blank">
+											<?php the_post_thumbnail("wpbs-featured-network"); ?>
+										
+											<div class="tcontent">
+											
+												<h3><?php the_title(); ?></h3>
+											
+										
+												<?php the_excerpt(); ?>
+												<br/>
+												Read more
+											</div>
+										</a>
 
-								</section> <!-- end article section -->
-							<!--
-							</a>	
-							-->
+									</section> <!-- end article section -->
+								<!--
+								</a>	
+								-->
 
 
-							</article> <!-- end article -->
+								</article> <!-- end article -->
+							</a>
 
 						</div>
 					

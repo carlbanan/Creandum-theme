@@ -1,4 +1,5 @@
 <?php
+
 /*
 Author: Eddie Machado
 URL: htp://themble.com/bones/
@@ -594,7 +595,7 @@ if( !function_exists("theme_styles") ) {
         wp_register_style( 'bootstrap-theme', get_template_directory_uri() . '/library/css/bootstrap-theme.css', array(), '1.0', 'all' );
         wp_register_style( 'wp-bootstrap', get_stylesheet_uri(), array(), '1.0', 'all' );
     
-        wp_register_style( 'creandum-theme', get_template_directory_uri() . '/library/css/creandum-custom.css', array(), '1.0', 'all' );       
+        wp_register_style( 'creandum-theme', get_template_directory_uri() . '/library/css/creandum-custom.css', array(), '1.1', 'all' );       
 
 
 
@@ -619,7 +620,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
       array('jquery'), 
-      '1.8' );
+      '2.0' );
   
     wp_register_script(  'modernizr', 
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 
@@ -678,10 +679,60 @@ function create_network_post() {
         'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'post-formats' ),
         'has_archive'   => 'network'
     );
+    add_action( 'add_meta_boxes', 'network_meta_box' );
     register_post_type( 'network', $args ); 
 
 }
 add_action( 'init', 'create_network_post' );
+
+function my_taxonomies_network() {
+    $labels = array(
+        'name'              => _x( 'Network types', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Network type', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Network types' ),
+        'all_items'         => __( 'All Network types' ),
+        'parent_item'       => __( 'Parent Network types' ),
+        'parent_item_colon' => __( 'Parent Network types:' ),
+        'edit_item'         => __( 'Edit Network types' ), 
+        'update_item'       => __( 'Update Network types' ),
+        'add_new_item'      => __( 'Add New Network types' ),
+        'new_item_name'     => __( 'New Network types' ),
+        'menu_name'         => __( 'Network types' ),
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+    );
+    register_taxonomy( 'network_category', 'network', $args );
+
+}
+add_action( 'init', 'my_taxonomies_network', 0 );
+
+$prefix = 'custom_';  
+global $network_custom_meta_fields;
+$network_custom_meta_fields = array(  
+    array(  
+        'label'=> 'URL: ',  
+        'desc'  => 'http://www.youtube.com/watch?v=cjp1xjOzJqY',  
+        'id'    => $prefix.'url',  
+        'type'  => 'text'  
+    )
+); 
+
+function network_meta_box() {
+
+    add_meta_box( 
+        'network_meta_box',
+        __( 'Link URL', 'myplugin_textdomain' ),
+        'add_custom_meta_box',
+        'network',
+        'normal',
+        'default'
+    );
+}
+
+
+
 
 function create_team_post() {
     $labels = array(
@@ -892,6 +943,8 @@ array(
     )  
 )  */
 
+wp_enqueue_script( 'media-upload' );
+
 
 $prefix = 'custom_';  
 global $investment_custom_meta_fields;
@@ -941,7 +994,7 @@ function investment_social_box() {
 }
 
 function add_custom_meta_box() {  
-    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields;  
+    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields,$network_custom_meta_fields;  
 
     $custom_meta_fields_name = $post->post_type."_custom_meta_fields";
     $custom_meta_fields = $$custom_meta_fields_name;
@@ -1007,7 +1060,7 @@ function my_admin_enqueue_scripts( ) {
     wp_register_script(  'admin', 
       get_template_directory_uri() . '/library/js/admin.js', 
       array('jquery'), 
-      '1.3' );
+      '1.4' );
     wp_enqueue_script('admin');
 }
 // ADMIN CSS
@@ -1034,7 +1087,7 @@ add_action('admin_head', 'custom_colors');
 
 // Save the Data  
 function save_custom_meta_box($post_id) {  
-    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields;  
+    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields,$network_custom_meta_fields;  
 
     $custom_meta_fields_name = $post->post_type."_custom_meta_fields";
     $custom_meta_fields = $$custom_meta_fields_name;
@@ -1115,7 +1168,7 @@ register_post_type('slideshows', array(
     'labels' => array (
         'name' => 'Slideshows',
         'singular_name' => 'Slideshow',
-        'menu_name' => 'Slideshows'
+        'menu_name' => 'Slideshows & press'
     ),
 ) );
 
@@ -1268,6 +1321,9 @@ if(is_plugin_active($plugin)){
       }
   }
 } 
+
+
+
 
 // END IS SIMPLE FIELDS ACTIVE
 /*

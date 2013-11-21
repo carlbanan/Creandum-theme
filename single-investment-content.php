@@ -8,10 +8,13 @@
         <!-- SINGLE TEAM CONTENT  -->
       <div  id="post_<?php the_ID();?>">
       <?php if( $bigimg  != ''){ ?>
-
-        <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div> 
-
+        
+        <div class="responsive-wrapper">
+          <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div> 
+        </div>
       <?php }else{ ?>
+     
+
       <div class="small-header"></div>
       <?php } ?>  
         <div class="container padblock page-content">

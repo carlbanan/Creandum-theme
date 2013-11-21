@@ -107,53 +107,22 @@
       </div>
 
 
-      <?php 
-      require_once("library/newsfeed.php");
-      $n = new newsfeed();
-      $news = $n->give_newsfeed(10,"blog");
-      ?>
 
       <div class='page-wrapper newspage'>
         <div class="lightgreen_bg">
           <div class="container newsdeck">
 
-                <div class="newsicon"></div>
-                <h2>Read the latest from Creandum Team and our great network.</h2>
+              <div class="newsicon"></div>
+              <h2>Read the latest from Creandum Team and our great network.</h2>
 
-                 <div class="feed">  
+               <div class="feed">  
 
-                    <?php
+                <?php 
+                require_once("feed.php");
+                feed(30,"blog");
+                ?>
 
-                    foreach($news as $n){
-                    ?>
-                      <a href='<?php echo $n['url'];?>' <?php if($n['type'] != 'blog'){ echo "target='_blank'";} ?>>
-                    <div class="ncard <?php echo $n['type'];?>">
-                      <div class="<?php echo $n['type'];?>icon icon"></div>
-                      <?php if($n['type']=='blog' && $n['author_img'] != ''){ ?>
-                        <div class="profile hidden-xs" style="background-image:url('<?php echo $n['author_img'];?>');"></div>
-                      <?php } ?>
-                      <div class='ncard-content'>
-                      <?php  if($n['type']=='blog'){ ?>
-                        
-                          <!-- BLOG POST -->
-                            <h2 class="bold"><?php echo $n['title'];?></h2>
-                            <h3 class="green"><?php echo date("M j, Y",strtotime($n['date']));?><?php if($n['author']){ echo " by ".$n['author']; } ?></h3>
-                        <? }else{ ?>
-
-                          <!-- OTHERS -->
-                          <h2><?php echo $n['title'];?></h2>
-                        <?php } ?>
-
-                      </div> <!-- END ncard-content -->
-                      <div class="feedright"></div>
-                    </div>
-                  </a>
-                <?php
-                    }
-                    ?>
-
-        
-              </div><!-- END FEED --> 
+               </div><!-- END FEED --> 
           
             <p class='center padblock'>
               <a href="<?php echo bloginfo("url");?>/news/">
