@@ -1,11 +1,28 @@
 
      <div id="footer">
        <div class="container">
-         <ul class="links">
-          <li><p>Blog</p></li>
-          <li><p>Press</p></li>
-          <li><p>Contact</p></li>
-          <li><p>AngelList</p></li>
+         <ul class="links">          
+           
+           <?php
+           $menu = "Footer";
+           $items = wp_get_nav_menu_items( $menu ); 
+           
+           if($items){
+              foreach($items as $item){
+                ?>
+
+                  <li>
+                      <a href="<?php echo $item->url;?>">
+                        <p><?php echo $item->title;?></p>
+                      </a>
+                  </li>
+               
+                <?php
+              }
+           }
+           ?>
+
+
           <div class="hidemobile">
               <button type="button" class="btn2 btn-default btn-lg right">
               	<span class="in btntext hidden-xs"></span>
