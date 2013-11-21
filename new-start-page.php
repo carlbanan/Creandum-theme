@@ -116,14 +116,7 @@ Template Name: New startpage
                   </div>  
                 </div>
                 <!--pay attention-->
-                <?php
-                $language->q1 = "Betalar du tvavgift?";
-                $_GET['q'] = "q1";
-                echo $language->$_GET['q'];
 
-                 $lanuage[1] = "Betalar du tvavgift?";
-                 $_GET['q'] = 1;
-                 echo $lanuage[$_GET['q']];
 
                 ?>
               </div>
