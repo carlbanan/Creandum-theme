@@ -693,15 +693,11 @@ span.date{
 	margin-top: 120px;
 }
 
-.network .row{
+.team .row,.network .row,.investments .row{
 	margin-top: 120px;
 	margin-bottom: 120px;
 }
 
-.investments .row{
-	margin-top: 120px;
-	margin-bottom: 120px;
-}
 
 
 
