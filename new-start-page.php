@@ -117,8 +117,6 @@ Template Name: New startpage
                 </div>
                 <!--pay attention-->
 
-
-                ?>
               </div>
             </div>
           </div>

@@ -41,13 +41,13 @@
 			
 				<div id="main" class="clearfix" role="main">
 				
-					<div class='filter-menu'>
-						<span class='filter active' id=''>All</span>
-						<span class='filter' id='hardware'>Hardware companies</span>
-						<span class='filter' id='software'>Software companies</span>
-					</div>
+				<div class='filter-menu'>
+					<span class='filter active' id=''>All</span>
+					<span class='filter' id='hardware'>Hardware companies</span>
+					<span class='filter' id='software'>Software companies</span>
+				</div>
 		
-		<div class="container">
+				<div class="container">
 
 					<div class="row">	
 						<?php

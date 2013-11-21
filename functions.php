@@ -679,10 +679,60 @@ function create_network_post() {
         'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'post-formats' ),
         'has_archive'   => 'network'
     );
+    add_action( 'add_meta_boxes', 'network_meta_box' );
     register_post_type( 'network', $args ); 
 
 }
 add_action( 'init', 'create_network_post' );
+
+function my_taxonomies_network() {
+    $labels = array(
+        'name'              => _x( 'Network types', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Network type', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Network types' ),
+        'all_items'         => __( 'All Network types' ),
+        'parent_item'       => __( 'Parent Network types' ),
+        'parent_item_colon' => __( 'Parent Network types:' ),
+        'edit_item'         => __( 'Edit Network types' ), 
+        'update_item'       => __( 'Update Network types' ),
+        'add_new_item'      => __( 'Add New Network types' ),
+        'new_item_name'     => __( 'New Network types' ),
+        'menu_name'         => __( 'Network types' ),
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+    );
+    register_taxonomy( 'network_category', 'network', $args );
+
+}
+add_action( 'init', 'my_taxonomies_network', 0 );
+
+$prefix = 'custom_';  
+global $network_custom_meta_fields;
+$network_custom_meta_fields = array(  
+    array(  
+        'label'=> 'URL: ',  
+        'desc'  => 'http://www.youtube.com/watch?v=cjp1xjOzJqY',  
+        'id'    => $prefix.'url',  
+        'type'  => 'text'  
+    )
+); 
+
+function network_meta_box() {
+
+    add_meta_box( 
+        'network_meta_box',
+        __( 'Link URL', 'myplugin_textdomain' ),
+        'add_custom_meta_box',
+        'network',
+        'normal',
+        'default'
+    );
+}
+
+
+
 
 function create_team_post() {
     $labels = array(
@@ -944,7 +994,7 @@ function investment_social_box() {
 }
 
 function add_custom_meta_box() {  
-    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields;  
+    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields,$network_custom_meta_fields;  
 
     $custom_meta_fields_name = $post->post_type."_custom_meta_fields";
     $custom_meta_fields = $$custom_meta_fields_name;
@@ -1037,7 +1087,7 @@ add_action('admin_head', 'custom_colors');
 
 // Save the Data  
 function save_custom_meta_box($post_id) {  
-    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields;  
+    global  $post, $team_custom_meta_fields,$investment_custom_meta_fields,$network_custom_meta_fields;  
 
     $custom_meta_fields_name = $post->post_type."_custom_meta_fields";
     $custom_meta_fields = $$custom_meta_fields_name;
