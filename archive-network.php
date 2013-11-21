@@ -67,9 +67,9 @@
 								  }
 							  }
 							  // CUSTOM META
-								$postid = $post->ID;
-								$linkurl = "";
-								$linkurl = get_post_meta($postid,"custom_url",true);
+							$postid = $post->ID;
+							$linkurl = "";
+							$linkurl = get_post_meta($postid,"custom_url",true);
 						?>
 						<div class="col-lg-3 col-md-4 clearfix network-post  filterable <?php echo $tax;?>" role="main">	
 							
@@ -81,16 +81,17 @@
 									<section class="post_content">
 										<a href="<?php echo $linkurl;?>" target="_blank">
 											<?php the_post_thumbnail("wpbs-featured-network"); ?>
-										</a>
-										<div class="tcontent">
-											<a href="<?php echo $linkurl;?>" target="_blank">
-												<h3><?php the_title(); ?></h3>
-											</a>
 										
-											<?php the_excerpt(); ?>
-											<br/>
-											<a href="<?php echo $linkurl;?>" target="_blank" class="green">Read more</a>
-										</div>
+											<div class="tcontent">
+											
+												<h3><?php the_title(); ?></h3>
+											
+										
+												<?php the_excerpt(); ?>
+												<br/>
+												Read more
+											</div>
+										</a>
 
 									</section> <!-- end article section -->
 								<!--

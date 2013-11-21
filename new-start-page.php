@@ -131,7 +131,7 @@ Template Name: New startpage
           'order'            => 'DESC',
           'post_type'        => 'investment',
           'post_status'      => 'publish',
-          'investment_category' => 'Bump firstpage'
+          'investment_category' => 'Bump startpage'
           );
         $posts_array = get_posts( $args );
 
