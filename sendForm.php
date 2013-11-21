@@ -19,7 +19,7 @@ $other = mysql_real_escape_string($_POST['other']);
 
 // SEND MAIL TO / BCC / FROM
 
-$to_email 	= "carl@oystr.se";
+$to_email 	= "p.wiehager@gmail.com";
 $bcc_email 	= "pontus@guided.se";
 $from_email = "pitch@creandum.com";
 $from_name 	= "Creandum pitch";
@@ -35,45 +35,10 @@ $from_name 	= "Creandum pitch";
 	
 	$mail             = new PHPMailer();
 	
-	$body             = "<h1>Pitch</h1>
-							<table style='padding:30px 0;border:0;vertical-align:top;'>
-								<tr>
-									<th style='min-width:120px;vertical-align:top;padding:20px 0;text-align:left;'>Problem:</th>
-									<td style='min-width:380px;vertical-align:top;padding:20px 0;'>".$problem."</td>
-								</tr>
-								<tr>
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Market:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$market."</td>
-								</tr>
-								<tr>
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Team:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$team."</td>
-								</tr>
-								<tr >
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Stage:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$stage."</td>
-								</tr>
-								<tr >
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Sector:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$stage."</td>
-								</tr>
-								<tr>
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Name:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$stage."</td>
-								</tr>
-								<tr>
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Startup name:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$company."</td>
-								</tr>
-								<tr >
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Website:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$website."</td>
-								</tr>
-								<tr>
-									<th style='vertical-align:top;padding:20px 0;text-align:left;'>Email:</th>
-									<td style='vertical-align:top;padding:20px 0;'>".$email."</td>
-								</tr>
-							</table><h3>Skicka från Creandum.com/contact.</h3>";
+	$body             = $problem."\n".$market."\n".$team."\n".$other."\n".$website."\n".$email;
+
+	$mail->Subject    = $company." #".$stage." #".$sector;
+
 
 	
 	$mail->IsSMTP(); // telling the class to use SMTP
@@ -91,7 +56,7 @@ $from_name 	= "Creandum pitch";
 	$mail->SetFrom($from_email,$from_name);
 
 
-	$mail->Subject    = "Pitch from ".$name;
+
 
 	$mail->MsgHTML($body);
 	

@@ -54,7 +54,7 @@
 						  	$menuitem[$posclass] = $pos;
 
 						  	// FOR LISTING
-						  	$post->cotitle = $posclass;
+						  	$post->cotitle = $post_class;
 						  	array_push($team,$post);
 
 						  endwhile;
