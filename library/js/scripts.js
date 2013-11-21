@@ -591,6 +591,7 @@ jQuery(document).ready(function($) {
 						page++;
 						fetchNews(page);
 					}
+
 				}
 			});
 	 	}

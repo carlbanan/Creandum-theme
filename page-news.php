@@ -23,20 +23,26 @@ else{ ?>
 <!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 <div class"top-post">
 	<!-- Big picture -->
-	<div class="page-content intro-about">	
 
-		<!--<p class="large_invest_white"></p> -->
-		<section class="post_content center clearfix" itemprop="articleBody">
-			<h2>
-				 Here's what we're up to and whats going on in our network.
-			</h2>
-		</section>
-	</div>
-	<div class="responsive-wrapper">
-		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
-		<div class="green_background"></div>
-	</div>
+<div class="page-content intro-about">	
+				<!--<p class="large_invest_white"></p> -->
+				<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
+                  	 <div class='shadowop'>
+                          <h1 class="small shadow">Here's what we're up to</h1>
+                          <br><h1 class="small shadow">and whats going on in our network.</h1>
+                        </div>
+                        <div>
+                          <h1 class="small strip">Here's what we're up to</h1>
+                          <br><h1 class="small strip">and whats going on in our network.</h1>
+                        </div>
 
+				</section>
+
+		</div>
+		<div class="responsive-wrapper">
+			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
+			<div class="green_background"></div>
+		</div>
 </div>	
 
 <div class='newspage infront'>

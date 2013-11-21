@@ -44,16 +44,30 @@ Template Name: New startpage
 
 
                  <div class='content-header-text wrapper container'>
-                   <div class='shadowop'>
-                    <?php foreach($textline as $txt){ ?>
-                    <h1 class="shadow"><?php echo $txt;?></h1><br>
-                    <?php } ?>
-                  </div>
-                  <div>
-                    <?php foreach($textline as $txt){ ?>
-                    <h1 class="strip"><?php echo $txt;?></h1><br>
-                    <?php } ?>
-                  </div>
+                    <div class="hidemobile">
+                       <div class='shadowop'>
+                          <?php foreach($textline as $txt){ ?>
+                          <h1 class="shadow"><?php echo $txt;?></h1><br>
+                          <?php } ?>
+                        </div>
+                      <div>
+                        <?php foreach($textline as $txt){ ?>
+                        <h1 class="strip"><?php echo $txt;?></h1><br>
+                        <?php } ?>
+                      </div>
+                    </div>  
+
+                    <div class="showmobile">
+                        <div class='shadowop'>
+                          <h1 class="shadow">Backing the companies</h1>
+                          <br><h1 class="shadow">of tomorrow</h1>
+                        </div>
+                        <div>
+                          <h1 class="strip">Backing the companies</h1>
+                          <br><h1 class="strip">of tomorrow</h1>
+                        </div>
+                    </div>  
+
                   <div>
                     <?php if($textline2!=""){ echo "<h4>".$textline2."</h4>"; }?>
                     <?php if($textline3!=""){ echo "<h5>".$textline3."</h5>"; }?>
@@ -254,7 +268,6 @@ Template Name: New startpage
                       <div class="icon_center sprite-large_news"></div> 
                       <h2>Find out what we are up to and what's happening in our network.</h2>
               </div>
-
 
 
                <div class="feed">  

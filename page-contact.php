@@ -7,29 +7,15 @@
 
 <!-- Big picture -->
 
-
-	 <div class='content-header-text fixedheight wrapper container'>
-		<div class="hidemobile">
-		   <div class='shadowop'>
-		    
-		    <h1 class="shadow">Are you building</h1><br>
-		    <h1 class="shadow">the company of tomorrow?</h1><br>
-
-		  </div>
-		  <div>
-		   	 <h1 class="strip">Are you building</h1><br>
-		    <h1 class="strip">the company of tomorrow?</h1><br>
-		   
-		  </div>
-		</div>
-		  <div class='subtext'>	
-			<h3>
-				The best way to contact us is throug someone in our connected network. The second best way is to give
-				us the 140 charachter pitch. We get contacted by over 600 billion companies every year, we invest in all of them.
-			</h3>
-			
-		</div>
-	
+	 <section class="small contact content-header-text wrapper clearfix container" itemprop="articleBody">
+		                  	 <div class='shadowop'>
+		                          <h1 class="small shadow">backing the companies of tomorrow.</h1>
+		                        </div>
+		                        <div>
+		                          <h1 class="small strip">backing the companies of tomorrow.</h1>
+		                        </div>
+		                    </section>
+		  
 </div>
 <div class="responsive-wrapper">
 	<div class="contact">
