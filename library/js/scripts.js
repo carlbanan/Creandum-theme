@@ -107,6 +107,7 @@ jQuery(document).ready(function($) {
 	}
 	function ajax_nav(){
 
+
 			if (History.enabled) {
 				State = History.getState();
 				// set initial state to first page that was loaded
@@ -254,105 +255,23 @@ jQuery(document).ready(function($) {
 
 	
 
-/*
-	$(window).scroll(function() {    
-   		var scroll = $(window).scrollTop();
 
-	    if (scroll >= 100) {
-	        $(".cbp-af-header").addClass("topanimation");
-	    } else {
-	        $(".cbp-af-header").removeClass("topanimation");
-	    }
-
-
-	    if (scroll >= 100) {
-	        $(".cbp-af-header").addClass("cbp-af-header-shrink");
-	    } else {
-	        $(".cbp-af-header").removeClass("cbp-af-header-shrink");
-	    }
-	  
-
-	    if (scroll >= 400) {
-	        $(".cbp-af-header").addClass("topanimations");
-	    } else {
-	        $(".cbp-af-header").removeClass("topanimations");
-	    }
-	});
-*/
-
-/*
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-        $(".tick").addClass("ticker_margin_one opacity");
-    } else {
-        $(".tick").removeClass("ticker_margin_one opacity");
-    }
-});
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-        $(".one").addClass("opacity");
-    } else {
-        $(".one").removeClass("opacity");
-    }
-});
-
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 200) {
-        $(".tick").addClass("ticker_margin_two");
-    } else {
-        $(".tick").removeClass("ticker_margin_two");
-    }
-});
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 300) {
-        $(".tick").addClass("ticker_margin_two");
-    } else {
-        $(".tick").removeClass("ticker_margin_two");
-    }
-});
-
-
-
-$('span.one').hover(function () {
-	$(this).find('.ticker h2').toggleClass('ticker_margin_one')
-})
-
-*/
 
 
     $('li.one').hover(function(){
-    	console.log('sdf')
-        $('.tick').addClass('ticker_margin_one');    
-    },     
-    function(){    
-        $('.tick').removeClass('ticker_margin_one');     
+    	$(".ticker2.init").removeClass("init");     	    	    
+    	$(".ticker2 h2").css("top",0);
     });
  
-    $('.two').hover(function(){     
-        $('.ticker2').addClass('ticker_margin_two');    
-    },     
-    function(){    
-        $('.ticker2').removeClass('ticker_margin_two');     
-    });
- 
+    $('.two').hover(function(){  
+        	$(".ticker2 h2").css("top","-103px" ); 
+			$(".ticker2.init").removeClass("init");     		
+	}); 
     $('.three').hover(function(){     
-        $('.ticker2').addClass('ticker_margin_three');    
-    },     
-    function(){    
-        $('.ticker2').removeClass('ticker_margin_three');     
-    });
+			$(".ticker2.init").removeClass("init");     	
+          	$(".ticker2 h2").css("top","-222px" );   	
+ 	});
+
 
     var $window = $(window);
     var $box = $('.sunrise');
@@ -370,15 +289,15 @@ $('span.one').hover(function () {
     	var position = $(this).scrollTop(); // on scroll update the position value
     	var changeValue = 100 + ((parseHeight * 2 - position) / 10)
 
-    	if (position <= parseHeight ) { // start value is 0, stop when the value reach 300
+    	if (position + 300 <= parseHeight ) { // start value is 0, stop when the value reach 300
 
     		$sun.css({
     			'top': position / 1.7, // 300 - whatever scroll says
-    			'-webkit-transform': 'rotate(' + position + 'deg)'
+    			/*'-webkit-transform': 'rotate(' + position + 'deg)'*/
     		})
 
     		$box.css({
-    			'height': parseHeight - position * 1.3, // 300 - whatever scroll says
+    			'height': parseHeight - position - 100 * 1.3, // 300 - whatever scroll says
     		})
     	}
 
@@ -408,7 +327,8 @@ $('span.one').hover(function () {
 
     	} 
 
-    	if (position >= parseHeight * 3 && position <= parseHeight * 4 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+    	if (position >= parseHeight * 3 && position <= parseHeight * 4 - 200 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+
     		$wheel.css({
     			'top': parseInt((position - parseHeight * 3) / 3), // 300 - whatever scroll says
     			'-webkit-transform': 'rotate(' + parseInt((position - parseHeight * 3) / 1) + 'deg)'
@@ -416,10 +336,12 @@ $('span.one').hover(function () {
 
     	}
 
-    	if ((position >= (parseHeight * 4) - (parseHeight / 2))  && position <= parseHeight * 5 ) {
+    	if ((position >= (parseHeight * 4))  && position <= parseHeight * 5 - 50 ) {
+    		console.log(position)
+    		console.log((parseHeight * 4) - (parseHeight / 20))
 
     		$tools.css({
-    			'marginTop': ((position - parseHeight  * 4) + (parseHeight / 2)) / 1.4
+    			'marginTop': ((position - parseHeight  * 4)) / 2
     		})
     	}
 
@@ -447,7 +369,7 @@ $('span.one').hover(function () {
 			$(".content-header-text").addClass("bigheight");
 		}
 		
-		$(".content-header-wrap,.slider-bigimage .item").css("height",windowHeight);
+		$(".content-header-wrap,.slider-bigimage .item, #slider-bigimage").css("height",windowHeight);
 
 		//var slider = new Swiper('.startpage')
 
@@ -458,7 +380,7 @@ $('span.one').hover(function () {
 		            var $cur = obj.find('.active').removeClass('active');
 		            var $next = $cur.next().length?$cur.next():obj.children().eq(0);
 		            $next.addClass('active');
-		        },8000);
+		        },3000);
 		    })($(this));
 		        
 		});
@@ -470,7 +392,12 @@ $('span.one').hover(function () {
 		$("#nextbig").click(function(){
 			
 			act = $(".content-header-wrap.active");
-			next = act.next(".content-header-wrap");
+			next = act.next(".content-header-wrap").attr("id");
+			
+			console.log(next);
+
+			nextimg = $("#"+id+" .bigimage").attr("style");
+			console.log(nextimg);
 			if(next.length == 0){
 				next = $("#img1.content-header-wrap");
 			}
@@ -598,40 +525,116 @@ $('span.one').hover(function () {
     });
 
 
-	    function scrollY() {
-	        return window.pageYOffset || document.documentElement.scrollTop;
-	    }
-	    
-	    // STICKY FILTER
-	    if($(".filter-menu").length >= 1){
-	    	 fixh = $(".filter-menu").offset().top;
-	    	$(window).scroll(function(){
-		        var sy = scrollY();
-		       
+    function scrollY() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+    }
+    var show;
+    // STICKY FILTER
+    if($(".filter-menu").length >= 1){
+    	 fixh = $(".filter-menu").offset().top;
+    	$(window).scroll(function(){
+	        var sy = scrollY();
+	       
 
-		  	    if (60 + sy >= fixh ) {	
+	  	    if (60 + sy >= fixh ) {	
 
-		        	$(".filter-menu").addClass("fix");
-		       	}
-		       	else{
-		       		$(".filter-menu").removeClass("fix");
-		       	}
-		       	
-	    	});
-			$(".filter").bind("click",function(){
-				var show = $(this).attr("id");
-				$(".filterable").css( "display", "block" );
-				if(show != ""){
-					$(".filterable").not("."+show).css( "display", "none" );
+	        	$(".filter-menu").addClass("fix");
+	       	}
+	       	else{
+	       		$(".filter-menu").removeClass("fix");
+	       	}
+	       	
+    	});
+		$(".filter").bind("click",function(){
+			show = $(this).attr("id");
+			$(".filterable").css( "display", "block" );
+			if(show != ""){
+				$(".filterable").not("."+show).css( "display", "none" );
+			}
+			$(this).parent(".filter-menu").children(".active").removeClass("active");
+			$(this).addClass("active");		
+			$('html, body').animate({
+		         scrollTop: ( fixh - 50 )
+			 },250);
+		});
+    }
+    // NEWSDECK INFINITE SCROLL
+    
+
+	 var newsdeck = function(){
+	 	
+	 	// NEWSDECK CONFIG
+ 		page = 0;
+ 		ant = 3;	
+
+ 		// START
+ 		checkHeight();
+
+	 	function checkHeight(){
+	 		page = 1;
+	 		fetchNews(page);
+	 		$(window).scroll(function(){
+
+				var tot 		= $(document).height();
+				var wheight 	= $(window).height();
+				var offset 		= scrollY();
+				
+				
+
+				if ($("#more").length >= 1){			// LOAD ONE MORE
+
+					var offset_more = $("#more").offset().top;
+					console.log(offset_more+" "+(wheight + offset));
+
+					if( (offset_more - 200) <= (wheight + offset) ){
+
+						page++;
+						fetchNews(page);
+					}
+>>>>>>> 37c0a63612306545b0e24d5886a4f96b6903e734
 				}
-				$(this).parent(".filter-menu").children(".active").removeClass("active");
-				$(this).addClass("active");		
-				$('html, body').animate({
-			         scrollTop: ( fixh - 50 )
-				 },250);
 			});
-	    }
+	 	}
+	 	function fetchNews(page){
+	 		var filter = "";
+	 		if(show){
+	 			filter = show;
+	 		}
+	 		console.log(ant+" "+page);
+			var reqData = { async : 1, paginate : page , ant : ant, content : 'feed', filter : filter }
+			var urlBase = $("#feed").attr("url");
+			// EXEC
+			$.get(urlBase, reqData, function(d) {
+				if(d == 1){
+					$("#more").remove();
+				}
+				else{
+					$("#more").remove();
+					$("#feed").append(d);
+					if(page == 1){
+						fetchTweets();
+					}
+				}
 
+			});	
+	 	}
+	 	function fetchTweets(page){
+	 		
+			var reqData = { async : 1, content : 'side' }
+			var urlBase = $("#feed").attr("url");
+			// EXEC
+			$.get(urlBase, reqData, function(d) {
+				
+				$("#tweets").append(d);
+
+
+			});	
+	 	}
+	 	
+	 }
+     if($(".newsdeck .feed").length >= 1){
+     	newsdeck();
+     }
 }); /* end of as page load scripts */
 
 

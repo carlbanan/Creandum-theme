@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			
+
 			<div id="content" class="clearfix row container">
 			
 				<div id="main" class="col-md-8 col-sm-8 col-lg-8 clearfix" role="main">
