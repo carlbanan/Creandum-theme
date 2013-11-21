@@ -64,7 +64,7 @@
 						  }
 						?>
 												
-						<div id="post-<?php the_ID(); ?>" <?php post_class('col-md-3  col-lg-3  col-sm-6 filterable '.$tax); ?> role="article">
+						<div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-6 col-md-3  col-lg-3  col-sm-4 filterable '.$tax); ?> role="article">
 								
 							<a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" class='async' rel="bookmark" title="<?php the_title_attribute(); ?>">		
 									
