@@ -46,6 +46,7 @@ else{ ?>
 			<span class='filter' id='blog'>Our blog</span>
 			<span class='filter' id='twitter'>Twitter</span>
 			<span class='filter' id='external'>News</span>
+			<span class='filter' id='jobs'>Jobs</span>
 		</div>
 		<div class="container newsdeck">
 			<div class="row">

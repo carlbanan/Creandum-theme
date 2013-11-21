@@ -136,37 +136,56 @@
 
          // XML FEED
         if($ptype == '' || $ptype == 'xml' && $page <= 1){
-           $xmlsource = "http://swedishstartupspace.com/tag/swedish-startup-space/feed/rss";
-           $xmlsource = "http://swedishstartupspace.com/feed/";
-           //$rawFeed = file_get_contents($xmlsource);
+           
+           
+           $sources = array(
+                          array( 
+                           "xmlsource" =>  "http://swedishstartupspace.com/feed/",
+                           "type" =>  "external",
+                          ),
+                          array(
+                           "xmlsource" =>  "http://swedishstartupspace.com/rss-feed-jobs/",
+                           "type" =>  "jobs",
+                          )
+                      );
 
            $max_age = 2*60*60;     // 2 HOURS
-           $feed = $this->get_xml($xmlsource,$max_age);
+           $max_tot = 30;
 
-           if($feed){
-             $doc = new DOMDocument();
-             $doc->loadXML($feed);
-             //$x = $doc->documentElement;
-             $x = $doc->getElementsByTagName('item');
-             
-             $type = "external";
-             $ant_xml = 0;
-             foreach ($x AS $item){
-                $title = $item->getElementsByTagName('title')->item(0)->nodeValue;
-                $date  = date("Y-m-d H:i:s",strtotime($item->getElementsByTagName('pubDate')->item(0)->nodeValue));
-                $url  = $item->getElementsByTagName('link')->item(0)->nodeValue;
-                $authour = "";
-                $x_item = array(
-                            'type'   => $type,
-                            'date'   => $date,
-                            'title'  => $title,
-                            'url'    => $url,
-                            'author'=> $authour
-                          );
-                if( $ant_xml >= $offset && $ant_xml < ($offset + $ant)){
+           foreach($sources as $source){
+               
+              $xmlsource      = $source['xmlsource'];
+              $type           = $source['type'];
+
+              $feed = $this->get_xml($xmlsource,$max_age);
+
+              if($feed){
+
+               $doc = new DOMDocument();
+               $doc->loadXML($feed);
+               $x = $doc->getElementsByTagName('item');
+               
+               $ant_xml = 0;
+               foreach ($x AS $item){
+                
+                  if( $ant_xml >= $offset && $ant_xml < ($offset + $ant) && $max_tot > ($offset + $ant)){
+                  
+                    $title = $item->getElementsByTagName('title')->item(0)->nodeValue;
+                    $date  = date("Y-m-d H:i:s",strtotime($item->getElementsByTagName('pubDate')->item(0)->nodeValue));
+                    $url  = $item->getElementsByTagName('link')->item(0)->nodeValue;
+                    $authour = "";
+                    $x_item = array(
+                                'type'   => $type,
+                                'date'   => $date,
+                                'title'  => $title,
+                                'url'    => $url,
+                                'author'=> $authour
+                              );
+                    
                     array_push($nfeed,$x_item);
-                }
-                $ant_xml++;
+                  }
+                  $ant_xml++;
+               }
              }
            }
         }
