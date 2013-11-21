@@ -102,66 +102,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 </div>
 			
 
-<<<<<<< HEAD
-<div class='press-area' style='background:#fff;z-index:9999999;position:relative;padding:60px 0;'>
-	<div class=' container'>
-		<h1>Press resources</h1>
-	<!--
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p1.png'/>
-			<h4>Team picture</h4>
-			<span class='green'>Download</span>
-		</div>
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p2.png'/>
-			<h4>Network picture</h4>
-			<span class='green'>Download</span>
-		</div>
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p3.png'/>
-			<h4>Logo picture</h4>
-			<span class='green'>Download</span>
-		</div>		
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p4.png'/>
-			<h4>Team picture</h4>
-			<span class='green'>Download</span>
-		</div>	
-			
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p5.png'/>
-			<h4>Team picture</h4>
-			<span class='green'>Download</span>
-		</div>
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p6.png'/>
-			<h4>Network picture</h4>
-			<span class='green'>Download</span>
-		</div>
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p7.png'/>
-			<h4>Logo picture</h4>
-			<span>Download</span>
-		</div>		
-		<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-			<img src='<?php echo bloginfo("template_url");?>/library/images/press/p4.png'/>
-			<h4>Team picture</h4>
-			<span class='green'>Download</span>
-		</div>		
 
-	-->
-
-
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-			<?php the_content(); ?>
-
-		<?php endwhile;  endif; ?>
-
-
-	</div>
-</div>		
-=======
 <div class='press-area container' style='background:#fff;z-index:9999;position:relative;padding:60px 0;'>
 	<h1>Press resources</h1>
 <?php
@@ -210,15 +151,6 @@ if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_ex
 	
 
 <?php endif; ?>
-
-
-
-	
->>>>>>> 37c0a63612306545b0e24d5886a4f96b6903e734
-
-	<!-- /Wrapper -->
-
-	<!-- /Wrapper -->
 
 <?php get_footer(); ?>
 

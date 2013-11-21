@@ -270,7 +270,6 @@ Template Name: New startpage
               </div>
 
 
-
                <div class="feed">  
 
               <?php 

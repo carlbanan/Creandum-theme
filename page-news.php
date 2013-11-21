@@ -23,7 +23,7 @@ else{ ?>
 <!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 <div class"top-post">
 	<!-- Big picture -->
-<<<<<<< HEAD
+
 <div class="page-content intro-about">	
 				<!--<p class="large_invest_white"></p> -->
 				<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
@@ -43,22 +43,6 @@ else{ ?>
 			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
 			<div class="green_background"></div>
 		</div>
-=======
-	<div class="page-content intro-about">	
-
-		<!--<p class="large_invest_white"></p> -->
-		<section class="post_content center clearfix" itemprop="articleBody">
-			<h2>
-				 Here's what we're up to and whats going on in our network.
-			</h2>
-		</section>
-	</div>
-	<div class="responsive-wrapper">
-		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
-		<div class="green_background"></div>
-	</div>
-
->>>>>>> 37c0a63612306545b0e24d5886a4f96b6903e734
 </div>	
 
 <div class='newspage infront'>

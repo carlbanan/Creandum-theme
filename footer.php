@@ -1,11 +1,6 @@
 
      <div id="footer">
        <div class="container">
-         <ul class="links">
-          <li><p>Blog</p></li>
-          <li><p>Press</p></li>
-          <li><a href="http://www.woms.se/creandum/contact/"><p>Contact</p></a></li>
-          <li><p>AngelList</p></li>
          <ul class="links">          
            
            <?php
@@ -50,15 +45,14 @@
         </ul>
         
         <div class="hidemobile">
-        <div class="info">
-        <ul class="details">
-          <li><p>Jacobsbergsgatan 18, Stockholm, 103 86</p></li>
-          <li><p>Box 7068, SE-103 86 Stockholm</p></li>
-          <li><p>+46 (0)8 524 636 30</p></li>
-        </ul>
-      </div>
-    </div>
-
+          <div class="info">
+            <ul class="details">
+              <li><p>Jacobsbergsgatan 18, Stockholm, 103 86</p></li>
+              <li><p>Box 7068, SE-103 86 Stockholm</p></li>
+              <li><p>+46 (0)8 524 636 30</p></li>
+            </ul>
+          </div>
+         </div>
 
        </div>   
       </div>	

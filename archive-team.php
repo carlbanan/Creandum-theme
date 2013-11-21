@@ -121,9 +121,6 @@
 						  if($team){
 						  	foreach($team as $post){
 						?>
-												
-						<div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-6 col-md-3  col-lg-3  col-sm-4'); ?> role="article">
-
 
 						<div id="post-<?php the_ID(); ?>" <?php post_class('col-md-3  col-lg-3  col-sm-6 filterable '.$post->cotitle); ?> role="article">
 								

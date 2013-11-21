@@ -9,11 +9,11 @@
       <div  id="post_<?php the_ID();?>">
       <?php if( $bigimg  != ''){ ?>
         
+
         <div class="responsive-wrapper-invest">
            
             <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"><div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div></div>     
 
-    
       <?php }else{ ?>
      
 

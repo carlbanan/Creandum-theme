@@ -591,7 +591,7 @@ jQuery(document).ready(function($) {
 						page++;
 						fetchNews(page);
 					}
->>>>>>> 37c0a63612306545b0e24d5886a4f96b6903e734
+
 				}
 			});
 	 	}
