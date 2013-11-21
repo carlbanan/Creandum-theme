@@ -6,17 +6,27 @@
       function __construct() {
 
       }
-      function give_newsfeed($ant = 10, $ptype = '') {
+      function give_newsfeed($ant = 1, $ptype = '',$page = 0) {
 
          $this->ant = $ant;
          $nfeed = array();
          $count = 0;
+         if($ptype == ""){
+          $offset = ($ant*($page-1) +1);
+         }
+         else{
+          $offset = 0;
+         }
+         
+
+
+
 
          if($ptype == '' || $ptype == 'blog' ){
            // GET POSTS
            $args = array(
               'posts_per_page'   => $ant,
-              'offset'           => 0,
+              'offset'           => $offset,
               'category'         => '',
               'orderby'          => 'post_date',
               'order'            => 'DESC',
@@ -75,60 +85,73 @@
          // TWITTER
 
         if($ptype == '' || $ptype == 'twitter' ){
+
           require_once('Twitter.php');
+          if($ant == 1){
+            $twitterCount      = 1; 
+          }
+          else{
+            $twitterCount      = 30; 
+          }
           
-          $twitterCount      = $ant; 
           $twitterUsername   = "creandum";
-          $twitterCacheFile  = "cache/twitter_".$twitterCount.".cacheFile";
+          $twitterCacheFile  = "cache/twitterfeed_".$twitterCount.".cacheFile";
 
           $Twitter = new Twitter($twitterUsername,$twitterCacheFile,$twitterCount);
-
+          $t_nr = 0;
 
           if($Twitter->tweet != false) {
 
               $type = "twitter";
 
               foreach($Twitter->tweet as $twt){
+                
 
-                 $title = $twt->text;
-                 $url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
-                 $date = date('Y-m-d H:i:s',strtotime($twt->{"created_at"}));
-                 $tweet_user_url = "https://www.twitter.com/".$twt->user->{"screen_name"};
-                 $authour = $twt->user->{"screen_name"};    
+                if( $t_nr >= $offset && $t_nr < ($offset + $ant)){
 
-                 $t_item = array(
-                            'type'   => $type,
-                            'date'   => $date,
-                            'title'  => $title,
-                            'url'    => $url,
-                            'author'=> $authour
-                          );
+                   $title = $twt->text;
+                   $url = "https://www.twitter.com/".$twt->user->{"screen_name"}."/status/".$twt->{"id_str"};
+                   $date = date('Y-m-d H:i:s',strtotime($twt->{"created_at"}));
+                   $tweet_user_url = "https://www.twitter.com/".$twt->user->{"screen_name"};
+                   $authour = $twt->user->{"screen_name"};    
 
-                 array_push($nfeed,$t_item);
+                   $t_item = array(
+                              'type'   => $type,
+                              'date'   => $date,
+                              'title'  => $title,
+                              'url'    => $url,
+                              'author'=> $authour
+                            );
+
+                   array_push($nfeed,$t_item);
+                }
+                $t_nr++;
                 
               }
 
            }
+           
         } // end twitter
 
 
          // XML FEED
-        if($ptype == '' || $ptype == 'xml' ){
+        if($ptype == '' || $ptype == 'xml' && $page <= 1){
            $xmlsource = "http://swedishstartupspace.com/tag/swedish-startup-space/feed/rss";
            $xmlsource = "http://swedishstartupspace.com/feed/";
            //$rawFeed = file_get_contents($xmlsource);
 
-           $max_age = 2*60*60;     // 2 HOURE
+           $max_age = 2*60*60;     // 2 HOURS
            $feed = $this->get_xml($xmlsource,$max_age);
 
-           $doc = new DOMDocument();
-           $doc->loadXML($feed);
-           //$x = $doc->documentElement;
-           $x = $doc->getElementsByTagName('item');
-           
-           $type = "external";
-           $ant_xml = 0;
-           foreach ($x AS $item){
+           if($feed){
+             $doc = new DOMDocument();
+             $doc->loadXML($feed);
+             //$x = $doc->documentElement;
+             $x = $doc->getElementsByTagName('item');
+             
+             $type = "external";
+             $ant_xml = 0;
+             foreach ($x AS $item){
                 $title = $item->getElementsByTagName('title')->item(0)->nodeValue;
                 $date  = date("Y-m-d H:i:s",strtotime($item->getElementsByTagName('pubDate')->item(0)->nodeValue));
                 $url  = $item->getElementsByTagName('link')->item(0)->nodeValue;
@@ -140,21 +163,26 @@
                             'url'    => $url,
                             'author'=> $authour
                           );
-                if($ant_xml < ($ant*3)){
-                    $ant_xml++;
+                if( $ant_xml >= $offset && $ant_xml < ($offset + $ant)){
                     array_push($nfeed,$x_item);
                 }
+                $ant_xml++;
+             }
            }
         }
-
-         // SORT ARRAY ON DATE
-         foreach ($nfeed as $key => $row) {
-              $ddate[$key]  = $row['date'];
-              $ttype[$key]  = $row['type'];
-          }
-          array_multisort($ddate, SORT_DESC, $ttype, SORT_ASC, $nfeed);
-
-          return $nfeed;
+        if($nfeed){
+           // SORT ARRAY ON DATE
+           foreach ($nfeed as $key => $row) {
+                $ddate[$key]  = $row['date'];
+                $ttype[$key]  = $row['type'];
+            }
+            array_multisort($ddate, SORT_DESC, $ttype, SORT_ASC, $nfeed);
+            return $nfeed;
+        }
+        else{
+           return false;
+        }
+        
 
 
       }
@@ -206,6 +234,7 @@
             array_multisort($ddate, SORT_DESC, $ttype, SORT_ASC, $ret);
         }
         return $ret;
+
       }
 
       function get_xml($url, $max_age){
@@ -223,8 +252,6 @@
           $feed = file_put_contents($file, $xml);
           return $xml;
       }
-
-
 
    }
 ?>

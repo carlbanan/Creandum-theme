@@ -1117,7 +1117,7 @@ register_post_type('slideshows', array(
     'labels' => array (
         'name' => 'Slideshows',
         'singular_name' => 'Slideshow',
-        'menu_name' => 'Slideshows'
+        'menu_name' => 'Slideshows & press'
     ),
 ) );
 
@@ -1270,6 +1270,7 @@ if(is_plugin_active($plugin)){
       }
   }
 } 
+
 
 
 

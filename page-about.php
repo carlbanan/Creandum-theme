@@ -99,61 +99,56 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 
 <div class='press-area container' style='background:#fff;z-index:9999;position:relative;padding:60px 0;'>
 	<h1>Press resources</h1>
-<!--
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p1.png'/>
-		<h4>Team picture</h4>
-		<span class='green'>Download</span>
-	</div>
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p2.png'/>
-		<h4>Network picture</h4>
-		<span class='green'>Download</span>
-	</div>
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p3.png'/>
-		<h4>Logo picture</h4>
-		<span class='green'>Download</span>
-	</div>		
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p4.png'/>
-		<h4>Team picture</h4>
-		<span class='green'>Download</span>
-	</div>	
-		
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p5.png'/>
-		<h4>Team picture</h4>
-		<span class='green'>Download</span>
-	</div>
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p6.png'/>
-		<h4>Network picture</h4>
-		<span class='green'>Download</span>
-	</div>
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p7.png'/>
-		<h4>Logo picture</h4>
-		<span>Download</span>
-	</div>		
-	<div class='press-r' style='width:20%;display:inline-block;margin:2% 1%;'>
-		<img src='<?php echo bloginfo("template_url");?>/library/images/press/p4.png'/>
-		<h4>Team picture</h4>
-		<span class='green'>Download</span>
-	</div>		
+<?php
+if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_exists( $media_cat_lib, 'get_media_categories' ) ):
+     
+     $cat = "Press";
+	 $posts= $media_cat_lib->get_mediacategory_shortcode( array( 'returnposts' => 1,'cats' => $cat, 'orderby' => "date", 'order' => "DESC" ) );
+	 
+	 ?>
+	 <div class="row">
+	<?php foreach ( $posts as $rpost ): 
+		$caption = $img = "";
+		$caption = $rpost->post_title;
+		$img = wp_get_attachment_image_src( $rpost->ID, "thumbnail-size" );
+		$ext = substr($img[0],-4);
 
--->
+		if($ext == ".jpg" || $ext == ".png" || $ext == ".gif" || $ext == "jpeg" || $ext == ".JPG" || $ext == ".PNG" || $ext == "JPEG"){
+		?>
 
+	        
+		        <a target="_blank" href="<?php echo wp_get_attachment_url( $rpost->ID ); ?>">
+		        	<div class="col-md-3 col-lg-3">
+			        	 <img src='<?php echo $img[0]; ?>' class="pressimg"/>
+			       		 <h4><?php echo $caption; ?></h4>
+			       		 <span class='green'>Download</span>
+		       		 </div>
+		        </a>
+	       
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-		<?php the_content(); ?>
+	     <?php }
+	     else{
+	     	$files .= '<a target="_blank" href="'.wp_get_attachment_url( $rpost->ID ).'"> 
+	     		<h4>'.$caption.' <span class="green">Download &darr;</span> </h4> </a>';
+	     }
+	      ?>
+	      
+	<?php endforeach; ?>
 
-	<?php endwhile;  endif; ?>
+	</div>	 <!-- ROW -->
+	<?php if($files != ''){ ?>
+	<h2>Files</h2>
+	<?php echo $files ?>
+	<?php } ?>
+</div>
+
+	
+
+<?php endif; ?>
 
 
 
-</div>		
+	
 
 	<!-- /Wrapper -->
 

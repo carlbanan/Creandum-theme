@@ -1143,6 +1143,9 @@ transition: all 0.5s ease-in-out;
 
 
 /* ABOUT */
+.pressimg{
+	width: 100%;
+}
 .press-area{
 	padding:60px 0;
 }

@@ -6,10 +6,7 @@ Template Name: New startpage
 
 <?php get_header(); ?>
       
-
       <div class='startpage'>
-
-
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -113,9 +110,20 @@ Template Name: New startpage
                       </li>
 
                     </ul>
+
                   </div>  
                 </div>
                 <!--pay attention-->
+                <?php
+                $language->q1 = "Betalar du tvavgift?";
+                $_GET['q'] = "q1";
+                echo $language->$_GET['q'];
+
+                 $lanuage[1] = "Betalar du tvavgift?";
+                 $_GET['q'] = 1;
+                 echo $lanuage[$_GET['q']];
+
+                ?>
               </div>
             </div>
           </div>
@@ -254,46 +262,18 @@ Template Name: New startpage
                       <h2>Find out what we are up to and what's happening in our network.</h2>
               </div>
 
-            <?php 
-            require_once("library/newsfeed.php");
-            $n = new newsfeed();
-            $news = $n->give_newsfeed(1);
-            ?>
+
 
                <div class="feed">  
 
-                    <?php
-
-                    foreach($news as $n){
-                    ?>
-                      <a href='<?php echo $n['url'];?>' class='<?php echo $n['type'];?> filterable' <?php if($n['type'] != 'blog'){ echo "target='_blank'";} ?>>
-                    <div class="ncard <?php echo $n['type'];?>">
-                      <div class="<?php echo $n['type'];?>icon icon"></div>
-                      <?php if($n['type']=='blog' && $n['author_img'] != ''){ ?>
-                        <div class="profile hidden-xs" style="background-image:url('<?php echo $n['author_img'];?>');"></div>
-                      <?php } ?>
-                      <div class='ncard-content'>
-                      <?php  if($n['type']=='blog'){ ?>
-                        
-                          <!-- BLOG POST -->
-                            <h2 class="bold"><?php echo $n['title'];?></h2>
-                            <h3 class="green"><?php echo date("M j, Y",strtotime($n['date']));?> <?php if($n['author']){ echo " by ".$n['author']; } ?></h3>
-                        <? }else{ ?>
-
-                          <!-- OTHERS -->
-                          <h2><?php echo $n['title'];?></h2>
-                        <?php } ?>
-
-                      </div> <!-- END ncard-content -->
-                      <div class="feedright"></div>
-                    </div>
-                  </a>
-                <?php
-                    }
-                    ?>
+              <?php 
+                  require_once("feed.php");
+                  feed(1);
+              ?>
 
         
                 </div><!-- END FEED --> 
+              
 
             </div>
           </div>

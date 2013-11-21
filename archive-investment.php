@@ -72,10 +72,11 @@
 									$portrait = get_post_meta($postid,"custom_logo_image",true);	
 									?>
 									<div class="portrait_list">
-										<div class='over'>
+										<div class='over hidemobile'>
 											<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
 										</div>
 										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
+										<h4 class="showmobile"><?php the_title();?></h4>
 
 									</div>
 									
