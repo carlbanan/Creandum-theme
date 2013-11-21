@@ -1,48 +1,5 @@
 <?php get_header(); ?>
 
-	<div id="async_content">
-		
-		<!-- AJAX CONTENT GOES HERE -->
-		<?php
-			if(SINGLEPOST == 1){
-				$_template_file = get_template_directory()."/single-team-content.php";
-				load_template( $_template_file);
-			}
-			else{
-				?>
-		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
-		<div class"top-post">
-				<!-- Big picture -->
-				<div class="page-content intro-about">	
-								<!--<p class="large_invest_white"></p> -->
-							<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
-		                  	 <div class='shadowop'>
-		                          <h1 class="small shadow">This is team Creandum and also</h1>
-		                          <br><h1 class="small shadow">a great part of somewhat 60 companies.</h1>
-		                        </div>
-		                        <div>
-		                          <h1 class="small strip">This is team Creandum and also</h1>
-		                          <br><h1 class="small strip">a great part of somewhat 60 companies.</h1>
-		                        </div>
-							</section>
-						</div>
-						<div class="responsive-wrapper">
-							<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
-							<div class="green_background"></div>
-						</div>	
-				</div>	
-	</div>	
-	<?php } ?>
-
-	</div>
-	<div id="hidden_content">
-		<!-- HIDDEN CONTENTN IS STORED HERE -->
-	</div>
-
-	<div class='lightgreen_bg padblock infront'>
-
-		<div class="team container">
-
 <div id="async_content">
 	
 	<!-- AJAX CONTENT GOES HERE -->
@@ -122,7 +79,8 @@
 						  	foreach($team as $post){
 						?>
 
-						<div id="post-<?php the_ID(); ?>" <?php post_class('col-md-3  col-lg-3  col-sm-6 filterable '.$post->cotitle); ?> role="article">
+
+						<div id="post-<?php the_ID(); ?>" <?php post_class('col-xs-6 col-md-3  col-lg-3  col-sm-4 filterable '.$post->cotitle); ?> role="article">
 								
 							<a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" class='async' rel="bookmark" title="<?php the_title_attribute(); ?>">		
 									
@@ -141,7 +99,6 @@
 
 								?>
 							</a>
-							<div class="title_mobile showmobile"><h2><?php the_title();?></h2></div>
 						</div> <!-- end article -->
 						
 						<?php } ?>	

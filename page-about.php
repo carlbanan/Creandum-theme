@@ -8,13 +8,10 @@
 <!-- Big picture -->
 <div class="page-content intro-about">	
 				<!--<p class="large_invest_white"></p> -->
-				<section class="small oneline content-header-text wrapper clearfix container" itemprop="articleBody">
-		                  	 <div class='shadowop'>
-		                          <h1 class="small shadow">backing the companies of tomorrow.</h1>
-		                        </div>
-		                        <div>
-		                          <h1 class="small strip">backing the companies of tomorrow.</h1>
-		                        </div>
+				<section class="post_content center clearfix" itemprop="articleBody">
+				<h2>
+				 Backing the companies of tomorrow.
+				</h2>
 				</section>
 		</div>
 		<div class="responsive-wrapper">
@@ -102,7 +99,6 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 </div>
 			
 
-
 <div class='press-area container' style='background:#fff;z-index:9999;position:relative;padding:60px 0;'>
 	<h1>Press resources</h1>
 <?php
@@ -151,6 +147,14 @@ if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_ex
 	
 
 <?php endif; ?>
+
+
+
+	
+
+	<!-- /Wrapper -->
+
+	<!-- /Wrapper -->
 
 <?php get_footer(); ?>
 

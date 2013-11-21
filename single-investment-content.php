@@ -9,17 +9,15 @@
       <div  id="post_<?php the_ID();?>">
       <?php if( $bigimg  != ''){ ?>
         
-
-        <div class="responsive-wrapper-invest">
-           
-            <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"><div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div></div>     
-
+        <div class="responsive-wrapper">
+          <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div> 
+        </div>
       <?php }else{ ?>
      
 
       <div class="small-header"></div>
       <?php } ?>  
-        <div class="container padblock-invest page-content">
+        <div class="container padblock page-content">
             <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 
               
@@ -27,6 +25,7 @@
                 
                 <header>
       
+                  <div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
                        
                 </header> <!-- end article header -->
               
