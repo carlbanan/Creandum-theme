@@ -21,8 +21,10 @@
 								</h2>
 								</section>
 						</div>
-						<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
-						<div class="green_background"></div>
+						<div class="responsive-wrapper">
+							<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
+							<div class="green_background"></div>
+						</div>	
 				</div>	
 	</div>	
 	<?php } ?>

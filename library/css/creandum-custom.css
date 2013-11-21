@@ -215,6 +215,8 @@ h3 {
 
 }
 
+
+
 .contactz{
 	z-index:9999!important;
 }
@@ -638,7 +640,7 @@ line-height: 1.8em;
 }
 .sidecontent{
 	text-align: left;
-	padding:20px 40px 20px 20px;
+	padding:20px 40px 30px 20px;
 	-webkit-border-bottom-right-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	-moz-border-radius-bottomright: 3px;
@@ -726,12 +728,12 @@ span.date{
 	max-height: 75px;
 	text-overflow:hidden;
 	overflow:hidden;
-	max-width: 62%;
+	max-width: 75%;
 }
 .ncard-content h2{
 	text-align: left;
-	font-size: 16px;
-	line-height: 1.6em;
+	font-size: 15px;
+	line-height: 1.5em;
 	padding:4px 0;
 	margin:auto; 
 	vertical-align: middle;
@@ -1161,7 +1163,7 @@ transition: all 0.5s ease-in-out;
 	background-color: #fff;
 	border-bottom-left-radius:3px;
 	border-bottom-right-radius:3px;
-	padding:10px;
+	padding:15px 20px 0px 20px;
 	max-height:150px;
 	overflow-y:hidden;
 
@@ -1240,7 +1242,19 @@ line-height: 1.8em;
 	top: 0;
 	height: 295px;
 	background-image: url("../../images/sun.png");
+	-webkit-animation: rotate 30s linear 1s infinite alternate;
+
 }
+
+	
+@-webkit-keyframes rotate {
+
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+
+
 
 .sunrise{
 	width: 350px;
@@ -1346,6 +1360,8 @@ line-height: 1.8em;
 	75% {-webkit-transform: translate(0,-20px);}
 	100% {-webkit-transform: translate(0,0);}
 }
+
+
 
 
 .wheel{
@@ -1467,8 +1483,8 @@ line-height: 1.8em;
 .cbp-af-header nav a {
 		color: white;
 		font-size: 1em;
-		margin-left: 20px;
 		margin-right: 20px;
+		
 }
 
 .cbp-af-header nav ul {
@@ -1531,7 +1547,7 @@ line-height: 1.8em;
 }
 
 .cbp-af-header.cbp-af-header-shrink a {
-		margin-left: 10px;
+		
 }
 
 .cbp-af-header.cbp-af-header-shrink .head{
@@ -1544,8 +1560,7 @@ line-height: 1.8em;
 .cbp-af-header.cbp-af-header-shrink  .network,
 .cbp-af-header.cbp-af-header-shrink  .aboutnav,
 .cbp-af-header.cbp-af-header-shrink  .contactnav{
-		background-image: none;
-		position: none;
+		display: none;
 }
 
  .cbp-af-header.cbp-af-header-shrink nav ul{
@@ -1682,7 +1697,7 @@ button:hover .twitter-icon{
 .btn2 {
 	display: inline-block;
 	-webkit-font-smoothing:antialiased;
-	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding: 4px 20px 0 0;
 	margin-bottom: 0;
 	margin-left: 20px;
@@ -2529,6 +2544,8 @@ button:hover .twitter-icon{
 	transition: opacity 0.43s linear; 	
 	
 }
+
+
 .content-header-wrap.active{
 		display: table;
 		opacity: 1;
@@ -2781,11 +2798,12 @@ button:hover .twitter-icon{
 .carousel-control.right {
 background-image: none;
 right: 20px;
-z-index: 6;
+z-index: 66;
 }
 
 .carousel-control.left {
 background-image: none;
+z-index: 66;
 }
 
 .carousel-control{
@@ -2872,102 +2890,475 @@ p.center{
 }
 /* Example Media Queries */
 @media screen and (max-width: 1060px) {
-		 
-		.cbp-af-header .cbp-af-inner {
-				width: 100%;
-		}
+
+
+
+.cbp-af-header {
+		position: fixed;
+		left: 0;
+		top:0;
+		width: 100%;
+		background: none;
+		z-index: 10000;
+		height: 60px;
+		overflow: hidden;
+		transition: 0.2s ease-in-out;
+		-webkit-transition: 0.2s ease-in-out;
+		-moz-transition: 0.2s ease-in-out;
+		-o-transition: 0.2s ease-in-out;
+
+}
+
+
+.cbp-af-header nav ul li{
+		display: block;
+		float:left;
+		top: 0px;   
+}
+
+.cbp-af-header nav ul{
+		margin-right: ; 
+}
+
+.head{
+	margin-top:40px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+
+.cbp-af-header .cbp-af-inner {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 15px;
+}
+ 
+.cbp-af-header h1,
+.cbp-af-header nav {
+		display: inline-block;
+		position: absolute;
+		line-height: 60px;
+		font-size: 1.5em;
+}
+
+.cbp-af-header h1{
+		z-index:50;
+		padding-left: 15px;
+}
+ 
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+
+ 
+.cbp-af-header h1 {
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: 3.2px;
+		font-size: 2.3em;
+		margin: 0;
+		float: left;
+}
+ 
+.cbp-af-header nav {
+		float: right;
+}
+ 
+.cbp-af-header nav a {
+		color: white;
+		font-size: 1em;
+
 		
-		.content-header-wrap .container {
-		max-width: 100%!important;
-			}
+}
 
- 
-		.cbp-af-header h1,
-		.cbp-af-header nav {
-				display: block;
-				margin: 0 auto;
-				text-align: left;
-				float: left;
-		}
- 
-		.cbp-af-header h1,
-		.cbp-af-header nav a {
-				line-height: 100px;
-		}
- 
-		.cbp-af-header nav a {
-				margin: 0 10px;
-		}
- 
-		.cbp-af-header.cbp-af-header-shrink h1,
-		.cbp-af-header.cbp-af-header-shrink nav a {
-				line-height: 58px;
-		}
- 
-		.cbp-af-header.cbp-af-header-shrink h1 {
-				font-size: 2em;
-		}
- 
-		.cbp-af-header.cbp-af-header-shrink nav a {
-				font-size: 1em;
-		}
 
-		.cbp-af-header.cbp-af-header-shrink nav ul li {
-				display: none;
-		}
+.cbp-af-header.cbp-af-header-shrink {
+		background: #3da955;
 
-		.cbp-af-header .cbp-af-inner {
-			padding:0;
-		}
+}
+ 
+.cbp-af-header.cbp-af-header-shrink h1 {
+		font-size: 2.3em;
+}
+
+.cbp-af-header.cbp-af-header-shrink a {
+		margin-left: 0px;
+
+}
+
+.cbp-af-header.cbp-af-header-shrink .head{
+	display: none;
+}
+
+.cbp-af-header.cbp-af-header-shrink  .invest,
+.cbp-af-header.cbp-af-header-shrink  .team,
+.cbp-af-header.cbp-af-header-shrink  .newsnav,
+.cbp-af-header.cbp-af-header-shrink  .network,
+.cbp-af-header.cbp-af-header-shrink  .aboutnav,
+.cbp-af-header.cbp-af-header-shrink  .contactnav{
+		display: none;
+}
+
+ .cbp-af-header.cbp-af-header-shrink nav ul{
+				margin-top:0;
+}
+
+	
 
 		/* SHOW MENU ICON TOGGLE */
 		.menu-icon{
 			display: block;
 			z-index: 999;
-			margin-top: 25px;
 			cursor: pointer;
 			 -webkit-transition: all 0.3s ease;
 			transition: all 0.3s ease; 
 		}
 
+		
 
-		.cbp-af-header.cbp-af-header-shrink .menu-icon {
-				margin-top: 0px;
+		.cbp-af-header .cbp-af-inner {
+		padding: 0;
 		}
 
 		.cbp-af-header nav ul li{
 			display: none;
 		}
 
-		.cbp-af-header.cbp-af-header-shrink.mobile nav,.cbp-af-header.mobile nav  {	
-			margin-top:-26px;
+		.cbp-af-header.mobile nav  {	
+			position: absolute;
+			width:100%;
+			height: 824px;
+			background: #3da955;
+			-webkit-transition: height 0.3s, background 0.3s ease-in-out;
+			transition: height 0.3s, background 0.3s ease-in-out; 
 		}
-		.cbp-af-header.cbp-af-header-shrink.mobile nav ul li ,.cbp-af-header.mobile nav ul li {		
+
+		.cbp-af-header.mobile nav ul{	
+			margin-top: 60px;
+		}
+
+		.cbp-af-header.mobile nav ul li {		
 			display: block;
-			width: 100%;
-			height: 50px;
-			background-color: #edf3ef;
+			height: 100%;	
+			float:center;
+			-webkit-transition: all 0.3 ease-in-out;
+			transition: all 0.3 ease-in-out; 
+			-webkit-animation: fadeIn 1s;
+		    animation: fadeIn 1s;
+		    border-top: 1px solid rgba(255, 255, 255, 0.2);
 		}
+
+		@-webkit-keyframes fadeIn {
+	    from { opacity: 0; }
+	      to { opacity: 1; }
+		}
+
+		@keyframes fadeIn {
+		    from { opacity: 0; }
+		      to { opacity: 1; }
+		}
+
+		.cbp-af-header.mobile nav ul li a{		
+			line-height: 3em;
+			margin-left: 20px;
+			text-align: left;
+			
+		}
+
 		.cbp-af-header.mobile{
 			overflow:visible;
 		}
-		.cbp-af-header.mobile nav a ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a {
- 			line-height: 3em;
- 			color:#3da955;
- 		}
+
+		
 		.cbp-af-header.mobile nav a span ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a span{
 			display: none;
-		} 		
+			-webkit-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out; 
+		} 
+
+
+		.content-header-text div h4 {
+		font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 1.6em;
+		padding-top: 20px;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 25em;
+		}
+
 }	
 /* SCREENS LESS THAN 480px */
 @media only screen and (max-width : 484px) {
+
+	.mobile{
+		display: block;
+	}
+
+	.hidemobile{
+		display: none!important;
+	}
+	
+	.padblock_two, .padblock_one {
+		padding: 50px 0 50px 0;
+	}
+
+	.col-lg-12{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+/*
 	.investments, .team{
 		background: url(/creandum/wp-content/themes/Creandum-theme/images/spritesx2.png) no-repeat;
 		background-size: 500px 500px
 	}
+*/
 
 	.large_invest_green, .large_invest_white, .small_invest_white, .small_invest_fillw{
 		background: url(sprites.png) no-repeat;
+	}
+
+
+	.content-header-text div h4 {
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 1.6em;
+	padding-top: 20px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 3em;
+	}
+
+	
+	.cbp-af-header .container, .about .container{
+		max-width: 1140px!important;
+	}
+
+	.content-header-text h1 {
+	line-height: 1.6em;
+	font-size: 21px;
+	-webkit-margin-before: 0.2em;
+	-webkit-margin-after: 0.2em;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	padding:0px 5 0 5px;
+	}
+
+	.ticker2 h2 {
+		margin: 30px 0;
+		font-size: 14px;
+	}
+
+	.text {
+		font-size: 11px;
+	}
+
+	.content-header-text div h4:first-child{
+	margin-top:90px;
+	}
+
+	h2{ 
+		line-height: 1.4;
+		font-size: 19px;
+	}
+
+	.carousel-inner {
+	overflow: hidden;
+
+}
+	.carousel-caption {
+		position: absolute;
+		top: 100px;
+		right:0px;
+		left:0px;
+		width: 100%;
+	}
+
+	.carousel-inner > .item > img {
+	display: block;
+	height: auto;
+	line-height: 1;
+	min-width: none;
+	max-width: none;
+	min-height: none;
+	min-width: none;
+	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	display: block;
+	height: auto;
+	max-width: none;
+	line-height: 1;
+		}
+
+	.strip2{
+		font-size: 13px;
+		padding: 10px 10px 10px 10px;
+	}
+
+	.carousel-control.right {
+	background-image: none;
+	z-index: 66;
+	right: 0;
+	}
+
+	.carousel-control.left {
+	background-image: none;
+	z-index: 66;
+	left: 0;
+
+	}
+
+	.ncard .icon {
+	width: 50px;
+	height: 50px;
+	background-size: 50px auto;
+	background-position: center center;
+	border-width: 0;
+	margin-top: -60px!important;
+	position: absolute;
+	background-color: white;
+	border-radius: 50px;
+	text-align: center;
+	margin: 0 auto;
+	left: 42%;
+	}	
+	
+	.ncard{
+		margin-top: 110px;
+		height: 100%;
+		background-color: rgba(255,255,255,0);
+		text-align: center;
+	}
+
+	.ncard .ncard-content{
+		overflow: visible;
+		max-width: 100%;
+		max-height: 100%;
+		padding-left: 0;
+	}
+	.ncard-content h2{
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.mobile h2{
+		color: #3da955;
+	}
+
+
+	.details{
+		margin-left:0;
+	}
+
+
+	.links li{
+		float: center;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 20px;
+	}
+
+	.links {
+		text-align: center;
+	}	
+
+	.btn2, .mobile{
+		padding: 0 0 0 0;
+	}
+	
+	.btntext, .mobile{
+	border-right:none;
+	margin-right:0;
+}
+	.btnmobile{
+		width: 40px;
+		height: 40px;
+		border-radius: 4px;
+		border:1px solid white;
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	.twitter-icon{
+		width: 40px;
+		height: 40px;
+		display: block;
+	}
+
+	.mobilesocial{
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.in{
+		width: 40px;
+		height: 40px;
+		display: block;
+	}
+
+	.info{
+		margin-top: 50px;
+	}
+
+	/* TEAM */
+
+	.big-image-container {
+	background-position: top center;
+	background-color: #f1f1f1;
+	background-image: url("../../images/creandum-big-backup.jpg");
+	background-attachment: absolute;
+	background-repeat: no-repeat;
+	background-size: 700px;
+	height: 470px;
+	min-width: 950px;
+	width: 100%
+	-webkit-transition: all 0.15s ease;
+	-moz-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+	-webkit-transition-delay: 0.35s;
+	-moz-transition-delay: 0.35s;
+	transition-delay: 0.35s;
+}
+
+	.green_background {
+	height: 450px;
+	}
+
+	.responsive-wrapper{
+		width:100%;
+		height: 420px;
+		overflow: hidden;
+	}
+
+	.post_content h2{
+		margin-top:100px;
+		margin-left:20px;
+		margin-right: auto;
+		left:auto;
+		right:auto;
+		font-size:28px;
+		text-align: left;
+		-webkit-margin-before: 90px;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 20px;
+		-webkit-margin-end: 0;
+	}
+
+		/* 	CONTACT */
+	.content-header-text div.subtext {
+	margin-top: 120px;
+	width: 90%;
+}
+
+	.forms{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 }
@@ -2980,17 +3371,7 @@ p.center{
 		max-width: 1140px!important;
 	}
 
-	
 
-
-	.cbp-af-header .container, .about .container{
-		max-width: 1140px!important;
-	}
-
-	.cbp-af-header, .about .post_content{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
 
 
 }
@@ -3000,6 +3381,8 @@ p.center{
 
 
 }
+
+
 
 
 

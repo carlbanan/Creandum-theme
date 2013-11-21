@@ -272,6 +272,7 @@ jQuery(document).ready(function($) {
           	$(".ticker2 h2").css("top","-222px" );   	
  	});
 
+
     var $window = $(window);
     var $box = $('.sunrise');
     var $sun = $('.sun');
@@ -335,12 +336,12 @@ jQuery(document).ready(function($) {
 
     	}
 
-    	if ((position >= (parseHeight * 4) - (parseHeight / 2))  && position <= parseHeight * 5 - 500 ) {
+    	if ((position >= (parseHeight * 4))  && position <= parseHeight * 5 - 50 ) {
     		console.log(position)
-    		console.log(parseHeight * 5 - 200)
+    		console.log((parseHeight * 4) - (parseHeight / 20))
 
     		$tools.css({
-    			'marginTop': ((position - parseHeight  * 4) + (parseHeight / 2)) / 1.4
+    			'marginTop': ((position - parseHeight  * 4)) / 2
     		})
     	}
 

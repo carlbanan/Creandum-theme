@@ -14,8 +14,10 @@
 				</h2>
 				</section>
 		</div>
-		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/about.png);'></div>
-		<div class="green_background"></div>
+		<div class="responsive-wrapper">
+			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/about.png);'></div>
+			<div class="green_background"></div>
+		</div>
 
 <div class='about'>
 
@@ -33,14 +35,14 @@
 Over the years, we have built an international network of VC's, entrepreneurs, executives, technology companies, service providers, and fund investors to ensure we support our companies in every way possible.
 Building companies is our favorite occupation.</p>	
 				</div>
-				<div class="col-md-7 icon_right">
+				<div class="col-md-7 icon_right hidemobile">
 					<div class="sun"></div>
 					<div class="sunrise icon_right"></div>
 				</div>
 			</div>
 
 			<div class="who">
-				<div class="col-md-7 icon_left">
+				<div class="col-md-7 icon_left hidemobile">
 					<div class="globe">
 						<div class="cloud-1"></div>
 						<div class="cloud-2"></div>
@@ -62,14 +64,14 @@ Once we invest in a company we take an active role and all of our team contribut
 					<p>People with vision. People that lead. People that believe in "already done" instead of "will do". People that are obsessed by creating extraordinary things.
 Companies that impact, shape, and disrupt markets. Often with a global market opportunity and strong international focus from day one.</p>	
 				</div>
-				<div class="col-md-7 icon_right">
+				<div class="col-md-7 icon_right hidemobile">
 					<div class="eye_outer">
 					<div class="eye icon_right"></div></div>
 				</div>
 			</div>
 
 			<div class="who">
-				<div class="col-md-7 icon_left">
+				<div class="col-md-7 icon_left hidemobile">
 					<div class="wheel"></div>
 				</div>
 				<div class="col-md-5">
@@ -85,7 +87,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 					<p class="lead">We do not only invest in great companies, we help make them stronger and better aswell.</h3>
 					<p>We help our investments with recruitments, advisory boards, office spaces and all sorts of great leads to help them build strong networks and grow their businesses. Our network spreads all over the globe in all kinds of operating categories which leaves us with the possibility of helping our investments with pretty much everything.</p>	
 				</div>
-				<div class="col-md-7 icon_right">
+				<div class="col-md-7 icon_right hidemobile">
 					<div class="box"></div>
 				</div>
 			</div>
