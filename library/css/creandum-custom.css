@@ -2516,16 +2516,17 @@ button:hover .twitter-icon{
 	display: table;
 	opacity:0;
 	position: absolute;
-	 -webkit-transition: opacity 2s linear;
-	transition: opacity 2s linear; 	
-	
-}
+	 -webkit-transition: opacity 1s linear;
+	transition: opacity 1s linear; 	
+	-webkit-transition-delay:1s;
+	transition-delay:1s;}
 
 .content-header-wrap.active{
-		display: table;
-		opacity: 1;
+	display: table;
+	opacity: 1;
 	 -webkit-transition: opacity 2s linear;
 	transition: opacity 2s linear; 		
+
 }
 .content-header.bigimage{
 	background-size:cover;
