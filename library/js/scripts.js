@@ -611,7 +611,9 @@ jQuery(document).ready(function($) {
 					$("#more").remove();
 					$("#feed").append(d);
 					if(page == 1){
-						fetchPodio();
+						if (document.documentElement.clientWidth > 1070) {
+							fetchPodio();
+						}
 					}
 				}
 
