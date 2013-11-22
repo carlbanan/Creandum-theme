@@ -44,7 +44,7 @@ Template Name: New startpage
 
 
                  <div class='content-header-text wrapper container'>
-                  <div class="hidemobile">
+                  <div class="hidemobile htext">
                        <div class='shadowop'>
                           <?php foreach($textline as $txt){ ?>
                           <h1 class="shadow"><?php echo $txt;?></h1><br>
@@ -57,7 +57,7 @@ Template Name: New startpage
                       </div>
                     </div>  
 
-                    <div class="showmobile">
+                    <div class="showmobile htext">
                         <div class='shadowop'>
                           <h1 class="shadow">Backing the companies</h1>
                           <br><h1 class="shadow">of tomorrow</h1>
@@ -67,7 +67,7 @@ Template Name: New startpage
                           <br><h1 class="strip">of tomorrow</h1>
                         </div>
                     </div>  
-                  <div>
+                  <div class="htext2">
                     <?php if($textline2!=""){ echo "<h4>".$textline2."</h4>"; }?>
                     <?php if($textline3!=""){ echo "<h5>".$textline3."</h5>"; }?>
                   </div>

@@ -363,7 +363,7 @@ h3 {
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
-	 margin-top: 110px;
+	
 	 max-width:960px;
 
 }
@@ -3111,6 +3111,16 @@ header.showmobile{
 		width:80%;
 		margin-left:-40%;
 		font-size:32px;
+	}
+	.content-header-text .showmobile{
+		display: block!important;
+	}
+	.content-header-text .hidemobile{
+		display: none!important;
+	}
+	.content-header-text h1{
+		font-size: 40px;
+
 	}
 }
 /* Smartphones (portrait and landscape) ----------- */
