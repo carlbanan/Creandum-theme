@@ -2495,9 +2495,7 @@ button:hover .twitter-icon{
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
-	 top:50%;
-	 bottom:50%;
-	 margin-top: -110px;
+	 margin-top: 240px;
 	 max-width:960px;
 
 }
@@ -2788,6 +2786,10 @@ p.center{
 width: 100%;
 height: 400px;
 overflow: hidden;
+}
+
+.showmobile{
+display: none;
 }
 
 /* SCREENS LESS THAN 1300px */
