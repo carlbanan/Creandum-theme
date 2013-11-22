@@ -93,8 +93,8 @@
 											
 										
 												<?php the_excerpt(); ?>
-												<br/>
-												Read more
+											
+												<span>Read more</span>
 											</div>
 										</a>
 

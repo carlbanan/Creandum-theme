@@ -775,6 +775,15 @@ span.date{
 		background-image: url("../../images/icons/blog.png");
 }
 
+.jobsicon{
+	background-image: url("../../images/icons/jobs.png");
+}
+
+.jobsicon:hover{
+	background-image: url("../../images/icons/jobs_white.png");
+}
+
+
 .ncard:hover .blogicon{
 	background-image: url("../../images/icons/blog_white.png");
 }
@@ -826,7 +835,7 @@ span.date{
 	margin-bottom:1px;
 }
 div.sideblock.news.podio:first-child{
-	margin-top:6px;
+	margin-top:66px;
 	 -webkit-border-top-right-radius: 3px;
 	-moz-border-radius-topright: 3px;
 	border-top-right-radius: 3px;
@@ -835,7 +844,7 @@ div.sideblock.news.podio:first-child{
 	border-top-left-radius: 3px;
 }
 div.sideblock.news.podio:last-child{
-	margin-bottom:30px;
+	margin-bottom:3px;
 	 -webkit-border-bottom-right-radius: 3px;
 	-moz-border-radius-bottomright: 3px;
 	border-bottom-right-radius: 3px;
@@ -867,10 +876,12 @@ div.sideblock.news.podio:last-child{
 	width:60px;
 }
 .twitter h4{
-	font-size:12px;
-	font-weight: 600;
+	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
 	position: absolute;
-	margin-top:-30px;
+	margin-top:4px;
+	padding-top:5px;
+	padding-right: 20px;
 }
 /* FILTER */
 
@@ -1177,8 +1188,8 @@ transition: all 0.5s ease-in-out;
 	background-color: #fff;
 	border-bottom-left-radius:3px;
 	border-bottom-right-radius:3px;
-	padding:15px 20px 0px 20px;
-	max-height:150px;
+	padding:15px 20px 20px 20px;
+	max-height:200px;
 	overflow-y:hidden;
 
 }
@@ -1192,9 +1203,18 @@ transition: all 0.5s ease-in-out;
 	margin-top:0;
 }
 .network-post p{
-	font-size:12px;
+	font-size:14px;
 	line-height: 1.6em;
 }
+
+.network-post span{
+	font-size:14px;
+	text-decoration: underline;
+	margin-top: -20px;
+	line-height: 1.6em;
+	color: #3da955;
+}
+
 
 .padblock .green_bg{
 
@@ -3109,7 +3129,7 @@ header.showmobile{
 }
 
 	.sideblock {
-		width: 100%;
+		display: none;
 	}
 
 
