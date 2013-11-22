@@ -15,6 +15,10 @@ if($_GET['async'] == 1){
 
 		require_once("tweets.php");
 	}
+	elseif($_GET['content'] == "podio"){
+
+		require_once("podio.php");
+	}	
 }
 else{ ?>
 <?php get_header(); ?>

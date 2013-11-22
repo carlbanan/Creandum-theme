@@ -219,14 +219,14 @@ Template Name: New startpage
                         $textline = explode("\n", $slide2['Slide text line 1']);
                         ?>
                         <div class="item <?php echo $active;?>">
-                          <img src="<?php echo $slide2['img']['src'];?>" alt="First slide">
+                          <img src="<?php echo $slide2['img']['src'];?>" alt="First slide"/>
 
                             <div class="carousel-caption">
                               <?php foreach($textline as $txt){ ?>
-                              <h2 class="strip2"><?php echo $txt;?></h2><br>
+                              <h2 class="strip2"><?php echo $txt;?></h2><br/>
                               <?php } ?>
                               <div class"title" style="margin-top:10px;">
-                                <p class="strip3"><?php echo $slide2['Slide text line 2'];?></p><br>
+                                <p class="strip3"><?php echo $slide2['Slide text line 2'];?></p><br/>
                                 <p class="strip3"><?php echo $slide2['Slide text line 3'];?></p>
                               </div>
 
@@ -239,11 +239,12 @@ Template Name: New startpage
                 }
               ?>
             <!--pay attention-->
+
+        </div><!-- /.carousel -->
             <?php if($c != 0){ ?>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><div class="lefticon"></div></a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next"><div class="righticon"></div></a>
             <?php } ?>
-        </div><!-- /.carousel -->
       </div>
 
         <div class='lightgreen_bg'>

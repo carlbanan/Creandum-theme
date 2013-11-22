@@ -654,7 +654,7 @@ function get_wpbs_theme_options(){
 
 add_filter('show_admin_bar', '__return_false');
 
-// Create TEAM POST
+// Create NETWORK POST
 function create_network_post() {
     $labels = array(
         'name'               => _x( 'network', 'post type general name' ),
@@ -731,7 +731,34 @@ function network_meta_box() {
     );
 }
 
-
+function create_podio_post() {
+    $labels = array(
+        'name'               => _x( 'Podio action', 'post type general name' ),
+        'singular_name'      => _x( 'Podio action', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New Podio action' ),
+        'edit_item'          => __( 'Edit Podio action' ),
+        'new_item'           => __( 'New Podio action' ),
+        'all_items'          => __( 'All Podio action' ),
+        'view_item'          => __( 'View Podio action' ),
+        'search_items'       => __( 'Search Podio actions' ),
+        'not_found'          => __( 'No Podio action found' ),
+        'not_found_in_trash' => __( 'No Podio action found in the Trash' ), 
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Podio'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our actions / events from podio specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+        'has_archive'   => true,
+    );
+    register_post_type( 'podio', $args ); 
+   
+}
+add_action( 'init', 'create_podio_post' );
 
 
 function create_team_post() {
@@ -1168,7 +1195,7 @@ register_post_type('slideshows', array(
     'labels' => array (
         'name' => 'Slideshows',
         'singular_name' => 'Slideshow',
-        'menu_name' => 'Slideshows & press'
+        'menu_name' => 'Slideshows'
     ),
 ) );
 

@@ -558,9 +558,9 @@ jQuery(document).ready(function($) {
 			 },250);
 		});
     }
+ 
     // NEWSDECK INFINITE SCROLL
-    
-
+ 
 	 var newsdeck = function(){
 	 	
 	 	// NEWSDECK CONFIG
@@ -611,13 +611,25 @@ jQuery(document).ready(function($) {
 					$("#more").remove();
 					$("#feed").append(d);
 					if(page == 1){
-						fetchTweets();
+						fetchPodio();
 					}
 				}
 
 			});	
 	 	}
-	 	function fetchTweets(page){
+	 	function fetchPodio(){
+	 		
+			var reqData = { async : 1, content : 'podio' }
+			var urlBase = $("#feed").attr("url");
+			// EXEC
+			$.get(urlBase, reqData, function(d) {
+				
+				$("#tweets").append(d);
+				fetchTweets();
+
+			});	
+	 	}
+	 	function fetchTweets(){
 	 		
 			var reqData = { async : 1, content : 'side' }
 			var urlBase = $("#feed").attr("url");
@@ -626,9 +638,8 @@ jQuery(document).ready(function($) {
 				
 				$("#tweets").append(d);
 
-
 			});	
-	 	}
+	 	}	 	
 	 	
 	 }
      if($(".newsdeck .feed").length >= 1){
