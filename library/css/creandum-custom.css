@@ -808,7 +808,58 @@ span.date{
 	.hidden-xs {
 	display: inline-block!important;
 }
+.sideblock.news.podio{
+	background-color: #fff;
+	margin-top:0;
+	margin-bottom:1px;
+}
+div.sideblock.news.podio:first-child{
+	margin-top:6px;
+	 -webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
+	 -webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+}
+div.sideblock.news.podio:last-child{
+	margin-bottom:30px;
+	 -webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-right-radius: 3px;
+	 -webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-left-radius: 3px;
+}
 
+.podio .sidehead{
+	height: auto;
+	margin-bottom:0;
+	
+}
+.podio .sidetopic{
+	height: auto;
+	border-left:1px solid #edf3ef;
+	margin-left:59px;
+	min-height: 62px;
+}
+
+.podio-date{
+	border-right:1px solid #edf3ef;
+	color:#3da954;
+	line-height: 15px;
+	font-size:12px;
+	font-weight: 600;
+	padding:17px 18px 15px 18px;
+	text-align: center;
+	width:60px;
+}
+.twitter h4{
+	font-size:12px;
+	font-weight: 600;
+	position: absolute;
+	margin-top:-30px;
+}
 /* FILTER */
 
 .filter-menu{
