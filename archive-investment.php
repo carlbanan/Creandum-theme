@@ -16,15 +16,21 @@
 	<div class"top-post">
 		<div class="page-content intro">	
 				<!--<p class="large_invest_white"></p> -->
-				<section class="post_content center clearfix" itemprop="articleBody">
+				<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
+		                  	 <div class='shadowop'>
+		                          <h1 class="small shadow">Our ambition is to help build</h1>
+		                          <br><h1 class="small shadow">market leaders.</h1>
+		                        </div>
+		                        <div>
+		                          <h1 class="small strip">Our ambition is to help build</h1>
+		                          <br><h1 class="small strip">market leaders.</h1>
+		                        </div>
 
-				<h2>
-				 Our ambition is to help build market leaders.
-				</h2>
+				</section>
+
 		</div>
 		<div class="responsive-wrapper">
 			<div class="big-image-container"></div>
-			<div class="green_background"></div>
 		</div>
 	</div>	
 	<?php } ?>

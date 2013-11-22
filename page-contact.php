@@ -7,34 +7,28 @@
 
 <!-- Big picture -->
 
+<div class="responsive-wrapper">
 
-	 <div class='content-header-text fixedheight wrapper container'>
-		<div class="hidemobile">
-		   <div class='shadowop'>
-		    
-		    <h1 class="shadow">Are you building</h1><br>
-		    <h1 class="shadow">the company of tomorrow?</h1><br>
+	<div class"top-post">
+		<div class="page-content intro">	
+				<!--<p class="large_invest_white"></p> -->
+				<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
+		                  	 <div class='shadowop'>
+		                          <h1 class="small shadow">Are you building</h1>
+		                          <br><h1 class="small shadow">the company of tomorrow?</h1>
+		                        </div>
+		                        <div>
+		                          <h1 class="small strip">Are you building</h1>
+		                          <br><h1 class="small strip">the company of tomorrow?</h1>
+		                        </div>
 
-		  </div>
-		  <div>
-		   	 <h1 class="strip">Are you building</h1><br>
-		    <h1 class="strip">the company of tomorrow?</h1><br>
-		   
-		  </div>
-		</div>
-		  <div class='subtext'>	
-			<h3>
-				The best way to contact us is throug someone in our connected network. The second best way is to give
-				us the 140 charachter pitch. We get contacted by over 600 billion companies every year, we invest in all of them.
-			</h3>
-			
+				</section>
+
 		</div>
 	
 </div>
-<div class="responsive-wrapper">
 	<div class="contact">
 		<div class="big-image-container contact"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/laptop.png);'></div>
-		<div class="green_background contact"></div>
 	</div>
 </div>
 

@@ -536,7 +536,7 @@ jQuery(document).ready(function($) {
 	        var sy = scrollY();
 	       
 
-	  	    if (60 + sy >= fixh ) {	
+	  	    if (sy >= fixh ) {	
 
 	        	$(".filter-menu").addClass("fix");
 	       	}

@@ -8,15 +8,20 @@
 <!-- Big picture -->
 <div class="page-content intro-about">	
 				<!--<p class="large_invest_white"></p> -->
-				<section class="post_content center clearfix" itemprop="articleBody">
-				<h2>
-				 Backing the companies of tomorrow.
-				</h2>
-				</section>
+					<section class="small oneline content-header-text wrapper clearfix container" itemprop="articleBody">
+		                  	 <div class='shadowop'>
+		                          <h1 class="small shadow">backing the companies</h1>
+		                          <br><h1 class="small shadow">of tomorrow.</h1>
+		                        
+		                        </div>
+		                        <div>
+		                          <h1 class="small strip">backing the companies</h1>
+		                        	<br><h1 class="small strip">of tomorrow.</h1>
+		                        </div>
+					</section>
 		</div>
 		<div class="responsive-wrapper">
 			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/about.png);'></div>
-			<div class="green_background"></div>
 		</div>
 
 <div class='about'>

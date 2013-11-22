@@ -9,15 +9,25 @@
       <div  id="post_<?php the_ID();?>">
       <?php if( $bigimg  != ''){ ?>
         
-        <div class="responsive-wrapper">
-          <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"></div> 
+        <div class="content responsive-wrapper">
+          <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"> 
+                 <div class='invest-title content-header-text wrapper container'>
+                     <div class='shadowop'>
+                      <h1 class="shadow" itemprop="headline"><?php the_title(); ?></h1>
+                     </div>
+                      <div>
+                      <h1 class="strip" itemprop="headline"><?php the_title(); ?></h1>
+                      </div>
+                </div>   
+            </div>
+         </div>
         </div>
       <?php }else{ ?>
      
 
-      <div class="small-header"></div>
+      <div class="small-header"></div> 
       <?php } ?>  
-        <div class="container padblock page-content">
+        <div class="container content-padblock page-content infront">
             <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 
               
@@ -25,11 +35,11 @@
                 
                 <header>
       
-                  <div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
+                  <div class="page-header"></div>
                        
                 </header> <!-- end article header -->
               
-                <section class="post_content clearfix" itemprop="articleBody">
+                <section class="invest-content post_content clearfix" itemprop="articleBody">
                   <?php the_content(); ?>
                   
                   <?php

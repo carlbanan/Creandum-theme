@@ -13,20 +13,22 @@
 		else{
 	?>
 		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
-
-		<div class="page-content intro">	
-				<!--<p class="large_invest_white"></p> -->
-				<section class="small oneline content-header-text wrapper clearfix container" itemprop="articleBody">
-		                  	 <div class='shadowop'>
-		                          <h1 class="small shadow">Meet some of the people we meet.</h1>
-		                        </div>
-		                        <div>
-		                          <h1 class="small strip">Meet some of the people we meet.</h1>
-		                        </div>
-				</section>
+		<div class="responsive-wrapper">
+			<div class="page-content intro">	
+					<!--<p class="large_invest_white"></p> -->
+					<section class="small oneline content-header-text wrapper clearfix container" itemprop="articleBody">
+			                  	 <div class='shadowop'>
+			                          <h1 class="small shadow">Meet some of the people</h1>
+			                        	 <br><h1 class="small shadow">we meet.</h1>
+			                        </div>
+			                        <div>
+			                          <h1 class="small strip">Meet some of the people</h1>
+			                        	<br><h1 class="small strip">we meet.</h1>
+			                        </div>
+					</section>
+			</div>
+			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/header-network.jpg);'></div>
 		</div>
-		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/header-network.jpg);'></div>
-		<div class="green_background"></div>
 	<?php } ?>
 	</div>
 

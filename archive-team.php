@@ -1,32 +1,36 @@
 <?php get_header(); ?>
 
-<div id="async_content">
-	
-	<!-- AJAX CONTENT GOES HERE -->
-	<?php
-		if(SINGLEPOST == 1){
-			$_template_file = get_template_directory()."/single-team-content.php";
-			load_template( $_template_file);
-		}
-		else{
-			?>
-	<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
-	<div class"top-post">
-			<!-- Big picture -->
-			<div class="page-content intro-about">	
-							<!--<p class="large_invest_white"></p> -->
-							<section class="post_content center clearfix" itemprop="articleBody">
-							<h2>
-							 This is team Creandum and also a great part of somewhat 60 companies. 
-							</h2>
+	<div id="async_content">
+		
+		<!-- AJAX CONTENT GOES HERE -->
+		<?php
+			if(SINGLEPOST == 1){
+				$_template_file = get_template_directory()."/single-team-content.php";
+				load_template( $_template_file);
+			}
+			else{
+				?>
+		<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
+		<div class"top-post">
+				<!-- Big picture -->
+				<div class="page-content intro-about">	
+								<!--<p class="large_invest_white"></p> -->
+							<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
+		                  	 <div class='shadowop'>
+		                          <h1 class="small shadow">This is team Creandum and also</h1>
+		                          <br><h1 class="small shadow">a great part of somewhat 60 companies.</h1>
+		                        </div>
+		                        <div>
+		                          <h1 class="small strip">This is team Creandum and also</h1>
+		                          <br><h1 class="small strip">a great part of somewhat 60 companies.</h1>
+		                        </div>
 							</section>
-					</div>
-					<div class="responsive-wrapper">
-						<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
-						<div class="green_background"></div>
-					</div>	
-			</div>	
-</div>	
+						</div>
+						<div class="responsive-wrapper">
+							<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
+						</div>	
+				</div>	
+	</div>	
 <?php } ?>
 
 </div>
