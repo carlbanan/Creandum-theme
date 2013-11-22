@@ -370,7 +370,7 @@ jQuery(document).ready(function($) {
 		}
 		
 		$(".content-header-wrap,.slider-bigimage .item, #slider-bigimage").css("height",windowHeight);
-		$(".content-header-text div.htext").css("margin-top", ((windowHeight/2) - 350) );
+		$(".content-header-text div.htext").css("margin-top", ((windowHeight/2) - 270) );
 		$(".content-header-text div.htext2").css("margin-top", ((windowHeight/2) - 270) );
 
 

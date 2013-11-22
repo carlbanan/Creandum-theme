@@ -1158,9 +1158,12 @@ transition: all 0.5s ease-in-out;
 /* ABOUT */
 .pressimg{
 	width: 100%;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 .press-area{
-	padding:60px 0;
+	padding: 40px 0 60px 0;
 }
 .press-area h1{
 	padding:0 0 60px 0;
@@ -2564,7 +2567,7 @@ button:hover .twitter-icon{
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
-	 margin-top: 240px;
+	 margin-top: 110px;
 	 max-width:960px;
 
 }
@@ -3099,6 +3102,16 @@ header.showmobile{
 		height: 230px;
 		overflow: hidden;
 	}
+
+	.invest-title.content-header-text div{
+	margin-top:90px;
+	position: absolute;
+}
+
+	.sideblock {
+		width: 100%;
+	}
+
 
 
 	.content.responsive-wrapper {

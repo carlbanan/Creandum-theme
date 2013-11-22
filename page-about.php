@@ -104,8 +104,9 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 </div>
 			
 
-<div class='press-area container' style='background:#fff;z-index:9999;position:relative;padding:60px 0;'>
-	<h1>Press resources</h1>
+<div class='press-area' style='background:#fff;z-index:9999;position:relative;padding:60px 0 100px 0;'>
+<div class="container">	
+	<h1>Press esources</h1>
 <?php
 if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_exists( $media_cat_lib, 'get_media_categories' ) ):
      
@@ -127,7 +128,7 @@ if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_ex
 		        <a target="_blank" href="<?php echo wp_get_attachment_url( $rpost->ID ); ?>">
 		        	<div class="col-md-3 col-lg-3">
 			        	 <img src='<?php echo $img[0]; ?>' class="pressimg"/>
-			       		 <h4><?php echo $caption; ?></h4>
+			       		 <h3><?php echo $caption; ?></h3>
 			       		 <span class='green'>Download</span>
 		       		 </div>
 		        </a>
@@ -147,11 +148,12 @@ if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_ex
 	<h2>Files</h2>
 	<?php echo $files ?>
 	<?php } ?>
-</div>
 
-	
+
 
 <?php endif; ?>
+</div>
+</div>
 
 
 
