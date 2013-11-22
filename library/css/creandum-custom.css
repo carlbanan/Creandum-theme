@@ -2575,7 +2575,7 @@ button:hover .twitter-icon{
 	 height:inherit;
 	 top:auto;
 	 bottom:auto;
-	 margin-top: 260px;
+	 margin-top: 140px;
 }
 .content-header-text div h4{
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2599,7 +2599,7 @@ button:hover .twitter-icon{
 }
 
 .content-header-text div h4:first-child{
-	margin-top:180px;
+	margin-top:320px;
 }
 
 .content-header-text.fixedheight div{
@@ -2860,8 +2860,12 @@ overflow: hidden;
 }
 
 .showmobile{
-display: none;
+display: none!important;
 }
+
+header.showmobile{
+		display: none!important;
+	}
 
 /* SCREENS LESS THAN 1300px */
 @media all and (max-width : 1300px) {
@@ -2924,7 +2928,7 @@ display: none;
 		display: inline-block;
 		position: absolute;
 		line-height: 60px;
-		font-size: 1.5em;
+		font-size: 1.2em;
 }
 
 .cbp-af-header h1{
@@ -2939,7 +2943,7 @@ display: none;
 		text-transform: uppercase;
 		color: white;
 		letter-spacing: 3.2px;
-		font-size: 2.3em;
+		font-size: 2em;
 		margin: 0;
 		float: left;
 }
@@ -2961,7 +2965,7 @@ display: none;
 }
  
 .cbp-af-header.cbp-af-header-shrink h1 {
-		font-size: 2.3em;
+		font-size: 2em;
 }
 
 .cbp-af-header.cbp-af-header-shrink a {
@@ -3055,8 +3059,7 @@ display: none;
 		
 		.cbp-af-header.mobile nav a span ,.cbp-af-header.cbp-af-header-shrink.mobile.mobile nav a span{
 			display: none;
-			-webkit-transition: all 1s ease-in-out;
-			transition: all 1s ease-in-out; 
+			
 		} 
 
 
@@ -3103,16 +3106,28 @@ display: none;
 		font-size:32px;
 	}
 }
-
-/* SCREENS LESS THAN 480px */
+/* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width : 484px) {
+/* Styles */
 
-	.mobile{
-		display: block;
+	.mobile, .showmobile{
+		display: block!important;
+	}
+
+	header.showmobile{
+		display: block!important;
 	}
 
 	.hidemobile{
 		display: none!important;
+	}
+
+	.tick2.tick.showmobile h2, h2.mobile{
+		font-size: 28px;
+		text-align: left;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #fff;
+		color: #39423f;
 	}
 	
 	.padblock_two, .padblock_one {
@@ -3124,6 +3139,25 @@ display: none;
 		padding-right: 0;
 	}
 
+	.cbp-af-header {
+		transition: 0s ease-in-out;
+		-webkit-transition: 0s ease-in-out;
+		-moz-transition: 0s ease-in-out;
+		-o-transition: 0s ease-in-out;
+}
+
+	.content-header-text.bigheight div {
+	height: inherit;
+	top: auto;
+	bottom: auto;
+	margin-top: 140px;
+	}
+	
+	.showmobile .shadow, .showmobile .strip{
+		padding:3px 10px 3px 10px;
+	}
+	
+
 /*
 	.investments, .team{
 		background: url(/creandum/wp-content/themes/Creandum-theme/images/spritesx2.png) no-repeat;
@@ -3133,6 +3167,14 @@ display: none;
 
 	.large_invest_green, .large_invest_white, .small_invest_white, .small_invest_fillw{
 		background: url(sprites.png) no-repeat;
+	}
+
+	.content-header.bigimage, .content-header-text div {
+		position: absolute;
+	}
+
+	.content-header.bigimage{
+		top:0;
 	}
 
 
@@ -3147,6 +3189,10 @@ display: none;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 3em;
 	}
+
+	.content-header-text div h4:first-child{
+	margin-top:250px;
+}
 
 	
 	.cbp-af-header .container, .about .container{
@@ -3172,9 +3218,6 @@ display: none;
 		font-size: 11px;
 	}
 
-	.content-header-text div h4:first-child{
-	margin-top:90px;
-	}
 
 	h2{ 
 		line-height: 1.4;
@@ -3257,12 +3300,7 @@ display: none;
 		padding-left: 0;
 	}
 	.ncard-content h2{
-		font-size: 16px;
-		text-align: center;
-	}
-
-	.mobile h2{
-		color: #3da955;
+		font-size: 18px;
 	}
 
 
@@ -3320,8 +3358,74 @@ display: none;
 	.info{
 		margin-top: 50px;
 	}
+	
 
-	/* TEAM */
+	/****************/
+	/*  MOBILE ALL  */
+	/****************/
+
+	
+	.responsive-wrapper{
+		width:100%;
+		height: 230px;
+		overflow: hidden;
+	}
+
+	.team .row,.network .row,.investments .row{
+	margin-top: 100px;
+	margin-bottom: 0;
+}
+
+	.sideblock{
+		width:100%;
+	}
+
+	.invest-title.content-header-text div{
+		margin-top: 110px;
+	}
+
+	.content-padblock{
+		margin: 50px auto 50px auto;
+	}
+
+	.content.responsive-wrapper {
+	height: 230px;
+	}
+
+	.small.content-header-text div {
+	position: absolute;
+	margin-top: 50px;
+	}	
+
+
+	/**********/
+	/*  TEAM  */
+	/**********/
+
+
+	/*****************/
+	/*  INVESTMETNS  */
+	/*****************/
+	
+	.portrait_list{
+
+	}
+
+	.showmobile h3{
+		font-size: 14px;
+		font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+		min-height: 30px;
+		margin-top: 10px;
+	}
+
+	.portrait_list .over{
+		display: none;
+	}
+	
+	.small h1.shadow, .small h1.strip{
+	font-size: 16px;
+	padding: 3px 10px 3px 10px;
+	}
 
 	.big-image-container {
 	background-position: top center;
@@ -3345,11 +3449,6 @@ display: none;
 	height: 450px;
 	}
 
-	.responsive-wrapper{
-		width:100%;
-		height: 420px;
-		overflow: hidden;
-	}
 
 	.post_content h2{
 		margin-top:100px;

@@ -10,7 +10,7 @@
       <?php if($img != ''){ ?>
      <div class="content responsive-wrapper">
        <div class="big-image-container" style="<?php if($img){ echo "background-image:url('".$img."');"; } ?>">
-          <div class='invest-title content-header-text wrapper container'>
+          <div class='invest-title content-header-text wrapper container hidemobile'>
              <div class='shadowop'>
               <h1 class="shadow" itemprop="headline"><?php the_title(); ?></h1>
              </div>
@@ -22,8 +22,8 @@
        </div>  <!-- end big-image --> 
     </div>
       <?php }else{ ?>
-        <div class="small-header">
-          <div class='invest-title content-header-text wrapper container'>
+        <div class="small-header responsive-wrapper">
+          <div class='invest-title content-header-text wrapper container hidemobile'>
              <div class='shadowop'>
               <h1 class="shadow" itemprop="headline"><?php the_title(); ?></h1>
              </div>
@@ -39,10 +39,10 @@
             
             <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
               
-              <header>
+              <header class="showmobile">
                 
-    
-                     
+            <div class="page-header"> <h1 itemprop="headline"><?php the_title(); ?></h1></div>
+                   
               </header> <!-- end article header -->
             
               <section class="team-content post_content clearfix" itemprop="articleBody">

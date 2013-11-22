@@ -44,16 +44,29 @@ Template Name: New startpage
 
 
                  <div class='content-header-text wrapper container'>
-                   <div class='shadowop'>
-                    <?php foreach($textline as $txt){ ?>
-                    <h1 class="shadow"><?php echo $txt;?></h1><br>
-                    <?php } ?>
-                  </div>
-                  <div>
-                    <?php foreach($textline as $txt){ ?>
-                    <h1 class="strip"><?php echo $txt;?></h1><br>
-                    <?php } ?>
-                  </div>
+                  <div class="hidemobile">
+                       <div class='shadowop'>
+                          <?php foreach($textline as $txt){ ?>
+                          <h1 class="shadow"><?php echo $txt;?></h1><br>
+                          <?php } ?>
+                        </div>
+                      <div>
+                        <?php foreach($textline as $txt){ ?>
+                        <h1 class="strip"><?php echo $txt;?></h1><br>
+                        <?php } ?>
+                      </div>
+                    </div>  
+
+                    <div class="showmobile">
+                        <div class='shadowop'>
+                          <h1 class="shadow">Backing the companies</h1>
+                          <br><h1 class="shadow">of tomorrow</h1>
+                        </div>
+                        <div>
+                          <h1 class="strip">Backing the companies</h1>
+                          <br><h1 class="strip">of tomorrow</h1>
+                        </div>
+                    </div>  
                   <div>
                     <?php if($textline2!=""){ echo "<h4>".$textline2."</h4>"; }?>
                     <?php if($textline3!=""){ echo "<h5>".$textline3."</h5>"; }?>
@@ -87,14 +100,15 @@ Template Name: New startpage
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
-                   <div class="ticker2 init"> 
+                   <div class="tick2 tick showmobile"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
+                   <div class="ticker2 init hidemobile"> 
                     <div class="tick2 tick"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
                   <div class="tick2"><h2>We are backing entrepreneurs that are obsessed by creating extraordinary things within software and hardware.</h2></div>
                   <div class="tick2"><h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2></div>
                    <div class="tick2"><h2> We use our extensive background in building companies to serve top entrepreneurs.</h2></div>
                   </h2>
                    </div> 
-                  <div class="ticker_icons">
+                  <div class="ticker_icons hidemobile">
                     <ul>
                       <li class="one">
                       <span class="sprite-spinn_sun icon"></span>
@@ -144,8 +158,8 @@ Template Name: New startpage
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="center homeblock">
-                      <div class="icon_center sprite-large_invest"></div> 
-                      <h2>We invest in fast-growing companies in early- and later stages.</h2>
+                      <div class="icon_center sprite-large_invest hidemobile"></div> 
+                      <h2 class="mobile">We invest in fast-growing companies in early- and later stages.</h2>
                     </div>
                     <?php
                     foreach ( $myposts as $post ) : setup_postdata( $post );
@@ -267,8 +281,8 @@ Template Name: New startpage
             <div class="row padblock_two">
 
               <div class="center homeblock mobile">
-                      <div class="icon_center sprite-large_news"></div> 
-                      <h2>Find out what we are up to and what's happening in our network.</h2>
+                      <div class="icon_center sprite-large_news hidemobile"></div> 
+                      <h2 class="mobile">Find out what we are up to and what's happening in our network.</h2>
               </div>
 
 

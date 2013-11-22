@@ -84,10 +84,8 @@
 											<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
 										</div>
 										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
-										<h4 class="showmobile"><?php the_title();?></h4>
-
 									</div>
-									
+									<div class="showmobile"><h3><?php the_title();?></h3></div>
 
 			
 							</a>
