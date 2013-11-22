@@ -80,7 +80,7 @@ Template Name: New startpage
       </div>
 
       <?php echo $pr; ?>
-      <!-- <div class="container goscroll"></div> -->
+      <div class="container goscroll"></div>
        <div class="start-content">
         <div class="container">
           <div class="row padblock_one">
@@ -125,7 +125,7 @@ Template Name: New startpage
         <?php
         /* POSTS */
         $args = array(
-          'posts_per_page'   => 8,
+          'posts_per_page'   => 7,
           'offset'           => 0,
           'orderby'          => 'post_date',
           'order'            => 'DESC',
@@ -154,7 +154,7 @@ Template Name: New startpage
                       $portrait = get_post_meta($postid,"custom_logo_image",true);  
                      ?>
                       <div id="post-<?php the_ID(); ?>" <?php post_class('col-md-3  col-lg-3  col-sm-6 filterable '.$tax); ?> role="article">
-                        <a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" class='async' rel="bookmark" title="<?php the_title_attribute(); ?>">   
+                        <a href="<?php the_permalink() ?>"  select="post_<?php the_ID();?>" rel="bookmark" title="<?php the_title_attribute(); ?>">   
                             <div class="portrait_list">
                               <div class='over'>
                                 <button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
@@ -165,6 +165,21 @@ Template Name: New startpage
                       </div> <!-- end article -->
                     <?php endforeach; 
                     wp_reset_postdata();?>
+
+                    <!-- COULD YOU BE THE NEXT COMPANY STATIC BOX -->
+                      <div <?php post_class('col-md-3  col-lg-3  col-sm-6 static-bump');?> role="article">
+                       <a href="<?php echo bloginfo("url");?>/contact/">  
+                            <div class="portrait_list">
+                              <span class="green">Are you building the company of tomorrow?</span>
+                              <div class='over'>
+                                <button type="button" class="btn btn-default btn-white">Contact us</button>
+                              </div>
+                              <img src="<?php echo $portrait;?>">
+
+                            </div>
+                        </a>
+                      </div> <!-- end article -->
+
                   </div>
                   <!--pay attention-->
                 </div>

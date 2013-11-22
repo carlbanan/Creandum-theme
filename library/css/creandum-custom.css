@@ -436,6 +436,20 @@ h3 {
 	position: relative;
 	z-index: 9999;
 }
+
+.static-bump img{
+	opacity: 0;
+}
+.static-bump span{
+	margin-top:40%;
+	position: absolute;
+	padding:0 30px;
+	font-weight: 600;
+	text-align: center;
+}
+.static-bump .portrait_list:hover span{
+	display: none;
+}
 /* DISPLAY CONTENT TEAM INVESTMENT */
 
 /*  TEAM  */
@@ -2657,7 +2671,7 @@ button:hover .twitter-icon{
 	z-index: 25;
 	left:50%;right:50%;
 	margin-left:-32.5px;
-	margin-top:-95px;
+	margin-top:-35px;
 }
 .preload{
 	opacity: 0.1;
