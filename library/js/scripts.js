@@ -380,7 +380,7 @@ jQuery(document).ready(function($) {
 		            var $cur = obj.find('.active').removeClass('active');
 		            var $next = $cur.next().length?$cur.next():obj.children().eq(0);
 		            $next.addClass('active');
-		        },3000);
+		        },7000);
 		    })($(this));
 		        
 		});

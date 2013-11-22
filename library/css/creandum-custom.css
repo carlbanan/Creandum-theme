@@ -364,9 +364,7 @@ h3 {
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
-	 top:50%;
-	 bottom:50%;
-	 margin-top: -190px;
+	 margin-top: 110px;
 	 max-width:960px;
 
 }
@@ -439,6 +437,13 @@ h3 {
 	z-index: 9999;
 }
 /* DISPLAY CONTENT TEAM INVESTMENT */
+
+/*  TEAM  */
+.team-content.post_content{
+	margin-top: -30px;
+}
+
+
 .big-image-stat{
 	max-height: 450px;
 	width: 100%;
@@ -1145,7 +1150,7 @@ transition: all 0.5s ease-in-out;
 }
 
 .invest-title.content-header-text div{
-	margin-top: -40px;
+	margin-top:150px;
 	position: absolute;
 }
 
@@ -1526,7 +1531,7 @@ line-height: 1.8em;
 
  .small-header{
  	width: 100%;
- 	height: 105px;
+ 	height: 400px;
  	background-color: #3da955;
  }
 
