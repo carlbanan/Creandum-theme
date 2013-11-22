@@ -3096,9 +3096,17 @@ header.showmobile{
 	.feedright,.ncard .blogicon{
 		display: none;
 	}
-	.intro,.big-image-container,.green_background{
-		height:250px;
-	}	
+	.responsive-wrapper{
+		width:100%;
+		height: 230px;
+		overflow: hidden;
+	}
+
+
+	.content.responsive-wrapper {
+	height: 230px;
+	}
+	
 	.post_content h2{
 		margin-top:80px;
 		width:80%;
