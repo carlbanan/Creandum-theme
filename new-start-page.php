@@ -181,7 +181,7 @@ Template Name: New startpage
                     wp_reset_postdata();?>
 
                     <!-- COULD YOU BE THE NEXT COMPANY STATIC BOX -->
-                      <div <?php post_class('col-md-3  col-lg-3  col-sm-6 static-bump');?> role="article">
+                      <div <?php post_class('col-xs-6 col-md-3  col-lg-3  col-sm-4 static-bump');?> role="article">
                        <a href="<?php echo bloginfo("url");?>/contact/">  
                             <div class="portrait_list">
                               <span class="green">Are you building the company of tomorrow?</span>
