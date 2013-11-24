@@ -11,7 +11,7 @@
         
         <div class="content responsive-wrapper">
           <div class="big-image-container" style="<?php if($bigimg){ echo "background-image:url('".$bigimg."');"; } ?>"> 
-                 <div class='invest-title content-header-text wrapper container'>
+                 <div class='invest-title content-header-text wrapper container hidemobile'>
                      <div class='shadowop'>
                       <h1 class="shadow" itemprop="headline"><?php the_title(); ?></h1>
                      </div>
@@ -24,8 +24,17 @@
         </div>
       <?php }else{ ?>
      
+      <div class="small-header responsive-wrapper">
+          <div class='invest-title content-header-text wrapper container hidemobile'>
+             <div class='shadowop'>
+              <h1 class="shadow" itemprop="headline"><?php the_title(); ?></h1>
+             </div>
+              <div>
+              <h1 class="strip" itemprop="headline"><?php the_title(); ?></h1>
+              </div>
+          </div> 
+        </div>
 
-      <div class="small-header"></div> 
       <?php } ?>  
         <div class="container content-padblock page-content infront">
             <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
@@ -33,9 +42,9 @@
               
               <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                 
-                <header>
+                <header class="showmobile">
       
-                  <div class="page-header"></div>
+                  <div class="page-header"> <h1 itemprop="headline"><?php the_title(); ?></h1></div>
                        
                 </header> <!-- end article header -->
               
