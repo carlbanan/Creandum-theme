@@ -1236,7 +1236,7 @@ transition: all 0.5s ease-in-out;
 }
 
 .invest-title.content-header-text div{
-	margin-top:150px;
+	margin-top:154px;
 	position: absolute;
 }
 
@@ -2587,7 +2587,7 @@ button:hover .twitter-icon{
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
-	 margin-top: 110px;
+	 margin-top: 140px;
 	 max-width:960px;
 
 }
@@ -2769,6 +2769,7 @@ button:hover .twitter-icon{
 	.carousel-caption h2{
 		margin-top: 0px;
 		margin-bottom: 4px;
+		font-size: 19px;
 	} 
 
 	 .carousel-caption p{
@@ -2794,7 +2795,7 @@ button:hover .twitter-icon{
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-	max-height: 650px;
+	max-height: 550px;
 }
 .carousel-inner > .item > img {
 	display: block;

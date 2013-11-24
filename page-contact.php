@@ -43,8 +43,8 @@
 			<div class='forms'>
 				<div class="center contactblock">
                       <div class="icon_center sprite-large_contact"></div> 
-                      <h2>We read all pitches, but make sure you take the time to formulate your elevator pitch. 
-					We get contacted by 800+ companies a year and are use to high standards.</h2>
+                      <h2>We read all pitches, but make sure you take the time to formulate your pitch.
+					We get contacted by 800+ companies a year and are used to high standards.</h2>
                     </div>
 
 				<form id="pitch" class="pitchform" url="<?php bloginfo('template_url'); ?>/sendForm.php">
@@ -63,7 +63,7 @@
 							<div class="right">
 							<span for="team" class="counter" max="140">0 / 140</span>
 							</div>
-							<textarea id="team" maxlength="140" name="team" placeholder="What makes your team so great?"></textarea>
+							<textarea id="team" maxlength="140" name="team" placeholder="What makes your team extraordinary?"></textarea>
 
 							<label>In what stage is your company in?</label>
 							<div class="checkform">
@@ -104,12 +104,12 @@
 								<input type="hidden" id="sector" value="" name="sector"/>
 								<div class="checkbox" value="consumer">
 									<span>
-										Consumer Software / Internet
+										Consumer
 									</span>
 								</div>
 								<div class="checkbox" value="software">
 									<span>
-										Enterprise software
+										Software
 									</span>
 								</div>
 								<div class="checkbox" value="hardware">

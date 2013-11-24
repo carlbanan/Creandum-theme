@@ -49,8 +49,9 @@
 				
 				<div class='filter-menu'>
 					<span class='filter active' id=''>All</span>
-					<span class='filter' id='hardware'>Hardware companies</span>
-					<span class='filter' id='software'>Software companies</span>
+					<span class='filter' id='hardware'>Hardware</span>
+					<span class='filter' id='software'>Software</span>
+					<span class='filter' id='software'>Consumer</span>
 				</div>
 		
 				<div class="container">
