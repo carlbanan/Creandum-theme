@@ -104,9 +104,9 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 </div>
 			
 
-<div class='press-area' style='background:#fff;z-index:9999;position:relative;padding:60px 0 100px 0;'>
+<div class='press-area' style='background:#fff;z-index:9999;position:relative;padding:110px 0 100px 0;'>
 <div class="container">	
-	<h1>Press esources</h1>
+	<h1>Press resources</h1>
 <?php
 if ( method_exists( $media_cat_lib, 'get_mediacategory_shortcode' ) && method_exists( $media_cat_lib, 'get_media_categories' ) ):
      
