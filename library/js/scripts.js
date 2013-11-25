@@ -350,8 +350,8 @@ jQuery(document).ready(function($) {
     	}
 
     	if ((position >= (parseHeight * 4))  && position <= parseHeight * 5 - 50 ) {
-    		console.log(position)
-    		console.log((parseHeight * 4) - (parseHeight / 20))
+
+
 
     		$tools.css({
     			'marginTop': ((position - parseHeight  * 4)) / 2
@@ -410,10 +410,10 @@ jQuery(document).ready(function($) {
 			act = $(".content-header-wrap.active");
 			next = act.next(".content-header-wrap").attr("id");
 			
-			console.log(next);
+
 
 			nextimg = $("#"+id+" .bigimage").attr("style");
-			console.log(nextimg);
+
 			if(next.length == 0){
 				next = $("#img1.content-header-wrap");
 			}
@@ -557,7 +557,7 @@ jQuery(document).ready(function($) {
     	else{
     		gotopos = fixh;
     	}
-    	//console.log($(".filter-menu").not(".orig-filter").length );
+
     	
 		//REPLACE
 		filterhtml = $(".filter-menu.orig-filter").html();
@@ -616,7 +616,7 @@ jQuery(document).ready(function($) {
 				if ($("#more").length >= 1){			// LOAD ONE MORE
 
 					var offset_more = $("#more").offset().top;
-					console.log(offset_more+" "+(wheight + offset));
+
 
 					if( (offset_more - 200) <= (wheight + offset) ){
 
@@ -631,7 +631,7 @@ jQuery(document).ready(function($) {
 	 		if(show){
 	 			filter = show;
 	 		}
-	 		console.log(ant+" "+page);
+
 			var reqData = { async : 1, paginate : page , ant : ant, content : 'feed', filter : filter }
 			var urlBase = $("#feed").attr("url");
 			// EXEC
