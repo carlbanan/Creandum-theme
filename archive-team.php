@@ -55,6 +55,8 @@
 						    $pos = $posclass = "";
 						  	$pos = get_post_meta($post->ID,"custom_title",true);
 						  	$posclass = str_replace(" ","-",$pos);
+						  	$posclass = str_replace("&","",$posclass);
+						  	$posclass = urldecode($posclass);
 						  	$menuitem[$posclass] = $pos;
 
 						  	// FOR LISTING
