@@ -1671,9 +1671,13 @@ line-height: 1.8em;
 
 
 
-.links{
+.links {
 	display: block;
-	float:right;
+	float:left;
+}
+
+.icons-right {
+	float: right;
 }
 
 .links p{
@@ -3201,7 +3205,7 @@ header.showmobile{
 	position: absolute;
 }
 
-	.sideblock {
+	.sideblock, .filter-menu {
 		display: none;
 	}
 
@@ -3224,7 +3228,10 @@ header.showmobile{
 	}
 	.content-header-text h1{
 		font-size: 40px;
+	}
 
+	.icons-right{
+		float:center;
 	}
 }
 /* Smartphones (portrait and landscape) ----------- */
@@ -3470,6 +3477,7 @@ header.showmobile{
 		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
+		text-align: center;
 	}
 
 	.in{
