@@ -33,6 +33,10 @@
           </div> 
         </div>
       <?php } ?>
+        
+        <div class='filter-menu single-filter'>
+        </div>
+
         <div class="container content-padblock page-content">
           <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 

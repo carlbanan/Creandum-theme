@@ -131,6 +131,7 @@ jQuery(document).ready(function($) {
 					$('html, body').animate({
 				         scrollTop: 0
 					 },250);
+
 					filter_menu();
 				});	
 
@@ -176,7 +177,7 @@ jQuery(document).ready(function($) {
 				$("a.async").click(function(e){
 					e.preventDefault();
 
-					$(".orig-filter").hide();
+					$(".orig-filter").delay(1000).fadeOut();
 
 					// SHOW LOADER
 					$(".loader").addClass("show");
@@ -550,7 +551,18 @@ jQuery(document).ready(function($) {
     }
 	function filter_menu(){
     	fixh = $(".filter-menu").offset().top;
-    	gotopos = $("#main").offset().top;
+    	if($("#main").length >= 1){
+    		gotopos = $("#main").offset().top;
+    	}
+    	else{
+    		gotopos = fixh;
+    	}
+    	//console.log($(".filter-menu").not(".orig-filter").length );
+    	
+		//REPLACE
+		filterhtml = $(".filter-menu.orig-filter").html();
+		$(".filter-menu").not(".orig-filter").html(filterhtml);
+
     	$(window).scroll(function(){
 	        var sy = scrollY();
 	       

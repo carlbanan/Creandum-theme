@@ -67,7 +67,7 @@
 						  endif;
 							  if($menuitem){
 							  	?>
-								<div class='filter-menu'>
+								<div class='filter-menu orig-filter'>
 									<span class='filter active' id=''>All</span>
 							  	<?php
 								  	foreach($menuitem as $key => $value){
