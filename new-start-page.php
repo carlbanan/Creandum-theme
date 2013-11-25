@@ -204,7 +204,7 @@ Template Name: New startpage
 
 
 
-      <div id="myCarousel" class="carousel slide">
+      <div id="myCarousel" class="carousel slide" data-interval="2500"> 
 
           <div class="carousel-inner">
 

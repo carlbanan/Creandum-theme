@@ -1202,7 +1202,8 @@ transition: all 0.5s ease-in-out;
 
 }
 .net-wrapper{
-	min-height: 400px;
+	height: 420px;
+	overflow:hidden;
 }
 .network-post img{
 	border-top-left-radius:3px;

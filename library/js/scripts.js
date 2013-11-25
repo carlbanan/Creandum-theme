@@ -254,7 +254,12 @@ jQuery(document).ready(function($) {
 	})();
 
 	
-
+	if($("#myCarousel").length >= 1){
+		var intv = $("#myCarousel").attr("data-interval");
+		$('#myCarousel').carousel({
+		  interval: intv
+		});
+	}
 
 
 
