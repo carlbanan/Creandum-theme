@@ -28,9 +28,12 @@
               	<span class="in btntext hidden-xs"></span>
               	Follow us on Linkedin
               </button>
-              <button type="button" class="btn2 btn-default btn-lg right">
-              	<span class="twitter-icon btntext hidden-xs "></span>Follow us on twitter
-              </button>
+              <div class="btnmobile">
+              <span class="twitter-icon"></span>
+            </div>
+            <div class="btnmobile">
+              <span class="angellist"></span>
+            </div>
           </div>
             
            <div class="showmobile mobilesocial">
@@ -39,6 +42,9 @@
             </div>
              <div class="btnmobile">
               <span class="in"></span>
+            </div>
+             <div class="btnmobile">
+              <span class="angellist"></span>
             </div>
         </div>
         </ul>

@@ -481,6 +481,10 @@ h3 {
 	transition-delay: 0.35s; /* Safari */
 }
 
+.team-fallback {
+	background-image: url("../../images/group.jpg");
+	}
+
 
 .intro{
 		padding-top: 40px;
@@ -657,6 +661,10 @@ span.date{
 
 .newsdeck .row{
 	margin-top: 120px;
+}
+
+.blog .row{
+	margin-top: 70px;
 }
 
 .team .row,.network .row,.investments .row{
@@ -1095,7 +1103,7 @@ span.one:hover, span.two:hover, span.three:hover, span.four:hover{
 }
 
 .ticker2 h2 {
-margin:30px 10%;	
+margin:30px 20%;	
 display: inline-block;
 position: relative;
 line-height: 1.4em;
@@ -1103,8 +1111,8 @@ line-height: 1.4em;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;
-
 }
+
 .ticker2.init h2 {
  -webkit-animation: move 25s;
  -webkit-animation-iteration-count: 1;
@@ -1216,9 +1224,6 @@ transition: all 0.5s ease-in-out;
 }
 
 
-.padblock .green_bg{
-
-}
 
 /* ABOUT */
 
@@ -1236,7 +1241,7 @@ transition: all 0.5s ease-in-out;
 }
 
 .invest-title.content-header-text div{
-	margin-top:154px;
+	margin-top:170px;
 	position: absolute;
 }
 
@@ -1377,7 +1382,7 @@ line-height: 1.8em;
 	bottom: 150px;
 	background-image: url("../../images/cloud-1.png");
 	position:absolute;
-	-webkit-animation: myfirst 10s linear 3s infinite alternate;
+	-webkit-animation: myfirst 10s ease 3s infinite alternate;
 
 }
 
@@ -1389,7 +1394,7 @@ line-height: 1.8em;
 	bottom: 70px;
 	background-image: url("../../images/cloud-2.png");
 	position:absolute;
-	-webkit-animation: myfirst 10s linear 2s infinite alternate;
+	-webkit-animation: myfirst 10s ease 2s infinite alternate;
 }
 
 .cloud-3{
@@ -1399,7 +1404,7 @@ line-height: 1.8em;
 	bottom: 40px;
 	background-image: url("../../images/cloud-3.png");
 	position:absolute;
-	-webkit-animation: myfirst 10s linear 1s infinite alternate;
+	-webkit-animation: myfirst 10s ease 1s infinite alternate;
 }
 
 @-webkit-keyframes myfirst {
@@ -1424,6 +1429,7 @@ line-height: 1.8em;
 	top: 0;
 	height: 295px;
 	background-image: url("../../images/wheel.png");
+	-webkit-animation: rotate 30s linear 1s infinite alternate;
 }
 
 
@@ -1457,7 +1463,6 @@ line-height: 1.8em;
 .metanfo{
 	padding-bottom:10px;
 }
-
 
 
 
@@ -1621,6 +1626,13 @@ line-height: 1.8em;
  	background-color: #3da955;
  }
 
+  .small-header-blog{
+ 	width: 100%;
+ 	height: 110px;
+ 	background-color: #3da955;
+ }
+
+
 
 
 /* FOOTER */
@@ -1634,8 +1646,34 @@ line-height: 1.8em;
 	z-index:999999;
 }
 
+.btnmobile{
+		width: 42px;
+		height: 42px;
+		border-radius: 4px;
+		border:1px solid white;
+		display: inline-block;
+		float:right;
+		margin: 0 5px;
+	}
+
+	.twitter-icon{
+		width: 42px;
+		height: 42px;
+		display: block;
+	}
+
+	.angellist{
+		width: 42px;
+		height: 42px;
+		display: block;
+		padding-left: 10px;
+	}
+
+
+
 .links{
 	display: block;
+	float:right;
 }
 
 .links p{
@@ -1701,10 +1739,33 @@ button:hover .in{
 	background-image: url("../../images/icons/social/twitter_full_white.png");
 }
 
+.angellist{
+	background-image: url("../../images/icons/social/angellist.png");
+}
+
+.btnmobile:hover .angellist{
+	background-image: url("../../images/icons/social/angellist_green.png");
+}
+
+.btnmobile:hover .twitter-icon{
+	border-right: 1px solid #3da955;
+	background-image: url("../../images/icons/social/twitter_full.png");
+}
+
 button:hover .twitter-icon{
 	border-right: 1px solid #3da955;
 	background-image: url("../../images/icons/social/twitter_full.png");
 }
+
+
+
+	.btnmobile:hover{
+	background: white;
+	border: 1px solid #3da955;
+	cursor: pointer;
+	color:#3da955;
+}
+
 .btn2 {
 	display: inline-block;
 	-webkit-font-smoothing:antialiased;
@@ -1712,6 +1773,7 @@ button:hover .twitter-icon{
 	padding: 4px 20px 0 0;
 	margin-bottom: 0;
 	margin-left: 20px;
+	margin-right:5px;
 	font-size: 14px;
 	line-height: 1.428571429;
 	text-align: center;
@@ -1727,6 +1789,7 @@ button:hover .twitter-icon{
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	float:left;
 }
 
 .btn2:hover {
@@ -2968,6 +3031,7 @@ header.showmobile{
 		font-size: 2em;
 		margin: 0;
 		float: left;
+		padding-top: 2px;
 }
  
 .cbp-af-header nav {
@@ -3100,6 +3164,14 @@ header.showmobile{
 }	
 
 /* SCREENS LESS THAN 767px */
+@media (max-width: 1000px) {
+
+.ticker2 h2 {
+	margin:30px 0%;
+	}
+}	
+
+/* SCREENS LESS THAN 767px */
 @media (max-width: 767px) {
 	.newsdeck .twitter{
 		display: none;
@@ -3132,7 +3204,6 @@ header.showmobile{
 	.sideblock {
 		display: none;
 	}
-
 
 
 	.content.responsive-wrapper {
@@ -3368,6 +3439,7 @@ header.showmobile{
 
 	.links {
 		text-align: center;
+		float:center;
 	}	
 
 	.btn2, .mobile{
@@ -3385,6 +3457,7 @@ header.showmobile{
 		border:1px solid white;
 		display: inline-block;
 		margin: 0 5px;
+		float:center;
 	}
 
 	.twitter-icon{

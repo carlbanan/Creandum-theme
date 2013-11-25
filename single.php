@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-      <div class="small-header"></div>
+      <div class="small-header-blog"></div>
       <div id="content" class="clearfix row">
       
         <div class="container padblock page-content">
@@ -110,12 +110,9 @@
 
       <div class='page-wrapper newspage'>
         <div class="lightgreen_bg">
-          <div class="container newsdeck">
+          <div class="container newsdeck blog">
 
-              <div class="newsicon"></div>
-              <h2>Read the latest from Creandum Team and our great network.</h2>
-
-               <div class="feed">  
+               <div class="feed row">  
 
                 <?php 
                 require_once("feed.php");

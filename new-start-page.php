@@ -102,10 +102,10 @@ Template Name: New startpage
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
                    <div class="tick2 tick showmobile"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
                    <div class="ticker2 init hidemobile"> 
-                    <div class="tick2 tick"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
-                  <div class="tick2"><h2>We are backing entrepreneurs that are obsessed by creating extraordinary things within software and hardware.</h2></div>
-                  <div class="tick2"><h2>We focus on people with vision, people that lead. People obsessed by creating extraordinary things.</h2></div>
-                   <div class="tick2"><h2> We use our extensive background in building companies to serve top entrepreneurs.</h2></div>
+                    <div class="tick2 tick"><h2>We are a leading Nordic based Venture Capital firm.</h2></div>
+                  <div class="tick2"><h2>We focus on being the first institutional backer of top entrepreneurs within consumer and hardware.</h2></div>
+                  <div class="tick2"><h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2></div>
+                  <!-- <div class="tick2"><h2> We use our extensive background in building companies to serve top entrepreneurs.</h2></div>-->
                   </h2>
                    </div> 
                   <div class="ticker_icons hidemobile">

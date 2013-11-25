@@ -22,7 +22,7 @@
        </div>  <!-- end big-image --> 
     </div>
       <?php }else{ ?>
-        <div class="small-header responsive-wrapper">
+        <div class="big-image-container team-fallback responsive-wrapper">
           <div class='invest-title content-header-text wrapper container hidemobile'>
              <div class='shadowop'>
               <h1 class="shadow" itemprop="headline"><?php the_title(); ?></h1>

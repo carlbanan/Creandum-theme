@@ -331,7 +331,7 @@ jQuery(document).ready(function($) {
 
     		$wheel.css({
     			'top': parseInt((position - parseHeight * 3) / 3), // 300 - whatever scroll says
-    			'-webkit-transform': 'rotate(' + parseInt((position - parseHeight * 3) / 1) + 'deg)'
+    			
     		})
 
     	}

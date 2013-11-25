@@ -37,7 +37,7 @@
 					<h1>Who we are</h1>
 					<p class="lead">Our company motto is "backing the companies of tomorrow."</h3>
 					<p>Simply put, our job is to help great entrepreneurs building great companies.
-Over the years, we have built an international network of VC's, entrepreneurs, executives, technology companies, service providers, and fund investors to ensure we support our companies in every way possible.
+Over the years, we have built an international network of entrepreneurs, executives, large technology companies, governments, service providers, VC's, and fund investors to ensure we support our companies in every way possible.
 Building companies is our favorite occupation.</p>	
 				</div>
 				<div class="col-md-7 icon_right hidemobile">
@@ -56,7 +56,7 @@ Building companies is our favorite occupation.</p>
 				</div>
 				<div class="col-md-5">
 					<h1>What we do</h1>
-					<p class="lead">We invest in the best innovative and fast-growing companies that can change industries and the people that make it happen.</p>	
+					<p class="lead">We invest in the best innovative and fast-growing companies, companies that can change industries and are led by the people that make it happen.</p>	
 					<p>Our initial investment can be as small as a couple of hundred thousand euros and can go up to 10 million euros over the life cycle of a company. We have invested in companies before they incorporated as well as in companies with tens of millions of euros in revenue.
 Once we invest in a company we take an active role and all of our team contributes with time, expertise, and extensive networks to help the company succeed.</p>
 				</div>
@@ -65,7 +65,7 @@ Once we invest in a company we take an active role and all of our team contribut
 			<div class="who">
 				<div class="col-md-5">
 					<h1>Our focus</h1>
-					<p class="lead">Our ambition is to help build market leaders.</h3>
+					<p class="lead">Our ambition is to help build market leaders within consumer, software and hardware.</h3>
 					<p>People with vision. People that lead. People that believe in "already done" instead of "will do". People that are obsessed by creating extraordinary things.
 Companies that impact, shape, and disrupt markets. Often with a global market opportunity and strong international focus from day one.</p>	
 				</div>
@@ -81,7 +81,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 				</div>
 				<div class="col-md-5">
 					<h1>Our approach</h1>
-					<p class="lead">Our approach is straightforward - we are your partners.</p>	
+					<p class="lead">Our approach is straightforward - we are your partner and service provider.</p>	
 					<p>We have an uncomplicated operating style that is direct and results-driven. We have very high ambitions and only invest if this ambition is shared by the individuals we invest in.</p>
 				</div>
 			</div>
