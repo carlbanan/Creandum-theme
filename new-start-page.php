@@ -202,9 +202,10 @@ Template Name: New startpage
           </div>
         </div>
 
-
-
-      <div id="myCarousel" class="carousel slide" data-interval="2500"> 
+      <div class="lightgreen_bg slide-h1 center">
+        <h2 class="mobile">Our goal is to be our entrepreneurs' best partner.</h2>
+      </div> 
+      <div id="myCarousel" class="carousel slide" data-interval="6000"> 
 
           <div class="carousel-inner">
 

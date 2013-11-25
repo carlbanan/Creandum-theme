@@ -2870,6 +2870,16 @@ button:hover .twitter-icon{
 		font-size: 12px;
 		letter-spacing: 0.02em;
 	 }
+
+	.slide-h1{
+		 	padding: 50px auto 40px auto;
+	}
+
+	 .slide-h1 h2{
+	 	margin-top: 0;
+	 	margin-bottom:0;
+	 	padding: 50px;
+	 }
 /* Carousel base class */
 .carousel {
 	
