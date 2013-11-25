@@ -77,12 +77,10 @@
 							$linkurl = get_post_meta($postid,"custom_url",true);
 						?>
 						<div class="col-lg-3 col-md-4 clearfix network-post  filterable <?php echo $tax;?>" role="main">	
-							
+							<div class='net-wrapper'>
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 									
-								<!--
-								<a href="<?php the_permalink() ?>" class="async" rel="bookmark" title="<?php the_title_attribute(); ?>">
-								-->			
+		
 									<section class="post_content">
 										<a href="<?php echo $linkurl;?>" target="_blank">
 											<?php the_post_thumbnail("wpbs-featured-network"); ?>
@@ -105,7 +103,9 @@
 
 
 								</article> <!-- end article -->
-							</a>
+
+							</div>
+
 
 						</div>
 					
