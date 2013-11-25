@@ -159,7 +159,7 @@ Template Name: New startpage
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="center homeblock">
                       <div class="icon_center sprite-large_invest hidemobile"></div> 
-                      <h2 class="mobile">We have invested in some of the world's best entrepreneurs.</h2>
+                      <h2 class="mobile">We have invested in some of the best entrepreneurs.</h2>
                     </div>
                     <?php
                     foreach ( $myposts as $post ) : setup_postdata( $post );

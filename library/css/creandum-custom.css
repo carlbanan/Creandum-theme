@@ -634,6 +634,16 @@ span.date{
 	text-decoration: underline;
 }
 
+.tweet-title{
+	display: block;
+	position: relative;
+	margin-top: 230px;
+}
+
+.tweet-title h4{
+	position: relative!important;
+}
+
 
 
 /* NEWS */
@@ -2877,7 +2887,7 @@ button:hover .twitter-icon{
 	 .slide-h1 h2{
 	 	margin-top: 0;
 	 	margin-bottom:0;
-	 	padding: 50px;
+	 	padding: 0 0 60px 0;
 	 }
 /* Carousel base class */
 .carousel {
