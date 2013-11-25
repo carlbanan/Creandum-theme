@@ -1132,25 +1132,32 @@ transition: all 0.5s ease-in-out;
 }
 
 .ticker_icons .one{
+ -webkit-animation: opacity_one 5s;
+ -webkit-animation-iteration-count: 1;
+-webkit-animation-delay: 0s;
+} 
+
+.ticker_icons .two{
  -webkit-animation: opacity 5s;
  -webkit-animation-iteration-count: 1;
 -webkit-animation-delay: 5s;
 }
 
-.ticker_icons .two{
+.ticker_icons .three{
  -webkit-animation: opacity 5s;
  -webkit-animation-iteration-count: 1;
 -webkit-animation-delay: 10s;
 }
 
-.ticker_icons .three{
- -webkit-animation: opacity 5s;
- -webkit-animation-iteration-count: 1;
--webkit-animation-delay: 15s;
-}
-
 @-webkit-keyframes opacity{
 0%{ opacity: 0.5; }
+5% { opacity: 1;}
+95% { opacity: 1;}
+100% { opacity: 0.5;}
+}
+
+@-webkit-keyframes opacity_one{
+0%{ opacity: 1; }
 5% { opacity: 1;}
 95% { opacity: 1;}
 100% { opacity: 0.5;}
