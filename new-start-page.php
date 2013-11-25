@@ -159,7 +159,7 @@ Template Name: New startpage
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="center homeblock">
                       <div class="icon_center sprite-large_invest hidemobile"></div> 
-                      <h2 class="mobile">We invest in fast-growing companies in early- and later stages.</h2>
+                      <h2 class="mobile">We have invested in some of the world's best entrepreneurs.</h2>
                     </div>
                     <?php
                     foreach ( $myposts as $post ) : setup_postdata( $post );
@@ -282,7 +282,7 @@ Template Name: New startpage
 
               <div class="center homeblock mobile">
                       <div class="icon_center sprite-large_news hidemobile"></div> 
-                      <h2 class="mobile">Find out what we are up to and what's happening in our network.</h2>
+                      <h2 class="mobile">Follow our news feed to find out what we are up to:</h2>
               </div>
 
 

@@ -53,12 +53,12 @@
 							<div class="right">
 								<span for="problem" class="counter">0 / 140</span>
 							</div>
-							<textarea id="problem"  name="problem" maxlength="140" placeholder="What problem does your startup solve?"></textarea>
+							<textarea id="problem"  name="problem" maxlength="140" placeholder="Why would someone pay for your product/service?"></textarea>
 							
 							<div class="right">
 								<span for="market" name="problem"class="counter" max="140">0 / 140</span>
 							</div>
-							<textarea id="market" name="market" maxlength="140" placeholder="How big is your market for your solution?"></textarea>
+							<textarea id="market" name="market" maxlength="140" placeholder="How big is the market for your product/service?"></textarea>
 							
 							<div class="right">
 							<span for="team" class="counter" max="140">0 / 140</span>

@@ -2880,7 +2880,7 @@ button:hover .twitter-icon{
 	z-index: 10;
 	padding:0;
 	bottom: 50%;
-	top: 35%;
+	top: 50%;
 }
 
 /* Declare heights because of positioning of img element */
