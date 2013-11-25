@@ -36,6 +36,12 @@
         </div>
 
       <?php } ?>  
+        <div class='filter-menu single-filter'>
+          <span class='filter active' id=''>All</span>
+          <span class='filter' id='hardware'>Hardware</span>
+          <span class='filter' id='software'>Software</span>
+          <span class='filter' id='consumer'>Consumer</span>
+        </div>
         <div class="container content-padblock page-content infront">
             <div class="col-lg-8 col-md-8 col-sm-8 clearfix" role="main">
 

@@ -131,6 +131,7 @@ jQuery(document).ready(function($) {
 					$('html, body').animate({
 				         scrollTop: 0
 					 },250);
+					filter_menu();
 				});	
 
 						
@@ -175,6 +176,8 @@ jQuery(document).ready(function($) {
 				$("a.async").click(function(e){
 					e.preventDefault();
 
+					$(".orig-filter").hide();
+
 					// SHOW LOADER
 					$(".loader").addClass("show");
 					$(".async.active").removeClass("active")
@@ -187,7 +190,11 @@ jQuery(document).ready(function($) {
 					History.pushState({urlPath: urlPath, select : select}, title, urlPath);
 
 
+
+
 					return false; // prevents default click action of <a ...>
+
+
 
 				});	 	 	
 		 	 }
@@ -539,7 +546,11 @@ jQuery(document).ready(function($) {
     var show;
     // STICKY FILTER
     if($(".filter-menu").length >= 1){
-    	 fixh = $(".filter-menu").offset().top;
+    	filter_menu();
+    }
+	function filter_menu(){
+    	fixh = $(".filter-menu").offset().top;
+    	gotopos = $("#main").offset().top;
     	$(window).scroll(function(){
 	        var sy = scrollY();
 	       
@@ -553,6 +564,7 @@ jQuery(document).ready(function($) {
 	       	}
 	       	
     	});
+    	$(".filter").unbind("click");
 		$(".filter").bind("click",function(){
 			show = $(this).attr("id");
 			$(".filterable").css( "display", "block" );
@@ -562,7 +574,7 @@ jQuery(document).ready(function($) {
 			$(this).parent(".filter-menu").children(".active").removeClass("active");
 			$(this).addClass("active");		
 			$('html, body').animate({
-		         scrollTop: ( fixh - 50 )
+		         scrollTop: ( gotopos - 10 )
 			 },250);
 		});
     }

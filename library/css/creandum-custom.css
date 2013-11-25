@@ -900,7 +900,6 @@ div.sideblock.news.podio:last-child{
 	background: #edf3ef;
 	text-align: center;
 	margin-top: 0;
-	position: absolute;
 	width: 100%;
 	border-bottom: 1px solid white;
 }
