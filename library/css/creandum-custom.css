@@ -867,13 +867,12 @@ div.sideblock.news.podio:last-child{
 	
 }
 .podio .sidetopic{
-	height: auto;
+
 	border-left:1px solid #edf3ef;
 	margin-left:59px;
 	min-height: 62px;
 	line-height: 17px;
-	text-wrap:none;
-	overflow-x:hidden;
+
 }
 
 .podio-date{
