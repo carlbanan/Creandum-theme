@@ -1125,11 +1125,23 @@ transition: all 0.5s ease-in-out;
 20% { top: -103px;}
 25% { top: -222px; }
 40% { top: -222px; }
+45% { top: 0px; }
+60% { top: 0px; }
+}
+
+/*
+@-webkit-keyframes move{
+0%{ top: 0px; }
+5% { top: -103px;}
+20% { top: -103px;}
+25% { top: -222px; }
+40% { top: -222px; }
 45% { top: -339px; }
 60% { top: -339px; }
 65% { top: 0px; }
 80% { top: 0px; }
 }
+*/
 
 .ticker_icons .one{
  -webkit-animation: opacity_one 5s;
@@ -1172,12 +1184,12 @@ transition: all 0.5s ease-in-out;
 
 .ticker_margin_two{
 	top:0
-	margin-top: -222px;
+	margin-top: -103px;
 }
 
 .ticker_margin_three{
 	top:0;
-	margin-top: -339px;
+	margin-top: -222px;
 }
 
 
