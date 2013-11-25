@@ -586,7 +586,7 @@ jQuery(document).ready(function($) {
 			$(this).parent(".filter-menu").children(".active").removeClass("active");
 			$(this).addClass("active");		
 			$('html, body').animate({
-		         scrollTop: ( gotopos - 10 )
+		         scrollTop: ( gotopos - 40 )
 			 },250);
 		});
     }
