@@ -43,6 +43,7 @@
           <div class='sidetopic fill'>
 
             <?php echo $event['city'];?>
+            <br/>
             <?php echo $event['title'] ?>
             
            
