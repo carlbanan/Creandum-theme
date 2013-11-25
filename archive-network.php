@@ -76,8 +76,10 @@
 							$linkurl = "";
 							$linkurl = get_post_meta($postid,"custom_url",true);
 						?>
-						<div class="col-lg-3 col-md-4 clearfix network-post  filterable <?php echo $tax;?>" role="main">	
+
+						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 clearfix network-post  filterable <?php echo $tax;?>" role="main">	
 							<div class='net-wrapper'>
+
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 									
 		

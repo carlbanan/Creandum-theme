@@ -105,7 +105,7 @@ Template Name: New startpage
                     <div class="tick2 tick"><h2>We are a leading Nordic based Venture Capital firm.</h2></div>
                   <div class="tick2"><h2>We focus on being the first institutional backer of top entrepreneurs within consumer and hardware.</h2></div>
                   <div class="tick2"><h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2></div>
-                  <!-- <div class="tick2"><h2> We use our extensive background in building companies to serve top entrepreneurs.</h2></div>-->
+                 <div class="tick2"><h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2></div>
                   </h2>
                    </div> 
                   <div class="ticker_icons hidemobile">

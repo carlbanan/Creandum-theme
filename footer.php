@@ -21,19 +21,19 @@
               }
            }
            ?>
+        </ul>
 
-
-          <div class="hidemobile">
-              <button type="button" class="btn2 btn-default btn-lg right">
-              	<span class="in btntext hidden-xs"></span>
-              	Follow us on Linkedin
-              </button>
-              <div class="btnmobile">
-              <span class="twitter-icon"></span>
-            </div>
-            <div class="btnmobile">
-              <span class="angellist"></span>
-            </div>
+          <div class="hidemobile icons-right">
+                <button type="button" class="btn2 btn-default btn-lg right">
+                	<span class="in btntext hidden-xs"></span>
+                	Follow us on Linkedin
+                </button>
+                <div class="btnmobile">
+                <span class="twitter-icon"></span>
+                </div>
+                <div class="btnmobile">
+                  <span class="angellist"></span>
+                </div>
           </div>
             
            <div class="showmobile mobilesocial">
@@ -47,7 +47,6 @@
               <span class="angellist"></span>
             </div>
         </div>
-        </ul>
         
         <div class="hidemobile">
           <div class="info">
