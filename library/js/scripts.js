@@ -269,21 +269,23 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+	//HERO TICKER
+	var current = 1; 
+	var height = jQuery('.ticker').height(); 
+	var numberDivs = jQuery('.ticker').children().length; 
+	var first = jQuery('.ticker h2:nth-child(1)'); 
+	setInterval(function() {
+	    var number = current * -height;
+	    first.css('margin-top', number + 'px');
 
+            // SET ICON LI
+            $(".icon-"+current).addClass("activeicon");
 
-    $('li.one').hover(function(){
-    	$(".ticker2.init").removeClass("init");     	    	    
-    	$(".ticker2 h2").css("top",0);
-    });
- 
-    $('.two').hover(function(){  
-        	$(".ticker2 h2").css("top","-103px" ); 
-			$(".ticker2.init").removeClass("init");     		
-	}); 
-    $('.three').hover(function(){     
-			$(".ticker2.init").removeClass("init");     	
-          	$(".ticker2 h2").css("top","-222px" );   	
- 	});
+	    if (current === numberDivs) {
+	        first.css('margin-top', '0px');
+	        current = 1;
+	    } else current++;
+	}, 2500);
 
 
     var $window = $(window);

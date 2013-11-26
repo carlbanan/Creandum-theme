@@ -101,26 +101,25 @@ Template Name: New startpage
               <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
                    <div class="tick2 tick showmobile"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
-                   <div class="ticker2 init hidemobile"> 
-                    <div class="tick2 tick"><h2>We are a leading Nordic based Venture Capital firm.</h2></div>
-                  <div class="tick2"><h2>We focus on being the first institutional backer of top entrepreneurs within consumer and hardware.</h2></div>
-                  <div class="tick2"><h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2></div>
-                 <div class="tick2"><h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2></div>
-                  </h2>
+                   <div class="ticker hidemobile"> 
+                      <h2>We are a leading Nordic based Venture Capital firm.</h2>
+                      <h2>We focus on being the first institutional backer of top entrepreneurs within consumer and hardware.</h2>
+                      <h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2>
                    </div> 
+
                   <div class="ticker_icons hidemobile">
                     <ul>
-                      <li class="one">
+                      <li class="icon-1">
                       <span class="sprite-spinn_sun icon"></span>
                         <span class="text">We are</span>
                       </li>
 
-                      <li class="two">
+                      <li class="icon-2">
                         <span class="sprite-spinneye icon focus"></span>
                         <span class="text">Our focus</span>
                       </li>
 
-                      <li class="three">
+                      <li class="icon-3">
                         <span class="sprite-spin_service icon"></span>
                         <span class="text">Our service</span>
                       </li>
@@ -158,7 +157,6 @@ Template Name: New startpage
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="center homeblock">
-                      <div class="icon_center sprite-large_invest hidemobile"></div> 
                       <h2 class="mobile">We have invested in some of the best entrepreneurs.</h2>
                     </div>
                     <?php
@@ -202,8 +200,10 @@ Template Name: New startpage
           </div>
         </div>
 
-      <div class="lightgreen_bg slide-h1 center">
-        <h2 class="mobile">Our goal is to be our entrepreneurs' best partner.</h2>
+      <div class="lightgreen_bg">
+        <div class="slideblock center">
+          <h2 class="mobile">Our goal is to be our entrepreneurs' best partner.</h2>
+        </div>
       </div> 
       <div id="myCarousel" class="carousel slide" data-interval="6000"> 
 
@@ -282,7 +282,6 @@ Template Name: New startpage
             <div class="row padblock_two">
 
               <div class="center homeblock mobile">
-                      <div class="icon_center sprite-large_news hidemobile"></div> 
                       <h2 class="mobile">Follow our news feed to find out what we are up to:</h2>
               </div>
 
