@@ -19,8 +19,8 @@ $other = mysql_real_escape_string($_POST['other']);
 
 // SEND MAIL TO / BCC / FROM
 
-$to_email 	= "p.wiehager@gmail.com";
-$bcc_email 	= "pontus@guided.se";
+$to_email 	= "communications.2f092b36@creandum2.creandum.podio.com";
+$bcc_email 	= "";
 $from_email = "contactform@creandum.com";
 $from_name 	= $name;
 
@@ -35,9 +35,14 @@ $from_name 	= $name;
 	
 	$mail             = new PHPMailer();
 	
-	$body             = $problem."\n".$market."\n".$team."\n".$other."\n".$website."\n".$email;
+	$body             = " - Why would someone pay for your product / service? ". $problem." 
+	 - How big is the market for your product/service? ".$market." 
+	 - What makes your team extraordinary? ".$team."
+	 - Other : ".$other." 
+	 - Website: ".$website." 
+	 - E-mail: ".$email;
 
-	$mail->Subject    = $company." #".$stage." #".$sector;
+	$mail->Subject    = $company." #".$stage." #".$sector." #Unsolicited";
 
 
 	
@@ -61,7 +66,7 @@ $from_name 	= $name;
 	
 	$address = $to_email;
 	$mail->AddAddress($address, $address);
-	$mail->AddBCC($bcc_email);
+	//$mail->AddBCC($bcc_email);
 	
 	//$mail->AddAttachment("images/phpmailer.gif");      // attachment
 	//$mail->AddAttachment("images/phpmailer_mini.gif"); // attachment
@@ -69,7 +74,7 @@ $from_name 	= $name;
 	if(!$mail->Send()) {
 	  $mes = "Mail Error: ".$mail->ErrorInfo;
 	} else {
-	  $mes = "Tack för pitchten! Vi återkommer.";
+	  $mes = "Thank you, we will be in touch shortly!";
 	}
 
 	$data['message'] = $mes;

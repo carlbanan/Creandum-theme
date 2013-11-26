@@ -144,9 +144,9 @@
 							<input type="text" id="email" name="email" placeholder="Your e-mail"  class="col-6"/>	
 						</div>
 					</div>
-
+					<div id="dialog" class="dialog" style="text-align:center;"></div>
 					<input type="submit" id="sendform" class="sendform btn btn-default green_bg white" value="Send"/>
-					<div id="dialog" class="dialog"></div>
+					
 				</form>									
 
 

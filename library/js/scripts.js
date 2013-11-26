@@ -33,70 +33,9 @@ jQuery(document).ready(function($) {
 
 
 	var windowHeight = $(window).height();
-	
-
-	// modify tag cloud links to match up with twitter bootstrap
-	$("#tag-cloud a").each(function() {
-	    addTwitterBSClass(this);
-	    return true;
-	});
-	
-	$("p.tags a").each(function() {
-		addTwitterBSClass(this);
-		return true;
-	});
-	
-	$("ol.commentlist a.comment-reply-link").each(function() {
-		$(this).addClass('btn btn-success btn-mini');
-		return true;
-	});
-	
-	$('#cancel-comment-reply-link').each(function() {
-		$(this).addClass('btn btn-danger btn-mini');
-		return true;
-	});
-	
-	$('article.post').hover(function(){
-		$('a.edit-post').show();
-	},function(){
-		$('a.edit-post').hide();
-	});
-	
-	// Input placeholder text fix for IE
-	$('[placeholder]').focus(function() {
-	  var input = $(this);
-	  if (input.val() == input.attr('placeholder')) {
-		input.val('');
-		input.removeClass('placeholder');
-	  }
-	}).blur(function() {
-	  var input = $(this);
-	  if (input.val() == '' || input.val() == input.attr('placeholder')) {
-		input.addClass('placeholder');
-		input.val(input.attr('placeholder'));
-	  }
-	}).blur();
-	
-	// Prevent submission of empty form
-	$('[placeholder]').parents('form').submit(function() {
-	  $(this).find('[placeholder]').each(function() {
-		var input = $(this);
-		if (input.val() == input.attr('placeholder')) {
-		  input.val('');
-		}
-	  })
-	});
-	
-				
-	$('.alert-message').alert();
-	
-	$('.dropdown-toggle').dropdown();
 
 	var route = router();
  
-
-
-
 	function router(){
 		var r = $("#content").attr("page");
 		if(r){
@@ -287,80 +226,85 @@ jQuery(document).ready(function($) {
 	    } else current++;
 	}, 2500);
 
+    /* ABOUT PAGE */
+    if($(".about").length >= 1){
+    	console.log("about");
 
-    var $window = $(window);
-    var $box = $('.sunrise');
-    var $sun = $('.sun');
-    var $eye = $('.eye')
-    var $globe = $('.globe')
-    var $circle = $('.circle')
-    var $wheel = $('.wheel')
-    var $tools = $('.box')
-    var $outerEye = $('.eye_outer')
-    var height = $('.who').css('height'); // get the height value from the css
-    var parseHeight = parseInt(height); // parse the height value from 300px to 300
+	    var $window = $(window);
+	    var $box = $('.sunrise');
+	    var $sun = $('.sun');
+	    var $eye = $('.eye')
+	    var $globe = $('.globe')
+	    var $circle = $('.circle')
+	    var $wheel = $('.wheel')
+	    var $tools = $('.box')
+	    var $outerEye = $('.eye_outer')
+	    var height = $('.who').css('height'); // get the height value from the css
+	    var parseHeight = parseInt(height); // parse the height value from 300px to 300
 
-    $window.on('scroll', function(e) {
-    	var position = $(this).scrollTop(); // on scroll update the position value
-    	var changeValue = 100 + ((parseHeight * 2 - position) / 10)
+	    $window.on('scroll', function(e) {
+	    	var position = $(this).scrollTop(); // on scroll update the position value
+	    	var changeValue = 100 + ((parseHeight * 2 - position) / 10)
 
-    	if (position + 300 <= parseHeight ) { // start value is 0, stop when the value reach 300
+	    	if (position + 300 <= parseHeight ) { // start value is 0, stop when the value reach 300
 
-    		$sun.css({
-    			'top': position / 1.7, // 300 - whatever scroll says
-    			/*'-webkit-transform': 'rotate(' + position + 'deg)'*/
-    		})
+	    		$sun.css({
+	    			'top': position / 1.7, // 300 - whatever scroll says
+	    			/*'-webkit-transform': 'rotate(' + position + 'deg)'*/
+	    		})
 
-    		$box.css({
-    			'height': parseHeight - position - 100 * 1.3, // 300 - whatever scroll says
-    		})
-    	}
+	    		$box.css({
+	    			'height': parseHeight - position - 100 * 1.3, // 300 - whatever scroll says
+	    		})
+	    	}
 
-    	if (position >= parseHeight && position <= parseHeight * 2 ) {
-    		
-    		$globe.css({
-    			'marginTop': ((position - parseHeight) / 4)
-    		})
-    	}
+	    	if (position >= parseHeight && position <= parseHeight * 2 ) {
+	    		
+	    		$globe.css({
+	    			'marginTop': ((position - parseHeight) / 4)
+	    		})
+	    	}
 
-    	if (position >= parseHeight * 2 && position <= parseHeight * 3 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+	    	if (position >= parseHeight * 2 && position <= parseHeight * 3 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
 
-    		$outerEye.css({
-    			'marginTop' : ((position - parseHeight * 2) / 3)
-    		})
+	    		$outerEye.css({
+	    			'marginTop' : ((position - parseHeight * 2) / 3)
+	    		})
 
-    		if(changeValue > 10) {
+	    		if(changeValue > 10) {
 
-	    		$eye.css({
-	    			'width':  changeValue,
-	    			'height':  changeValue,
-	    			'marginLeft':  -(changeValue) / 2,
-	    			'marginTop':  -(changeValue) / 2,
+		    		$eye.css({
+		    			'width':  changeValue,
+		    			'height':  changeValue,
+		    			'marginLeft':  -(changeValue) / 2,
+		    			'marginTop':  -(changeValue) / 2,
+		    		})
+
+		    	}
+
+	    	} 
+
+	    	if (position >= parseHeight * 3 && position <= parseHeight * 4 - 200 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
+
+	    		$wheel.css({
+	    			'top': parseInt((position - parseHeight * 3) / 3), // 300 - whatever scroll says
+	    			
 	    		})
 
 	    	}
 
-    	} 
-
-    	if (position >= parseHeight * 3 && position <= parseHeight * 4 - 200 ) { // start value is parseheight("800"), stop when the value reach parseheight * 2 = 800*2 = 1600
-
-    		$wheel.css({
-    			'top': parseInt((position - parseHeight * 3) / 3), // 300 - whatever scroll says
-    			
-    		})
-
-    	}
-
-    	if ((position >= (parseHeight * 4))  && position <= parseHeight * 5 - 50 ) {
+	    	if ((position >= (parseHeight * 4))  && position <= parseHeight * 5 - 50 ) {
 
 
 
-    		$tools.css({
-    			'marginTop': ((position - parseHeight  * 4)) / 2
-    		})
-    	}
+	    		$tools.css({
+	    			'marginTop': ((position - parseHeight  * 4)) / 2
+	    		})
+	    	}
 
-    })
+	    });
+	 }
+	 /* END ABOUT */
 
 
 	var gobig = $(".content-header").hasClass("bigimage"); 
@@ -478,10 +422,14 @@ jQuery(document).ready(function($) {
 			$("#dialog").hide().removeClass("success").html("");
 			var data = $(this).serializeArray();
 			url = $(this).attr("url");
+			$("#sendform").val("Sending");
 			 $.post(url,data).done(function(d){
+
 			 	dd = JSON.parse(d);
+			 	$("#sendform").val("Sent!");	 		
 			 	if(dd.response == 1){
-			 		$("#dialog").fadeIn().addClass("success").html(dd.message);		 		
+			 		$("#dialog").fadeIn().html(dd.message);
+
 			 	} 
 			 	else{
 			 		$("#dialog").fadeIn().html(dd.message);
@@ -550,6 +498,11 @@ jQuery(document).ready(function($) {
     // STICKY FILTER
     if($(".filter-menu").length >= 1){
     	filter_menu();
+		if(window.location.hash) {
+	   		if($(window.location.hash).length >= 1){
+				$(window.location.hash).click();
+			}
+	    }
     }
 	function filter_menu(){
     	fixh = $(".filter-menu").offset().top;
@@ -558,6 +511,11 @@ jQuery(document).ready(function($) {
     	}
     	else{
     		gotopos = fixh;
+    	}
+    	if($("#async_content .paginate #prevpost").length >= 1){
+    		$(".filter-menu .prev").html($("#async_content .paginate #prevpost").html());
+    		$(".filter-menu .next").html($("#async_content .paginate #nextpost").html());
+    		$(".filter-menu .next a,.filter-menu .prev a").addClass("filter")
     	}
 
     	

@@ -5,6 +5,7 @@
         $bigimg = get_post_meta($post->ID,"custom_big_image",true);
       ?>
 
+
         <!-- SINGLE TEAM CONTENT  -->
       <div  id="post_<?php the_ID();?>">
       <?php if( $bigimg  != ''){ ?>
@@ -55,8 +56,9 @@
                 </header> <!-- end article header -->
               
                 <section class="invest-content post_content clearfix" itemprop="articleBody">
-                  <?php the_content(); ?>
                   
+                  <?php the_content(); ?>
+
                   <?php
                   // Find connected pages
                   $connected = new WP_Query( array(
@@ -217,9 +219,20 @@
 
           </div>
       </div> <!-- end container -->
-    </div>      
+    </div>  
 
-    <?php endwhile; ?>      
+    <!-- NOT FOR SHOW -->    
+    <div class="paginate">
+      <span  id="prevpost">
+        &larr;<?php echo get_next_post_link('%link'); ?>
+      </span>
+      <span id="nextpost">
+        <?php echo get_previous_post_link('%link'); ?>&rarr;
+      </span>
+    </div>
+
+    <?php endwhile; ?>  
+
     
     <?php else : ?>
     

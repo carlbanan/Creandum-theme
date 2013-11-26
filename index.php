@@ -1,10 +1,32 @@
 <?php get_header(); ?>
 
-	<div class="small-header"></div>
-	<div class='lightgreen_bg'>
+<!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
+<div class"top-post">
+	<!-- Big picture -->
+	<div class="page-content intro-about">	
 
-		<div class='container padblock'>
-			<h2 class='center'>Creandum news archive</h2>
+		<!--<p class="large_invest_white"></p> -->
+		<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
+                  	 <div class='shadowop'>
+                          <h1 class="small shadow">Blog archive.</h1>
+
+                        </div>
+                        <div>
+                          <h1 class="small strip">Blog archive.</h1>
+
+                        </div>
+
+				</section>
+	</div>
+	<div class="responsive-wrapper">
+		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
+	</div>
+
+</div>	
+
+<div class='newspage infront'>
+	<div class="lightgreen_bg">
+		<div class='container'>
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col-sm-12 col-md-12 clearfix feed" role="main">
@@ -45,11 +67,15 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
+				
+				<div class='clear padblock'></div>
+			
     
 			</div> <!-- end #content -->
 
 		</div> <!-- CONTAINER -->	
 
 	</div> <!-- BACKGROUND LIGHTGREEB -->	
+</div>
 
 <?php get_footer(); ?>

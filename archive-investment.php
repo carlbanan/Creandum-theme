@@ -48,10 +48,12 @@
 				<div id="main" class="clearfix" role="main">
 				
 				<div class='filter-menu orig-filter'>
+					<span class='prev left'></span>
 					<span class='filter active' id=''>All</span>
 					<span class='filter' id='hardware'>Hardware</span>
 					<span class='filter' id='software'>Software</span>
 					<span class='filter' id='consumer'>Consumer</span>
+					<span class='next right'></span>
 				</div>
 		
 				<div class="container">

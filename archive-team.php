@@ -61,6 +61,7 @@
 
 						  	// FOR LISTING
 						  	$post->cotitle = $posclass;
+						  	$post->h4title = $pos;
 						  	array_push($team,$post);
 
 						  endwhile;
@@ -68,12 +69,14 @@
 							  if($menuitem){
 							  	?>
 								<div class='filter-menu orig-filter'>
+
 									<span class='filter active' id=''>All</span>
 							  	<?php
 								  	foreach($menuitem as $key => $value){
 								  		echo '<span class="filter" id="'.$key.'">' .$value. '</span>';
 								  	}
 							  	?>
+
 							  	</div>	<!--END FILTER -->
 							  	<?php
 							  }
@@ -98,6 +101,7 @@
 									<div class="portrait_list">
 										<div class='over'>
 											<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
+											<h4><?php echo $post->h4title;?>
 										</div>
 										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
 									</div>

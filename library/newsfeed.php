@@ -17,9 +17,6 @@
          else{
           $offset = 0;
          }
-         
-
-
 
 
          if($ptype == '' || $ptype == 'blog' ){
@@ -142,37 +139,65 @@
                           array( 
                            "xmlsource" =>  "http://swedishstartupspace.com/feed/",
                            "type" =>  "external",
+                           "max" => 30
                           ),
                           array(
                            "xmlsource" =>  "http://swedishstartupspace.com/rss-feed-jobs/",
                            "type" =>  "jobs",
+                           "max" => 30
+                          ),
+                          array(
+                           "xmlsource" =>  "http://feeds.feedburner.com/ArcticStartup?format=xml",
+                           "type" =>  "external",
+                           "max" => 1,
+                           "iterate" => "entry"
+                          ),
+                          array(
+                           "xmlsource" =>  "http://oresundstartups.com/feed/",
+                           "type" =>  "external",
+                           "max" => 1,
+
                           )
                       );
 
            $max_age = 2*60*60;     // 2 HOURS
-           $max_tot = 30;
+          
 
            foreach($sources as $source){
                
               $xmlsource      = $source['xmlsource'];
               $type           = $source['type'];
+              $max_tot        = $source['max']; 
+              $iterate        = $source['iterate'];
+
+              if($iterate == ""){
+                $iterate = "item";
+              }
+
 
               $feed = $this->get_xml($xmlsource,$max_age);
-
+             
+             
               if($feed){
 
                $doc = new DOMDocument();
                $doc->loadXML($feed);
-               $x = $doc->getElementsByTagName('item');
+               $x = $doc->getElementsByTagName($iterate);
                
                $ant_xml = 0;
+
                foreach ($x AS $item){
-                
-                  if( $ant_xml >= $offset && $ant_xml < ($offset + $ant) && $max_tot > ($offset + $ant)){
+
                   
+                  if( ( $ant_xml >= $offset && $ant_xml < ($offset + $ant) && $max_tot > ($offset + $ant)) || ($max_tot == 1 && $ant_xml < 1 && $page == 0)){
+                   
                     $title = $item->getElementsByTagName('title')->item(0)->nodeValue;
                     $date  = date("Y-m-d H:i:s",strtotime($item->getElementsByTagName('pubDate')->item(0)->nodeValue));
                     $url  = $item->getElementsByTagName('link')->item(0)->nodeValue;
+                    if($url == ""){
+                      $slashNS = "http://rssnamespace.org/feedburner/ext/1.0";
+                      $url = $item->getElementsByTagNameNS($slashNS, 'origLink')->item(0)->nodeValue;
+                    }
                     $authour = "";
                     $x_item = array(
                                 'type'   => $type,
