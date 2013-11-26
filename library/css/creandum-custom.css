@@ -488,17 +488,17 @@ h3 {
 .intro{
 		padding-top: 40px;
 		position: absolute;
-		z-index: 9999;
+		z-index: 99;
 		width: 100%;
 		color: white;
 }
 
 .intro-about{
 	padding-top: 40px;
-		position: fixed;
-		z-index: 9999;
-		width: 100%;
-		color: white;
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	color: white;
 }
 .intro,.big-image-container,.green_background{
 	height:450px;
@@ -941,21 +941,18 @@ div.sideblock.news.podio:last-child{
 	padding:15px 0;
 }
 
-.filter{
+.filter,.scrollto{
 	color: #3da955;
 	margin:0px 20px;
 	cursor: pointer;
 }
 
-.filter.active,.filter:hover{
+.filter.active,.filter:hover,.scrollto.active,.scrollto:hover{
  opacity: 1;
  padding-bottom: 1px;
  border-bottom: 1px solid #3da955;
 }
 
-.filter.active{
-
-}
 
 .filter:hover{
  padding-bottom: 5px;
@@ -1149,7 +1146,10 @@ textarea:focus,input:focus{
 	border-radius: 3px;
 }
 .press-area{
-	padding: 40px 0 60px 0;
+	z-index: 101;
+	background:#fff;
+	position:relative;
+	padding:110px 0 100px 0;
 }
 .press-area h1{
 	padding:0 0 60px 0;

@@ -6,7 +6,7 @@
 
 
 <!-- Big picture -->
-<div class="page-content intro-about">	
+<div class="page-content intro-about" >	
 				<!--<p class="large_invest_white"></p> -->
 					<section class="small oneline content-header-text wrapper clearfix container" itemprop="articleBody">
 		                  	 <div class='shadowop'>
@@ -24,13 +24,16 @@
 			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/about.png);'></div>
 		</div>
 
-<div class='about'>
+<div class='about' id='about'>
 
-	
 
 	<!-- Wrapper -->
 
 	<div class="lightgreen_bg infront">
+	<div class='filter-menu orig-filter' <?php if(SINGLEPOST == 1){ echo "style='display:none;'"; } ?>>
+		<span class='scrollto active' scroll='about'>About</span>
+		<span class='scrollto' scroll='press-area'>Press resources</span>
+	</div>	
 		<div class="container about post_content padblock">
 			<div class="who">
 				<div class="col-md-5">
@@ -104,7 +107,7 @@ Companies that impact, shape, and disrupt markets. Often with a global market op
 </div>
 			
 
-<div class='press-area' style='background:#fff;z-index:9999;position:relative;padding:110px 0 100px 0;'>
+<div class='press-area' id='press-area'>
 <div class="container">	
 	<h1>Press resources</h1>
 <?php

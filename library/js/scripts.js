@@ -314,6 +314,16 @@ jQuery(document).ready(function($) {
 	    	}
 
 	    });
+
+		/* SCROLL FILTERMENU */
+		$(".scrollto").click(function(){
+			$(".active").removeClass("active");
+			$(this).addClass("active");
+			todiv = $(this).attr("scroll");
+			$("html,body").animate({
+				scrollTop: $("#"+todiv).offset().top 
+				},1500);
+		});
 	 }
 	 /* END ABOUT */
 
