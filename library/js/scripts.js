@@ -213,16 +213,19 @@ jQuery(document).ready(function($) {
 	var height = jQuery('.ticker').height(); 
 	var numberDivs = jQuery('.ticker').children().length; 
 	var first = jQuery('.ticker h2:nth-child(1)'); 
+	$(".icon-"+current).addClass("activeicon");
 	setInterval(function() {
 	    var number = current * -height;
 	    first.css('margin-top', number + 'px');
 
             // SET ICON LI
-            $(".icon-"+current).addClass("activeicon");
+            $(".activeicon").removeClass("activeicon");
+            $(".icon-"+(current+1)).addClass("activeicon");
 
 	    if (current === numberDivs) {
 	        first.css('margin-top', '0px');
 	        current = 1;
+	        $(".icon-"+current).addClass("activeicon");
 	    } else current++;
 	}, 2500);
 
