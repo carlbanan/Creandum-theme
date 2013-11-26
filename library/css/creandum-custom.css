@@ -3168,9 +3168,9 @@ header.showmobile{
 	}
 
 	.invest-title.content-header-text div{
-	margin-top:90px;
-	position: absolute;
-}
+		margin-top:90px;
+		position: absolute;
+	}
 
 	.sideblock, .filter-menu {
 		display: none;

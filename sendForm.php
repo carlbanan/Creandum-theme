@@ -21,8 +21,8 @@ $other = mysql_real_escape_string($_POST['other']);
 
 $to_email 	= "p.wiehager@gmail.com";
 $bcc_email 	= "pontus@guided.se";
-$from_email = "pitch@creandum.com";
-$from_name 	= "Creandum pitch";
+$from_email = "contactform@creandum.com";
+$from_name 	= $name;
 
 
 
@@ -41,17 +41,16 @@ $from_name 	= "Creandum pitch";
 
 
 	
-	$mail->IsSMTP(); // telling the class to use SMTP
-	$mail->Host       = "smtp.gmail.com";	 // SMTP server
+	$mail->IsSMTP(); // telling the class to use SMTP // SMTP server
 	$mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
 											   // 1 = errors and messages
 											   // 2 = messages only
 	$mail->SMTPAuth   = true;                  // enable SMTP authentication
-	$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-	$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
-	$mail->Port       = 465;                   // set the SMTP port for the GMAIL server
-	$mail->Username   = "pontus@outletsverige.se";  // GMAIL username
-	$mail->Password   = "ckr30a/k!!";            // GMAIL password
+	$mail->SMTPSecure = 'tls';               // sets the prefix to the servier
+	$mail->Host       = "smtp.office365.com";      // sets GMAIL as the SMTP server
+	$mail->Port       = 587;                   // set the SMTP port for the GMAIL server
+	$mail->Username   = "contactform@creandum.com";  // GMAIL username
+	$mail->Password   = "Javu0311!!";            // GMAIL password
 	
 	$mail->SetFrom($from_email,$from_name);
 
