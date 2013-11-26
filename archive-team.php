@@ -69,14 +69,14 @@
 							  if($menuitem){
 							  	?>
 								<div class='filter-menu orig-filter'>
-
+									<span class='prev left'></span>
 									<span class='filter active' id=''>All</span>
 							  	<?php
 								  	foreach($menuitem as $key => $value){
 								  		echo '<span class="filter" id="'.$key.'">' .$value. '</span>';
 								  	}
 							  	?>
-
+									<span class='next right'></span>
 							  	</div>	<!--END FILTER -->
 							  	<?php
 							  }

@@ -282,6 +282,16 @@
           
           </div> <!-- end sidecontent-->
 
+          <!-- NOT FOR SHOW -->    
+          <div class="paginate">
+            <span  id="prevpost">
+              <span class="async"><?php echo get_next_post_link('%link','&larr; %title'); ?></span>
+            </span>
+            <span id="nextpost" class="async">
+              <span class="async"><?php echo get_previous_post_link('%link','%title &rarr; '); ?></span>
+            </span>
+          </div>
+          
     </div> <!-- end container -->
   </div>
          

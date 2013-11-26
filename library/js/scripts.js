@@ -71,7 +71,11 @@ jQuery(document).ready(function($) {
 				         scrollTop: 0
 					 },250);
 
+					// SETUP LINKS
 					filter_menu();
+					next_prev_menu();
+					linkHandler();
+
 				});	
 
 						
@@ -93,6 +97,10 @@ jQuery(document).ready(function($) {
 				         scrollTop: 0
 					 },0);
 
+					// SETUP LINKS
+					next_prev_menu();
+					linkHandler();
+
 			    }
 			    else { 
 
@@ -112,11 +120,11 @@ jQuery(document).ready(function($) {
 		 	 };
 		 	 var linkHandler = function(){
 
-		 	 	$("a.async").unbind("click");
-				$("a.async").click(function(e){
+		 	 	$("a.async,.async a").unbind("click");
+				$("a.async,.async a").click(function(e){
 					e.preventDefault();
 
-					$(".orig-filter").delay(1000).fadeOut();
+					$(".orig-filter").delay(100).fadeOut();
 
 					// SHOW LOADER
 					$(".loader").addClass("show");
@@ -231,7 +239,7 @@ jQuery(document).ready(function($) {
 
     /* ABOUT PAGE */
     if($(".about").length >= 1){
-    	console.log("about");
+
 
 	    var $window = $(window);
 	    var $box = $('.sunrise');
@@ -498,6 +506,23 @@ jQuery(document).ready(function($) {
         return window.pageYOffset || document.documentElement.scrollTop;
     }
     var show;
+
+    function next_prev_menu(){
+    	if($("#async_content .paginate #prevpost").length >= 1){
+    		$(".filter-menu .prev").html($("#async_content .paginate #prevpost").html());
+
+    	}
+    	else{
+       		$(".filter-menu .prev").html("");		    		
+    	}
+     	if($("#async_content .paginate #nextpost").length >= 1){
+    		$(".filter-menu .next").html($("#async_content .paginate #nextpost").html());
+
+    	}
+    	else{
+       		$(".filter-menu .next").html("");		    		
+    	}   	
+    }
     // STICKY FILTER
     if($(".filter-menu").length >= 1){
     	filter_menu();
@@ -515,13 +540,9 @@ jQuery(document).ready(function($) {
     	else{
     		gotopos = fixh;
     	}
-    	if($("#async_content .paginate #prevpost").length >= 1){
-    		$(".filter-menu .prev").html($("#async_content .paginate #prevpost").html());
-    		$(".filter-menu .next").html($("#async_content .paginate #nextpost").html());
-    		$(".filter-menu .next a,.filter-menu .prev a").addClass("filter")
-    	}
+    	next_prev_menu();
 
-    	
+
 		//REPLACE
 		filterhtml = $(".filter-menu.orig-filter").html();
 		$(".filter-menu").not(".orig-filter").html(filterhtml);

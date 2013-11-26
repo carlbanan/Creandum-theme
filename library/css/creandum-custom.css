@@ -916,6 +916,14 @@ div.sideblock.news.podio:last-child{
 }
 .filter-menu .prev a,.filter-menu .next a{
 	margin:0 2px;
+	color:#3da955;
+
+}
+.filter-menu .prev a:hover,.filter-menu .next a:hover{
+	color:#3da955;
+	border-bottom:1px solid #3da955;
+	 padding-bottom: 5px;
+	 -webkit-transition: all 0.15s ease-in-out;
 }
 .filter-menu{
 	padding:15px 0;
