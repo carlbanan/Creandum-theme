@@ -24,16 +24,23 @@
         </ul>
 
           <div class="hidemobile icons-right">
-                <button type="button" class="btn2 btn-default btn-lg right">
-                	<span class="in btntext hidden-xs"></span>
-                	Follow us on Linkedin
+                <a href="https://twitter.com/creandum" target="_blank"><button type="button" class="btn2 btn-default btn-lg right">
+                	<span class="twitter-icon btntext hidden-xs"></span>
+                	Follow us on twitter
                 </button>
+              </a>
+
+              <a href="http://www.linkedin.com/company/112817?trk=tyah&trkInfo=tas%3Acrean%2Cidx%3A1-1-1" target="_blank">
                 <div class="btnmobile">
-                <span class="twitter-icon"></span>
+                <span class="in"></span>
                 </div>
+               </a> 
+
+               <a href="https://angel.co/creandum" target="_blank">
                 <div class="btnmobile">
                   <span class="angellist"></span>
                 </div>
+               </a> 
           </div>
             
            <div class="showmobile mobilesocial">

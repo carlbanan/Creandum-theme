@@ -174,9 +174,7 @@ h3 {
 	transition-delay: 0.2s;
 	-webkit-transition-delay: 0.2s; 
 }
-.bold{
-	font-weight: 600;
-}
+
 /* COLOR */
 .lightgreen_bg{
 	background-color: #edf3ef;
@@ -305,8 +303,9 @@ h3 {
 	background: none;
 	border-top: 1px solid #3da955;
 	padding:25px 0;
+	border-left:none;
+	border-right:none;
 }
-
 
 
 /* MENU */
@@ -712,7 +711,7 @@ span.date{
 }
 .ncard-content h2{
 	text-align: left;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.5em;
 	padding:4px 0;
 	margin:auto; 
@@ -723,8 +722,9 @@ span.date{
 	padding-top:0;
 	margin-top:0;
 	font-weight: 200;
+	text-transform: uppercase;
 }
-.ncard:hover .green{
+.ncard:hover .green, .ncard:hover .bold, .ncard:hover h2 {
 	color:#fff;
 }
 .ncard p{
@@ -737,9 +737,9 @@ span.date{
 	background-color: white;
 	border-radius: 3px;
 	text-align: left;
-	transition: 0.4s;
 	cursor: pointer;  
 	height:100px;
+	transition: 0.1s;
 }
 
 .ncard:hover{
@@ -1111,6 +1111,7 @@ textarea:focus,input:focus{
 
 .ticker h2 {	
 	line-height: 1.7em;
+	padding: 0 30%;
 	margin-bottom: 0px;
 	height: 90px;
     -webkit-transition: margin-top 0.5s ease-in-out;
@@ -1611,6 +1612,14 @@ line-height: 1.8em;
 		height: 42px;
 		display: block;
 	}
+
+	
+	.in{
+		width: 42px;
+		height: 42px;
+		display: block;
+	}
+
 
 	.angellist{
 		width: 42px;
@@ -2721,7 +2730,7 @@ button:hover .twitter-icon{
 
 
 .homeblock{
-	margin: 0px 0 60px 0;
+	margin: 0px 0 70px 0;
 }
 
 .contactblock{
