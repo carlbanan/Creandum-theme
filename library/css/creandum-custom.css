@@ -94,6 +94,18 @@
 .sprite-twitter{ background-position: -354px -1844px; width: 19px; height: 15px; } 
 .sprite-wheel{ background-position: -354px -1909px; width: 295px; height: 295px; } 
 
+.spinn_globe{
+	background: url('../../images/icons/spinn_globe.png') no-repeat;
+	background-size: 20px;
+	width: 40px;
+	height: 40px;
+}
+
+.ticker_icons span.icon {
+display: block;
+margin: 0 auto;
+}
+
 
 body{
 	-webkit-font-smoothing:antialiased;
@@ -125,6 +137,10 @@ ul {
 }
 
 p {
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+span {
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -713,7 +729,7 @@ span.date{
 	text-align: left;
 	font-size: 16px;
 	line-height: 1.5em;
-	padding:4px 0;
+	padding:0px 0;
 	margin:auto; 
 	vertical-align: middle;
 }

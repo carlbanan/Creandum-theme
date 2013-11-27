@@ -110,7 +110,7 @@ Template Name: New startpage
                   <div class="ticker_icons hidemobile">
                     <ul>
                       <li class="icon-1">
-                      <span class="sprite-spinn_sun icon"></span>
+                      <span class="spinn_globe icon"></span>
                         <span class="text">We are</span>
                       </li>
 
