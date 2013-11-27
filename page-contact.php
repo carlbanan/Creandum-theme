@@ -36,8 +36,6 @@
 
 	<!-- Wrapper -->
 
-	
-
 	<div class="lightgreen_bg">
 		<div class="container padblock">
 			<div class='forms'>
@@ -47,7 +45,7 @@
 					We get contacted by 800+ companies a year and are used to high standards.</h2>
                     </div>
 
-				<form id="pitch" class="pitchform" url="<?php bloginfo('template_url'); ?>/sendForm.php">
+				<form id="pitch" class="pitchform" url="<?php bloginfo('template_url'); ?>/">
 					<div class="row">
 						<div class="col-md-12 col-lg-12">
 							<div class="right">
@@ -101,8 +99,8 @@
 
 							<label>What sector are you in?</label>
 							<div class="checkform">
-								<input type="hidden" id="sector" value="" name="sector"/>
-								<div class="checkbox" value="consumer">
+								<input type="hidden" id="sector" value="consumer" name="sector"/>
+								<div class="checkbox active" value="consumer">
 									<span>
 										Consumer
 									</span>
@@ -122,11 +120,18 @@
 										Other
 									</span>
 								</div>
-
 							</div> 
+							<div class='clear'></div>
+							
+							<div id="filearea" class="optional filearea">
+
+								Upload file ( optional )
+								<input type="button" id="uploadbtn" value="Upload file" class="optional uploadbtn btn btn-default green_bg white"/>
+								<ul id="filelist"></ul>
+							</div>
 
 							<span for="other" class="counter"></span>
-							<textarea id="other" placeholder="Other ( optional )" name="other"></textarea>
+							<textarea id="other" class="optional"  placeholder="Other ( optional )" name="other"></textarea>
 
 						
 						</div>
@@ -141,10 +146,10 @@
 							<input type="text" id="website" name="website" placeholder="Website"  class="col-6"/>
 						</div>
 						<div class="col-md-6 col-lg-6">
-							<input type="text" id="email" name="email" placeholder="Your e-mail"  class="col-6"/>	
+							<input type="email" id="email" name="email" placeholder="Your e-mail"  class="col-6"/>	
 						</div>
 					</div>
-					<div id="dialog" class="dialog" style="text-align:center;"></div>
+					<div id="dialog" class="dialog" style="text-align:center;margin-top:10px;"></div>
 					<input type="submit" id="sendform" class="sendform btn btn-default green_bg white" value="Send"/>
 					
 				</form>									

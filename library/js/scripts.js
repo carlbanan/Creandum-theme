@@ -120,6 +120,8 @@ jQuery(document).ready(function($) {
 		 	 };
 		 	 var linkHandler = function(){
 
+
+
 		 	 	$("a.async,.async a").unbind("click");
 				$("a.async,.async a").click(function(e){
 					e.preventDefault();
@@ -134,7 +136,10 @@ jQuery(document).ready(function($) {
 					var urlPath = $(this).attr('href');
 					var select = $(this).attr("select");
 
-					var title = $(this).text();
+					var title = $(this).find("button").text();
+					if(title == ""){
+						 title = $(this).text();
+					}
 					History.pushState({urlPath: urlPath, select : select}, title, urlPath);
 
 
@@ -415,7 +420,7 @@ jQuery(document).ready(function($) {
 	function form_init(){
 
 		// TEXAREA COUNTER
-		$("textarea, input").on("focus",function(){
+		$("textarea:not(.optional), input").on("focus",function(){
 			var counter;
 			inputid = $(this).attr("id");
 			pcounter = $(".counter[for='"+inputid+"']");
@@ -437,32 +442,97 @@ jQuery(document).ready(function($) {
 			$(this).parent("div.checkform").children("input").attr("value",cval);
 		});
 
+		// UPLOAD 
+		inuploader();
+
 		// SEND FORM
 		$("#pitch").submit(function( event ) {
 			event.preventDefault();
-			$("#dialog").hide().removeClass("success").html("");
-			var data = $(this).serializeArray();
-			url = $(this).attr("url");
-			$("#sendform").val("Sending");
-			 $.post(url,data).done(function(d){
+			if(validateForm()){
+				$("#dialog").hide().removeClass("success").html("");
+				var data = $(this).serializeArray();
+				$(".loadedfiles").each(function(e){
+					data.push({file: 'username', value: 'this is username'});
+				});
+				console.log(data);
+				
+				url = $(this).attr("url");
+				$("#sendform").val("Sending");
 
-			 	dd = JSON.parse(d);
-			 	$("#sendform").val("Sent!");	 		
-			 	if(dd.response == 1){
-			 		$("#dialog").fadeIn().html(dd.message);
+				 $.post(url+"sendForm.php",data).done(function(d){
 
-			 	} 
-			 	else{
-			 		$("#dialog").fadeIn().html(dd.message);
-			 	}
-	 	
+				 	dd = JSON.parse(d);
+				 	console.log(dd.response);
+				 	$("#sendform").val("Sent!");	 		
+				 	if(dd.response == 1){
+				 		$("#dialog").fadeIn().html(dd.message);
+				 		$('#sendform').attr("disabled", true);
 
-			 },'json');
+				 	} 
+				 	else{
+				 		$("#dialog").fadeIn().html(dd.message);
+				 	}
+		 	
+
+				 },'json');
+			 }
 		  	 
 		});
+		function validateForm(){
+			fail = 0;
+			failpos = '';
+			$(".validate").removeClass("validate");
+			$("textarea:not(.optional)").each(function(tx){
+				
+				if($(this).val() == ''){
+					$(this).addClass("validate");
+					if(!failpos){
+						failpos = $(this).attr("id");
+						
+					}
+					fail = 1;
+				}
+			});
+			$("input[type='text']:not(.optional),input[type='email']:not(.optional)").each(function(tx){
+
+				if($(this).val() == ''){
+					$(this).addClass("validate");
+					if(!failpos){
+						failpos = $(this).attr("id");
+					}
+					fail = 1;
+				}
+				else if($(this).attr("type") == "email"){
+					if(!validateEmail($(this).val())){
+						$(this).addClass("validate");
+						fail = 1;
+						if(!failpos){
+							failpos = $(this).attr("id");
+						}					
+					}	
+				}
+			});
+
+			// SCROLL UP ON FAILS
+			if(fail == 1){
+				if(failpos == ''){
+					failpos = "pitch";
+				}
+				$('html, body').animate({
+			         scrollTop: ($("#"+failpos).offset().top - 15 )
+				 },1050);
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
 
 	}
-
+	function validateEmail(email) {
+	    var re = /\S+@\S+\.\S+/;
+	    return re.test(email);
+	}
 
     function Swiper(element) {
         var $element = $(element);
@@ -673,6 +743,72 @@ jQuery(document).ready(function($) {
      if($(".newsdeck .feed").length >= 1){
      	newsdeck();
      }
+	function inuploader(){
+
+		var maxfiles = 1;
+		var serv = $("#pitch").attr("url");
+	    var uploader = new plupload.Uploader({
+	        runtimes: 'html5,html4',
+	        browse_button: 'uploadbtn',
+			max_file_size : '5mb',
+			max_file_count: maxfiles,
+	        url: serv+'upload.php',
+			unique_name:true
+			
+	    });
+
+	    uploader.init();
+
+	    uploader.bind('FilesAdded', function(up, files) {
+			// loop through the files array
+			var i = up.files.length;
+			if(i>maxfiles){
+				 alert("Max "+maxfiles+" files");
+				 plupload.each(files, function (file) {
+					uploader.removeFile(file);
+				});
+			}
+			else{
+			
+				for (var i in files) {
+					document.getElementById('filelist').innerHTML += '<li  id="' + files[i].id + '" class="loadedfiles">' + files[i].name + ' <b>(' + plupload.formatSize(files[i].size) + ')</b> </li>';		   
+				}
+				setTimeout(function () { uploader.start(); }, 150);
+			 	
+			}
+	    });
+	    uploader.bind('UploadProgress', function(up, file) {
+
+			
+	        document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = "<span>" + file.percent + "%</span> Uploading ... ";
+	    
+	    });	
+	    uploader.bind('FileUploaded', function(up, file, info) {
+
+	    	if(info.response != ''){
+
+		    	document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = "<span>Uploaded</span> <span class='remove' id='remove"+file.id+"'>Remove</span><input type='hidden' value='"+info.response+"' name='file' />";
+		    	$("#remove"+file.id).click(function(){
+		    		$("#"+file.id).remove();
+		    	});
+	    	}
+			setTimeout(function () { 
+					uploader.removeFile(file);
+			}, 750);
+
+	    });	
+	    
+	    uploader.bind('Error', function(up, args) {
+			mes = "";
+			if(args.message=="File size error."){
+				mes = "Filstorleken får vara max 40 Mb";
+			}
+	        alert(args.message+' '+mes);
+	    });
+	   
+	   
+	}
+
 }); /* end of as page load scripts */
 
 

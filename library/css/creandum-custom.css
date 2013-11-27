@@ -971,17 +971,44 @@ span.dash{
 .pitchform{
 	margin-top:30px;
 }
-.sendform{
+.sendform,.uploadbtn{
 	width: 100px;
 	display: block;
 	margin:30px auto;
 	background:#3da955;
 	border-color:#3da955;
 }
-.sendform:hover,.sendform:focus{
+.sendform:hover,.sendform:focus,.uploadbtn:hover,.uploadbtn:focus{
 	background-color: #1f592c;
 	border-color:#1f592c;
 	color:#fff;
+}
+.uploadbtn{
+	margin:10px 0px 10px 0px;
+	width:120px;
+	padding:8px 10px;
+	clear:both;
+}
+#filelist{
+	padding:0;
+	margin:0;
+	color:#111;
+}
+.loadedfiles{
+	padding:5px 0px;
+	list-style:none;
+}
+.loadedfiles span{
+	padding:0 3px;
+}
+span.remove{
+	cursor: pointer;
+	font-weight: normal;
+	color:#bbb;
+}
+span.remove:hover{
+	cursor: pointer;
+	color:#111;
 }
 label{
 	border-bottom:1px solid #fff;
@@ -990,7 +1017,7 @@ label{
 	font-weight: normal!important;
 	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-textarea,input{
+textarea,input,.filearea{
 	width:100%;
 	padding:15px;
 	background-color: #fff;
@@ -1000,6 +1027,13 @@ textarea,input{
 	font-size:14px;
 	color:#39423f;
 	margin:8px 0;	
+}
+.filearea{
+	clear:both;
+	color:#ccc;
+}
+textarea.validate,input.validate{
+	box-shadow:0 0 5px rgba(200,0,0,0.45);
 }
 textarea{
 	height:70px;
@@ -1023,6 +1057,11 @@ textarea:focus,input:focus{
 *:-ms-input-placeholder {
     /* IE10+ */
     color: #ccc;
+}
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active{
+	color:#3da955;
+	background-color: #fff;
+	border-color:#3da955;
 }
 .counter{
 	position: absolute;

@@ -12,6 +12,7 @@ $email = mysql_real_escape_string($_POST['email']);
 $website = mysql_real_escape_string($_POST['website']);
 $name = mysql_real_escape_string($_POST['name']);
 $other = mysql_real_escape_string($_POST['other']);
+$file = mysql_real_escape_string($_POST['file']);
 
 
 
@@ -66,18 +67,27 @@ $from_name 	= $name;
 	
 	$address = $to_email;
 	$mail->AddAddress($address, $address);
-	//$mail->AddBCC($bcc_email);
+
+
+	if($file != ''){
+		if(file_exists($file)){
+			$mail->AddAttachment($file);      // attachment
+		}
+	}
 	
-	//$mail->AddAttachment("images/phpmailer.gif");      // attachment
-	//$mail->AddAttachment("images/phpmailer_mini.gif"); // attachment
-	
+
+	$mes = "Thank you, we will be in touch shortly!";
 	if(!$mail->Send()) {
 	  $mes = "Mail Error: ".$mail->ErrorInfo;
+	  $data['response'] = 2;
 	} else {
 	  $mes = "Thank you, we will be in touch shortly!";
+	  $data['response'] = 1;
 	}
+	
 
 	$data['message'] = $mes;
+
 
 	echo json_encode($data);
 

@@ -616,6 +616,15 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'), 
       '1.2' );
 
+        wp_register_script( 'moxie', 
+      get_template_directory_uri() . '/library/js/libs/plupload/Moxie.min.js', 
+      array('jquery'), 
+      '1.2' );
+
+    wp_register_script( 'xplupload', 
+      get_template_directory_uri() . '/library/js/libs/plupload/plupload.min.js', 
+      array('jquery'), 
+      '1.2' );
 
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
@@ -636,6 +645,8 @@ if( !function_exists( "theme_js" ) ) {
 
 
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('moxie');
+    wp_enqueue_script('xplupload');   
     wp_enqueue_script('history');
     wp_enqueue_script('wpbs-scripts');
     wp_enqueue_script('modernizr');
