@@ -49,6 +49,17 @@
 	background: url('../../images/sprite_small_green.png') no-repeat;
 }
 
+.sprite-checklist_green, .sprite-checklist_grey, .sprite-eye-grey, .sprite-eye_green, .sprite-mountain-grey, .sprite-mountain_green{
+	background: url('../../images/hero.png') no-repeat;
+}
+
+.sprite-checklist_green{ background-position: 0 0; width: 24px; height: 31px; } 
+.sprite-checklist_grey{ background-position: 0 -81px; width: 24px; height: 31px; } 
+.sprite-eye-grey{ background-position: 0 -162px; width: 36px; height: 26px; } 
+.sprite-eye_green{ background-position: 0 -238px; width: 36px; height: 26px; } 
+.sprite-mountain-grey{ background-position: 0 -314px; width: 38px; height: 30px; } 
+.sprite-mountain_green{ background-position: 0 -394px; width: 38px; height: 30px; } 
+
 .sprite-blog, .sprite-cloud-1, .sprite-cloud-2, .sprite-cloud-3, .sprite-eye, .sprite-eye_outer, .sprite-fb-white, .sprite-fb, .sprite-globe, .sprite-large_invest, .sprite-mail, .sprite-phone, .sprite-small_about_filled, .sprite-small_about_white, .sprite-small_contact_filled, .sprite-small_contact_white, .sprite-small_invest_filled, .sprite-small_invest_white, .sprite-small_network_filled, .sprite-small_network_white, .sprite-small_news_filled, .sprite-small_news_white, .sprite-small_team_filled, .sprite-small_team_white, .sprite-sun, .sprite-twitter-white, .sprite-twitter, .sprite-wheel, .sprite-large_news, .sprite-in, .sprite-in_white, .sprite-spin_service, .sprite-spinneye, .sprite-spinn_sun, .sprite-contact_email, .sprite-contact_phone, .sprite-contact_pin, .sprite-large_contact
 {
 	background: url('../../images/sprite-all.png') no-repeat;
@@ -95,6 +106,12 @@
 .sprite-wheel{ background-position: -354px -1909px; width: 295px; height: 295px; } 
 
 
+.ticker_icons span.icon {
+display: block;
+margin: 0 auto;
+}
+
+
 body{
 	-webkit-font-smoothing:antialiased;
 	font-family: 'gothambook', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -125,6 +142,10 @@ ul {
 }
 
 p {
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+span {
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -669,7 +690,7 @@ span.date{
 }
 
 .newsdeck .row{
-	margin-top: 120px;
+	margin-top: 70px;
 }
 
 .blog .row{
@@ -677,8 +698,8 @@ span.date{
 }
 
 .team .row,.network .row,.investments .row{
-	margin-top: 120px;
-	margin-bottom: 120px;
+	margin-top: 70px;
+	margin-bottom: 70px;
 }
 
 
@@ -713,7 +734,7 @@ span.date{
 	text-align: left;
 	font-size: 16px;
 	line-height: 1.5em;
-	padding:4px 0;
+	padding:0px 0;
 	margin:auto; 
 	vertical-align: middle;
 }
@@ -1102,7 +1123,7 @@ textarea:focus,input:focus{
 }
 
 .padblock_one{
-	padding: 85px 0 75px 0;
+	padding: 100px 0 100px 0;
 }
 
 .padblock_two{
@@ -1112,7 +1133,10 @@ textarea:focus,input:focus{
 
 .text{
 	color: #3da955;
-	padding-top: 10px;
+	padding-top: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	font-size: 12px;
 }
 
 
@@ -1161,19 +1185,25 @@ textarea:focus,input:focus{
 
 .ticker{
 	overflow: hidden;
-	height: 90px;
-	vertical-align: baseline;
+	height: 110px;
+	margin-bottom: 10px;
 }
 
 .ticker h2 {	
-	line-height: 1.7em;
-	padding: 0 30%;
+	line-height: 1.5em;
+	padding: 14px 15%;
 	margin-bottom: 0px;
-	height: 90px;
+	margin-top: 0;
+	height: 110px;
+	vertical-align: middle;
     -webkit-transition: margin-top 0.5s ease-in-out;
     -moz-transition: margin-top 0.5s ease-in-out;
     -o-transition: margin-top 0.5s ease-in-out;
     transition: margin-top 0.5s ease-in-out;
+}
+
+h2.tickpad {
+	padding: 30px;
 }
 
 
@@ -1485,12 +1515,23 @@ line-height: 1.8em;
 		width: 100%;
 		background: none;
 		z-index: 10000;
-		height: 100px;
+		height: 200px;
 		overflow: hidden;
 		transition: 0.2s ease-in-out;
 		-webkit-transition: 0.2s ease-in-out;
 		-moz-transition: 0.2s ease-in-out;
 		-o-transition: 0.2s ease-in-out;
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KICAgIDxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4yIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 1%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(1%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 1%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 1%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 1%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 1%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#00000000',GradientType=0 ); /* IE6-8 */
+
 
 }
 
@@ -2770,18 +2811,66 @@ button:hover .twitter-icon{
 
 
 .goscroll{
-	width:65px;
-	position: fixed;
-	height:65px;
+	width: 83px;
+	height: 20px;
+	position: fixed;;
 	text-align: center;
-	background-image: url("../../images/icons/scroll_down.png");
-	background-repeat: no-repeat;
-	background-position: center center;
 	z-index: 25;
 	left:50%;right:50%;
-	margin-left:-32.5px;
-	margin-top:-35px;
+	margin-left:-44px;
+	margin-top:-70px;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	padding-left: 0;
+	padding-right: 0;
 }
+
+.goscroll-icon{
+	margin-top: 10px;
+	margin-left:31px;
+	height:20px;
+	width:20px;
+	background-image: url("../../images/icons/scroll_down-arrow.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.floating{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);	
+	}
+	50% {
+		transform: translateY(30%);	
+	}	
+	100% {
+		transform: translateY(0%);
+	}			
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);	
+	}
+	50% {
+		-webkit-transform: translateY(30%);	
+	}	
+	100% {
+		-webkit-transform: translateY(0%);
+	}			
+}
+
 .preload{
 	opacity: 0.1;
 	width:1px;
@@ -2892,6 +2981,7 @@ button:hover .twitter-icon{
 /* Declare heights because of positioning of img element */
 .carousel .item {
 	max-height: 550px;
+	min-height: 550;
 }
 .carousel-inner > .item > img {
 	display: block;
@@ -2973,7 +3063,7 @@ p.center{
 
 .responsive-wrapper {
 width: 100%;
-height: 400px;
+height: 450px;
 overflow: hidden;
 }
 

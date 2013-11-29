@@ -93,7 +93,10 @@ Template Name: New startpage
       </div>
 
       <?php echo $pr; ?>
-      <div class="container goscroll"></div>
+      <div class="container goscroll floating">
+        Scroll down
+        <div class="goscroll-icon"></div>
+      </div>
        <div class="start-content">
         <div class="container">
           <div class="row padblock_one">
@@ -102,7 +105,7 @@ Template Name: New startpage
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
                    <div class="tick2 tick showmobile"><h2>We are a leading venture capitalfirm based in the Nordics.</h2></div>
                    <div class="ticker hidemobile"> 
-                      <h2>We are a leading Nordic based Venture Capital firm.</h2>
+                      <h2 style="padding:34px 15%;">We are a leading Nordic based Venture Capital firm.</h2>
                       <h2>We focus on being the first institutional backer of top entrepreneurs within consumer and hardware.</h2>
                       <h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2>
                    </div> 
@@ -110,17 +113,17 @@ Template Name: New startpage
                   <div class="ticker_icons hidemobile">
                     <ul>
                       <li class="icon-1">
-                      <span class="sprite-spinn_sun icon"></span>
+                      <span class="sprite-mountain_green icon"></span>
                         <span class="text">We are</span>
                       </li>
 
                       <li class="icon-2">
-                        <span class="sprite-spinneye icon focus"></span>
+                        <span class="sprite-eye_green icon"></span>
                         <span class="text">Our focus</span>
                       </li>
 
                       <li class="icon-3">
-                        <span class="sprite-spin_service icon"></span>
+                        <span class="sprite-checklist_green icon"></span>
                         <span class="text">Our service</span>
                       </li>
 
