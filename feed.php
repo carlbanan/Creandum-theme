@@ -28,7 +28,7 @@ function feed($ant = 1,$type = ""){
 					  <!-- BLOG POST -->
 					  	<h2 class="bold"><?php echo $n['title'];?></h2>
 					  	<h3 class="green"><?php echo date("M j, Y",strtotime($n['date']));?><?php if($n['author']){ echo " by ".$n['author']; } ?></h3>
-					<? }else{ ?>
+					<?php }else{ ?>
 
 					  <!-- OTHERS -->
 					 	<h2><?php echo $n['title'];?></h2>
