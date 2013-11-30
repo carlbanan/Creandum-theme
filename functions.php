@@ -617,7 +617,7 @@ if( !function_exists( "theme_js" ) ) {
       '1.2' );
 
         wp_register_script( 'moxie', 
-      get_template_directory_uri() . '/library/js/libs/plupload/Moxie.min.js', 
+      get_template_directory_uri() . '/library/js/libs/plupload/moxie.min.js', 
       array('jquery'), 
       '1.2' );
 
