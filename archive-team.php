@@ -100,8 +100,10 @@
 									?>
 									<div class="portrait_list">
 										<div class='over'>
-											<button type="button" class="btn btn-default btn-white"><?php the_title();?></button>
-											<h4><?php echo $post->h4title;?>
+											<div class="team-title">
+												<h3><?php the_title();?></h3>
+												<h4><?php echo $post->h4title;?>
+											</div>
 										</div>
 										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
 									</div>

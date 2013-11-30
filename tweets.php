@@ -1,5 +1,3 @@
-
- <div class="tweet-title"><h4>Portfolio feed.</h4></div>
 <?php
 	require_once("library/newsfeed.php");
 	$n = new newsfeed();

@@ -440,6 +440,39 @@ h3 {
 	opacity: 1;
 }
 
+.portrait_list .over .team-title{
+	opacity: 0;
+	z-index: 3;
+	 -webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	 backface-visibility: hidden;
+	 -webkit-backface-visibility:hidden;
+}	
+
+.portrait_list:hover .over .team-title{
+	opacity: 1;
+	margin-top: 40%;
+	z-index: 3;
+	backface-visibility: hidden;
+	 -webkit-backface-visibility:hidden;
+}
+
+.portrait_list .over .team-title h3{
+	color: white;
+	font-size: 16px;
+}
+
+.portrait_list .over .team-title h4{
+	color: white;
+}
+
+.portrait_list .over .team-title:hover h4,
+.portrait_list .over .team-title:hover h3{
+	text-decoration: underline;
+}
+
+
+
 .clear{
 	clear:both;
 }
@@ -468,13 +501,20 @@ h3 {
 .static-bump .portrait_list:hover span{
 	display: none;
 }
+
 /* DISPLAY CONTENT TEAM INVESTMENT */
 
 /*  TEAM  */
+
+.over h4{
+	font-size: 16px;
+	color:white;
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .team-content.post_content{
 	margin-top: -30px;
 }
-
 
 .big-image-stat{
 	max-height: 450px;
@@ -657,7 +697,7 @@ span.date{
 .tweet-title{
 	display: block;
 	position: relative;
-	margin-top: 280px;
+	margin-top: 40px;
 }
 
 .tweet-title h4{
@@ -739,9 +779,10 @@ span.date{
 	vertical-align: middle;
 }
 .ncard-content h3{
-	font-size:13px;
+	font-size:12px;
 	padding-top:0;
-	margin-top:0;
+	margin-top:3px;
+	margin-bottom: 0;
 	font-weight: 200;
 	text-transform: uppercase;
 }
@@ -830,7 +871,7 @@ span.date{
 .feedright{
 	height:100px;
 	width:101px;
-	position: relative;
+	position: absolute;
 	background-image: url("../../images/icons/right.png");
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -838,15 +879,18 @@ span.date{
 	vertical-align: middle;
 	z-index:9999;
 	float: right;
+	right:0;
 	 transform: translate(0px,0px);
 	-webkit-transform: translate(0px,0px);
-	transition: 1s;  
+	transition: 0.3s;  
+	-webkit-transition: 0.3s;
 }
 
 .ncard:hover .feedright{
 	transform: translate(-10px,0px);
 	-webkit-transform: translate(-10px,0px);
-	transition: 1s;  
+	transition: 0.3s;  
+	-webkit-transition: 0.3s;
 }
 .profile {
 	height:50px;
@@ -1123,7 +1167,7 @@ textarea:focus,input:focus{
 }
 
 .padblock_one{
-	padding: 100px 0 100px 0;
+	padding: 80px 0 70px 0;
 }
 
 .padblock_two{
@@ -1225,72 +1269,6 @@ h2.tickpad {
 }
 .press-area ul.thumbnails li{
 	display: inline-block;
-}
-
-/* NETWORK */
-.network-post .tcontent{
-	background-color: #fff;
-	border-bottom-left-radius:3px;
-	border-bottom-right-radius:3px;
-	padding:15px 20px 20px 20px;
-	max-height:200px;
-	overflow-y:hidden;
-
-}
-.net-wrapper{
-	height: 420px;
-	overflow:hidden;
-}
-.network-post img{
-	border-top-left-radius:3px;
-	border-top-right-radius:3px;
-}
-.network-post h3{
-	font-size:18px;
-	padding-top:0px;
-	margin-top:0;
-}
-.network-post p{
-	font-size:14px;
-	line-height: 1.6em;
-}
-
-.network-post span{
-	font-size:14px;
-	text-decoration: underline;
-	margin-top: -20px;
-	line-height: 1.6em;
-	color: #3da955;
-}
-
-
-
-/* ABOUT */
-
-/* INVESTMENTS */
-.investpadblock{
-	padding: 0px 0 100px 0!important;
-}
-
-.content.responsive-wrapper{
-	height: 350px;
-}
-
-.invest{
-	text-align: center!important;
-}
-
-.invest-title.content-header-text div{
-	margin-top:170px;
-	position: absolute;
-}
-
-.invest-content.post_content{
-	margin-top: -50px;
-}
-
-.content-padblock{
-	margin: 80px auto 80px auto;
 }
 
 .icon_right{
@@ -1474,6 +1452,69 @@ line-height: 1.8em;
 
 
 
+/* NETWORK */
+.network-post .tcontent{
+	background-color: #fff;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+	padding:15px 20px 20px 20px;
+	max-height:200px;
+	overflow-y:hidden;
+
+}
+.net-wrapper{
+	height: 420px;
+	overflow:hidden;
+}
+.network-post img{
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+.network-post h3{
+	font-size:18px;
+	padding-top:0px;
+	margin-top:0;
+}
+.network-post p{
+	font-size:14px;
+	line-height: 1.6em;
+}
+
+.network-post span{
+	font-size:14px;
+	text-decoration: underline;
+	margin-top: -20px;
+	line-height: 1.6em;
+	color: #3da955;
+}
+
+
+/* INVESTMENTS */
+.investpadblock{
+	padding: 0px 0 100px 0!important;
+}
+
+.content.responsive-wrapper{
+	height: 350px;
+}
+
+.invest{
+	text-align: center!important;
+}
+
+.invest-title.content-header-text div{
+	margin-top:170px;
+	position: absolute;
+}
+
+.invest-content.post_content{
+	margin-top: -50px;
+}
+
+.content-padblock{
+	margin: 80px auto 80px auto;
+}
+
 /* BLOG POST SINGLE */
 
 .blog h1{
@@ -1503,7 +1544,6 @@ line-height: 1.8em;
 .metanfo{
 	padding-bottom:10px;
 }
-
 
 
 /* MENU */
