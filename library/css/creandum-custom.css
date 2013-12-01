@@ -177,16 +177,18 @@ h3 {
 	bottom:50%;
 	left:50%;
 	right:50%;
-	width:300px;
-	padding:150px 0;
+	width:120px;
+	padding:45px 0 75px 0;
 	border-radius: 300px;
-	margin:-100px 0 0 -100px;
-	background-color:rgba(0,0,0,0.5);
+	margin:-100px 0 0 -60px;
+	background-color:#3da955;
 	text-align: center;
 	font-size:22px;
 	font-weight: 600;
-	color:#fff;
+	color:rgba(0,0,0,0);
+	opacity: 0.9;
 	display: none;
+	z-index: 113;
 }
 .loader.show{
 	display: block;
@@ -241,7 +243,7 @@ h3 {
 
 .infront{
 	position: relative;
-	z-index:9999;
+	z-index:99;
 }
 
 

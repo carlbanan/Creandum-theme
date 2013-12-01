@@ -99,6 +99,6 @@
   </div>
 </div>
 
-<div class="loader"> ... </div>
+<div class="loader"><span class="spinner"></span></div>
     
 
