@@ -2688,7 +2688,119 @@ button:hover .twitter-icon{
 		rgb(0,0,0) -700px 700px;
 }
 
-/* CONTENT HEADER BIGIMAGE */
+/* CSS3 LOADER */
+.startoff{
+	opacity: 1;
+	position: absolute;
+	height:800px;
+	background-color: #3da955;
+	width: 100%;
+	text-align: center;
+	padding-top:300px;
+	z-index: 111;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Styles for old versions of IE */
+.spinner {
+  font-family: sans-serif;
+  font-weight: 100;
+
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+.spinner:not(:required) {
+  -webkit-animation: spinner 1250ms infinite linear;
+  -moz-animation: spinner 1250ms infinite linear;
+  -ms-animation: spinner 1250ms infinite linear;
+  -o-animation: spinner 1250ms infinite linear;
+  animation: spinner 1250ms infinite linear;
+  border: 3px solid #FFF;
+  border-right-color: transparent;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+}
+
+/* END CSS3 LOADER */
+
 
 .top-post{
 	height: 400px;
@@ -2723,7 +2835,9 @@ button:hover .twitter-icon{
 	 -webkit-transition: opacity 1s linear;
 	transition: opacity 1s linear; 	
 	-webkit-transition-delay:1s;
-	transition-delay:1s;}
+	transition-delay:1s;
+
+}
 
 .content-header-wrap.active{
 	display: table;
@@ -3283,7 +3397,7 @@ header.showmobile{
 		    animation: fadeIn 1s;
 		    border-top: 1px solid rgba(255, 255, 255, 0.2);
 		}
-
+		/*		
 		@-webkit-keyframes fadeIn {
 	    from { opacity: 0; }
 	      to { opacity: 1; }
@@ -3293,6 +3407,7 @@ header.showmobile{
 		    from { opacity: 0; }
 		      to { opacity: 1; }
 		}
+		*/
 
 		.cbp-af-header.mobile nav ul li a{		
 			line-height: 3em;

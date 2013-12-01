@@ -595,7 +595,7 @@ if( !function_exists("theme_styles") ) {
         wp_register_style( 'bootstrap-theme', get_template_directory_uri() . '/library/css/bootstrap-theme.css', array(), '1.0', 'all' );
         wp_register_style( 'wp-bootstrap', get_stylesheet_uri(), array(), '1.0', 'all' );
     
-        wp_register_style( 'creandum-theme', get_template_directory_uri() . '/library/css/creandum-custom.css', array(), '1.1', 'all' );       
+        wp_register_style( 'creandum-theme', get_template_directory_uri() . '/library/css/creandum-custom.css', array(), '1.3', 'all' );       
 
 
 
@@ -629,7 +629,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
       array('jquery'), 
-      '2.2' );
+      '2.5' );
   
     wp_register_script(  'modernizr', 
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 

@@ -7,7 +7,9 @@ Template Name: New startpage
 <?php get_header(); ?>
       
       <div class='startpage'>
-
+        <div class='startoff'>  
+            <span class="spinner">Loading...</span>
+        </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
          
@@ -37,6 +39,7 @@ Template Name: New startpage
                   $textline3 = $slide['Slide text line 3'];
 
               ?>
+
                <div class="content-header-wrap<?php echo $active;?>" id='img<?php echo $c;?>' bigid='<?php echo $c;?>'>
                  <div class='green_background_main'></div>
                  <div class='content-header bigimage'  style='background-image:url("<?php echo $slide['img']['src'];?>");'>

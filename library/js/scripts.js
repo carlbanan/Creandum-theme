@@ -43,7 +43,9 @@ jQuery(document).ready(function($) {
 		var r = $("#content").attr("page");
 		if(r){
 			if(r == 'investment' || r == 'team'  || r == 'network'){
-				ajax_nav();
+				if(navigator.appName.indexOf("Internet Explorer")==-1){ 
+					ajax_nav();
+				}
 			}
 		}
 	}
@@ -178,43 +180,7 @@ jQuery(document).ready(function($) {
 
 	
 
-	
-	var cbpAnimatedHeader = (function() {
-	 
-	    var docElem = document.documentElement,
-	        didScroll = false,
-	        changeHeaderOn = 3;
-	 	var header = $(".cbp-af-header");
 
-	    function init() {
-	        window.addEventListener( 'scroll', function( event ) {
-	            if( !didScroll ) {
-	                didScroll = true;
-	                setTimeout( scrollPage, 3 );
-	            }
-	        }, false );
-	    }
-	 
-	    function scrollPage() {
-	        var sy = scrollY(3);
-	        if ( sy >= changeHeaderOn ) {
-	            if(!header.hasClass("cbp-af-header-shrink")){
-	            	header.addClass("cbp-af-header-shrink");
-	            }
-	        }
-	        else {
-	        	header.removeClass("cbp-af-header-shrink");
-	        }
-	        didScroll = false;
-	    }
-	    function scrollY() {
-	        return window.pageYOffset || docElem.scrollTop;
-	    }
-
-	 
-	    init();
-	 
-	})();
 
 	
 	if($("#myCarousel").length >= 1){
@@ -348,7 +314,10 @@ jQuery(document).ready(function($) {
 		if(t == 2){
 			windowHeight = $(window).height();			
 		}
-		
+		$(".startoff").delay(150).animate({
+			opacity: 0
+		}, 250);			
+
 		// SET HEIGHT
 		windowHeight = windowHeight;
 		
@@ -357,6 +326,7 @@ jQuery(document).ready(function($) {
 			$(".content-header-text").addClass("bigheight");
 			$(".content-header-text").addClass("bigheight");
 		}
+
 		
 		$(".content-header-wrap,.slider-bigimage .item, #slider-bigimage").css("height",windowHeight);
 		$(".content-header-text div.htext").css("margin-top", ((windowHeight/2) - 270) );
