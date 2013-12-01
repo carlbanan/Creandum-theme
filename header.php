@@ -39,6 +39,12 @@
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">  
 
+
+<!--[if gte IE 8]>
+  <link rel='stylesheet' id='creandum-ie'  href='<?php echo get_template_directory_uri(); ?>/library/css/creandum-ie8.css?ver=1.2' type='text/css' media='all' />
+<![endif]-->
+
+
   </head>
   
   <body <?php body_class(); ?>>
