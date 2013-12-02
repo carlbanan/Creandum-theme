@@ -18,10 +18,12 @@ function feed($ant = 1,$type = ""){
 			?>
 			<a href='<?php echo $n['url'];?>' class='<?php echo $n['type'];?> filterable' <?php if($n['type'] != 'blog'){ echo "target='_blank'";} ?> <?php if($f != "" && $f != $n['type']){ echo "style='display:none;'"; } ?>>
 			<div class="ncard <?php echo $n['type'];?>">
-				<div class="<?php echo $n['type'];?>icon icon"></div>
+				<div class="<?php echo $n['type'];?>icon icon">
 				<?php if($n['type']=='blog' && $n['author_img'] != ''){ ?>
 					<div class="profile hidden-xs" style="background-image:url('<?php echo $n['author_img'];?>');"></div>
 				<?php } ?>
+				</div>
+
 				<div class='ncard-content'>
 				<?php  if($n['type']=='blog'){ ?>
 					
