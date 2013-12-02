@@ -104,6 +104,8 @@
 .sprite-wheel{ background-position: -354px -1909px; width: 295px; height: 295px; } 
 
 
+.fb_icon{ background-position: 0 -1403px; width: 10px; height: 19px; } 
+
 .ticker_icons span.icon {
 display: block;
 margin: 0 auto;
@@ -1521,12 +1523,12 @@ line-height: 1.8em;
 }
 
 .invest-title.content-header-text div{
-	margin-top:170px;
+	margin-top:190px;
 	position: absolute;
 }
 
 .invest-content.post_content{
-	margin-top: -50px;
+	margin-top: -30px;
 }
 
 .content-padblock{
@@ -2710,11 +2712,11 @@ button:hover .twitter-icon{
 .startoff{
 	opacity: 1;
 	position: absolute;
-	height:800px;
+	height:100%;
 	background-color: #3da955;
 	width: 100%;
 	text-align: center;
-	padding-top:300px;
+	padding-top:500px;
 	z-index: 111;
 }
 
@@ -3413,7 +3415,6 @@ header.showmobile{
 		font-size: 2em;
 		margin: 0;
 		float: left;
-		padding-top: 2px;
 }
  
 .cbp-af-header nav {
@@ -3613,6 +3614,31 @@ header.showmobile{
 		float:center;
 	}
 }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+	.mobile, .showmobile{
+		display: block!important;
+	}
+
+	header.showmobile{
+		display: block!important;
+	}
+
+	.hidemobile{
+		display: none!important;
+	}
+
+	.content-header.bigimage, .content-header-text div {
+		position: absolute;
+	}
+
+	#footer {
+		padding: 20px auto 20px auto;
+	}
+
+	}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width : 484px) {
 /* Styles */
@@ -3627,6 +3653,10 @@ header.showmobile{
 
 	.hidemobile{
 		display: none!important;
+	}
+
+	#footer {
+		padding: 20px auto 20px auto;
 	}
 
 	.tick2.tick.showmobile h2, h2.mobile{
