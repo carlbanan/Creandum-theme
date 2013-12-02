@@ -975,6 +975,7 @@ div.sideblock.news.podio:last-child{
 	margin-top:4px;
 	padding-top:5px;
 	padding-right: 20px;
+	padding-left: 20px;
 }
 /* FILTER */
 #nextpost,#prevpost{
