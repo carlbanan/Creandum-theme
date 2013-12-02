@@ -3543,7 +3543,23 @@ header.showmobile{
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 25em;
 	}
-
+	.about .hidemobile{
+		display: none!important;
+	}
+	.who{
+		height: auto;
+		display: block;
+		clear:both;
+	}
+	.who .col-md-5{
+		width:90%;
+	}
+	.twitter{
+		display: none;
+	}
+	.feed{
+		width:100%;
+	}
 }	
 	
 
@@ -3608,6 +3624,7 @@ header.showmobile{
 	.icons-right{
 		float:center;
 	}
+
 }
 
 
@@ -3633,7 +3650,7 @@ header.showmobile{
 		padding: 20px auto 20px auto;
 	}
 
-	}
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 
