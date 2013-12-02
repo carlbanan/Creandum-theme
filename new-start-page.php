@@ -116,17 +116,17 @@ Template Name: New startpage
                   <div class="ticker_icons hidemobile">
                     <ul>
                       <li class="icon-1">
-                      <span class="sprite-mountain_green icon"></span>
+                      <span class="sprite-mountain-grey icon"></span>
                         <span class="text">We are</span>
                       </li>
 
                       <li class="icon-2">
-                        <span class="sprite-eye_green icon"></span>
+                        <span class="sprite-eye-grey icon"></span>
                         <span class="text">Our focus</span>
                       </li>
 
                       <li class="icon-3">
-                        <span class="sprite-checklist_green icon"></span>
+                        <span class="sprite-checklist-grey icon"></span>
                         <span class="text">Our service</span>
                       </li>
 

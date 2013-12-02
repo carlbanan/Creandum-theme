@@ -209,7 +209,7 @@ jQuery(document).ready(function($) {
 	        current = 1;
 	        $(".icon-"+current).addClass("activeicon");
 	    } else current++;
-	}, 3500);
+	}, 5000);
 
     /* ABOUT PAGE */
     if($(".about").length >= 1){

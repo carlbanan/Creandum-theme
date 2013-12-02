@@ -44,17 +44,15 @@ Over the years, we have built an international network of entrepreneurs, executi
 Building companies is our favorite occupation.</p>	
 				</div>
 				<div class="col-md-7 icon_right hidemobile">
-					<div class="sun"></div>
-					<div class="sunrise icon_right"></div>
+					<div class="sun"><div class="cloud-2 floating-cloud-2"></div>
+						<div class="cloud-3 floating-cloud"></div></div>
+					<div class="sunrise icon_right"></div>	
 				</div>
 			</div>
 
 			<div class="who">
 				<div class="col-md-7 icon_left hidemobile">
-					<div class="globe">
-						<div class="cloud-1"></div>
-						<div class="cloud-2"></div>
-						<div class="cloud-3"></div>
+					<div class="globe floating-globe">
 					</div>
 				</div>
 				<div class="col-md-5">
