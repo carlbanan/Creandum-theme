@@ -3413,7 +3413,7 @@ header.showmobile{
 .cbp-af-header nav a {
 		color: white;
 		font-size: 1em;
->>>>>>> 8ebf1b4d2ca2246df99c49cd55b068d340bb9c33
+}
 
 	 
 	.cbp-af-header h1 {
@@ -3657,7 +3657,7 @@ header.showmobile{
 	/* START */
 
 	.static-bump span{
-		margin-top:8px;
+		margin-top:22px;
 		padding:0 8px;
 	}
 	#footer {
@@ -3954,9 +3954,18 @@ header.showmobile{
 	/*  INVESTMETNS  */
 	/*****************/
 	
-	.portrait_list{
-
+	.investment .showmobile h1,.team .showmobile h1,.network .showmobile h1{
+		font-size:32px;
+		overflow-x:hidden;
 	}
+	.investment .post_content p.lead,.team .post_content p.lead,.network .post_content p.lead{
+		font-size:17px;
+	}
+	.investment .post_content p,.team .post_content p,.network .post_content p{
+		font-size:17px;
+		-webkit-margin-end:0em;
+	}
+
 
 	.showmobile h3{
 		font-size: 14px;
@@ -3980,8 +3989,8 @@ header.showmobile{
 		background-image: url("../../images/creandum-big-backup.jpg");
 		background-attachment: absolute;
 		background-repeat: no-repeat;
-		background-size: 700px;
-		height: 470px;
+		background-size:  auto 280px;
+		height: 280px;
 		min-width: auto;
 		width: 100%
 		-webkit-transition: all 0.15s ease;
