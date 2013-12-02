@@ -104,6 +104,8 @@
 .sprite-wheel{ background-position: -354px -1909px; width: 295px; height: 295px; } 
 
 
+.fb_icon{ background-position: 0 -1403px; width: 10px; height: 19px; } 
+
 .ticker_icons span.icon {
 display: block;
 margin: 0 auto;
@@ -1522,12 +1524,12 @@ line-height: 1.8em;
 }
 
 .invest-title.content-header-text div{
-	margin-top:170px;
+	margin-top:190px;
 	position: absolute;
 }
 
 .invest-content.post_content{
-	margin-top: -50px;
+	margin-top: -30px;
 }
 
 .content-padblock{
@@ -2699,11 +2701,11 @@ button:hover .twitter-icon{
 .startoff{
 	opacity: 1;
 	position: absolute;
-	height:800px;
+	height:100%;
 	background-color: #3da955;
 	width: 100%;
 	text-align: center;
-	padding-top:300px;
+	padding-top:35%;
 	z-index: 111;
 }
 
@@ -3386,12 +3388,32 @@ header.showmobile{
 			font-size: 1.2em;
 	}
 
+
 	.cbp-af-header h1{
 			z-index:50;
 			padding-left: 15px;
 	}
 	 
 	 /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+
+ 
+.cbp-af-header h1 {
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: 3.2px;
+		font-size: 2em;
+		margin: 0;
+		float: left;
+}
+ 
+.cbp-af-header nav {
+		float: right;
+}
+ 
+.cbp-af-header nav a {
+		color: white;
+		font-size: 1em;
+>>>>>>> 8ebf1b4d2ca2246df99c49cd55b068d340bb9c33
 
 	 
 	.cbp-af-header h1 {
@@ -3587,7 +3609,34 @@ header.showmobile{
 		float:center;
 	}
 }
-/* LESS THAN 484 px e.g Smartphones (portrait and landscape) ----------- */
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+	.mobile, .showmobile{
+		display: block!important;
+	}
+
+	header.showmobile{
+		display: block!important;
+	}
+
+	.hidemobile{
+		display: none!important;
+	}
+
+	.content-header.bigimage, .content-header-text div {
+		position: absolute;
+	}
+
+	#footer {
+		padding: 20px auto 20px auto;
+	}
+
+	}
+
+/* Smartphones (portrait and landscape) ----------- */
+
 @media only screen and (max-width : 484px) {
 
 
@@ -3604,11 +3653,16 @@ header.showmobile{
 	}
 
 
+
 	/* START */
 
 	.static-bump span{
 		margin-top:8px;
 		padding:0 8px;
+	}
+	#footer {
+		padding: 20px auto 20px auto;
+
 	}
 
 	.tick2.tick.showmobile h2, h2.mobile{
