@@ -27,7 +27,7 @@
 							</section>
 						</div>
 						<div class="responsive-wrapper">
-							<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/group.jpg);'></div>
+							<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/test_team.png);'></div>
 						</div>	
 				</div>	
 	</div>	
