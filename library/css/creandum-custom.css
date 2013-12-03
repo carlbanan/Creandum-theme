@@ -3226,6 +3226,8 @@ button:hover .twitter-icon{
 	top: 50%;
 }
 
+
+
 /* Declare heights because of positioning of img element */
 .carousel .item {
 	max-height: 550px;
@@ -3356,9 +3358,9 @@ header.showmobile{
 			left: 0;
 			top:0;
 			width: 100%;
-			background: none;
+			background: rgba(0,0,0,0.3);
 			z-index: 10000;
-			height: 60px;
+			height: 65px;
 			overflow: hidden;
 			transition: 0.2s ease-in-out;
 			-webkit-transition: 0.2s ease-in-out;
@@ -3795,20 +3797,33 @@ header.showmobile{
 		position: absolute;
 		top: 100px;
 		right:0px;
-		left:0px;
+		left:15px;
 		width: 100%;
+		text-align: left;
 	}
 	.carousel-caption h2{
 		font-size:13px;
 	}
+
+	.carousel .item {
+	max-height: 350px;
+	min-height: 350px;
+	width:100%;
+	}
+
+	.carousel-control{
+		display: none;
+	}
+
 	.carousel-inner > .item > img {
 		display: block;
 		height: auto;
 		line-height: 1;
-		min-width: none;
+		min-width: 300%;
+		margin-left:-100%;
 		max-width: none;
 		min-height: none;
-		min-width: none;
+		min-width: 300%;
 	}
 
 	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
