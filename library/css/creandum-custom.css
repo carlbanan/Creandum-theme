@@ -116,7 +116,6 @@ margin: 0 auto;
 body{
 	-webkit-font-smoothing:antialiased;
 	font-family: 'gothambook', Helvetica, Arial, sans-serif;
-	line-height: 12px;
 	color: #39423f;
 }
 a {
