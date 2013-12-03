@@ -5,8 +5,8 @@ Template Name: New startpage
 ?>
 
 <?php get_header(); ?>
-      
-      <div class='startpage'>
+
+       <div class='startpage'>
         <div class='startoff'>  
             <span class="spinner">Loading...</span>
         </div>
@@ -100,6 +100,7 @@ Template Name: New startpage
         Scroll down
         <div class="goscroll-icon"></div>
       </div>
+
        <div class="start-content">
         <div class="container">
           <div class="row padblock_one">
@@ -133,6 +134,7 @@ Template Name: New startpage
                     </ul>
 
                   </div>  
+
                 </div>
                 <!--pay attention-->
 
@@ -257,15 +259,11 @@ Template Name: New startpage
                         <div class="item <?php echo $active;?>">
                           <img src="<?php echo $slide2['img']['src'];?>" alt="First slide"/>
 
-                            <div class="carousel-caption">
-                              <?php foreach($textline as $txt){ ?>
-                              <h2 class="strip2"><?php echo $txt;?></h2><br/>
-                              <?php } ?>
-                              <div class"title" style="margin-top:10px;">
-                                <p class="strip3"><?php echo $slide2['Slide text line 2'];?></p><br/>
-                                <p class="strip3"><?php echo $slide2['Slide text line 3'];?></p>
-                              </div>
-
+                          <div class="carousel-caption"><?php foreach($textline as $txt){ ?><h2 class="strip2"><?php echo $txt;?></h2><br/><?php } ?>
+                            <div class="title" style="margin-top:10px;">
+                              <span class="strip3"><?php echo $slide2['Slide text line 2'];?></span><br/>
+                              <span class="strip3"><?php echo $slide2['Slide text line 3'];?></span>
+                            </div>
                           </div>
                         </div>
                         <?php
@@ -274,14 +272,16 @@ Template Name: New startpage
                   }
                 }
               ?>
-            <!--pay attention-->
-
-        </div><!-- /.carousel -->
+        </div>
             <?php if($c != 0){ ?>
+
             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><div class="lefticon"></div></a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next"><div class="righticon"></div></a>
+
             <?php } ?>
-      </div>
+      </div> 
+      <!--CAROUSEL END pay attention-->
+
 
         <div class='lightgreen_bg'>
           <div class='container'>
@@ -320,7 +320,7 @@ Template Name: New startpage
       <?php endif; ?>
 
       </div> <!-- END STARTAPGE -->
-    </div><!-- END startpage-content -->
+
 
 
 

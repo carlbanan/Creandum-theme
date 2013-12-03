@@ -47,7 +47,7 @@
 
 
   </head>
-  
+
   <body <?php body_class(); ?>>
       <!--facebook-->
     <div id="fb-root"></div>
@@ -70,6 +70,7 @@
      <a href="<?php echo home_url(); ?>"><h1>Creandum</h1></a>
     <div id='menutoggle' class='menu-icon cbp-af-header-shrink'></div>
       <nav>
+         
           <ul>
 
            <?php
@@ -84,8 +85,13 @@
                 ?>
 
                   <li <?php if($surl == $item->url) { echo "class='active'"; } ?>>
+                      
+                   
+                      
                       <a href="<?php echo $item->url;?>">
-                        <span class="<?php echo $item->classes[0];?>  head"></span><?php echo $item->title;?>
+                        <span class="<?php echo $item->classes[0];?>  head"></span>
+                       
+                       <?php echo $item->title;?>
                       </a>
                   </li>
                
@@ -100,6 +106,7 @@
   </div>
 </div>
 
+
 <div class="loader"><span class="spinner"></span></div>
-    
+
 
