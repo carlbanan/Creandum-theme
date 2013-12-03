@@ -43,7 +43,7 @@ else{ ?>
 				</section>
 	</div>
 	<div class="responsive-wrapper">
-		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news.png);'></div>
+		<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/news_picture.png);'></div>
 	</div>
 
 </div>	

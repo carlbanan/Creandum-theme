@@ -30,7 +30,7 @@
 
 		</div>
 		<div class="responsive-wrapper">
-			<div class="big-image-container"></div>
+			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/investments.png);'></div>
 		</div>
 	</div>	
 	<?php } ?>

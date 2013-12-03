@@ -3342,6 +3342,13 @@ header.showmobile{
 @media screen and (max-width: 1060px) {
 
 
+	.responsive-wrapper{
+		height: 360px;
+	}
+
+		.content-header-text div{
+		margin-top: 72px;
+	}
 
 	.cbp-af-header {
 			position: fixed;
@@ -3546,7 +3553,23 @@ header.showmobile{
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 25em;
 	}
-
+	.about .hidemobile{
+		display: none!important;
+	}
+	.who{
+		height: auto;
+		display: block;
+		clear:both;
+	}
+	.who .col-md-5{
+		width:90%;
+	}
+	.twitter{
+		display: none;
+	}
+	.feed{
+		width:100%;
+	}
 }	
 	
 
@@ -3576,6 +3599,10 @@ header.showmobile{
 		width:100%;
 		height: 230px;
 		overflow: hidden;
+	}
+
+	.content-header-text div{
+		margin-top: 30px;
 	}
 
 	.invest-title.content-header-text div{
@@ -3611,6 +3638,7 @@ header.showmobile{
 	.icons-right{
 		float:center;
 	}
+
 }
 
 
@@ -3636,7 +3664,7 @@ header.showmobile{
 		padding: 20px auto 20px auto;
 	}
 
-	}
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 
