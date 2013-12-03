@@ -541,12 +541,6 @@ h3 {
 	background-size: 100%;
 	display: table;
 	width: 100%;
-	-webkit-transition: all 0.15s ease;
-	-moz-transition: all  0.15s ease;
-	-o-transition:  all 0.15s ease; 
-	-webkit-transition-delay: 0.35s; /* Safari */
-	-moz-transition-delay: 0.35s; /* Safari */
-	transition-delay: 0.35s; /* Safari */
 }
 
 .team-fallback {
@@ -571,8 +565,6 @@ h3 {
 }
 .intro,.big-image-container,.green_background{
 	height:450px;
-	 -webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease; 
 }
 
 .contact .big-image-container, .green_background{
@@ -4035,12 +4027,6 @@ header.showmobile{
 		height: 280px;
 		min-width: auto;
 		width: 100%
-		-webkit-transition: all 0.15s ease;
-		-moz-transition: all 0.15s ease;
-		-o-transition: all 0.15s ease;
-		-webkit-transition-delay: 0.35s;
-		-moz-transition-delay: 0.35s;
-		transition-delay: 0.35s;
 	}
 
 	.green_background {
