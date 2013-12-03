@@ -27,9 +27,10 @@
 	src: url('fonts/GothamBook.eot');
 	src: url('fonts/GothamBook.eot?#iefix') format('embedded-opentype'),
 		 url('fonts/GothamBook.woff') format('woff'),
-		 url('fonts/GothamBook.ttf') format('truetype'); 
+		 url('fonts/GothamBook.ttf') format('truetype')
 	 font-weight:normal;
 	 font-style:normal; 
+	 line-height: 1em;
 	 -webkit-font-smoothing:antialiased;
 }
 
@@ -114,11 +115,12 @@ margin: 0 auto;
 
 body{
 	-webkit-font-smoothing:antialiased;
-	font-family: 'gothambook', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'gothambook', Helvetica, Arial, sans-serif;
+	line-height: 12px;
 	color: #39423f;
 }
 a {
-	font-family: 'gothambook', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'gothambook',  Helvetica, Arial, sans-serif;
 	color: #39423f;
 	cursor: pointer;
 }
@@ -272,7 +274,9 @@ h3 {
 	position: relative;
 }
 
-
+.btn{
+	font-family: 'Gothammedium'
+}
 
 /* BUTTONS BTN BOOTSRAP FIX */
 .btn:active,.btn:focus{
@@ -280,10 +284,9 @@ h3 {
 	outline: none;
 }
 .btn-default{
-	padding:12px 22px;
 	border-radius: 3px;
+	padding:12px 18px;
 	font-weight: 200;
-	font-size: 16px;
 	text-shadow:none;
 	box-shadow:none;
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -426,18 +429,20 @@ h3 {
 	padding-right:15px;
 	padding-top:-22px;
 	z-index: 2;
-	 backface-visibility: hidden;
-	 -webkit-backface-visibility:hidden;
+ backface-visibility: hidden;
+ -webkit-backface-visibility:hidden;
 }
 .portrait_list .over .btn{
 	opacity: 0;
-	position: relative;
 	z-index: 3;
-	 -webkit-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	 backface-visibility: hidden;
-	 -webkit-backface-visibility:hidden;
+	backface-visibility: hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-box-sizing:border-box;
+	
 }
+
 .portrait_list:hover .over .btn{
 	margin-top:40%;
 	opacity: 1;
@@ -1020,6 +1025,7 @@ div.sideblock.news.podio:last-child{
 	color: #3da955;
 	margin:0px 20px;
 	cursor: pointer;
+	padding-top:10px;
 }
 
 .filter.active,.filter:hover,.scrollto.active,.scrollto:hover{
@@ -1614,17 +1620,15 @@ line-height: 1.8em;
 .cbp-af-header nav ul li{
 		display: block;
 		float:left;
-		top: 0px;   
+
 }
 
-.cbp-af-header nav ul{
-		margin-right: ; 
-}
+
 
 .head{
-	margin-top:40px;
+	margin-top:20px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 3px;
 }
 
 
@@ -1642,10 +1646,7 @@ line-height: 1.8em;
 }
  
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header h1,
-.cbp-af-header nav a {
-		line-height: 100px;
-}
+
  
 .cbp-af-header h1 {
 		text-transform: uppercase;
@@ -1654,6 +1655,7 @@ line-height: 1.8em;
 		font-size: 2.3em;
 		margin: 0;
 		float: left;
+		padding-top:13px;
 }
  
 .cbp-af-header nav {
@@ -1661,18 +1663,15 @@ line-height: 1.8em;
 		margin-right: -20px;
 }
  
-.cbp-af-header nav a {
-		color: white;
-		font-size: 1em;
-		margin-right: 20px;
-		
-}
 
-.cbp-af-header nav ul {
-		
-}
  
 /* Menu icons*/
+.cbp-af-header nav ul li a{
+	padding:10px 2px;
+	color: white;
+	font-size: 1em;
+	margin-right: 20px;
+}
 
 .cbp-af-header nav a:hover span.small_invest_white{
 		color: #1f592c;
@@ -1686,7 +1685,7 @@ line-height: 1.8em;
 }
 
 
-.cbp-af-header nav a:active {
+.cbp-af-header nav a:active{
 		padding-bottom: 1px;
 		border-bottom: 1px solid white;
 }		
@@ -1700,14 +1699,18 @@ line-height: 1.8em;
 		position: fixed;
 }
 
-.cbp-af-header h1,
-.cbp-af-header nav a {
+
+.cbp-af-header nav a{
 		transition: 0.2s ease-in-out;
 		-webkit-transition: 0.2s ease-in-out;
-		-moz-transition: 0.2s ease-in-out;
 		-o-transition: 0.2s ease-in-out;
+		-moz-transition: none;
+		min-height: auto;
+		min-width: auto;
+		padding:1px;
+		line-height: 20px;
 }
- 
+
 .navbar-nav{
 	margin-right: -15px;
 }
@@ -3202,7 +3205,7 @@ button:hover .twitter-icon{
 	font-size: 19px;
 } 
 
- .carousel-caption p{
+ .carousel-caption span{
 	color:#3da955;
 	margin-bottom: 3px;
 	font-size: 12px;
@@ -3235,6 +3238,7 @@ button:hover .twitter-icon{
 .carousel .item {
 	max-height: 550px;
 	min-height: 550;
+	width:100%;
 }
 .carousel-inner > .item > img {
 	display: block;
@@ -3242,6 +3246,7 @@ button:hover .twitter-icon{
 	line-height: 1;
 	min-width: 100%;
 	max-width: 100%;
+	width: 100%;
 }
 
 .carousel-control.right {
@@ -3254,6 +3259,11 @@ z-index: 66;
 background-image: none;
 z-index: 66;
 }
+.carousel-control.left,.carousel-control.right{
+	transition:none;
+	-webkit-transition:none;
+	-moz-transition:none;
+}
 
 .carousel-control{
 	background: rgba(0,0,0,0.5);
@@ -3262,7 +3272,6 @@ z-index: 66;
 	top: 46%;
 	height: 60px;
 	border-radius: 3px;
-	transition: .1s;
 	z-index: 2;
 	opacity: 1;
 }
@@ -3281,7 +3290,7 @@ z-index: 66;
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	margin:0 auto;
-	transition: .1s;
+
 }
 
 .lefticon:hover{
@@ -3297,7 +3306,7 @@ z-index: 66;
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	margin:0 auto;
-	transition: .1s;
+
 }
 
 .righticon:hover{
@@ -3402,6 +3411,8 @@ header.showmobile{
 	.cbp-af-header h1{
 			z-index:50;
 			padding-left: 15px;
+
+
 	}
 	 
 	 /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
@@ -4067,7 +4078,12 @@ header.showmobile{
 
 
 
-
+/* MOZILLA FIREFOX FIX */
+ @-moz-document url-prefix() {
+ 	.btn{
+ 		font-family:'Gothammedium';
+ 	}
+ }
 
 
 
