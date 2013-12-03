@@ -34,8 +34,8 @@ jQuery(window).bind("load", function() {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
-
-	var windowHeight = $(window).height();
+	var $window = $(window);
+	var windowHeight = $window.height();
 
 	var route = router();
  
@@ -215,7 +215,6 @@ jQuery(document).ready(function($) {
     if($(".about").length >= 1){
 
 
-	    var $window = $(window);
 	    var $box = $('.sunrise');
 	    var $sun = $('.sun');
 	    var $eye = $('.eye')
@@ -300,8 +299,7 @@ jQuery(document).ready(function($) {
 		});
 	 }
 	 /* END ABOUT */
-
-	 $(window).bind('load', function(){
+	 $window.bind('load', function(){
 		var gobig = $(".content-header").hasClass("bigimage"); 
 		if(gobig){
 			//squarebox();
@@ -312,11 +310,13 @@ jQuery(document).ready(function($) {
 
 		//CHECK HEIGHT IF RESIZE
 		if(t == 2){
-			windowHeight = $(window).height();			
+			windowHeight = $window.height();			
 		}
 		$(".startoff").delay(150).animate({
-			opacity: 0
-		}, 250);			
+			opacity: 0,
+		}, 250, function () {
+			$(this).css('display', 'none')
+		});			
 
 		// SET HEIGHT
 		windowHeight = windowHeight;
@@ -373,12 +373,12 @@ jQuery(document).ready(function($) {
 		spinBigImage();
 	}
 	if ( ! Modernizr.touch){
-    	$(window).bind('scroll',function(e){
+    	$window.bind('scroll',function(e){
     		bigScroll();
 	    });
 	 }
 	function bigScroll(){
-		var yp = $(window).scrollTop();
+		var yp = $window.scrollTop();
 		var gobig = $(".content-header").hasClass("bigimage"); 
 		if(gobig){
 			$('.bigimage').css('top',(0-(yp*.2))+'px');	
@@ -512,7 +512,6 @@ jQuery(document).ready(function($) {
         var $element = $(element);
 
         var current = 0;
-        var $window = $(window);
         
         var length = $element.find('li').length;
 
@@ -601,7 +600,7 @@ jQuery(document).ready(function($) {
 		filterhtml = $(".filter-menu.orig-filter").html();
 		$(".filter-menu").not(".orig-filter").html(filterhtml);
 
-    	$(window).scroll(function(){
+    	$window.scroll(function(){
 	        var sy = scrollY();
 	       
 
@@ -643,10 +642,10 @@ jQuery(document).ready(function($) {
 	 	function checkHeight(){
 	 		page = 1;
 	 		fetchNews(page);
-	 		$(window).scroll(function(){
+	 		$window.scroll(function(){
 
 				var tot 		= $(document).height();
-				var wheight 	= $(window).height();
+				var wheight 	= $window.height();
 				var offset 		= scrollY();
 				
 				
