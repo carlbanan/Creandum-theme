@@ -1043,10 +1043,46 @@ span.dash{
 	color: #39423f;
 }
 /* CONTACT PAGE */
+
+.col-sm-6.no-padding{
+	padding:0;
+}
+
+.maps-footer{
+	display: block;
+	margin: 0 auto;
+	float:center;
+}
+
+.map h2{
+	color: #3da955;
+	font-size: 18px;
+	margin:0;
+	padding:0;
+}
+
+
+.center.map h2:hover {
+text-decoration: underline;
+}
+
+#left-map, #right-map{
+	margin-top: 35px;
+}
+
 .forms{
 	width:100%;
 	margin:30px auto;
 }
+
+.container.full{
+	width:100%;
+	max-width:100%!important;
+	padding:0;
+	margin-bottom: -50px;
+}
+
+
 .pitchform{
 	margin-top:30px;
 }
@@ -1781,7 +1817,7 @@ line-height: 1.8em;
 		border:1px solid white;
 		display: inline-block;
 		float:right;
-		margin: 0 5px;
+		margin: 0 10px 0 0;
 	}
 
 	.twitter-icon{
@@ -1915,7 +1951,7 @@ button:hover .twitter-icon{
 	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding: 4px 20px 0 0;
 	margin-bottom: 0;
-	margin-left: 20px;
+	margin-left: 0;
 	margin-right:5px;
 	font-size: 14px;
 	line-height: 1.428571429;
@@ -1932,7 +1968,6 @@ button:hover .twitter-icon{
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	float:left;
 }
 
 .btn2:hover {
@@ -1966,7 +2001,6 @@ button:hover .twitter-icon{
 .details{
 	color:yellow;
 	margin: 0 auto;
-	margin-left:-40px;
 }
 
 .links li:hover{
@@ -1976,23 +2010,12 @@ button:hover .twitter-icon{
 
 .info li{
 	display: inline-block;
-	padding-right:20px;
+	padding-right:10px;
+	padding-left: 10px;
 	text-align: center;
 	vertical-align: middle;
 	color: #1f592c;
 }
-
-.info li:hover{
-	opacity: 0.5;
-	cursor: pointer;
-}
-
-
-
-
-
-
-
 
 
 .shadowop{
@@ -3378,14 +3401,10 @@ header.showmobile{
 			left: 0;
 			top:0;
 			width: 100%;
-			background: rgba(0,0,0,0.3);
 			z-index: 10000;
-			height: 65px;
+			height: 60px;
+			background: rgba(0,0,0,0.2);
 			overflow: hidden;
-			transition: 0.2s ease-in-out;
-			-webkit-transition: 0.2s ease-in-out;
-			-moz-transition: 0.2s ease-in-out;
-			-o-transition: 0.2s ease-in-out;
 	}
 
 
@@ -3425,8 +3444,10 @@ header.showmobile{
 	.cbp-af-header h1{
 			z-index:50;
 			padding-left: 15px;
+	}
 
-
+	h2{
+		font-size: 21px;
 	}
 	 
 	 /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
@@ -3458,7 +3479,7 @@ header.showmobile{
 			font-size: 2em;
 			margin: 0;
 			float: left;
-			padding-top: 2px;
+			padding-top: 0px;
 	}
 	 
 	.cbp-af-header nav {
@@ -3527,7 +3548,7 @@ header.showmobile{
 	.cbp-af-header.mobile nav  {	
 		position: absolute;
 		width:100%;
-		height: 824px;
+		height: 366px;
 		background: #3da955;
 		-webkit-transition: height 0.3s, background 0.3s ease-in-out;
 		transition: height 0.3s, background 0.3s ease-in-out; 
@@ -3605,6 +3626,32 @@ header.showmobile{
 	}
 }	
 	
+@media (max-width: 811px) {
+
+	.btn2.btn-white-bg{
+		width: 100%;
+		margin:0;
+		margin-bottom: 10px;
+	}
+
+
+	.btntextcontact {
+	height: 60px;
+	width: 0;
+	margin-top: 0;
+	margin-right: 0;
+	position: relative;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: none;
+	}
+
+	.btntextcontact .hidemobile{
+		display: none;
+	}
+
+}	
 
 /* SCREENS LESS THAN 767px */
 @media (max-width: 767px) {
@@ -3669,35 +3716,10 @@ header.showmobile{
 		display: none;
 	}
 
-
-
-
-/*
-	.content.responsive-wrapper {
-	height: 230px;
+	#left-map, #right-map{
+		height: 300px!important;
+		margin-bottom: 50px;
 	}
-	
-	.post_content h2{
-		margin-top:80px;
-		width:80%;
-		margin-left:-40%;
-		font-size:32px;
-	}
-	.content-header-text .showmobile{
-		display: block!important;
-	}
-	.content-header-text .hidemobile{
-		display: none!important;
-	}
-	.content-header-text h1{
-		font-size: 40px;
-	}
-
-	.icons-right{
-		float:center;
-	}
-
-	*/
 
 }
 
@@ -3724,6 +3746,29 @@ header.showmobile{
 		padding: 20px auto 20px auto;
 	}
 
+	
+	.btn2.btn-white-bg{
+		width: 100%;
+		margin:0;
+		margin-bottom: 10px;
+	}
+
+
+	.btntextcontact {
+	height: 60px;
+	width: 0;
+	margin-top: 0;
+	margin-right: 0;
+	position: relative;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: none;
+	}
+
+	.sideblock, .filter-menu {
+		display: none;
+	}
 	
 
 }
@@ -3987,7 +4032,7 @@ header.showmobile{
 		border-radius: 4px;
 		border:1px solid white;
 		display: inline-block;
-		margin: 0 5px;
+		margin: 0 10px 0 0;
 		float:center;
 	}
 
@@ -4132,6 +4177,26 @@ header.showmobile{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
+	.btn2.btn-white-bg{
+		width: 100%;
+		margin:0;
+		margin-bottom: 10px;
+	}
+
+
+	.btntextcontact {
+	height: 60px;
+	width: 0;
+	margin-top: 0;
+	margin-right: 0;
+	position: relative;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: none;
+	}
+
 
 }
 

@@ -159,25 +159,25 @@
 		</div>
 	</div>
 	<div class="lightgreen_bg">
-		<iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.se/maps?t=m&amp;q=Jacobsbergsgatan+18,+Stockholm,+103+86&amp;ie=UTF8&amp;hq=&amp;hnear=Jakobsbergsgatan+18,+111+44+Stockholm,+Stockholms+l%C3%A4n&amp;z=14&amp;ll=59.33553,18.069616&amp;output=embed"></iframe>
-		<div class="container padblock center maps-footer">
-          <!--<button type="button" class="btn2 btn-default btn-lg btn-white-bg">
-          	<span class=" btntext hidden-xs"></span>
-          		E-mail for other inquries
-          </button> -->
-          <button type="button" class="btn2 btn-default btn-lg btn2 btn-default btn-lg btn-white-bg">
-          	<div class="btntextcontact hidden-xs"><div class="sprite-contact_email contact-con-email"></div></div>E-mail for other inquries
-          </button>
-          <button type="button" class="btn2 btn-default btn-lg btn-white-bg">
-          	<div class="btntextcontact hidden-xs"><div class="sprite-contact_phone contact-con"></div></div>+46 (0)8 524 636 30
-          </button>
-          <a href="https://www.google.se/maps?t=m&amp;q=Jacobsbergsgatan+18,+Stockholm,+103+86&amp;ie=UTF8&amp;hq=&amp;hnear=Jakobsbergsgatan+18,+111+44+Stockholm,+Stockholms+l%C3%A4n&amp;z=14&amp;ll=59.33553,18.069616&amp;source=embed" style="color:#0000FF;text-align:left">	
-	          <button type="button" class="btn2 btn-default btn-lg btn-white-bg">
-	          	<div class="btntextcontact hidden-xs"><div class="sprite-contact_pin contact-con"></div></div>
-	          		Go to Google maps
-	          </button>
-		   </a>
+		<div class="container full">
+				<div class="col-sm-6 no-padding">
+				 <a href="https://goo.gl/maps/fBU0e" target="_blank">	
+					<div class="center map"><h2>Stockholm office</h2></div>
+					</a>
+					<div id="left-map" style="height:550px;"></div>
+				
+			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x465f9d5cf9f0f4af%3A0x475b530ffbda3ab8!2sJakobsbergsgatan+18%2C+111+44+Stockholm%2C+Sweden!5e0!3m2!1sen!2s!4v1386165664448" width="100%" height="550" frameborder="0" style="border:0"  scrolling="no"></iframe> -->
+			</div>	
+			<div class="col-sm-6 no-padding">
+				<a href="https://goo.gl/maps/NlZX3" target="_blank">
+				<div class="center map"><h2>Palo Alto office</h2></div>
+				</a>
+				<div id="right-map" style="height:550px;"></div>
+			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x808fbb39dda3c9e5%3A0x9ce73e5790b7d014!2s470+Ramona+St%2C+Palo+Alto%2C+CA+94301%2C+USA!5e0!3m2!1sen!2s!4v1386164928509" width="100%" height="550	" frameborder="0" style="border:0"  scrolling="no"></iframe> -->
+			</div>
+
 		</div>
+			
 	</div>
 </div>
 		

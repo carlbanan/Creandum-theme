@@ -38,7 +38,8 @@
     <?php require_once('library/typeahead.php'); ?>
 
 
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">  
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false">></script>
 
 
 <!--[if gte IE 8]>
