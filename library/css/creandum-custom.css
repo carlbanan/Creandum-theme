@@ -985,6 +985,12 @@ div.sideblock.news.podio:last-child{
 .filter-menu .prev,.filter-menu .next{
 	padding:0 10px;
 	color:#3da955;
+	position: absolute;
+	right:10px;
+}
+.filter-menu .prev{
+	right: auto;
+	left:10px;
 }
 .filter-menu .prev a,.filter-menu .next a{
 	margin:0 2px;
