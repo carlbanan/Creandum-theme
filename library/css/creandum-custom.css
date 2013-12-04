@@ -27,10 +27,9 @@
 	src: url('fonts/GothamBook.eot');
 	src: url('fonts/GothamBook.eot?#iefix') format('embedded-opentype'),
 		 url('fonts/GothamBook.woff') format('woff'),
-		 url('fonts/GothamBook.ttf') format('truetype')
+		 url('fonts/GothamBook.ttf') format('truetype');
 	 font-weight:normal;
 	 font-style:normal; 
-	 line-height: 1em;
 	 -webkit-font-smoothing:antialiased;
 }
 
@@ -116,7 +115,6 @@ margin: 0 auto;
 body{
 	-webkit-font-smoothing:antialiased;
 	font-family: 'gothambook', Helvetica, Arial, sans-serif;
-	line-height: 12px;
 	color: #39423f;
 }
 a {
@@ -541,6 +539,7 @@ h3 {
 	background-size: 100%;
 	display: table;
 	width: 100%;
+
 }
 
 .team-fallback {
@@ -565,6 +564,7 @@ h3 {
 }
 .intro,.big-image-container,.green_background{
 	height:450px;
+
 }
 
 .contact .big-image-container, .green_background{
@@ -985,6 +985,12 @@ div.sideblock.news.podio:last-child{
 .filter-menu .prev,.filter-menu .next{
 	padding:0 10px;
 	color:#3da955;
+	position: absolute;
+	right:10px;
+}
+.filter-menu .prev{
+	right: auto;
+	left:10px;
 }
 .filter-menu .prev a,.filter-menu .next a{
 	margin:0 2px;
@@ -3240,8 +3246,8 @@ button:hover .twitter-icon{
 	height: auto;
 	line-height: 1;
 	min-width: 100%;
-	max-width: 100%;
-	width: 100%;
+	width:100%;
+
 }
 
 .carousel-control.right {
@@ -3846,7 +3852,7 @@ header.showmobile{
 	}
 	.carousel-caption {
 		position: absolute;
-		top: 100px;
+		top: 20px;
 		right:0px;
 		left:15px;
 		width: 100%;
