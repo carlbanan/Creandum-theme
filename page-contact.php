@@ -28,7 +28,7 @@
 	
 </div>
 	<div class="contact">
-		<div class="big-image-container contact"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/laptop.png);'></div>
+		<div class="big-image-container contact"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/dator.png);'></div>
 	</div>
 </div>
 
