@@ -4107,6 +4107,9 @@ header.showmobile{
 	/*  MOBILE ALL  */
 	/****************/
 
+	.intro-about {
+		position: absolute;
+	}
 	
 	.responsive-wrapper{
 		width:100%;
@@ -4115,7 +4118,7 @@ header.showmobile{
 	}
 
 	.team .row,.network .row,.investments .row{
-		margin-top: 100px;
+		margin-top: 20px;
 		margin-bottom: 0;
 	}
 

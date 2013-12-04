@@ -88,7 +88,6 @@
 										</div>
 										<img src="<?php echo $portrait;?>" alt="<?php the_title();?>">
 									</div>
-									<div class="showmobile"><h3><?php the_title();?></h3></div>
 
 			
 							</a>
