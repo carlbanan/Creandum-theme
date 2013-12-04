@@ -1514,10 +1514,11 @@ line-height: 1.8em;
 .investpadblock{
 	padding: 0px 0 100px 0!important;
 }
-
+/*
 .content.responsive-wrapper{
 	height: 350px;
 }
+*/
 
 .invest{
 	text-align: center!important;
@@ -3223,15 +3224,15 @@ button:hover .twitter-icon{
 	z-index: 10;
 	padding:0;
 	bottom: 50%;
-	top: 50%;
+	top: 40%;
 }
 
 
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-	max-height: 550px;
-	min-height: 550;
+	max-height: 450px;
+	min-height: 450px;
 	width:100%;
 }
 .carousel-inner > .item > img {
@@ -3346,12 +3347,25 @@ header.showmobile{
 
 
 	.responsive-wrapper{
-		height: 360px;
+		height: 320px;
 	}
 
 		.content-header-text div{
 		margin-top: 72px;
 	}
+
+	.invest-title.content-header-text div{
+	margin-top:130px;
+	position: absolute;
+}
+
+.content-header-text h1 {
+	font-size: 38px;
+}
+
+.small h1.shadow, .small h1.strip{
+	font-size: 32px;
+}
 
 	.cbp-af-header {
 			position: fixed;
@@ -3558,6 +3572,14 @@ header.showmobile{
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 25em;
 	}
+
+	.carousel .item {
+	max-height: 450px;
+	min-height: 450px;
+	width:100%;
+	}
+
+
 	.about .hidemobile{
 		display: none!important;
 	}
@@ -3583,6 +3605,24 @@ header.showmobile{
 	.newsdeck .twitter{
 		display: none;
 	}
+
+	.carousel .item {
+	max-height: 350px;
+	min-height: 350px;
+	width:100%;
+	}
+
+	.carousel-caption {
+	z-index: 10;
+	padding:0;
+	bottom: 50%;
+	top: 34%;
+	}
+
+	.carousel-inner > .item > img {
+	min-width: 150%;
+	}	
+
 	.ncard .icon{
 		width:50px;
 		height:50px;
@@ -3615,11 +3655,18 @@ header.showmobile{
 		position: absolute;
 	}
 
+	.small h1.shadow, .small h1.strip{
+	font-size: 21px;
+}
+
 	.sideblock, .filter-menu {
 		display: none;
 	}
 
 
+
+
+/*
 	.content.responsive-wrapper {
 	height: 230px;
 	}
@@ -3643,6 +3690,8 @@ header.showmobile{
 	.icons-right{
 		float:center;
 	}
+
+	*/
 
 }
 
@@ -3668,6 +3717,8 @@ header.showmobile{
 	#footer {
 		padding: 20px auto 20px auto;
 	}
+
+	
 
 }
 
@@ -3801,6 +3852,8 @@ header.showmobile{
 		width: 100%;
 		text-align: left;
 	}
+
+
 	.carousel-caption h2{
 		font-size:13px;
 	}
