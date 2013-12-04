@@ -3367,7 +3367,11 @@ header.showmobile{
 	.container{
 		max-width: 1070px!important;
 	}
-
+	.twitter h4{
+		text-align: center;
+		margin-left:0;
+		margin-right: 7.5px;
+	}
 
 }
 
@@ -3396,7 +3400,57 @@ header.showmobile{
 	font-size: 32px;
 }
 
-	.cbp-af-header {
+
+	.content-header-text div h4 {
+	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 20px;
+	font-size: 18px;
+	line-height: 1.6em;
+	padding-top: 20px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 25em;
+	}
+
+	.carousel .item {
+	max-height: 450px;
+	min-height: 450px;
+	width:100%;
+	}
+
+
+	.about .hidemobile{
+		display: none!important;
+	}
+	.who{
+		height: auto;
+		display: block;
+		clear:both;
+	}
+	.who .col-md-5{
+		width:90%;
+	}
+	.twitter{
+		display: none;
+	}
+	.feed{
+		width:100%;
+	}
+}	
+	
+@media (max-width: 811px) {
+
+
+	/*******************/
+	/*  MENU-DROPDOWN  */
+	/*******************/
+
+		.filter, .filter-menu{
+			display: none;
+		}
+
+		.cbp-af-header {
 			position: fixed;
 			left: 0;
 			top:0;
@@ -3587,47 +3641,6 @@ header.showmobile{
 		
 	} 
 
-
-	.content-header-text div h4 {
-	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
-	margin-top: 20px;
-	font-size: 18px;
-	line-height: 1.6em;
-	padding-top: 20px;
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 25em;
-	}
-
-	.carousel .item {
-	max-height: 450px;
-	min-height: 450px;
-	width:100%;
-	}
-
-
-	.about .hidemobile{
-		display: none!important;
-	}
-	.who{
-		height: auto;
-		display: block;
-		clear:both;
-	}
-	.who .col-md-5{
-		width:90%;
-	}
-	.twitter{
-		display: none;
-	}
-	.feed{
-		width:100%;
-	}
-}	
-	
-@media (max-width: 811px) {
-
 	.btn2.btn-white-bg{
 		width: 100%;
 		margin:0;
@@ -3655,6 +3668,8 @@ header.showmobile{
 
 /* SCREENS LESS THAN 767px */
 @media (max-width: 767px) {
+
+	
 	.newsdeck .twitter{
 		display: none;
 	}
@@ -3676,14 +3691,7 @@ header.showmobile{
 	min-width: 150%;
 	}	
 
-	.ncard .icon{
-		width:50px;
-		height:50px;
-		background-size:50px auto;
-		background-position: center center;
-		border-width: 0;
-		margin-top:25px;
-	}
+
 	.ncard .ncard-content{
 		max-width: 80%;
 	}
@@ -3723,6 +3731,9 @@ header.showmobile{
 
 }
 
+/**********/
+/*  IPAD  */
+/**********/
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
 
@@ -3743,7 +3754,7 @@ header.showmobile{
 	}
 
 	#footer {
-		padding: 20px auto 20px auto;
+		padding: 40px 0px 40px 0;
 	}
 
 	
@@ -3769,6 +3780,10 @@ header.showmobile{
 	.sideblock, .filter-menu {
 		display: none;
 	}
+
+	.press-area{
+		display: none;
+	}
 	
 
 }
@@ -3776,6 +3791,14 @@ header.showmobile{
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (max-width : 484px) {
+
+	.newsdeck .row{
+		margin-top:0;
+	}
+
+	.newsdeck{
+		padding-bottom: 0;
+	}
 
 
 	.mobile, .showmobile{
@@ -3798,8 +3821,9 @@ header.showmobile{
 		margin-top:22px;
 		padding:0 8px;
 	}
+
 	#footer {
-		padding: 20px auto 20px auto;
+		padding: 40px 0px 40px 0!important;
 
 	}
 
@@ -3954,6 +3978,18 @@ header.showmobile{
 		left: 0;
 	}
 
+	.btn-green, .more{
+		border-top: none;
+		padding-bottom: 40px;
+	}
+
+	.ncard{
+
+	border-bottom: 1px solid #fff;
+	padding-bottom: 60px;
+
+	}
+
 	.ncard .icon {
 		width: 50px;
 		height: 50px;
@@ -3966,7 +4002,9 @@ header.showmobile{
 		border-radius: 50px;
 		text-align: center;
 		margin: 0 auto;
-		left: 42%;
+		left: 50%;
+		right: 50%;
+		margin-left: -25px;
 	}	
 	
 	.ncard{
@@ -3982,10 +4020,18 @@ header.showmobile{
 		max-height: 100%;
 		padding-left: 0;
 		display: block;
+
 	}
 	.ncard-content h2{
 		font-size: 18px;
+		text-align: center;
 	}
+
+	.ncard-content h3{
+		text-align: center;
+	}
+
+		
 	.ncard .icon .profile {
 		height:100%;
 		width:100%;
@@ -3993,9 +4039,6 @@ header.showmobile{
 		background-size: 60px auto;
 
 
-	}
-	.ncard .icon{
-		left:15px;
 	}
 	.feedright{
 		display: none;
@@ -4167,7 +4210,8 @@ header.showmobile{
 		-webkit-margin-end: 0;
 	}
 
-		/* 	CONTACT */
+	/* 	CONTACT */
+	
 	.content-header-text div.subtext {
 		margin-top: 120px;
 		width: 90%;
@@ -4195,6 +4239,14 @@ header.showmobile{
 	display: inline-block;
 	vertical-align: middle;
 	border-right: none;
+	}
+
+	/***********/
+	/*  ABOUT  */
+	/***********/
+
+	.press-area{
+		display: none;
 	}
 
 
