@@ -789,7 +789,7 @@ jQuery(document).ready(function($) {
 	   
 	   
 	}
-	if($(".about").length >= 1){
+	if($(".page-template-page-contact-php").length >= 1){
 		var myLatlngLeft = new google.maps.LatLng(59.335530, 18.069616);
 
 		var myLatlngRight = new google.maps.LatLng(37.445511, -122.162747);
@@ -833,7 +833,7 @@ jQuery(document).ready(function($) {
 		    map: mapRight,
 		    title:""
 		});
-	});
+	}
 
 }); /* end of as page load scripts */
 
