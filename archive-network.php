@@ -27,7 +27,7 @@
 			                        </div>
 					</section>
 			</div>
-			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/network_bw.png);'></div>
+			<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/network_image.png);'></div>
 		</div>
 	<?php } ?>
 	</div>
