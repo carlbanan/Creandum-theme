@@ -111,7 +111,7 @@ Template Name: New startpage
                 <div class="col-sm-12 col-md-12 col-lg-12 center">
                    <div class="tick2 tick showmobile"><h2>We are a leading early stage venture capital firm, based in the Nordics.</h2></div>
                    <div class="ticker hidemobile"> 
-                      <h2 style="padding:34px 15%;">We are a leading early stage venture capital firm, based in the Nordics.</h2>
+                      <h2>We are a leading early stage venture capital firm,<br>based in the Nordics.</h2>
                       <h2>We focus on being the first institutional backer of top entrepreneurs within consumer and hardware.</h2>
                       <h2>We use our extensive company building backgrounds to serve top entrepreneurs.</h2>
                    </div> 

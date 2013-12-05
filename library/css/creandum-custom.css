@@ -3399,10 +3399,13 @@ header.showmobile{
 		margin-right: 7.5px;
 	}
 
+
+
 }
 
 /*  LESS THAN 1060 PX */
 @media screen and (max-width: 1060px) {
+
 
 
 	.responsive-wrapper{
@@ -3410,7 +3413,7 @@ header.showmobile{
 	}
 
 		.content-header-text div{
-		margin-top: 172px;
+		margin-top: 62px;
 	}
 
 	.invest-title.content-header-text div{
@@ -3424,6 +3427,10 @@ header.showmobile{
 
 .small h1.shadow, .small h1.strip{
 	font-size: 32px;
+}
+
+h2{
+	font-size: 21px;
 }
 
 
@@ -3487,6 +3494,9 @@ header.showmobile{
 			overflow: hidden;
 	}
 
+	.padblock{
+		padding: 70px 0 70px 10px;
+	}
 
 	.cbp-af-header nav ul li{
 			display: block;
@@ -3717,6 +3727,10 @@ header.showmobile{
 	min-width: 150%;
 	}	
 
+	.content-header-text div{
+	margin-top: 40px;
+	}
+
 
 	.ncard .ncard-content{
 		max-width: 80%;
@@ -3733,9 +3747,7 @@ header.showmobile{
 		overflow: hidden;
 	}
 
-	.content-header-text div{
-		/*margin-top: 30px;*/
-	}
+	
 
 	.invest-title.content-header-text div{
 		margin-top:90px;
@@ -3765,6 +3777,22 @@ header.showmobile{
 
 	.mobile, .showmobile{
 		display: block!important;
+	}
+
+	.goscroll{
+	position: absolute;
+	}	
+
+	.intro-about{
+		position:absolute;
+	}
+
+	.content-header.bigimage, .content-header-text div {
+		position: absolute;
+	}
+
+	.small.content-header-text div{
+		position: absolute;
 	}
 
 	header.showmobile{
@@ -3811,6 +3839,11 @@ header.showmobile{
 		display: none;
 	}
 	
+	.mobile-team-title{
+		padding-top:30px;
+	}
+
+
 
 }
 
@@ -3854,15 +3887,20 @@ header.showmobile{
 	}
 
 	.tick2.tick.showmobile h2, h2.mobile{
-		font-size: 28px;
-		text-align: left;
-		padding-bottom: 30px;
+		font-size: 25px;
+		text-align: center;
+		padding-bottom: 50px;
 		border-bottom: 1px solid #fff;
 		color: #39423f;
+		line-height: 1.3em;
 	}
-	
+
 	.padblock_two, .padblock_one {
-		padding: 50px 0 50px 0;
+		padding: 50px 0 0px 0;
+	}
+
+	.padblock{
+		padding: 70px 0 70px 10px;
 	}
 
 	.col-lg-12{
@@ -3947,12 +3985,13 @@ header.showmobile{
 	}
 	.carousel-caption {
 		position: absolute;
-		top: 20px;
+		top: 100px;
 		right:0px;
-		left:15px;
+		left:0px;
 		width: 100%;
-		text-align: left;
+		text-align: center;
 	}
+
 
 
 	.carousel-caption h2{
@@ -4144,12 +4183,16 @@ header.showmobile{
 	}
 
 	.team .row,.network .row,.investments .row{
-		margin-top: 20px;
-		margin-bottom: 0;
+		margin-top: 40px;
+		margin-bottom: 40px;
 	}
 
 	.sideblock{
 		width:100%;
+	}
+
+	.content-header-text div{
+	margin-top: 150px;
 	}
 
 	.invest-title.content-header-text div{
@@ -4173,6 +4216,10 @@ header.showmobile{
 	/**********/
 	/*  TEAM  */
 	/**********/
+
+	.mobile-team-title{
+		padding-top:10px;
+	}
 
 
 	/*****************/

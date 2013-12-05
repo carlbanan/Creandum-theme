@@ -15,7 +15,7 @@
 				<!-- Big picture -->
 				<div class="page-content intro-about">	
 								<!--<p class="large_invest_white"></p> -->
-							<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
+							<section class="small content-header-text wrapper clearfix container hidemobile" itemprop="articleBody">
 		                  	 <div class='shadowop'>
 		                          <h1 class="small shadow">This is team Creandum and also</h1>
 		                          <br><h1 class="small shadow">a great part of somewhat 60 companies.</h1>
@@ -25,6 +25,17 @@
 		                          <br><h1 class="small strip">a great part of somewhat 60 companies.</h1>
 		                        </div>
 							</section>
+
+							<section class="small content-header-text wrapper clearfix container showmobile mobile-team-title" itemprop="articleBody">
+		                  	 <div class='shadowop'>
+		                          <h1 class="small shadow">This is team Creandum</h1>
+		                        </div>
+		                        <div>
+		                          <h1 class="small strip">This is team Creandum</h1>
+		                        </div>
+							</section>
+
+
 						</div>
 						<div class="responsive-wrapper">
 							<div class="big-image-container"  style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/about_picture.png);'></div>
