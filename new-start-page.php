@@ -8,11 +8,13 @@ Template Name: New startpage
 
        <div class='startpage'>
         <div class='startoff'>  
+          <div class='startoff_loader'>
             <span class="spinner">Loading...</span>
+          </div>
         </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-         
+           
           
           <?php 
           $c = 0;

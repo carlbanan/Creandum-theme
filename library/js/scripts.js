@@ -133,8 +133,17 @@ jQuery(document).ready(function($) {
 
 					$(".orig-filter").delay(100).fadeOut();
 
-					// SHOW LOADER
-					$(".loader").addClass("show");
+					if($(this).hasClass("active")){
+						// JUST SCROLL UP
+						$('html, body').animate({
+					         scrollTop: 0
+						 },220);
+					}
+					else{
+						// SHOW LOADER
+						$(".loader").addClass("show");	
+					}
+
 					$(".async.active").removeClass("active")
 					$(this).addClass("active");
 
