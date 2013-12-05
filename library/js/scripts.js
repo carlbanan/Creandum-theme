@@ -329,8 +329,9 @@ jQuery(document).ready(function($) {
 		}
 
 		subh = 270;
-		console.log(windowWidth);
+		
 		if((windowWidth) <= 767 ){
+			console.log(windowWidth);
 			subh = 120;
 		}
 
