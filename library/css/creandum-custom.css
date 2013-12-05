@@ -488,7 +488,7 @@ h3 {
 	clear:both;
 }
 .padblock{
-	padding: 100px 0 100px 0;
+	padding: 120px 0 100px 0;
 }
 .page-wrapper{
 		margin-top:40px;
@@ -735,7 +735,7 @@ span.date{
 }
 
 .newsdeck .row{
-	margin-top: 70px;
+	margin-top: 120px;
 }
 
 .blog .row{
@@ -743,7 +743,7 @@ span.date{
 }
 
 .team .row,.network .row,.investments .row{
-	margin-top: 90px;
+	margin-top: 120px;
 	margin-bottom: 120px;
 }
 
@@ -1011,6 +1011,7 @@ div.sideblock.news.podio:last-child{
 .filter-menu{
 	padding:15px 0;
 	background: #edf3ef;
+	position: absolute;
 	text-align: center;
 	margin-top: 0;
 	width: 100%;
