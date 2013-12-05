@@ -117,6 +117,11 @@ body{
 	font-family: 'gothambook', Helvetica, Arial, sans-serif;
 	color: #39423f;
 }
+
+#main{
+	min-height: 660px;
+}
+
 a {
 	font-family: 'gothambook',  Helvetica, Arial, sans-serif;
 	color: #39423f;
@@ -738,8 +743,8 @@ span.date{
 }
 
 .team .row,.network .row,.investments .row{
-	margin-top: 70px;
-	margin-bottom: 70px;
+	margin-top: 90px;
+	margin-bottom: 120px;
 }
 
 
@@ -1010,13 +1015,20 @@ div.sideblock.news.podio:last-child{
 	margin-top: 0;
 	width: 100%;
 	border-bottom: 1px solid white;
+	opacity:0.6;
 }
+
+.filter-menu:hover{
+	opacity:1;
+}
+
 .filter-menu.fix{
 	position: fixed;
 	top:0;
 	z-index: 999999;
 	width: 100%;
 	padding:15px 0;
+	opacity:1;
 }
 
 .filter,.scrollto{
@@ -1222,7 +1234,6 @@ textarea:focus,input:focus{
 
 .padblock_two{
 	padding: 120px 0 160px 0;
-	border-bottom: 1px solid #fff;
 }
 
 .text{
@@ -1553,9 +1564,7 @@ line-height: 1.8em;
 
 
 /* INVESTMENTS */
-.investpadblock{
-	padding: 0px 0 100px 0!important;
-}
+
 /*
 .content.responsive-wrapper{
 	height: 350px;
@@ -1846,6 +1855,7 @@ line-height: 1.8em;
 .links {
 	display: block;
 	float:left;
+	padding-left:5px;
 }
 
 .icons-right {
