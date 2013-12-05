@@ -1237,6 +1237,10 @@ textarea:focus,input:focus{
 	padding: 120px 0 160px 0;
 }
 
+.padblock_two.border{
+	border-bottom: 1px solid #fff;
+}
+
 .text{
 	color: #b8c6bd;
 	padding-top: 15px;

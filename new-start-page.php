@@ -160,7 +160,7 @@ Template Name: New startpage
         ?>
         <div class='lightgreen_bg'>
           <div class='container'>
-            <div class="row padblock_two">
+            <div class="row padblock_two border">
               <div class="col-lg-12">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
