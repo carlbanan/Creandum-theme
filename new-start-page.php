@@ -48,7 +48,7 @@ Template Name: New startpage
                  </div>
 
 
-                 <div class='content-header-text wrapper container'>
+                 <div class='content-header-text start-header-text wrapper container'>
                   <div class="hidemobile htext">
                        <div class='shadowop'>
                           <?php foreach($textline as $txt){ ?>

@@ -2919,7 +2919,7 @@ button:hover .twitter-icon{
 	z-index: 1;
 }
 
-.content-header-text{
+.content-header-text,.start-header-text{
 	position: relative;
 	z-index: 30!important;
 	text-align: left;
@@ -2929,7 +2929,7 @@ button:hover .twitter-icon{
 }
 
 
-.content-header-text div{
+.content-header-text div,.start-header-text div{
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
@@ -2944,7 +2944,7 @@ button:hover .twitter-icon{
 	 bottom:auto;
 	 margin-top: 140px;
 }
-.content-header-text div h4{
+.content-header-text div h4,.start-header-text div h4{
 	font-family: 'gothambook',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin-top:20px;
 	font-size:18px;
@@ -2956,7 +2956,7 @@ button:hover .twitter-icon{
 	-webkit-margin-end: 34em;
 }
 
-.content-header-text div h5{
+.content-header-text div h5,.start-header-text div h5{
 	font-family: 'gothammedium',"Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin-top:20px;
 	font-size:14px;
@@ -2967,6 +2967,9 @@ button:hover .twitter-icon{
 
 .content-header-text div h4:first-child{
 	margin-top:320px;
+}
+.start-header-text.content-header-text div h4:first-child{
+	margin-top:290px;
 }
 
 .content-header-text.fixedheight div{
@@ -2985,7 +2988,7 @@ button:hover .twitter-icon{
 	margin-left:-300px;
 }
 
-.content-header-text h1{
+.content-header-text h1,.start-header-text h1{
 
 	line-height: 1.6em;
 	font-size: 48px;
@@ -3412,9 +3415,12 @@ header.showmobile{
 		height: 320px;
 	}
 
-		.content-header-text div{
+	.content-header-text div{
 		margin-top: 62px;
 	}
+	.content-header-text.start-header-text div{
+		margin-top: 162px;
+	}	
 
 	.invest-title.content-header-text div{
 	margin-top:130px;
