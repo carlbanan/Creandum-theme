@@ -789,49 +789,50 @@ jQuery(document).ready(function($) {
 	   
 	   
 	}
+	if($(".about").length >= 1){
+		var myLatlngLeft = new google.maps.LatLng(59.335530, 18.069616);
 
-	var myLatlngLeft = new google.maps.LatLng(59.335530, 18.069616);
+		var myLatlngRight = new google.maps.LatLng(37.445511, -122.162747);
 
-	var myLatlngRight = new google.maps.LatLng(37.445511, -122.162747);
+		var mapOptionsLeft = {
+	      center: myLatlngLeft,
+	      zoom: 16,
+	      zoomControl: true,
+	      navigationControl: true,
+		  mapTypeControl: true,
+		  scaleControl: true,
+		  draggable: false,
+	      scrollwheel: false,
+	    };
 
-	var mapOptionsLeft = {
-      center: myLatlngLeft,
-      zoom: 16,
-      zoomControl: true,
-      navigationControl: true,
-	  mapTypeControl: true,
-	  scaleControl: true,
-	  draggable: false,
-      scrollwheel: false,
-    };
+	    var mapOptionsRight = {
+	      center: myLatlngRight,
+	      zoom: 16,
+	      zoomControl: true,
+	      navigationControl: true,
+		  mapTypeControl: true,
+		  scaleControl: true,
+		  draggable: false,
+	      scrollwheel: false,
+	    };
 
-    var mapOptionsRight = {
-      center: myLatlngRight,
-      zoom: 16,
-      zoomControl: true,
-      navigationControl: true,
-	  mapTypeControl: true,
-	  scaleControl: true,
-	  draggable: false,
-      scrollwheel: false,
-    };
+	    var mapLeft = new google.maps.Map(document.getElementById("left-map"),
+	        mapOptionsLeft);
 
-    var mapLeft = new google.maps.Map(document.getElementById("left-map"),
-        mapOptionsLeft);
+	    var mapRight = new google.maps.Map(document.getElementById("right-map"),
+	        mapOptionsRight);
 
-    var mapRight = new google.maps.Map(document.getElementById("right-map"),
-        mapOptionsRight);
+	    var markerLeft = new google.maps.Marker({
+		    position: myLatlngLeft,
+		    map: mapLeft,
+		    title:""
+		});
 
-    var markerLeft = new google.maps.Marker({
-	    position: myLatlngLeft,
-	    map: mapLeft,
-	    title:""
-	});
-
-	var markerRight = new google.maps.Marker({
-	    position: myLatlngRight,
-	    map: mapRight,
-	    title:""
+		var markerRight = new google.maps.Marker({
+		    position: myLatlngRight,
+		    map: mapRight,
+		    title:""
+		});
 	});
 
 }); /* end of as page load scripts */
