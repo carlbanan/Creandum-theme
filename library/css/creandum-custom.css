@@ -1685,7 +1685,7 @@ line-height: 1.8em;
 .cbp-af-header .cbp-af-inner {
 		width: 100%;
 		margin: 0 auto;
-		padding: 0 15px;
+		padding: 10px 15px 0 15px;
 }
  
 .cbp-af-header h1,
@@ -2922,7 +2922,7 @@ button:hover .twitter-icon{
 	 position: fixed;
 	 display: table-cell;
 	 height:inherit;
-	 margin-top: 140px;
+	 margin-top: 130px;
 	 max-width:960px;
 
 }
