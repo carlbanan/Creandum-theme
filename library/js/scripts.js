@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 
 	var $window = $(window);
 	var windowHeight = $window.height();
-
+	var windowWidth = window.innerWidth;
 	var route = router();
  
 	function router(){
@@ -310,7 +310,8 @@ jQuery(document).ready(function($) {
 
 		//CHECK HEIGHT IF RESIZE
 		if(t == 2){
-			windowHeight = $window.height();			
+			windowHeight = $window.height();	
+			windowWidth = window.innerWidth;
 		}
 		$(".startoff").delay(150).animate({
 			opacity: 0,
@@ -327,7 +328,13 @@ jQuery(document).ready(function($) {
 			$(".content-header-text").addClass("bigheight");
 		}
 
-		
+		subh = 270;
+		console.log(windowWidth);
+		if((windowWidth) <= 767 ){
+			subh = 120;
+		}
+
+
 		$(".content-header-wrap,.slider-bigimage .item, #slider-bigimage").css("height",windowHeight);
 		$(".content-header-text div.htext").css("margin-top", ((windowHeight/2) - 270) );
 		$(".content-header-text div.htext2").css("margin-top", ((windowHeight/2) - 270) );
