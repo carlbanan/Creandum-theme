@@ -1952,6 +1952,11 @@ button:hover .in{
 	background-image: url("../../images/icons/social/angellist_green.png");
 }
 
+.angel_icon{
+	background-image: url("../../images/icons/social/angellist_green.png");
+	background-position: center center;
+}
+
 .btnmobile:hover .twitter-icon{
 	border-right: 1px solid #3da955;
 	background-image: url("../../images/icons/social/twitter_full.png");
