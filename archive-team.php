@@ -79,7 +79,7 @@
 						  endif;
 							  if($menuitem){
 							  	?>
-								<div class='filter-menu orig-filter'>
+								<div class='filter-menu orig-filter' <?php if(SINGLEPOST == 1){ echo "style='display:none;'"; } ?>>
 									<span class='prev left'></span>
 									<span class='filter active' id=''>All</span>
 							  	<?php
