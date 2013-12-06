@@ -27,17 +27,17 @@ else{ ?>
 <!-- LIST VIEW PAGE / FIRST PAGE INVEST CONTENT -->
 <div class"top-post">
 	<!-- Big picture -->
-	<div class="page-content intro-about">	
-
-		<!--<p class="large_invest_white"></p> -->
+	<div class="page-content intro-about">		
+		<!-- Here's what we're up to and whats going on in our network. -->
+		<!--<p class="large_invest_white"></p>  -->
 		<section class="small content-header-text wrapper clearfix container" itemprop="articleBody">
                   	 <div class='shadowop'>
-                          <h1 class="small shadow">Here's what we're up to</h1>
-                          <br><h1 class="small shadow">and whats going on in our network.</h1>
+                          <h1 class="small shadow">Follow our news feed</h1>
+                          <br><h1 class="small shadow">to find out what we are up to.</h1>
                         </div>
                         <div>
-                          <h1 class="small strip">Here's what we're up to</h1>
-                          <br><h1 class="small strip">and whats going on in our network.</h1>
+                          <h1 class="small strip">Follow our news feed</h1>
+                          <br><h1 class="small strip">to find out what we are up to.</h1>
                         </div>
 
 				</section>
