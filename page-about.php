@@ -29,7 +29,7 @@
 
 	<!-- Wrapper -->
 
-	<div class="lightgreen_bg infront">
+	<div class="lightgreen_bg infront" style='z-index:102;'>
 	<div class='filter-menu orig-filter' <?php if(SINGLEPOST == 1){ echo "style='display:none;'"; } ?>>
 		<span class='scrollto active' scroll='about'>About</span>
 		<span class='scrollto' scroll='press-area'>Press resources</span>
